@@ -1,0 +1,122 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 3px);
+  --radius-md: calc(var(--radius) - 1px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 3px);
+  --font-sans: "Manrope", sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-offer: var(--offer);
+  --color-offer-foreground: var(--offer-foreground);
+  --color-product-stage: var(--product-stage);
+  --color-surface-inverse: var(--surface-inverse);
+  --color-surface-inverse-foreground: var(--surface-inverse-foreground);
+  --color-rating: var(--rating);
+  --color-success: var(--success);
+}
+:root {
+  --radius: 0.35rem;
+  --background: #f4f5f8;
+  --foreground: #1e293b;
+  --card: #ffffff;
+  --card-foreground: var(--foreground);
+  --popover: var(--card);
+  --popover-foreground: var(--foreground);
+  --primary: #f0441c;
+  --primary-foreground: #ffffff;
+  --secondary: #f1f3f6;
+  --secondary-foreground: #1e293b;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #fff1ee;
+  --accent-foreground: #f0441c;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: #e2e8f0;
+  --input: #cbd5e1;
+  --ring: #f0441c;
+  --offer: #e53935;
+  --offer-foreground: #ffffff;
+  --product-stage: #ffffff;
+  --surface-inverse: #0f172a;
+  --surface-inverse-foreground: #f8fafc;
+  --rating: #16a34a;
+  --success: #16a34a;
+}
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    margin: 0;
+    background: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+  }
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    letter-spacing: 0;
+  }
+}
+@utility bg-hero-wash {
+  background: linear-gradient(
+    90deg,
+    oklch(0.99 0.004 75 / 0.97) 0%,
+    oklch(0.99 0.004 75 / 0.88) 36%,
+    oklch(0.99 0.004 75 / 0.18) 68%,
+    transparent 100%
+  );
+}
+@utility bg-category-wash {
+  background: linear-gradient(
+    to top,
+    oklch(0.18 0.012 25 / 0.96),
+    oklch(0.18 0.012 25 / 0.7) 45%,
+    transparent
+  );
+}
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

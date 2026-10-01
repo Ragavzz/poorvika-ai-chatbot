@@ -1,0 +1,31 @@
+# Environment variables
+.env
+.env.*
+*.env
+backend/.env
+frontend/.env
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+venv/
+.venv/
+
+# Node
+node_modules/
+/laya_service/node_modules/
+dist/
+.tanstack/
+.nitro/
+
+# Local Laya model/cache data (keep generated model files out of the repository)
+/laya_service/.cache/
+/laya_service/cache/
+/laya_service/models/
+/laya_service/model_cache/
+
+# System
+powershell.bat
+
+ecom-muse-main-backup/

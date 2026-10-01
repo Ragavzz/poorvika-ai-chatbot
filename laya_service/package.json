@@ -1,0 +1,13 @@
+{
+  "name": "laya-decision-service",
+  "version": "1.0.0",
+  "description": "Laya System-1 Decision Service using @receptron/laya for ShopAI",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@receptron/laya": "^0.1.2"
+  }
+}
