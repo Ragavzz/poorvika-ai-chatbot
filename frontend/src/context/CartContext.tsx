@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import type { Product } from "@/services/api";
 
@@ -7,11 +7,14 @@ export interface CartItem {
   quantity: number;
 }
 
-interface CartContextType {
+interface CartState {
   items: CartItem[];
   totalItems: number;
   subtotal: number;
   isOpen: boolean;
+}
+
+interface CartActions {
   addToCart: (product: Product, quantity?: number) => boolean;
   removeFromCart: (productId: string | number) => void;
   updateQuantity: (productId: string | number, quantity: number) => void;
@@ -23,7 +26,8 @@ interface CartContextType {
 
 const CART_STORAGE_KEY = "shopai_cart_items";
 
-const CartContext = createContext<CartContextType | undefined>(undefined);
+const CartStateContext = createContext<CartState | undefined>(undefined);
+const CartActionsContext = createContext<CartActions | undefined>(undefined);
 
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>(() => {
@@ -50,7 +54,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 
-  const addToCart = (product: Product, quantity: number = 1): boolean => {
+  const addToCart = useCallback((product: Product, quantity: number = 1): boolean => {
     // Prevent adding out-of-stock products
     if (product.inStock === false) {
       toast.error(`${product.name} is currently out of stock.`);
@@ -81,14 +85,14 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
       description: `${product.name} (${quantity} item${quantity > 1 ? "s" : ""})`,
     });
     return true;
-  };
+  }, []);
 
-  const removeFromCart = (productId: string | number) => {
+  const removeFromCart = useCallback((productId: string | number) => {
     setItems((prev) => prev.filter((item) => String(item.product.id) !== String(productId)));
     toast.info("Item removed from cart");
-  };
+  }, []);
 
-  const updateQuantity = (productId: string | number, quantity: number) => {
+  const updateQuantity = useCallback((productId: string | number, quantity: number) => {
     if (quantity <= 0) {
       removeFromCart(productId);
       return;
@@ -99,41 +103,45 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         String(item.product.id) === String(productId) ? { ...item, quantity } : item,
       ),
     );
-  };
+  }, [removeFromCart]);
 
-  const clearCart = () => {
+  const clearCart = useCallback(() => {
     setItems([]);
-  };
+  }, []);
 
-  const openCart = () => setIsOpen(true);
-  const closeCart = () => setIsOpen(false);
-  const toggleCart = () => setIsOpen((prev) => !prev);
+  const openCart = useCallback(() => setIsOpen(true), []);
+  const closeCart = useCallback(() => setIsOpen(false), []);
+  const toggleCart = useCallback(() => setIsOpen((prev) => !prev), []);
+
+  const actions = useMemo(
+    () => ({ addToCart, removeFromCart, updateQuantity, clearCart, openCart, closeCart, toggleCart }),
+    [addToCart, removeFromCart, updateQuantity, clearCart, openCart, closeCart, toggleCart],
+  );
+  const state = useMemo(
+    () => ({ items, totalItems, subtotal, isOpen }),
+    [items, totalItems, subtotal, isOpen],
+  );
 
   return (
-    <CartContext.Provider
-      value={{
-        items,
-        totalItems,
-        subtotal,
-        isOpen,
-        addToCart,
-        removeFromCart,
-        updateQuantity,
-        clearCart,
-        openCart,
-        closeCart,
-        toggleCart,
-      }}
-    >
-      {children}
-    </CartContext.Provider>
+    <CartActionsContext.Provider value={actions}>
+      <CartStateContext.Provider value={state}>{children}</CartStateContext.Provider>
+    </CartActionsContext.Provider>
   );
 }
 
 export function useCart() {
-  const context = useContext(CartContext);
-  if (!context) {
+  const state = useContext(CartStateContext);
+  const actions = useContext(CartActionsContext);
+  if (!state || !actions) {
     throw new Error("useCart must be used within a CartProvider");
+  }
+  return { ...state, ...actions };
+}
+
+export function useCartActions() {
+  const context = useContext(CartActionsContext);
+  if (!context) {
+    throw new Error("useCartActions must be used within a CartProvider");
   }
   return context;
 }

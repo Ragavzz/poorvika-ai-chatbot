@@ -200,6 +200,8 @@ function Home() {
                   <img
                     src={slide.image}
                     alt={slide.title}
+                    loading={idx === currentSlide ? "eager" : "lazy"}
+                    decoding="async"
                     className="relative z-10 max-h-[380px] w-auto object-contain drop-shadow-2xl transition duration-500 hover:scale-105"
                   />
                 </div>

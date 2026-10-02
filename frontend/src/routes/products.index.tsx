@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { createFileRoute, useNavigate, Link } from "@tanstack/react-router";
 import { ChevronRight, Home, SlidersHorizontal, X } from "lucide-react";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { ProductFilters } from "@/components/storefront/ProductFilters";
@@ -12,6 +12,7 @@ const searchSchema = z.object({
   q: z.string().optional(),
   category: z.string().optional(),
   sort: z.string().optional(),
+  page: z.coerce.number().int().min(1).optional(),
 });
 
 export const Route = createFileRoute("/products/")({
@@ -42,24 +43,41 @@ const sortOptions = [
   { label: "Price: Low to High", value: "price_asc" },
   { label: "Best Discount", value: "discount_desc" },
 ];
+const PAGE_SIZE = 24;
 
 function ProductsPage() {
   const search = Route.useSearch();
   const navigate = useNavigate({ from: "/products/" });
+  const page = search.page ?? 1;
 
   // Filter states
-  const [maxPrice, setMaxPrice] = useState(150000);
+  const [maxPrice, setMaxPriceState] = useState(150000);
   const [inStockOnly, setInStockOnly] = useState(false);
   const [selectedBrands, setSelectedBrands] = useState<string[]>([]);
   const [minRating, setMinRating] = useState(0);
   const [minDiscount, setMinDiscount] = useState(0);
   const [mobileFilters, setMobileFilters] = useState(false);
 
+  const resetPage = () => {
+    if (page > 1) void navigate({ search: (previous) => ({ ...previous, page: undefined }) });
+  };
+  const setPage = (nextPage: number) =>
+    void navigate({ search: (previous) => ({ ...previous, page: nextPage > 1 ? nextPage : undefined }) });
+  const setMaxPrice = (value: number) => {
+    resetPage();
+    setMaxPriceState(value);
+  };
+
   const requestQuery = {
-    maxPrice,
+    ...(maxPrice < 150000 ? { maxPrice } : {}),
+    inStockOnly,
+    minRating,
+    minDiscount,
     ...(selectedBrands.length > 0 ? { brand: selectedBrands } : {}),
     ...(search.category ? { category: search.category } : {}),
     ...(search.sort ? { sort: search.sort } : {}),
+    limit: PAGE_SIZE + 1,
+    offset: (page - 1) * PAGE_SIZE,
   };
 
   const query = useQuery({
@@ -69,53 +87,38 @@ function ProductsPage() {
       search.category,
       search.sort,
       maxPrice,
-      selectedBrands,
+      inStockOnly,
+      minRating,
+      minDiscount,
+      [...selectedBrands].sort(),
+      page,
     ],
-    queryFn: () =>
+    queryFn: ({ signal }) =>
       search.q
-        ? api.searchProducts({ ...requestQuery, query: search.q })
-        : api.getProducts(requestQuery),
+        ? api.searchProducts({ ...requestQuery, query: search.q }, signal)
+        : api.getProducts(requestQuery, signal),
     retry: false,
   });
 
-  // Client-side filtering refinement for inStock, minRating, minDiscount
-  const filteredProducts = useMemo(() => {
-    let items = query.data ?? [];
-
-    if (inStockOnly) {
-      items = items.filter((p) => p.inStock !== false);
-    }
-    if (minRating > 0) {
-      items = items.filter((p) => (p.rating ?? 0) >= minRating);
-    }
-    if (minDiscount > 0) {
-      items = items.filter((p) => {
-        const disc =
-          p.discount ??
-          (p.originalPrice && p.originalPrice > p.price
-            ? Math.round((1 - p.price / p.originalPrice) * 100)
-            : 0);
-        return disc >= minDiscount;
-      });
-    }
-
-    return items;
-  }, [query.data, inStockOnly, minRating, minDiscount]);
+  const hasNextPage = (query.data?.length ?? 0) > PAGE_SIZE;
+  const filteredProducts = (query.data ?? []).slice(0, PAGE_SIZE);
 
   const setCategory = (category?: string) =>
-    void navigate({ search: (previous) => ({ ...previous, category }) });
+    void navigate({ search: (previous) => ({ ...previous, category, page: undefined }) });
 
   const setSort = (sort: string) =>
-    void navigate({ search: (previous) => ({ ...previous, sort: sort || undefined }) });
+    void navigate({ search: (previous) => ({ ...previous, sort: sort || undefined, page: undefined }) });
 
   const handleBrandToggle = (brand: string) => {
+    resetPage();
     setSelectedBrands((prev) =>
       prev.includes(brand) ? prev.filter((b) => b !== brand) : [...prev, brand],
     );
   };
 
   const handleClearAll = () => {
-    setMaxPrice(150000);
+    setPage(1);
+    setMaxPriceState(150000);
     setInStockOnly(false);
     setSelectedBrands([]);
     setMinRating(0);
@@ -164,7 +167,7 @@ function ProductsPage() {
           <p className="mt-1 text-xs font-bold text-muted-foreground">
             {query.isLoading
               ? "Loading products…"
-              : `Found ${filteredProducts.length} product${filteredProducts.length === 1 ? "" : "s"}`}
+              : `Showing ${(page - 1) * PAGE_SIZE + (filteredProducts.length ? 1 : 0)}–${(page - 1) * PAGE_SIZE + filteredProducts.length}${hasNextPage ? "+" : ""} products`}
           </p>
         </div>
 
@@ -230,10 +233,10 @@ function ProductsPage() {
               minDiscount={minDiscount}
               onCategoryChange={setCategory}
               onMaxPriceChange={setMaxPrice}
-              onInStockChange={setInStockOnly}
+              onInStockChange={(value) => { resetPage(); setInStockOnly(value); }}
               onBrandToggle={handleBrandToggle}
-              onRatingChange={setMinRating}
-              onDiscountChange={setMinDiscount}
+              onRatingChange={(value) => { resetPage(); setMinRating(value); }}
+              onDiscountChange={(value) => { resetPage(); setMinDiscount(value); }}
               onClearAll={handleClearAll}
             />
           </div>
@@ -247,6 +250,17 @@ function ProductsPage() {
             {...(query.error instanceof Error ? { error: query.error.message } : {})}
             onRetry={() => void query.refetch()}
           />
+          {!query.error && (page > 1 || hasNextPage) && (
+            <nav className="mt-6 flex items-center justify-center gap-4" aria-label="Product pages">
+              <Button variant="outline" disabled={page <= 1} onClick={() => setPage(page - 1)}>
+                Previous
+              </Button>
+              <span className="text-sm font-semibold">Page {page}</span>
+              <Button variant="outline" disabled={!hasNextPage} onClick={() => setPage(page + 1)}>
+                Next
+              </Button>
+            </nav>
+          )}
         </div>
       </div>
 
@@ -280,10 +294,10 @@ function ProductsPage() {
               minDiscount={minDiscount}
               onCategoryChange={setCategory}
               onMaxPriceChange={setMaxPrice}
-              onInStockChange={setInStockOnly}
+              onInStockChange={(value) => { resetPage(); setInStockOnly(value); }}
               onBrandToggle={handleBrandToggle}
-              onRatingChange={setMinRating}
-              onDiscountChange={setMinDiscount}
+              onRatingChange={(value) => { resetPage(); setMinRating(value); }}
+              onDiscountChange={(value) => { resetPage(); setMinDiscount(value); }}
               onClearAll={handleClearAll}
             />
             <Button

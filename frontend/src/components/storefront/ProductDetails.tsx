@@ -85,6 +85,8 @@ export function ProductDetails({ product }: { product: Product }) {
                 <img
                   src={img}
                   alt={`${product.name} view ${idx + 1}`}
+                  loading="lazy"
+                  decoding="async"
                   className="size-full object-contain"
                 />
               </button>

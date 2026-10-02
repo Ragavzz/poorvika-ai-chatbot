@@ -5,9 +5,11 @@ prices, specifications, availability, or ratings.
 """
 
 import logging
+import time
+from datetime import datetime, timezone
 from typing import Optional, List, Dict, Any, Union
 from sqlalchemy import or_, and_, desc, asc
-from sqlalchemy.orm import Session
+from sqlalchemy.orm import Session, load_only
 from app.models.product import Product
 
 logger = logging.getLogger("shopai.tools.product_search")
@@ -93,14 +95,25 @@ class ProductSearchTool:
         min_price: Optional[float] = None,
         max_price: Optional[float] = None,
         in_stock_only: bool = False,
+        min_rating: Optional[float] = None,
+        min_discount: Optional[float] = None,
         sort_by: Optional[str] = None,
         limit: int = 50,
+        offset: int = 0,
+        frontend_only: bool = False,
+        timings: Optional[Dict[str, Any]] = None,
     ) -> List[Dict[str, Any]]:
         """
         Executes a controlled query against PostgreSQL.
         Returns serialized product dictionaries from real database rows.
         """
         stmt = self.db.query(Product)
+        if frontend_only:
+            stmt = stmt.options(load_only(
+                Product.id, Product.name, Product.brand, Product.price, Product.mrp,
+                Product.discount_percent, Product.image, Product.images, Product.category,
+                Product.rating, Product.rating_count, Product.in_stock, Product.flattened_specs,
+            ))
         filters = []
 
         # 1. Category filter (with normalization and parent-to-child mapping)
@@ -137,6 +150,10 @@ class ProductSearchTool:
         # 4. In-stock filter
         if in_stock_only:
             filters.append(Product.in_stock == True)
+        if min_rating is not None and min_rating > 0:
+            filters.append(Product.rating >= min_rating)
+        if min_discount is not None and min_discount > 0:
+            filters.append(Product.discount_percent >= min_discount)
 
         # 5. Text search across name, brand, category, model, description
         if query and query.strip():
@@ -168,18 +185,47 @@ class ProductSearchTool:
 
         # 6. Sorting
         if sort_by == "price_asc":
-            stmt = stmt.order_by(asc(Product.price))
+            stmt = stmt.order_by(asc(Product.price), asc(Product.id))
         elif sort_by == "price_desc":
-            stmt = stmt.order_by(desc(Product.price))
+            stmt = stmt.order_by(desc(Product.price), asc(Product.id))
         elif sort_by in ["rating", "rating_desc"]:
-            stmt = stmt.order_by(desc(Product.rating).nullslast(), desc(Product.rating_count))
+            stmt = stmt.order_by(desc(Product.rating).nullslast(), desc(Product.rating_count), asc(Product.id))
         elif sort_by in ["discount", "discount_desc"]:
-            stmt = stmt.order_by(desc(Product.discount_percent))
+            stmt = stmt.order_by(desc(Product.discount_percent), asc(Product.id))
         else:
             # Default: in-stock first, then rating, then lowest price
-            stmt = stmt.order_by(desc(Product.in_stock), desc(Product.rating).nullslast(), asc(Product.price))
+            stmt = stmt.order_by(
+                desc(Product.in_stock), desc(Product.rating).nullslast(),
+                asc(Product.price), asc(Product.id),
+            )
 
-        results = stmt.limit(max(1, min(limit, 100))).all()
+        query_started = time.perf_counter()
+        if timings is not None:
+            timings["postgres_query_start"] = datetime.now(timezone.utc).isoformat()
+            timings["postgres_query_count"] = timings.get("postgres_query_count", 0) + 1
+        results = stmt.offset(max(0, offset)).limit(max(1, min(limit, 100))).all()
+        if timings is not None:
+            timings["postgres_query_end"] = datetime.now(timezone.utc).isoformat()
+            timings["postgres_query_duration_ms"] = round((time.perf_counter() - query_started) * 1000, 1)
+        if frontend_only:
+            return [
+                {
+                    "id": product.id,
+                    "name": product.name,
+                    "brand": product.brand,
+                    "price": product.price,
+                    "originalPrice": product.mrp,
+                    "discount": product.discount_percent,
+                    "image": product.image,
+                    "images": product.images or ([product.image] if product.image else []),
+                    "category": product.category,
+                    "rating": product.rating,
+                    "reviewCount": product.rating_count,
+                    "inStock": product.in_stock,
+                    "specifications": dict(list((product.flattened_specs or {}).items())[:2]),
+                }
+                for product in results
+            ]
         return [p.to_dict() for p in results]
 
     def get_product_by_id(self, product_id: str) -> Optional[Dict[str, Any]]:

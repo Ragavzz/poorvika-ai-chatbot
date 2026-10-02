@@ -1,0 +1,14 @@
+[
+  {"id":"phones_samsung_budget","user_input":"Show me Samsung phones under 30000"},
+  {"id":"iphones_budget","user_input":"Show me iPhones under 50000"},
+  {"id":"wireless_earphones","user_input":"Do you have wireless earphones?"},
+  {"id":"power_banks","user_input":"Show me power banks"},
+  {"id":"laptops_budget","user_input":"Show me laptops under 50000"},
+  {"id":"sony_model","user_input":"Tell me about Sony MDR-EX15AP"},
+  {"id":"mobile_accessories","user_input":"Show me mobile accessories"},
+  {"id":"products_under_1000","user_input":"Which products are available under 1000?"},
+  {"id":"samsung_products","user_input":"Show me Samsung products"},
+  {"id":"phones_under_20000","user_input":"I need a phone under 20000"},
+  {"id":"headphones_under_2000","user_input":"Find headphones under 2000"},
+  {"id":"apple_accessories","user_input":"Show me Apple accessories"}
+]

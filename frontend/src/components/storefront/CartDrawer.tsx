@@ -124,6 +124,8 @@ export function CartDrawer() {
                       <img
                         src={imageSrc}
                         alt={product.name}
+                        loading="lazy"
+                        decoding="async"
                         className="size-full object-contain"
                       />
                     </Link>

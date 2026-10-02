@@ -1,8 +1,9 @@
+import { memo } from "react";
 import { Link } from "@tanstack/react-router";
 import { Heart, ShoppingCart, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { Product } from "@/services/api";
-import { useCart } from "@/context/CartContext";
+import { useCartActions } from "@/context/CartContext";
 import phoneFallback from "@/assets/category-phone.jpg";
 
 const money = new Intl.NumberFormat("en-IN", {
@@ -11,8 +12,8 @@ const money = new Intl.NumberFormat("en-IN", {
   maximumFractionDigits: 0,
 });
 
-export function ProductCard({ product }: { product: Product }) {
-  const { addToCart } = useCart();
+export const ProductCard = memo(function ProductCard({ product }: { product: Product }) {
+  const { addToCart } = useCartActions();
   const isOutOfStock = product.inStock === false;
 
   const discount =
@@ -57,6 +58,7 @@ export function ProductCard({ product }: { product: Product }) {
             src={product.image || product.images?.[0] || phoneFallback}
             alt={product.name}
             loading="lazy"
+            decoding="async"
             width={480}
             height={480}
             className="size-full object-contain transition duration-300 group-hover:scale-105"
@@ -137,4 +139,4 @@ export function ProductCard({ product }: { product: Product }) {
       </div>
     </article>
   );
-}
+});

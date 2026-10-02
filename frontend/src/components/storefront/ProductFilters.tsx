@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Slider } from "@/components/ui/slider";
 import { Star, RotateCcw } from "lucide-react";
@@ -49,6 +50,14 @@ export function ProductFilters({
   onDiscountChange,
   onClearAll,
 }: ProductFiltersProps) {
+  const [priceDraft, setPriceDraft] = useState(maxPrice);
+  useEffect(() => setPriceDraft(maxPrice), [maxPrice]);
+
+  const choosePrice = (price: number) => {
+    setPriceDraft(price);
+    onMaxPriceChange(price);
+  };
+
   return (
     <aside className="space-y-6 text-sm" aria-label="Product filters">
       {/* Header with Clear All */}
@@ -114,22 +123,23 @@ export function ProductFilters({
             Price Range
           </h3>
           <span className="text-xs font-black text-primary">
-            Up to ₹{maxPrice.toLocaleString("en-IN")}
+            {priceDraft === 150000 ? "Any price" : `Up to ₹${priceDraft.toLocaleString("en-IN")}`}
           </span>
         </div>
         <Slider
           min={100}
           max={150000}
           step={500}
-          value={[maxPrice]}
-          onValueChange={(value) => onMaxPriceChange(value[0] ?? 150000)}
+          value={[priceDraft]}
+          onValueChange={(value) => setPriceDraft(value[0] ?? 150000)}
+          onValueCommit={(value) => choosePrice(value[0] ?? 150000)}
         />
         <div className="mt-3 flex flex-wrap gap-1.5">
           {[1000, 3000, 10000, 50000].map((p) => (
             <button
               key={p}
               type="button"
-              onClick={() => onMaxPriceChange(p)}
+              onClick={() => choosePrice(p)}
               className={`rounded-full px-2 py-0.5 text-[11px] font-bold transition cursor-pointer ${
                 maxPrice === p
                   ? "bg-primary text-white"

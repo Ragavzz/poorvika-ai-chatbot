@@ -1,0 +1,793 @@
+[
+  {
+    "id": "phones_samsung_budget",
+    "question": "Show me Samsung phones under 30000",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.6246,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": null,
+      "category": "Smartphones",
+      "brand": "Samsung",
+      "min_price": null,
+      "max_price": 30000.0,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 0,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:09:42.739893+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:09:47.687404+00:00",
+      "laya_duration_ms": 4947.5,
+      "product_search_start": "2026-10-02T09:09:47.689685+00:00",
+      "postgres_query_start": "2026-10-02T09:09:47.694578+00:00",
+      "postgres_query_count": 1,
+      "postgres_query_end": "2026-10-02T09:09:47.938714+00:00",
+      "postgres_query_duration_ms": 244.2,
+      "product_search_end": "2026-10-02T09:09:47.938765+00:00",
+      "product_search_duration_ms": 249.1,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [],
+    "reference_contexts": [],
+    "response": "I couldn't find matching products in the catalog. Try broadening your search or budget.",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": null,
+          "category": "Smartphones",
+          "brand": "Samsung",
+          "min_price": null,
+          "max_price": 30000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 0,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "iphones_budget",
+    "question": "Show me iPhones under 50000",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.5945,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": "show me iphones under 50000",
+      "category": null,
+      "brand": null,
+      "min_price": null,
+      "max_price": 50000.0,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:09:47.941258+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:09:52.040696+00:00",
+      "laya_duration_ms": 4099.5,
+      "product_search_start": "2026-10-02T09:09:52.040844+00:00",
+      "postgres_query_start": "2026-10-02T09:09:52.063955+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:09:52.079164+00:00",
+      "postgres_query_duration_ms": 15.2,
+      "product_search_end": "2026-10-02T09:09:52.079635+00:00",
+      "product_search_duration_ms": 38.8,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 60.02, \"id\": \"3d-tempered-glass-screen-protector-for-iphone-12-12-pro-black\", \"in_stock\": false, \"model\": \"3D Tempered Glass Screen Protector For Apple iPhone 12/12 Pro\", \"mrp\": 2499.0, \"name\": \"3D Tempered Glass Screen Protector For Apple iPhone 12/12 Pro ( Black )\", \"price\": 999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-blue-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 (Blue,128GB)\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-green-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Green,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-midnight-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Midnight,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-pink-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Pink,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 60.02, \"id\": \"3d-tempered-glass-screen-protector-for-iphone-12-12-pro-black\", \"in_stock\": false, \"model\": \"3D Tempered Glass Screen Protector For Apple iPhone 12/12 Pro\", \"mrp\": 2499.0, \"name\": \"3D Tempered Glass Screen Protector For Apple iPhone 12/12 Pro ( Black )\", \"price\": 999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-blue-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 (Blue,128GB)\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-green-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Green,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-midnight-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Midnight,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-pink-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Pink,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Mobile Phone\", \"discount_percent\": 16.69, \"id\": \"apple-iphone-13-starlight-128gb\", \"in_stock\": false, \"model\": \"Apple iPhone 13\", \"mrp\": 59900.0, \"name\": \"Apple iPhone 13 ( Starlight,128GB )\", \"price\": 49900.0, \"rating\": 4.2, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Pc\", \"category\": \"Cases & Covers\", \"discount_percent\": 79.99, \"id\": \"pc-hard-clear-case-for-apple-iphone-14-transparent\", \"in_stock\": false, \"model\": \"Pc Hard Clear Case For Apple iPhone 14\", \"mrp\": 1499.0, \"name\": \"Pc Hard Clear Case For Apple iPhone 14 ( Transparent )\", \"price\": 300.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Space\", \"category\": \"Cases & Covers\", \"discount_percent\": 66.71, \"id\": \"space-hard-clear-back-case-for-iphone-13\", \"in_stock\": false, \"model\": \"Space Hard Clear Back Case For iPhone 13\", \"mrp\": 1499.0, \"name\": \"Space Hard Clear Back Case For iPhone 13 ( Transparent )\", \"price\": 499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 60.02, \"id\": \"3d-tempered-glass-screen-protector-for-apple-iphone-11-xr-black\", \"in_stock\": false, \"model\": \"3D Tempered Glass Screen Protector for Apple iPhone 11/XR\", \"mrp\": 2499.0, \"name\": \"3D Tempered Glass Screen Protector for Apple iPhone 11/XR ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 31.96, \"id\": \"gripp-clarion-magsafe-case-for-iphone-14-pro-purple\", \"in_stock\": false, \"model\": \"GRIPP Clarion MagSafe Case For iPhone 14 Pro\", \"mrp\": 2190.0, \"name\": \"Gripp Clarion MagSafe Case For iPhone 14 Pro ( Purple )\", \"price\": 1490.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 25.13, \"id\": \"gripp-clear-magsafe-case-with-white-ring-for-iphone-14-transparent\", \"in_stock\": false, \"model\": \"Gripp Clear MagSafe Case With White Ring For iPhone 14\", \"mrp\": 1990.0, \"name\": \"Gripp Clear MagSafe Case With White Ring For iPhone 14 ( Transparent )\", \"price\": 1490.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: 3D Tempered Glass Screen Protector For Apple iPhone 12/12 Pro ( Black ) — ₹999 (out of stock); Apple iPhone 13 (Blue,128GB) — ₹49,900 (out of stock); Apple iPhone 13 ( Green,128GB ) — ₹49,900 (out of stock); Apple iPhone 13 ( Midnight,128GB ) — ₹49,900 (out of stock); Apple iPhone 13 ( Pink,128GB ) — ₹49,900 (out of stock).\n\n[[SHOPAI_PRODUCTS:3d-tempered-glass-screen-protector-for-iphone-12-12-pro-black,apple-iphone-13-blue-128gb,apple-iphone-13-green-128gb,apple-iphone-13-midnight-128gb,apple-iphone-13-pink-128gb]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "show me iphones under 50000",
+          "category": null,
+          "brand": null,
+          "min_price": null,
+          "max_price": 50000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "wireless_earphones",
+    "question": "Do you have wireless earphones?",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.325,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": "do you have wireless earphones?",
+      "category": null,
+      "brand": null,
+      "min_price": null,
+      "max_price": null,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:09:52.081593+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:09:54.099368+00:00",
+      "laya_duration_ms": 2017.8,
+      "product_search_start": "2026-10-02T09:09:54.099467+00:00",
+      "postgres_query_start": "2026-10-02T09:09:54.118736+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:09:54.135834+00:00",
+      "postgres_query_duration_ms": 17.1,
+      "product_search_end": "2026-10-02T09:09:54.136545+00:00",
+      "product_search_duration_ms": 37.1,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.02, \"id\": \"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Wireless Charger 15W\", \"mrp\": 4500.0, \"name\": \"Apple MagSafe Wireless Charger 15W ( White )\", \"price\": 4499.0, \"rating\": 4.8, \"rating_count\": 71, \"stock\": 1}, {\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 30.79, \"id\": \"sony-wf-c700n-truly-wireless-headphones-black\", \"in_stock\": true, \"model\": \"Sony WF-C700N Truly Wireless Headphones\", \"mrp\": 12990.0, \"name\": \"Sony WF-C700N Truly Wireless Headphones ( Black )\", \"price\": 8990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 3}, {\"brand\": \"OnePlus\", \"category\": \"Headphones\", \"discount_percent\": 21.75, \"id\": \"oneplus-bullets-wireless-z2-bluetooth-headset-magico-black\", \"in_stock\": false, \"model\": \"OnePlus Bullets Wireless Z2 Bluetooth Headset\", \"mrp\": 2299.0, \"name\": \"OnePlus Bullets Wireless Z2 Bluetooth Headset ( Magico Black )\", \"price\": 1799.0, \"rating\": 5.0, \"rating_count\": 2, \"stock\": 0}, {\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 50.06, \"id\": \"sony-wf-c500-truly-wireless-headphones-black\", \"in_stock\": false, \"model\": \"Sony WF-C500 Truly Wireless Headphones\", \"mrp\": 8990.0, \"name\": \"Sony WF-C500 Truly Wireless Headphones ( Black )\", \"price\": 4490.0, \"rating\": 5.0, \"rating_count\": 56, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Headphones\", \"discount_percent\": 30.24, \"id\": \"apple-airpods-2-true-wireless-white-mv7n2hn-a\", \"in_stock\": false, \"model\": \"Apple AirPods 2 True Wireless\", \"mrp\": 12900.0, \"name\": \"Apple AirPods 2 True Wireless ( White )\", \"price\": 8999.0, \"rating\": 4.9, \"rating_count\": 37, \"stock\": 0}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.02, \"id\": \"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Wireless Charger 15W\", \"mrp\": 4500.0, \"name\": \"Apple MagSafe Wireless Charger 15W ( White )\", \"price\": 4499.0, \"rating\": 4.8, \"rating_count\": 71, \"stock\": 1}, {\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 30.79, \"id\": \"sony-wf-c700n-truly-wireless-headphones-black\", \"in_stock\": true, \"model\": \"Sony WF-C700N Truly Wireless Headphones\", \"mrp\": 12990.0, \"name\": \"Sony WF-C700N Truly Wireless Headphones ( Black )\", \"price\": 8990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 3}, {\"brand\": \"OnePlus\", \"category\": \"Headphones\", \"discount_percent\": 21.75, \"id\": \"oneplus-bullets-wireless-z2-bluetooth-headset-magico-black\", \"in_stock\": false, \"model\": \"OnePlus Bullets Wireless Z2 Bluetooth Headset\", \"mrp\": 2299.0, \"name\": \"OnePlus Bullets Wireless Z2 Bluetooth Headset ( Magico Black )\", \"price\": 1799.0, \"rating\": 5.0, \"rating_count\": 2, \"stock\": 0}, {\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 50.06, \"id\": \"sony-wf-c500-truly-wireless-headphones-black\", \"in_stock\": false, \"model\": \"Sony WF-C500 Truly Wireless Headphones\", \"mrp\": 8990.0, \"name\": \"Sony WF-C500 Truly Wireless Headphones ( Black )\", \"price\": 4490.0, \"rating\": 5.0, \"rating_count\": 56, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Headphones\", \"discount_percent\": 30.24, \"id\": \"apple-airpods-2-true-wireless-white-mv7n2hn-a\", \"in_stock\": false, \"model\": \"Apple AirPods 2 True Wireless\", \"mrp\": 12900.0, \"name\": \"Apple AirPods 2 True Wireless ( White )\", \"price\": 8999.0, \"rating\": 4.9, \"rating_count\": 37, \"stock\": 0}, {\"brand\": \"Realme\", \"category\": \"Electronics\", \"discount_percent\": 56.69, \"id\": \"realme-buds-wireless-2-neo-rma-2011-blue\", \"in_stock\": false, \"model\": \"Realme Buds Wireless 2 Neo RMA 2011\", \"mrp\": 2999.0, \"name\": \"Realme Buds Wireless 2 Neo RMA 2011 ( Blue )\", \"price\": 1299.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Realme\", \"category\": \"Headphones\", \"discount_percent\": 48.02, \"id\": \"realme-buds-wireless-3-neo-dark-black\", \"in_stock\": false, \"model\": \"Realme Buds Wireless 3 Neo\", \"mrp\": 2499.0, \"name\": \"Realme Buds Wireless 3 Neo ( Dark Black )\", \"price\": 1299.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Realme\", \"category\": \"Headphones\", \"discount_percent\": 48.02, \"id\": \"realme-buds-wireless-3-neo-dark-blue\", \"in_stock\": false, \"model\": \"Realme Buds Wireless 3 Neo\", \"mrp\": 2499.0, \"name\": \"Realme Buds Wireless 3 Neo ( Dark Blue )\", \"price\": 1299.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 71.96, \"id\": \"boat-airdopes-ultra-plus-wireless-earbuds-active-black\", \"in_stock\": false, \"model\": \"Boat Airdopes Ultra Plus Wireless Earbuds\", \"mrp\": 4990.0, \"name\": \"Boat Airdopes Ultra Plus Wireless Earbuds ( Active Black )\", \"price\": 1399.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 71.96, \"id\": \"boat-airdopes-ultra-plus-wireless-earbuds-olive-slate\", \"in_stock\": false, \"model\": \"Boat Airdopes Ultra Plus Wireless Earbuds\", \"mrp\": 4990.0, \"name\": \"Boat Airdopes Ultra Plus Wireless Earbuds ( Olive Slate )\", \"price\": 1399.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Noise\", \"category\": \"Headphones\", \"discount_percent\": 62.52, \"id\": \"noise-buds-connect-truly-wireless-mint-green\", \"in_stock\": false, \"model\": \"Noise Buds Connect Truly Wireless\", \"mrp\": 3999.0, \"name\": \"Noise Buds Connect Truly Wireless ( Mint Green )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 64.39, \"id\": \"boat-airdopes-170-true-wireless-frost-white\", \"in_stock\": false, \"model\": \"Boat Airdopes 170 True Wireless\", \"mrp\": 4490.0, \"name\": \"Boat Airdopes 170 True Wireless ( Frost White )\", \"price\": 1599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Ambrane\", \"category\": \"Power Banks\", \"discount_percent\": 57.51, \"id\": \"ambrane-aerosync-pb-10-15w-wireless-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Ambrane AeroSync PB 10 15W Wireless 10000 mAh Power Bank\", \"mrp\": 3999.0, \"name\": \"Ambrane AeroSync PB 10 15W Wireless 10000 mAh Power Bank ( Black )\", \"price\": 1699.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"OnePlus\", \"category\": \"Headphones\", \"discount_percent\": 4.35, \"id\": \"oneplus-nord-buds-2r-true-wireless-deep-grey\", \"in_stock\": false, \"model\": \"OnePlus Nord Buds 2R True Wireless\", \"mrp\": 2299.0, \"name\": \"OnePlus Nord Buds 2R True Wireless ( Deep Grey )\", \"price\": 2199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"OnePlus\", \"category\": \"Headphones\", \"discount_percent\": 4.35, \"id\": \"oneplus-nord-buds-2r-true-wireless-misty-grey\", \"in_stock\": false, \"model\": \"OnePlus Nord Buds 2R True Wireless\", \"mrp\": 2299.0, \"name\": \"OnePlus Nord Buds 2R True Wireless ( Misty Grey )\", \"price\": 2199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 59.95, \"id\": \"boat-airdopes-bliss-anc-true-wireless-pristine-white\", \"in_stock\": false, \"model\": \"Boat Airdopes Bliss ANC True Wireless\", \"mrp\": 5990.0, \"name\": \"Boat Airdopes Bliss ANC True Wireless ( Pristine White )\", \"price\": 2399.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: Apple MagSafe Wireless Charger 15W ( White ) — ₹4,499 (in stock); Sony WF-C700N Truly Wireless Headphones ( Black ) — ₹8,990 (in stock); OnePlus Bullets Wireless Z2 Bluetooth Headset ( Magico Black ) — ₹1,799 (out of stock); Sony WF-C500 Truly Wireless Headphones ( Black ) — ₹4,490 (out of stock); Apple AirPods 2 True Wireless ( White ) — ₹8,999 (out of stock).\n\n[[SHOPAI_PRODUCTS:apple-magsafe-wireless-charger-15w-white-mhxh3zm-a,sony-wf-c700n-truly-wireless-headphones-black,oneplus-bullets-wireless-z2-bluetooth-headset-magico-black,sony-wf-c500-truly-wireless-headphones-black,apple-airpods-2-true-wireless-white-mv7n2hn-a]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "do you have wireless earphones?",
+          "category": null,
+          "brand": null,
+          "min_price": null,
+          "max_price": null,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "power_banks",
+    "question": "Show me power banks",
+    "laya_intent": "cart_action",
+    "laya_confidence": 0.2824,
+    "intent_action": "product_search (recovered from cart_action)",
+    "extracted_filters": {
+      "query": "power banks",
+      "category": "Power Banks",
+      "brand": null,
+      "min_price": null,
+      "max_price": null,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:09:54.138455+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:09:56.301671+00:00",
+      "laya_duration_ms": 2163.2,
+      "product_search_start": "2026-10-02T09:09:56.301771+00:00",
+      "postgres_query_start": "2026-10-02T09:09:56.311028+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:09:56.317764+00:00",
+      "postgres_query_duration_ms": 6.8,
+      "product_search_end": "2026-10-02T09:09:56.318467+00:00",
+      "product_search_duration_ms": 16.7,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 64.03, \"id\": \"conekt-zeal-proton-pro-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal Proton Pro 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal Proton Pro 10000 mAh Power Bank ( Black )\", \"price\": 899.0, \"rating\": 5.0, \"rating_count\": 77, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 35.02, \"id\": \"mi-10000-mah-power-bank-3i-black\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Power Bank 3i\", \"mrp\": 1999.0, \"name\": \"Mi 10000 mAh Power Bank 3i ( Black )\", \"price\": 1299.0, \"rating\": 5.0, \"rating_count\": 120, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 35.02, \"id\": \"mi-10000-mah-power-bank-3i-blue\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Power Bank 3i\", \"mrp\": 1999.0, \"name\": \"Mi 10000 mAh Power Bank 3i ( Blue )\", \"price\": 1299.0, \"rating\": 5.0, \"rating_count\": 120, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 37.05, \"id\": \"mi-10000-mah-pocket-power-bank-pro-black\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Pocket Power Bank Pro\", \"mrp\": 2699.0, \"name\": \"Mi 10000 mAh Pocket Power Bank Pro ( Black )\", \"price\": 1699.0, \"rating\": 4.9, \"rating_count\": 34, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 78.6, \"id\": \"lapcare-bolt-1-10000-mah-power-bank-black-yellow\", \"in_stock\": false, \"model\": \"Lapcare Bolt I 10000 mAh Power Bank\", \"mrp\": 2799.0, \"name\": \"Lapcare Bolt 1 10000 mAh Power Bank ( Black Yellow )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 64.03, \"id\": \"conekt-zeal-proton-pro-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal Proton Pro 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal Proton Pro 10000 mAh Power Bank ( Black )\", \"price\": 899.0, \"rating\": 5.0, \"rating_count\": 77, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 35.02, \"id\": \"mi-10000-mah-power-bank-3i-black\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Power Bank 3i\", \"mrp\": 1999.0, \"name\": \"Mi 10000 mAh Power Bank 3i ( Black )\", \"price\": 1299.0, \"rating\": 5.0, \"rating_count\": 120, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 35.02, \"id\": \"mi-10000-mah-power-bank-3i-blue\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Power Bank 3i\", \"mrp\": 1999.0, \"name\": \"Mi 10000 mAh Power Bank 3i ( Blue )\", \"price\": 1299.0, \"rating\": 5.0, \"rating_count\": 120, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 37.05, \"id\": \"mi-10000-mah-pocket-power-bank-pro-black\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Pocket Power Bank Pro\", \"mrp\": 2699.0, \"name\": \"Mi 10000 mAh Pocket Power Bank Pro ( Black )\", \"price\": 1699.0, \"rating\": 4.9, \"rating_count\": 34, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 78.6, \"id\": \"lapcare-bolt-1-10000-mah-power-bank-black-yellow\", \"in_stock\": false, \"model\": \"Lapcare Bolt I 10000 mAh Power Bank\", \"mrp\": 2799.0, \"name\": \"Lapcare Bolt 1 10000 mAh Power Bank ( Black Yellow )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 64.03, \"id\": \"conekt-zeal-run-plus-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal Run Plus 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal Run Plus 10000 mAh Power Bank ( Black )\", \"price\": 899.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 60.02, \"id\": \"conekt-zeal-qc-18w-pd-22-5w-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal QC 18W PD 22.5W 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal QC 18W PD 22.5W 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 37.52, \"id\": \"lapcare-blaze-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Lapcare Blaze 10000 mAh Power Bank\", \"mrp\": 1599.0, \"name\": \"Lapcare Blaze 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Swiss Military\", \"category\": \"Power Banks\", \"discount_percent\": 79.14, \"id\": \"swiss-military-electra-10k-a-qc-pd-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Swiss Military Electra 10K/A QC PD 10000 mAh Power Bank\", \"mrp\": 4790.0, \"name\": \"Swiss Military Electra 10K/A QC PD 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Ambrane\", \"category\": \"Power Banks\", \"discount_percent\": 33.35, \"id\": \"ambrane-neos-11-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Ambrane Neos 11 10000 mAh Power Bank\", \"mrp\": 1799.0, \"name\": \"Ambrane Neos 11 10000 mAh Power Bank ( Black )\", \"price\": 1199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 62.52, \"id\": \"conekt-zeal-qc-18w-pd-22-5w-20000mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal QC 18W PD 22.5W 20000mAh Power Bank\", \"mrp\": 3999.0, \"name\": \"Conekt Zeal QC 18W PD 22.5W 20000 mAh Power Bank ( Black )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Ambrane\", \"category\": \"Power Banks\", \"discount_percent\": 57.51, \"id\": \"ambrane-aerosync-pb-10-15w-wireless-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Ambrane AeroSync PB 10 15W Wireless 10000 mAh Power Bank\", \"mrp\": 3999.0, \"name\": \"Ambrane AeroSync PB 10 15W Wireless 10000 mAh Power Bank ( Black )\", \"price\": 1699.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 63.28, \"id\": \"lapcare-bolt-pro-20000-mah-power-bank-black-yellow\", \"in_stock\": false, \"model\": \"Lapcare Bolt Pro 20000 mAh Power Bank\", \"mrp\": 4899.0, \"name\": \"Lapcare Bolt Pro 20000 mAh Power Bank ( Black Yellow )\", \"price\": 1799.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: Conekt Zeal Proton Pro 10000 mAh Power Bank ( Black ) — ₹899 (out of stock); Mi 10000 mAh Power Bank 3i ( Black ) — ₹1,299 (out of stock); Mi 10000 mAh Power Bank 3i ( Blue ) — ₹1,299 (out of stock); Mi 10000 mAh Pocket Power Bank Pro ( Black ) — ₹1,699 (out of stock); Lapcare Bolt 1 10000 mAh Power Bank ( Black Yellow ) — ₹599 (out of stock).\n\n[[SHOPAI_PRODUCTS:conekt-zeal-proton-pro-10000-mah-power-bank-black,mi-10000-mah-power-bank-3i-black,mi-10000-mah-power-bank-3i-blue,mi-10000-mah-pocket-power-bank-pro-black,lapcare-bolt-1-10000-mah-power-bank-black-yellow]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "power banks",
+          "category": "Power Banks",
+          "brand": null,
+          "min_price": null,
+          "max_price": null,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "laptops_budget",
+    "question": "Show me laptops under 50000",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.3519,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": "laptops",
+      "category": "Laptops",
+      "brand": null,
+      "min_price": null,
+      "max_price": 50000.0,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 0,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:09:56.320410+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:09:58.768184+00:00",
+      "laya_duration_ms": 2447.8,
+      "product_search_start": "2026-10-02T09:09:58.768288+00:00",
+      "postgres_query_start": "2026-10-02T09:09:58.768728+00:00",
+      "postgres_query_count": 1,
+      "postgres_query_end": "2026-10-02T09:09:58.773315+00:00",
+      "postgres_query_duration_ms": 4.6,
+      "product_search_end": "2026-10-02T09:09:58.773343+00:00",
+      "product_search_duration_ms": 5.1,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [],
+    "reference_contexts": [],
+    "response": "I couldn't find matching products in the catalog. Try broadening your search or budget.",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "laptops",
+          "category": "Laptops",
+          "brand": null,
+          "min_price": null,
+          "max_price": 50000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 0,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [
+      {
+        "purpose": "same filters without free-text term",
+        "filters": {
+          "query": null,
+          "category": "Laptops",
+          "brand": null,
+          "min_price": null,
+          "max_price": 50000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "match_count": 0
+      }
+    ],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "sony_model",
+    "question": "Tell me about Sony MDR-EX15AP",
+    "laya_intent": "product_details",
+    "laya_confidence": 0.3722,
+    "intent_action": "product_details",
+    "extracted_filters": {
+      "query": "tell mdr ex15ap",
+      "brand": "Sony",
+      "category": null,
+      "limit": 1
+    },
+    "product_search_result_count": 1,
+    "actual_ollama_called": true,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:09:58.778245+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:00.645797+00:00",
+      "laya_duration_ms": 1867.6,
+      "ollama_call_count": 1,
+      "ollama_start": "2026-10-02T09:10:00.660182+00:00",
+      "ollama_prompt_chars": 503,
+      "ollama_prompt_build_ms": 0.0,
+      "ollama_end": "2026-10-02T09:10:03.518768+00:00",
+      "ollama_duration_ms": 2858.6,
+      "ollama_http_duration_ms": 2858.6,
+      "ollama_model_load_ms": 14.5456,
+      "ollama_prompt_eval_ms": 229.12,
+      "ollama_generation_ms": 579.269,
+      "ollama_server_total_ms": 836.1172,
+      "ollama_client_overhead_ms": 2022.5
+    },
+    "case_classification": "B",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 6.85, \"id\": \"sony-mdr-ex15ap-earphone-black\", \"in_stock\": true, \"model\": \"Sony MDR-EX15AP Earphone\", \"mrp\": 890.0, \"name\": \"Sony MDR-EX15AP Earphone ( Black )\", \"price\": 829.0, \"rating\": 5.0, \"rating_count\": 153, \"stock\": 316}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 6.85, \"id\": \"sony-mdr-ex15ap-earphone-black\", \"in_stock\": true, \"model\": \"Sony MDR-EX15AP Earphone\", \"mrp\": 890.0, \"name\": \"Sony MDR-EX15AP Earphone ( Black )\", \"price\": 829.0, \"rating\": 5.0, \"rating_count\": 153, \"stock\": 316}]}"
+    ],
+    "response": "The Sony MDR-EX15AP Earphone ( Black ) is priced at ₹829.0 and is currently in stock.",
+    "response_source": "ollama",
+    "evaluation_status": "success",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "tell mdr ex15ap",
+          "brand": "Sony",
+          "category": null,
+          "limit": 1
+        },
+        "result_count": 1,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7510140325375531,
+    "context_precision": 0.9999999999,
+    "context_recall": 1.0
+  },
+  {
+    "id": "mobile_accessories",
+    "question": "Show me mobile accessories",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.2194,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": null,
+      "category": "accessories",
+      "brand": null,
+      "min_price": null,
+      "max_price": null,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:10:03.520644+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:05.565974+00:00",
+      "laya_duration_ms": 2045.4,
+      "product_search_start": "2026-10-02T09:10:05.566081+00:00",
+      "postgres_query_start": "2026-10-02T09:10:05.575360+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:10:05.597978+00:00",
+      "postgres_query_duration_ms": 22.6,
+      "product_search_end": "2026-10-02T09:10:05.600427+00:00",
+      "product_search_duration_ms": 34.4,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"SanDisk\", \"category\": \"Pendrives\", \"discount_percent\": 61.13, \"id\": \"sandisk-64gb-ultra-dual-drive-luxe-usb-type-c-steel\", \"in_stock\": true, \"model\": \"SanDisk Ultra Dual Drive Luxe USB Type C\", \"mrp\": 5400.0, \"name\": \"SanDisk Ultra Dual Drive Luxe USB Type C ( Silver,64GB )\", \"price\": 2099.0, \"rating\": 5.0, \"rating_count\": 347, \"stock\": 26}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.02, \"id\": \"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Wireless Charger 15W\", \"mrp\": 4500.0, \"name\": \"Apple MagSafe Wireless Charger 15W ( White )\", \"price\": 4499.0, \"rating\": 4.8, \"rating_count\": 71, \"stock\": 1}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-magsafe-power-adapter-45w-for-macbook-air-white-mc747hn-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Power Adapter 45W For MacBook Air\", \"mrp\": 7800.0, \"name\": \"Apple MagSafe Power Adapter 45W For MacBook Air ( White )\", \"price\": 7800.0, \"rating\": 4.8, \"rating_count\": 6, \"stock\": 1}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.18, \"id\": \"samsung-type-c-data-cable-black-ep-dg930ibegin\", \"in_stock\": true, \"model\": \"Samsung Type-C Data Cable\", \"mrp\": 550.0, \"name\": \"Samsung Type-C Data Cable ( Black )\", \"price\": 549.0, \"rating\": 4.7, \"rating_count\": 54, \"stock\": 2215}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"samsung-usb-c-to-usb-c-data-cable-black-ep-da705bbegin1\", \"in_stock\": true, \"model\": \"Samsung USB-C to USB-C Data Cable\", \"mrp\": 599.0, \"name\": \"Samsung USB-C to USB-C Data Cable ( Black )\", \"price\": 599.0, \"rating\": 4.6, \"rating_count\": 25, \"stock\": 2617}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"SanDisk\", \"category\": \"Pendrives\", \"discount_percent\": 61.13, \"id\": \"sandisk-64gb-ultra-dual-drive-luxe-usb-type-c-steel\", \"in_stock\": true, \"model\": \"SanDisk Ultra Dual Drive Luxe USB Type C\", \"mrp\": 5400.0, \"name\": \"SanDisk Ultra Dual Drive Luxe USB Type C ( Silver,64GB )\", \"price\": 2099.0, \"rating\": 5.0, \"rating_count\": 347, \"stock\": 26}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.02, \"id\": \"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Wireless Charger 15W\", \"mrp\": 4500.0, \"name\": \"Apple MagSafe Wireless Charger 15W ( White )\", \"price\": 4499.0, \"rating\": 4.8, \"rating_count\": 71, \"stock\": 1}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-magsafe-power-adapter-45w-for-macbook-air-white-mc747hn-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Power Adapter 45W For MacBook Air\", \"mrp\": 7800.0, \"name\": \"Apple MagSafe Power Adapter 45W For MacBook Air ( White )\", \"price\": 7800.0, \"rating\": 4.8, \"rating_count\": 6, \"stock\": 1}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.18, \"id\": \"samsung-type-c-data-cable-black-ep-dg930ibegin\", \"in_stock\": true, \"model\": \"Samsung Type-C Data Cable\", \"mrp\": 550.0, \"name\": \"Samsung Type-C Data Cable ( Black )\", \"price\": 549.0, \"rating\": 4.7, \"rating_count\": 54, \"stock\": 2215}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"samsung-usb-c-to-usb-c-data-cable-black-ep-da705bbegin1\", \"in_stock\": true, \"model\": \"Samsung USB-C to USB-C Data Cable\", \"mrp\": 599.0, \"name\": \"Samsung USB-C to USB-C Data Cable ( Black )\", \"price\": 599.0, \"rating\": 4.6, \"rating_count\": 25, \"stock\": 2617}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"samsung-usb-c-to-usb-c-data-cable-white-ep-da705bwegin\", \"in_stock\": true, \"model\": \"Samsung USB-C to USB-C Data Cable\", \"mrp\": 599.0, \"name\": \"Samsung USB-C to USB-C Data Cable ( White )\", \"price\": 599.0, \"rating\": 4.6, \"rating_count\": 25, \"stock\": 1691}, {\"brand\": \"Conekt\", \"category\": \"Data Cables\", \"discount_percent\": 40.16, \"id\": \"conekt-ace-go-micro-data-cable-black\", \"in_stock\": true, \"model\": \"Conekt ACE - GO Micro Data Cable\", \"mrp\": 249.0, \"name\": \"Conekt ACE - GO Micro Data Cable ( Black )\", \"price\": 149.0, \"rating\": 4.5, \"rating_count\": 123, \"stock\": 3}, {\"brand\": \"Conekt\", \"category\": \"Data Cables\", \"discount_percent\": 50.13, \"id\": \"conekt-ace-go-type-c-data-cable-white\", \"in_stock\": true, \"model\": \"Conekt ACE - GO Type C Data Cable\", \"mrp\": 399.0, \"name\": \"Conekt ACE - GO Type C Data Cable ( White )\", \"price\": 199.0, \"rating\": 4.5, \"rating_count\": 43, \"stock\": 6}, {\"brand\": \"Boat\", \"category\": \"Data Cables\", \"discount_percent\": 60.12, \"id\": \"boat-a320-braided-skin-usb-to-type-c-150cm-data-cable-black\", \"in_stock\": true, \"model\": \"Boat A320 Braided Skin USB to Type C 150cm Data Cable\", \"mrp\": 499.0, \"name\": \"Boat A320 Braided Skin USB to Type C 150cm Data Cable ( Black )\", \"price\": 199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 19}, {\"brand\": \"Conekt\", \"category\": \"Battery Chargers\", \"discount_percent\": 40.04, \"id\": \"conekt-20w-pd-and-18w-dual-port-charger-with-micro-cable-white\", \"in_stock\": true, \"model\": \"Conekt 20W PD and 18W Dual Port Charger with Micro Cable\", \"mrp\": 999.0, \"name\": \"Conekt 20W PD and 18W Dual Port Charger with Micro Cable ( White )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 48}, {\"brand\": \"Conekt\", \"category\": \"Battery Chargers\", \"discount_percent\": 46.19, \"id\": \"conekt-20w-pd-and-18w-dual-port-charger-with-type-c-cable-white\", \"in_stock\": true, \"model\": \"Conekt 20W PD and 18W Dual Port Charger with Type-C Cable\", \"mrp\": 1299.0, \"name\": \"Conekt 20W PD and 18W Dual Port Charger with Type-C Cable ( White )\", \"price\": 699.0, \"rating\": null, \"rating_count\": 0, \"stock\": 34}, {\"brand\": \"Zebronics\", \"category\": \"Data Cables\", \"discount_percent\": 40.02, \"id\": \"zebronics-zeb-ta700-7-in-1-type-c-multiport-adapter-grey\", \"in_stock\": true, \"model\": \"Zebronics ZEB-TA700 - 7 in 1 Type C Multiport Adapter\", \"mrp\": 2499.0, \"name\": \"Zebronics ZEB-TA700 - 7 in 1 Type C Multiport Adapter ( Grey )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 8}, {\"brand\": \"SanDisk\", \"category\": \"Pendrives\", \"discount_percent\": 51.43, \"id\": \"sandisk-64gb-dual-drive-3-transparent\", \"in_stock\": false, \"model\": \"SanDisk Dual Drive - 3\", \"mrp\": 1400.0, \"name\": \"SanDisk Dual Drive - 3 ( Transparent,64GB )\", \"price\": 680.0, \"rating\": 5.0, \"rating_count\": 226, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 64.03, \"id\": \"conekt-zeal-proton-pro-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal Proton Pro 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal Proton Pro 10000 mAh Power Bank ( Black )\", \"price\": 899.0, \"rating\": 5.0, \"rating_count\": 77, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 35.02, \"id\": \"mi-10000-mah-power-bank-3i-black\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Power Bank 3i\", \"mrp\": 1999.0, \"name\": \"Mi 10000 mAh Power Bank 3i ( Black )\", \"price\": 1299.0, \"rating\": 5.0, \"rating_count\": 120, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 35.02, \"id\": \"mi-10000-mah-power-bank-3i-blue\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Power Bank 3i\", \"mrp\": 1999.0, \"name\": \"Mi 10000 mAh Power Bank 3i ( Blue )\", \"price\": 1299.0, \"rating\": 5.0, \"rating_count\": 120, \"stock\": 0}, {\"brand\": \"SanDisk\", \"category\": \"Memory Cards\", \"discount_percent\": 40.72, \"id\": \"sandisk-1tb-extreme-160mb-s-u3-a2-microsdxc-memory-card\", \"in_stock\": false, \"model\": \"SanDisk Extreme 160MB/S U3 A2 MicroSDXC Memory Card\", \"mrp\": 28000.0, \"name\": \"SanDisk Extreme 160MB/S U3 A2 MicroSDXC Memory Card ( 1TB )\", \"price\": 16599.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.22, \"id\": \"apple-lightning-to-3-5mm-headphone-jack-adaptor-mmx62zm-a\", \"in_stock\": false, \"model\": \"Apple Lightning to 3.5mm Headphone Jack Adaptor\", \"mrp\": 900.0, \"name\": \"Apple Lightning to 3.5mm Headphone Jack Adaptor ( White )\", \"price\": 898.0, \"rating\": 4.9, \"rating_count\": 58, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-3-5mm-headphone-jack-adapter-white-mu7e2zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C to 3.5mm Headphone Jack Adapter\", \"mrp\": 900.0, \"name\": \"Apple USB-C to 3.5mm Headphone Jack Adapter ( White )\", \"price\": 900.0, \"rating\": 4.9, \"rating_count\": 17, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 15.79, \"id\": \"apple-usb-c-to-usb-adapter-white-mj1m2zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C To USB Adapter\", \"mrp\": 1900.0, \"name\": \"Apple USB-C To USB Adapter ( White )\", \"price\": 1600.0, \"rating\": 4.9, \"rating_count\": 7, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Power Banks\", \"discount_percent\": 37.05, \"id\": \"mi-10000-mah-pocket-power-bank-pro-black\", \"in_stock\": false, \"model\": \"Mi 10000 mAh Pocket Power Bank Pro\", \"mrp\": 2699.0, \"name\": \"Mi 10000 mAh Pocket Power Bank Pro ( Black )\", \"price\": 1699.0, \"rating\": 4.9, \"rating_count\": 34, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-lightning-to-usb-cable-1m-white-mxly2zm-a\", \"in_stock\": false, \"model\": \"Apple Lightning To USB Cable 1m\", \"mrp\": 1800.0, \"name\": \"Apple Lightning To USB Cable 1m ( White )\", \"price\": 1800.0, \"rating\": 4.9, \"rating_count\": 44, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.58, \"id\": \"apple-usb-c-power-adapter-20w-white-mhjd3hn-a\", \"in_stock\": false, \"model\": \"Apple USB-C Power Adapter 20W\", \"mrp\": 1900.0, \"name\": \"Apple USB-C Power Adapter 20W ( White ) MHJD3HN/A\", \"price\": 1889.0, \"rating\": 4.9, \"rating_count\": 201, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-digital-av-multiport-adapter-white-muf82zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C Digital AV Multiport Adapter\", \"mrp\": 6900.0, \"name\": \"Apple USB-C Digital AV Multiport Adapter ( White )\", \"price\": 6900.0, \"rating\": 4.9, \"rating_count\": 7, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Battery Chargers\", \"discount_percent\": 31.16, \"id\": \"mi-18w-dual-port-charger-black\", \"in_stock\": false, \"model\": \"Mi 18W Dual Port Charger\", \"mrp\": 799.0, \"name\": \"Mi 18W Dual Port Charger ( Black )\", \"price\": 550.0, \"rating\": 4.8, \"rating_count\": 110, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Battery Chargers\", \"discount_percent\": 25.04, \"id\": \"mi-2a-fast-charger-with-cable-black\", \"in_stock\": false, \"model\": \"Mi 2A Fast Charger with Cable\", \"mrp\": 599.0, \"name\": \"Mi 2A Fast Charger with Cable ( Black )\", \"price\": 449.0, \"rating\": 4.7, \"rating_count\": 62, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 23.54, \"id\": \"samsung-25w-charger-white-ep-ta800nbegin\", \"in_stock\": false, \"model\": \"Samsung 25W Travel Adapter\", \"mrp\": 1699.0, \"name\": \"Samsung 25W Travel Adapter ( White )\", \"price\": 1299.0, \"rating\": 4.7, \"rating_count\": 67, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 23.34, \"id\": \"samsung-35w-power-adapter-duo-ta220-black-ep-ta220nbngin\", \"in_stock\": false, \"model\": \"Samsung 35W Power Adapter Duo TA220\", \"mrp\": 2999.0, \"name\": \"Samsung 35W Power Adapter Duo TA220 ( Black )\", \"price\": 2299.0, \"rating\": 4.7, \"rating_count\": 69, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-magsafe-2-power-adapter-60w-for-macbook-pro-white-md565hn-a\", \"in_stock\": false, \"model\": \"Apple MagSafe 2 Power Adapter 60W For MacBook Pro\", \"mrp\": 7500.0, \"name\": \"Apple MagSafe 2 Power Adapter 60W For MacBook Pro ( White )\", \"price\": 7500.0, \"rating\": 4.7, \"rating_count\": 3, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Data Cables\", \"discount_percent\": 30.06, \"id\": \"conekt-ace-go-lightning-data-cable-white\", \"in_stock\": false, \"model\": \"Conekt ACE - GO Lightning Data Cable\", \"mrp\": 499.0, \"name\": \"Conekt ACE - GO Lightning Data Cable ( White )\", \"price\": 349.0, \"rating\": 4.6, \"rating_count\": 32, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Data Cables\", \"discount_percent\": 12.53, \"id\": \"mi-braided-usb-type-c-data-cable-black\", \"in_stock\": false, \"model\": \"Mi Braided USB Type-C Data Cable\", \"mrp\": 399.0, \"name\": \"Mi Braided USB Type-C Data Cable ( Black )\", \"price\": 349.0, \"rating\": 4.6, \"rating_count\": 29, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Data Cables\", \"discount_percent\": 12.53, \"id\": \"mi-braided-usb-type-c-data-cable-red\", \"in_stock\": false, \"model\": \"Mi Braided USB Type-C Data Cable\", \"mrp\": 399.0, \"name\": \"Mi Braided USB Type-C Data Cable ( Red )\", \"price\": 349.0, \"rating\": 4.6, \"rating_count\": 29, \"stock\": 0}, {\"brand\": \"PowerUp\", \"category\": \"Battery Chargers\", \"discount_percent\": 60.06, \"id\": \"powerup-20w-dual-port-type-c-usb-qualcomm-quick-charge-3-0-wall-charger-white\", \"in_stock\": false, \"model\": \"PowerUp 20W Dual Port Type C + USB Qualcomm Quick Charge 3.0 Wall Charger\", \"mrp\": 1750.0, \"name\": \"PowerUp 20W Dual Port Type C + USB Qualcomm Quick Charge 3.0 Wall Charger ( White )\", \"price\": 699.0, \"rating\": 4.6, \"rating_count\": 133, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Data Cables\", \"discount_percent\": 40.16, \"id\": \"conekt-ace-go-micro-data-cable-white\", \"in_stock\": false, \"model\": \"Conekt ACE - GO Micro Data Cable\", \"mrp\": 249.0, \"name\": \"Conekt ACE - GO Micro Data Cable ( White )\", \"price\": 149.0, \"rating\": 4.5, \"rating_count\": 123, \"stock\": 0}, {\"brand\": \"Mi\", \"category\": \"Data Cables\", \"discount_percent\": 25.06, \"id\": \"mi-2-in-1-micro-usb-to-type-c-100cm-data-cable-black\", \"in_stock\": false, \"model\": \"Mi 2-in-1 Micro USB to Type C 100 cm Data Cable\", \"mrp\": 399.0, \"name\": \"Mi 2-in-1 Micro USB to Type C 100 cm Data Cable ( Black )\", \"price\": 299.0, \"rating\": 4.5, \"rating_count\": 34, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"AirTag\", \"discount_percent\": 35.4, \"id\": \"apple-airtag-loop-deep-navy\", \"in_stock\": false, \"model\": \"Apple AirTag Loop\", \"mrp\": 3390.0, \"name\": \"Apple AirTag Loop ( Deep Navy )\", \"price\": 2190.0, \"rating\": 4.5, \"rating_count\": 21, \"stock\": 0}, {\"brand\": \"SanDisk\", \"category\": \"Memory Cards\", \"discount_percent\": 36.04, \"id\": \"sandisk-128gb-class-10-a1-microsd-without-adapter\", \"in_stock\": false, \"model\": \"SanDisk Class 10 A1 MicroSD Without Adapter\", \"mrp\": 2500.0, \"name\": \"SanDisk Class 10 A1 MicroSD Without Adapter ( 128GB )\", \"price\": 1599.0, \"rating\": 4.2, \"rating_count\": 5, \"stock\": 0}, {\"brand\": \"SanDisk\", \"category\": \"Memory Cards\", \"discount_percent\": 57.04, \"id\": \"sandisk-256gb-class-10-a1-microsd-without-adapter\", \"in_stock\": false, \"model\": \"SanDisk Class 10 A1 MicroSD Without Adapter\", \"mrp\": 6750.0, \"name\": \"SanDisk Class 10 A1 MicroSD Without Adapter ( 256GB )\", \"price\": 2900.0, \"rating\": 4.2, \"rating_count\": 5, \"stock\": 0}, {\"brand\": \"SanDisk\", \"category\": \"Memory Cards\", \"discount_percent\": 58.01, \"id\": \"sandisk-512gb-class-10-a1-microsd-without-adapter\", \"in_stock\": false, \"model\": \"SanDisk Class 10 A1 MicroSD Without Adapter\", \"mrp\": 15000.0, \"name\": \"SanDisk Class 10 A1 MicroSD Without Adapter ( 512GB )\", \"price\": 6299.0, \"rating\": 4.2, \"rating_count\": 5, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Data Cables\", \"discount_percent\": 84.98, \"id\": \"conekt-65w-pd-type-c-to-type-c-cable-white\", \"in_stock\": false, \"model\": \"Conekt 65W PD Type-C to Type-C Cable\", \"mrp\": 999.0, \"name\": \"Conekt 65W PD Type-C to Type-C Cable ( White )\", \"price\": 150.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Data Cables\", \"discount_percent\": 60.12, \"id\": \"conekt-20w-pd-type-c-to-lightning-cable-white\", \"in_stock\": false, \"model\": \"Conekt 20W PD Type-C to Lightning Cable\", \"mrp\": 499.0, \"name\": \"Conekt 20W PD Type-C to Lightning Cable ( White )\", \"price\": 199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Inbase\", \"category\": \"Cases & Covers\", \"discount_percent\": 66.74, \"id\": \"inbase-xundo-back-case-nothing-cmf-phone-1-5g-black\", \"in_stock\": false, \"model\": \"Inbase Xundo Back Case Nothing CMF Phone 1 5G\", \"mrp\": 899.0, \"name\": \"Inbase Xundo Back Case Nothing CMF Phone 1 5G  ( Black )\", \"price\": 299.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Pc\", \"category\": \"Cases & Covers\", \"discount_percent\": 79.99, \"id\": \"pc-hard-clear-case-for-apple-iphone-14-transparent\", \"in_stock\": false, \"model\": \"Pc Hard Clear Case For Apple iPhone 14\", \"mrp\": 1499.0, \"name\": \"Pc Hard Clear Case For Apple iPhone 14 ( Transparent )\", \"price\": 300.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Battery Chargers\", \"discount_percent\": 82.49, \"id\": \"conekt-20w-pd-c-port-charger-with-type-c-to-type-c-cable-white\", \"in_stock\": false, \"model\": \"Conekt 20W PD C-Port Charger with Type C to Type C Cable\", \"mrp\": 1999.0, \"name\": \"Conekt 20W PD C-Port Charger with Type C to Type C Cable ( White )\", \"price\": 350.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Zebronics\", \"category\": \"Data Cables\", \"discount_percent\": 55.62, \"id\": \"zebronics-zeb-oc150-optical-cable-black\", \"in_stock\": false, \"model\": \"Zebronics ZEB-OC150 Optical Cable\", \"mrp\": 899.0, \"name\": \"Zebronics ZEB-OC150 Optical Cable ( Black )\", \"price\": 399.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Inbase\", \"category\": \"Cases & Covers\", \"discount_percent\": 66.71, \"id\": \"inbase-trifold-pouch-for-apple-ipad-mini-6-8-3-inch-black\", \"in_stock\": false, \"model\": \"Inbase Trifold Pouch For Apple iPad Mini 6 (8.3 Inch)\", \"mrp\": 1499.0, \"name\": \"Inbase Trifold Pouch For Apple iPad Mini 6 (8.3 Inch) ( Black )\", \"price\": 499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Space\", \"category\": \"Cases & Covers\", \"discount_percent\": 66.71, \"id\": \"space-hard-clear-back-case-for-iphone-13\", \"in_stock\": false, \"model\": \"Space Hard Clear Back Case For iPhone 13\", \"mrp\": 1499.0, \"name\": \"Space Hard Clear Back Case For iPhone 13 ( Transparent )\", \"price\": 499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Zebronics\", \"category\": \"Data Cables\", \"discount_percent\": 44.49, \"id\": \"zebronics-zeb-haa3020-hdmi-cable-black\", \"in_stock\": false, \"model\": \"Zebronics ZEB-HAA3020 HDMI Cable\", \"mrp\": 899.0, \"name\": \"Zebronics ZEB-HAA3020 HDMI Cable ( Black )\", \"price\": 499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 78.6, \"id\": \"lapcare-bolt-1-10000-mah-power-bank-black-yellow\", \"in_stock\": false, \"model\": \"Lapcare Bolt I 10000 mAh Power Bank\", \"mrp\": 2799.0, \"name\": \"Lapcare Bolt 1 10000 mAh Power Bank ( Black Yellow )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Inbase\", \"category\": \"Cases & Covers\", \"discount_percent\": 60.03, \"id\": \"inbase-trifold-pouch-for-apple-ipad-10-2-inch-7th-8th-generation-black\", \"in_stock\": false, \"model\": \"Inbase Trifold Pouch For Apple iPad 10.2 Inch(7th & 8th Generation)\", \"mrp\": 1999.0, \"name\": \"Inbase Trifold Pouch For Apple iPad 10.2 Inch(7th & 8th Generation)  \", \"price\": 799.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 64.03, \"id\": \"conekt-zeal-run-plus-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal Run Plus 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal Run Plus 10000 mAh Power Bank ( Black )\", \"price\": 899.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Inbase\", \"category\": \"Cases & Covers\", \"discount_percent\": 40.03, \"id\": \"inbase-flip-cover-for-samsung-tab-a7-lite-8-7-inch-black\", \"in_stock\": false, \"model\": \"Inbase Flip Cover For Samsung Tab A7 Lite 8.7 Inch\", \"mrp\": 1499.0, \"name\": \"Inbase Flip Cover For Samsung Tab A7 Lite 8.7 Inch ( Black )\", \"price\": 899.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Portronics\", \"category\": \"Surge Protector\", \"discount_percent\": 40.03, \"id\": \"portronics-power-plate-6-with-4-usb-port-5-power-sockets-2500w-surge-protector-black\", \"in_stock\": false, \"model\": \"Portronics Power Plate 6 with 4 USB Port + 5 Power Sockets 2500W Surge Protector\", \"mrp\": 1499.0, \"name\": \"Portronics Power Plate 6 with 4 USB Port + 5 Power Sockets 2500W Surge Protector ( Black )\", \"price\": 899.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 60.02, \"id\": \"conekt-zeal-qc-18w-pd-22-5w-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal QC 18W PD 22.5W 10000 mAh Power Bank\", \"mrp\": 2499.0, \"name\": \"Conekt Zeal QC 18W PD 22.5W 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 37.52, \"id\": \"lapcare-blaze-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Lapcare Blaze 10000 mAh Power Bank\", \"mrp\": 1599.0, \"name\": \"Lapcare Blaze 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Swiss Military\", \"category\": \"Power Banks\", \"discount_percent\": 79.14, \"id\": \"swiss-military-electra-10k-a-qc-pd-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Swiss Military Electra 10K/A QC PD 10000 mAh Power Bank\", \"mrp\": 4790.0, \"name\": \"Swiss Military Electra 10K/A QC PD 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Inbase\", \"category\": \"Cases & Covers\", \"discount_percent\": 45.02, \"id\": \"inbase-trifold-pouch-for-samsung-t975-tab-s7-plus-12-4-inch-black\", \"in_stock\": false, \"model\": \"Inbase Trifold Pouch For Samsung T975 Tab S7 Plus 12.4 Inch/T735NE S7 FE\", \"mrp\": 1999.0, \"name\": \"Inbase Trifold Pouch For Samsung T975 Tab S7 Plus 12.4 Inch/T735NE S7 FE ( Black )\", \"price\": 1099.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Ambrane\", \"category\": \"Power Banks\", \"discount_percent\": 33.35, \"id\": \"ambrane-neos-11-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Ambrane Neos 11 10000 mAh Power Bank\", \"mrp\": 1799.0, \"name\": \"Ambrane Neos 11 10000 mAh Power Bank ( Black )\", \"price\": 1199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Inbase\", \"category\": \"Cases & Covers\", \"discount_percent\": 40.02, \"id\": \"inbase-flip-cover-for-apple-ipad-pro-12-9-black\", \"in_stock\": false, \"model\": \"Inbase Flip Cover For Apple iPad Pro 12.9\", \"mrp\": 1999.0, \"name\": \"Inbase Flip Cover For Apple iPad Pro 12.9 ( Black )\", \"price\": 1199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 31.96, \"id\": \"gripp-clarion-magsafe-case-for-iphone-14-pro-purple\", \"in_stock\": false, \"model\": \"GRIPP Clarion MagSafe Case For iPhone 14 Pro\", \"mrp\": 2190.0, \"name\": \"Gripp Clarion MagSafe Case For iPhone 14 Pro ( Purple )\", \"price\": 1490.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 25.13, \"id\": \"gripp-clear-magsafe-case-with-white-ring-for-iphone-14-transparent\", \"in_stock\": false, \"model\": \"Gripp Clear MagSafe Case With White Ring For iPhone 14\", \"mrp\": 1990.0, \"name\": \"Gripp Clear MagSafe Case With White Ring For iPhone 14 ( Transparent )\", \"price\": 1490.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Conekt\", \"category\": \"Power Banks\", \"discount_percent\": 62.52, \"id\": \"conekt-zeal-qc-18w-pd-22-5w-20000mah-power-bank-black\", \"in_stock\": false, \"model\": \"Conekt Zeal QC 18W PD 22.5W 20000mAh Power Bank\", \"mrp\": 3999.0, \"name\": \"Conekt Zeal QC 18W PD 22.5W 20000 mAh Power Bank ( Black )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 28.59, \"id\": \"samsung-silicone-case-for-galaxy-a54-5g-lime\", \"in_stock\": false, \"model\": \"Samsung Silicone Case For Galaxy A54 5G\", \"mrp\": 2099.0, \"name\": \"Samsung Silicone Case For Galaxy A54 5G ( Lime )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Ambrane\", \"category\": \"Power Banks\", \"discount_percent\": 57.51, \"id\": \"ambrane-aerosync-pb-10-15w-wireless-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Ambrane AeroSync PB 10 15W Wireless 10000 mAh Power Bank\", \"mrp\": 3999.0, \"name\": \"Ambrane AeroSync PB 10 15W Wireless 10000 mAh Power Bank ( Black )\", \"price\": 1699.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 48.36, \"id\": \"gripp-rhino-case-for-apple-ipad-air-10-9-inch-black\", \"in_stock\": false, \"model\": \"Gripp Rhino Case For Apple iPad Air 10.9 Inch\", \"mrp\": 3290.0, \"name\": \"Gripp Rhino Case For Apple iPad Air 10.9 Inch ( Black )\", \"price\": 1699.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 63.28, \"id\": \"lapcare-bolt-pro-20000-mah-power-bank-black-yellow\", \"in_stock\": false, \"model\": \"Lapcare Bolt Pro 20000 mAh Power Bank\", \"mrp\": 4899.0, \"name\": \"Lapcare Bolt Pro 20000 mAh Power Bank ( Black Yellow )\", \"price\": 1799.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-lightning-cable-1m-white\", \"in_stock\": false, \"model\": \"Apple USB C To Lightning Cable 1m\", \"mrp\": 1900.0, \"name\": \"Apple USB C To Lightning Cable 1m ( White )\", \"price\": 1900.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 0.0, \"id\": \"samsung-silicone-case-for-galaxy-a54-5g-black\", \"in_stock\": false, \"model\": \"Samsung Silicone Case For Galaxy A54 5G\", \"mrp\": 2099.0, \"name\": \"Samsung Silicone Case For Galaxy A54 5G ( Black )\", \"price\": 2099.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 24.04, \"id\": \"gripp-rhino-case-for-apple-ipad-10-9-inch-10th-gen-2022-black\", \"in_stock\": false, \"model\": \"Gripp Rhino Case For Apple iPad Air 10.9 Inch 10th Gen\", \"mrp\": 3290.0, \"name\": \"Gripp Rhino Case For Apple iPad Air 10.9 Inch 10th Gen ( Black )\", \"price\": 2499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Gripp\", \"category\": \"Cases & Covers\", \"discount_percent\": 7.1, \"id\": \"gripp-rhino-case-for-apple-ipad-10-9-inch-10th-gen-2022-blue\", \"in_stock\": false, \"model\": \"Gripp Rhino Case For Apple iPad Air 10.9 Inch 10th Gen\", \"mrp\": 2690.0, \"name\": \"Gripp Rhino Case For Apple iPad Air 10.9 Inch 10th Gen ( Blue )\", \"price\": 2499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-lightning-cable-2m-white\", \"in_stock\": false, \"model\": \"Apple USB C To Lightning Cable 2M\", \"mrp\": 2900.0, \"name\": \"Apple USB C To Lightning Cable 2M ( White )\", \"price\": 2900.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 7.9, \"id\": \"samsung-t4511-45w-charger-with-type-c-to-type-c-cable-ep-t4511xbegin-black\", \"in_stock\": false, \"model\": \"Samsung T4511 45W Charger With Type C to Type C Cable, EP T4511XBEGIN\", \"mrp\": 3799.0, \"name\": \"Samsung T4511 45W Charger With Type C to Type C Cable, EP T4511XBEGIN ( Black )\", \"price\": 3499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"samsung-65w-pd-power-adapter-trio-black\", \"in_stock\": false, \"model\": \"Samsung 65W PD Power Adapter Trio\", \"mrp\": 4499.0, \"name\": \"Samsung 65W PD Power Adapter Trio ( Black )\", \"price\": 4499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-35w-dual-usb-c-port-power-adapter-white-mnwp3hn-a\", \"in_stock\": false, \"model\": \"Apple 35W Dual USB-C Port Power Adapter\", \"mrp\": 5800.0, \"name\": \"Apple 35W Dual USB-C Port Power Adapter ( White )\", \"price\": 5800.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 2.7, \"id\": \"samsung-book-cover-keyboard-for-galaxy-tab-s9-black\", \"in_stock\": false, \"model\": \"Samsung Book Cover Keyboard For Galaxy Tab S9\", \"mrp\": 18499.0, \"name\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 ( Black )\", \"price\": 17999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 4.76, \"id\": \"samsung-book-cover-keyboard-for-galaxy-tab-s9-plus-black\", \"in_stock\": false, \"model\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Plus\", \"mrp\": 20999.0, \"name\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Plus ( Black )\", \"price\": 19999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 6.25, \"id\": \"samsung-book-cover-keyboard-for-galaxy-tab-s9-ultra-black\", \"in_stock\": false, \"model\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Ultra\", \"mrp\": 31999.0, \"name\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Ultra ( Black )\", \"price\": 29999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: SanDisk Ultra Dual Drive Luxe USB Type C ( Silver,64GB ) — ₹2,099 (in stock); Apple MagSafe Wireless Charger 15W ( White ) — ₹4,499 (in stock); Apple MagSafe Power Adapter 45W For MacBook Air ( White ) — ₹7,800 (in stock); Samsung Type-C Data Cable ( Black ) — ₹549 (in stock); Samsung USB-C to USB-C Data Cable ( Black ) — ₹599 (in stock).\n\n[[SHOPAI_PRODUCTS:sandisk-64gb-ultra-dual-drive-luxe-usb-type-c-steel,apple-magsafe-wireless-charger-15w-white-mhxh3zm-a,apple-magsafe-power-adapter-45w-for-macbook-air-white-mc747hn-a,samsung-type-c-data-cable-black-ep-dg930ibegin,samsung-usb-c-to-usb-c-data-cable-black-ep-da705bbegin1]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": null,
+          "category": "accessories",
+          "brand": null,
+          "min_price": null,
+          "max_price": null,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "products_under_1000",
+    "question": "Which products are available under 1000?",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.9798,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": "which products are available under 1000?",
+      "category": null,
+      "brand": null,
+      "min_price": null,
+      "max_price": 1000.0,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:10:05.602392+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:07.482214+00:00",
+      "laya_duration_ms": 1879.8,
+      "product_search_start": "2026-10-02T09:10:07.482304+00:00",
+      "postgres_query_start": "2026-10-02T09:10:07.497369+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:10:07.505394+00:00",
+      "postgres_query_duration_ms": 8.0,
+      "product_search_end": "2026-10-02T09:10:07.505697+00:00",
+      "product_search_duration_ms": 23.4,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"M.A\", \"category\": \"Temper glass\", \"discount_percent\": 60.02, \"id\": \"2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch\", \"in_stock\": true, \"model\": \"2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE\", \"mrp\": 2499.0, \"name\": \"2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )\", \"price\": 999.0, \"rating\": 5.0, \"rating_count\": 2, \"stock\": 12}, {\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 79.99, \"id\": \"2-5d-clear-tempered-glass-screen-protector-for-apple-ipad-10-2-inch\", \"in_stock\": false, \"model\": \"2.5D Tempered Glass Screen Protector for Apple iPad 10.2 Inch 7th/8th Generation\", \"mrp\": 2499.0, \"name\": \"2.5D Tempered Glass Screen Protector for Apple iPad 10.2 Inch 7th/8th Generation ( Transparent )\", \"price\": 500.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"SanDisk\", \"category\": \"Pendrives\", \"discount_percent\": 51.43, \"id\": \"sandisk-64gb-dual-drive-3-transparent\", \"in_stock\": false, \"model\": \"SanDisk Dual Drive - 3\", \"mrp\": 1400.0, \"name\": \"SanDisk Dual Drive - 3 ( Transparent,64GB )\", \"price\": 680.0, \"rating\": 5.0, \"rating_count\": 226, \"stock\": 0}, {\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 66.78, \"id\": \"2-5d-tempered-glass-screen-protector-for-redmi-7-y3-vivo-v11-transparent\", \"in_stock\": false, \"model\": \"2.5D Tempered Glass Screen Protector For Redmi 7/Y3/Vivo V11\", \"mrp\": 599.0, \"name\": \"2.5D Tempered Glass Screen Protector For Redmi 7/Y3/Vivo V11 ( Transparent )\", \"price\": 199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Pc\", \"category\": \"Cases & Covers\", \"discount_percent\": 79.99, \"id\": \"pc-hard-clear-case-for-apple-iphone-14-transparent\", \"in_stock\": false, \"model\": \"Pc Hard Clear Case For Apple iPhone 14\", \"mrp\": 1499.0, \"name\": \"Pc Hard Clear Case For Apple iPhone 14 ( Transparent )\", \"price\": 300.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"M.A\", \"category\": \"Temper glass\", \"discount_percent\": 60.02, \"id\": \"2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch\", \"in_stock\": true, \"model\": \"2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE\", \"mrp\": 2499.0, \"name\": \"2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )\", \"price\": 999.0, \"rating\": 5.0, \"rating_count\": 2, \"stock\": 12}, {\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 79.99, \"id\": \"2-5d-clear-tempered-glass-screen-protector-for-apple-ipad-10-2-inch\", \"in_stock\": false, \"model\": \"2.5D Tempered Glass Screen Protector for Apple iPad 10.2 Inch 7th/8th Generation\", \"mrp\": 2499.0, \"name\": \"2.5D Tempered Glass Screen Protector for Apple iPad 10.2 Inch 7th/8th Generation ( Transparent )\", \"price\": 500.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"SanDisk\", \"category\": \"Pendrives\", \"discount_percent\": 51.43, \"id\": \"sandisk-64gb-dual-drive-3-transparent\", \"in_stock\": false, \"model\": \"SanDisk Dual Drive - 3\", \"mrp\": 1400.0, \"name\": \"SanDisk Dual Drive - 3 ( Transparent,64GB )\", \"price\": 680.0, \"rating\": 5.0, \"rating_count\": 226, \"stock\": 0}, {\"brand\": \"Cool-Touch\", \"category\": \"Temper glass\", \"discount_percent\": 66.78, \"id\": \"2-5d-tempered-glass-screen-protector-for-redmi-7-y3-vivo-v11-transparent\", \"in_stock\": false, \"model\": \"2.5D Tempered Glass Screen Protector For Redmi 7/Y3/Vivo V11\", \"mrp\": 599.0, \"name\": \"2.5D Tempered Glass Screen Protector For Redmi 7/Y3/Vivo V11 ( Transparent )\", \"price\": 199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Pc\", \"category\": \"Cases & Covers\", \"discount_percent\": 79.99, \"id\": \"pc-hard-clear-case-for-apple-iphone-14-transparent\", \"in_stock\": false, \"model\": \"Pc Hard Clear Case For Apple iPhone 14\", \"mrp\": 1499.0, \"name\": \"Pc Hard Clear Case For Apple iPhone 14 ( Transparent )\", \"price\": 300.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Space\", \"category\": \"Cases & Covers\", \"discount_percent\": 66.71, \"id\": \"space-hard-clear-back-case-for-iphone-13\", \"in_stock\": false, \"model\": \"Space Hard Clear Back Case For iPhone 13\", \"mrp\": 1499.0, \"name\": \"Space Hard Clear Back Case For iPhone 13 ( Transparent )\", \"price\": 499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 78.6, \"id\": \"lapcare-bolt-1-10000-mah-power-bank-black-yellow\", \"in_stock\": false, \"model\": \"Lapcare Bolt I 10000 mAh Power Bank\", \"mrp\": 2799.0, \"name\": \"Lapcare Bolt 1 10000 mAh Power Bank ( Black Yellow )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Lapcare\", \"category\": \"Power Banks\", \"discount_percent\": 37.52, \"id\": \"lapcare-blaze-10000-mah-power-bank-black\", \"in_stock\": false, \"model\": \"Lapcare Blaze 10000 mAh Power Bank\", \"mrp\": 1599.0, \"name\": \"Lapcare Blaze 10000 mAh Power Bank ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) — ₹999 (in stock); 2.5D Tempered Glass Screen Protector for Apple iPad 10.2 Inch 7th/8th Generation ( Transparent ) — ₹500 (out of stock); SanDisk Dual Drive - 3 ( Transparent,64GB ) — ₹680 (out of stock); 2.5D Tempered Glass Screen Protector For Redmi 7/Y3/Vivo V11 ( Transparent ) — ₹199 (out of stock); Pc Hard Clear Case For Apple iPhone 14 ( Transparent ) — ₹300 (out of stock).\n\n[[SHOPAI_PRODUCTS:2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch,2-5d-clear-tempered-glass-screen-protector-for-apple-ipad-10-2-inch,sandisk-64gb-dual-drive-3-transparent,2-5d-tempered-glass-screen-protector-for-redmi-7-y3-vivo-v11-transparent,pc-hard-clear-case-for-apple-iphone-14-transparent]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "which products are available under 1000?",
+          "category": null,
+          "brand": null,
+          "min_price": null,
+          "max_price": 1000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "samsung_products",
+    "question": "Show me Samsung products",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.3075,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": null,
+      "category": null,
+      "brand": "Samsung",
+      "min_price": null,
+      "max_price": null,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:10:07.507229+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:09.311068+00:00",
+      "laya_duration_ms": 1803.9,
+      "product_search_start": "2026-10-02T09:10:09.311179+00:00",
+      "postgres_query_start": "2026-10-02T09:10:09.317040+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:10:09.335515+00:00",
+      "postgres_query_duration_ms": 18.5,
+      "product_search_end": "2026-10-02T09:10:09.338457+00:00",
+      "product_search_duration_ms": 27.3,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 9.09, \"id\": \"samsung-galaxy-watch5-pro-lte-45-mm-gray-titanium-sm-r925fztainu\", \"in_stock\": true, \"model\": \"Samsung Galaxy Watch5 Pro LTE\", \"mrp\": 54999.0, \"name\": \"Samsung Galaxy Watch5 Pro LTE ( Gray Titanium,45 mm )\", \"price\": 49999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 2}, {\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 9.09, \"id\": \"samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu\", \"in_stock\": true, \"model\": \"Samsung Galaxy Watch5 Pro LTE\", \"mrp\": 54999.0, \"name\": \"Samsung Galaxy Watch5 Pro LTE ( Black Titanium,45 mm )\", \"price\": 49999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 3}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 11.25, \"id\": \"samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram\", \"in_stock\": true, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Onyx Black,8GB-256GB )\", \"price\": 70999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 2}, {\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 16.28, \"id\": \"samsung-galaxy-watch4-classic-lte-46mm-black-sm-r895fzkainu\", \"in_stock\": true, \"model\": \"Samsung Galaxy Watch4 Classic LTE\", \"mrp\": 42999.0, \"name\": \"Samsung Galaxy Watch4 Classic LTE ( Black,46 mm )\", \"price\": 35999.0, \"rating\": 4.9, \"rating_count\": 18, \"stock\": 1}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.18, \"id\": \"samsung-type-c-data-cable-black-ep-dg930ibegin\", \"in_stock\": true, \"model\": \"Samsung Type-C Data Cable\", \"mrp\": 550.0, \"name\": \"Samsung Type-C Data Cable ( Black )\", \"price\": 549.0, \"rating\": 4.7, \"rating_count\": 54, \"stock\": 2215}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 9.09, \"id\": \"samsung-galaxy-watch5-pro-lte-45-mm-gray-titanium-sm-r925fztainu\", \"in_stock\": true, \"model\": \"Samsung Galaxy Watch5 Pro LTE\", \"mrp\": 54999.0, \"name\": \"Samsung Galaxy Watch5 Pro LTE ( Gray Titanium,45 mm )\", \"price\": 49999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 2}, {\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 9.09, \"id\": \"samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu\", \"in_stock\": true, \"model\": \"Samsung Galaxy Watch5 Pro LTE\", \"mrp\": 54999.0, \"name\": \"Samsung Galaxy Watch5 Pro LTE ( Black Titanium,45 mm )\", \"price\": 49999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 3}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 11.25, \"id\": \"samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram\", \"in_stock\": true, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Onyx Black,8GB-256GB )\", \"price\": 70999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 2}, {\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 16.28, \"id\": \"samsung-galaxy-watch4-classic-lte-46mm-black-sm-r895fzkainu\", \"in_stock\": true, \"model\": \"Samsung Galaxy Watch4 Classic LTE\", \"mrp\": 42999.0, \"name\": \"Samsung Galaxy Watch4 Classic LTE ( Black,46 mm )\", \"price\": 35999.0, \"rating\": 4.9, \"rating_count\": 18, \"stock\": 1}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.18, \"id\": \"samsung-type-c-data-cable-black-ep-dg930ibegin\", \"in_stock\": true, \"model\": \"Samsung Type-C Data Cable\", \"mrp\": 550.0, \"name\": \"Samsung Type-C Data Cable ( Black )\", \"price\": 549.0, \"rating\": 4.7, \"rating_count\": 54, \"stock\": 2215}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"samsung-usb-c-to-usb-c-data-cable-black-ep-da705bbegin1\", \"in_stock\": true, \"model\": \"Samsung USB-C to USB-C Data Cable\", \"mrp\": 599.0, \"name\": \"Samsung USB-C to USB-C Data Cable ( Black )\", \"price\": 599.0, \"rating\": 4.6, \"rating_count\": 25, \"stock\": 2617}, {\"brand\": \"Samsung\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"samsung-usb-c-to-usb-c-data-cable-white-ep-da705bwegin\", \"in_stock\": true, \"model\": \"Samsung USB-C to USB-C Data Cable\", \"mrp\": 599.0, \"name\": \"Samsung USB-C to USB-C Data Cable ( White )\", \"price\": 599.0, \"rating\": 4.6, \"rating_count\": 25, \"stock\": 1691}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 9.1, \"id\": \"samsung-eo-ic050-type-c-earphone-black-eo-ic050bbegin\", \"in_stock\": true, \"model\": \"Samsung EO IC050 Type-C Earphone\", \"mrp\": 1099.0, \"name\": \"Samsung EO IC050 Type-C Earphone EO IC050BBEGIN ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 3}, {\"brand\": \"Samsung\", \"category\": \"Car Chargers\", \"discount_percent\": 7.41, \"id\": \"samsung-40w-car-charger-duo-black\", \"in_stock\": true, \"model\": \"Samsung 40W Car Charger Duo\", \"mrp\": 2699.0, \"name\": \"Samsung 40W Car Charger Duo ( Black )\", \"price\": 2499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 4}, {\"brand\": \"Samsung\", \"category\": \"Washing Machine\", \"discount_percent\": 27.38, \"id\": \"samsung-7-0kg-fully-automatic-top-load-washing-machine-wa70bg4441bytl-lavender-gray\", \"in_stock\": true, \"model\": \"Samsung 7.0Kg Fully Automatic Top Load Washing Machine, WA70BG4441BYTL\\n\", \"mrp\": 26990.0, \"name\": \"Samsung 7.0Kg Fully Automatic Top Load Washing Machine, WA70BG4441BYTL ( Lavender Gray )\", \"price\": 19600.0, \"rating\": null, \"rating_count\": 0, \"stock\": 21}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 20.0, \"id\": \"samsung-galaxy-buds-3-pro-reserve-white\", \"in_stock\": true, \"model\": \"Samsung Galaxy Buds 3 Pro\", \"mrp\": 24999.0, \"name\": \"Samsung Galaxy Buds 3 Pro Reserve ( White )\", \"price\": 19999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 1}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 20.0, \"id\": \"samsung-galaxy-buds-3-pro-silver\", \"in_stock\": true, \"model\": \"Samsung Galaxy Buds 3 Pro\", \"mrp\": 24999.0, \"name\": \"Samsung Galaxy Buds 3 Pro ( Silver )\", \"price\": 19999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 3}, {\"brand\": \"Samsung\", \"category\": \"Refrigerators\", \"discount_percent\": 24.25, \"id\": \"samsung-236-l-frost-free-double-door-2-star-refrigerator-rt28c3042s8-hl-elegant-inox\", \"in_stock\": true, \"model\": \"Samsung 236 L Frost Free Double Door 2 Star Refrigerator, RT28C3042S8/HL\", \"mrp\": 32990.0, \"name\": \"Samsung 236 L Frost Free Double Door 2 Star Refrigerator, RT28C3042S8/HL ( Elegant Inox )\", \"price\": 24990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 1}, {\"brand\": \"Samsung\", \"category\": \"Refrigerators\", \"discount_percent\": 20.01, \"id\": \"samsung-236-l-frost-free-double-door-2-star-refrigerator-rt28c3122cu-hl-camellia-blue\", \"in_stock\": true, \"model\": \"Samsung 236 L Frost Free Double Door 2 Star Refrigerator, RT28C3122CU/HL\", \"mrp\": 35990.0, \"name\": \"Samsung 236 L Frost Free Double Door 2 Star Refrigerator, RT28C3122CU/HL ( Camellia Blue )\", \"price\": 28789.0, \"rating\": null, \"rating_count\": 0, \"stock\": 7}, {\"brand\": \"Samsung\", \"category\": \"Refrigerators\", \"discount_percent\": 26.65, \"id\": \"samsung-653-l-frost-free-side-by-side-door-refrigerator-rs76cg8113slhl-real-stainless\", \"in_stock\": true, \"model\": \"Samsung 653 L Frost Free Side By Side Door Refrigerator, RS76CG8113SLHL\", \"mrp\": 137000.0, \"name\": \"Samsung 653 L Frost Free Side By Side Door Refrigerator, RS76CG8113SLHL ( Real Stainless )\", \"price\": 100490.0, \"rating\": null, \"rating_count\": 0, \"stock\": 32}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 22.5, \"id\": \"samsung-galaxy-a16-5g-light-green-6gb-128gb\", \"in_stock\": false, \"model\": \"Samsung Galaxy A16 5G\", \"mrp\": 19999.0, \"name\": \"Samsung Galaxy A16 5G ( Light Green, 6GB-128GB )\", \"price\": 15499.0, \"rating\": 5.0, \"rating_count\": 4, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 20.0, \"id\": \"samsung-galaxy-a16-5g-blue-black-6gb-128gb\", \"in_stock\": false, \"model\": \"Samsung Galaxy A16 5G\", \"mrp\": 19999.0, \"name\": \"Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )\", \"price\": 15999.0, \"rating\": 5.0, \"rating_count\": 4, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 20.0, \"id\": \"samsung-galaxy-a16-5g-gold-6gb-128gb\", \"in_stock\": false, \"model\": \"Samsung Galaxy A16 5G\", \"mrp\": 19999.0, \"name\": \"Samsung Galaxy A16 5G ( Gold, 6GB-128GB )\", \"price\": 15999.0, \"rating\": 5.0, \"rating_count\": 4, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 20.93, \"id\": \"samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy A16 5G\", \"mrp\": 21499.0, \"name\": \"Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )\", \"price\": 16999.0, \"rating\": 5.0, \"rating_count\": 4, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 20.93, \"id\": \"samsung-galaxy-a16-5g-light-green-128gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy A16 5G\", \"mrp\": 21499.0, \"name\": \"Samsung Galaxy A16 5G ( Light Green, 8GB-128GB )\", \"price\": 16999.0, \"rating\": 5.0, \"rating_count\": 4, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 18.61, \"id\": \"samsung-galaxy-a16-5g-gold-128gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy A16 5G\", \"mrp\": 21499.0, \"name\": \"Samsung Galaxy A16 5G ( Gold, 8GB-128GB )\", \"price\": 17499.0, \"rating\": 5.0, \"rating_count\": 4, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 34.86, \"id\": \"samsung-4k-ultra-hd-crystal-smart-tv-au7600-43-inch\", \"in_stock\": false, \"model\": \"Samsung Crystal 4K UHD Smart TV AU7600\", \"mrp\": 47900.0, \"name\": \"Samsung 4K Ultra HD Crystal Smart TV AU7600 ( 43 inch )\", \"price\": 31200.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 48.24, \"id\": \"samsung-4k-ultra-hd-crystal-smart-tv-au7600-55-inch\", \"in_stock\": false, \"model\": \"Samsung Crystal 4K UHD Smart TV AU7600\", \"mrp\": 70900.0, \"name\": \"Samsung 4K Ultra HD Crystal Smart TV AU7600 ( 55 inch )\", \"price\": 36700.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 18.75, \"id\": \"samsung-galaxy-s24-5g-cobalt-violet-128gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Cobalt Violet, 8GB-128GB )\", \"price\": 64999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 18.75, \"id\": \"samsung-galaxy-s24-5g-onyx-black-128gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Onyx Black, 8GB-128GB )\", \"price\": 64999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 11.25, \"id\": \"samsung-galaxy-s24-5g-amber-yellow-256gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Amber Yellow,8GB-256GB )\", \"price\": 70999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 11.25, \"id\": \"samsung-galaxy-s24-5g-cobalt-violet-256gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Cobalt Violet,8GB-256GB )\", \"price\": 70999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 11.25, \"id\": \"samsung-galaxy-s24-5g-marble-grey-256gb-8gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy S24 5G\", \"mrp\": 79999.0, \"name\": \"Samsung Galaxy S24 5G ( Marble Grey, 8GB-256GB )\", \"price\": 70999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 40.7, \"id\": \"samsung-4k-ultra-hd-neo-qled-smart-tv-qn90c-55-inch\", \"in_stock\": false, \"model\": \"Samsung 4K Ultra HD Neo QLED Smart TV, QN90C\", \"mrp\": 204900.0, \"name\": \"Samsung 4K Ultra HD Neo QLED Smart TV, QN90C ( 55 inch )\", \"price\": 121500.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 50.66, \"id\": \"samsung-4k-ultra-hd-neo-qled-smart-tv-qn90c-65-inch\", \"in_stock\": false, \"model\": \"Samsung 4K Ultra HD Neo QLED Smart TV, QN90C\", \"mrp\": 279900.0, \"name\": \"Samsung 4K Ultra HD Neo QLED Smart TV, QN90C ( 65 inch )\", \"price\": 138100.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 10.02, \"id\": \"samsung-earphone-ehs64avfbecinu-black\", \"in_stock\": false, \"model\": \"Samsung EHS64 Earphone\", \"mrp\": 499.0, \"name\": \"Samsung EHS64 Earphone ( Black )\", \"price\": 449.0, \"rating\": 4.9, \"rating_count\": 65, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 16.28, \"id\": \"samsung-galaxy-watch4-classic-lte-46mm-silver-sm-r895fzsa\", \"in_stock\": false, \"model\": \"Samsung Galaxy Watch4 Classic LTE\", \"mrp\": 42999.0, \"name\": \"Samsung Galaxy Watch4 Classic LTE ( Silver,46 mm )\", \"price\": 35999.0, \"rating\": 4.9, \"rating_count\": 18, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 23.54, \"id\": \"samsung-25w-charger-white-ep-ta800nbegin\", \"in_stock\": false, \"model\": \"Samsung 25W Travel Adapter\", \"mrp\": 1699.0, \"name\": \"Samsung 25W Travel Adapter ( White )\", \"price\": 1299.0, \"rating\": 4.7, \"rating_count\": 67, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 23.34, \"id\": \"samsung-35w-power-adapter-duo-ta220-black-ep-ta220nbngin\", \"in_stock\": false, \"model\": \"Samsung 35W Power Adapter Duo TA220\", \"mrp\": 2999.0, \"name\": \"Samsung 35W Power Adapter Duo TA220 ( Black )\", \"price\": 2299.0, \"rating\": 4.7, \"rating_count\": 69, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 41.08, \"id\": \"samsung-4k-ultra-hd-smart-tv-tu8000-55-inch\", \"in_stock\": false, \"model\": \"Samsung 4K Smart Tv TU8000\", \"mrp\": 77900.0, \"name\": \"Samsung 4K Ultra HD Smart Tv TU8000 ( 55 inch )\", \"price\": 45900.0, \"rating\": 4.7, \"rating_count\": 15, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 28.59, \"id\": \"samsung-silicone-case-for-galaxy-a54-5g-lime\", \"in_stock\": false, \"model\": \"Samsung Silicone Case For Galaxy A54 5G\", \"mrp\": 2099.0, \"name\": \"Samsung Silicone Case For Galaxy A54 5G ( Lime )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 0.0, \"id\": \"samsung-silicone-case-for-galaxy-a54-5g-black\", \"in_stock\": false, \"model\": \"Samsung Silicone Case For Galaxy A54 5G\", \"mrp\": 2099.0, \"name\": \"Samsung Silicone Case For Galaxy A54 5G ( Black )\", \"price\": 2099.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 7.9, \"id\": \"samsung-t4511-45w-charger-with-type-c-to-type-c-cable-ep-t4511xbegin-black\", \"in_stock\": false, \"model\": \"Samsung T4511 45W Charger With Type C to Type C Cable, EP T4511XBEGIN\", \"mrp\": 3799.0, \"name\": \"Samsung T4511 45W Charger With Type C to Type C Cable, EP T4511XBEGIN ( Black )\", \"price\": 3499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"samsung-65w-pd-power-adapter-trio-black\", \"in_stock\": false, \"model\": \"Samsung 65W PD Power Adapter Trio\", \"mrp\": 4499.0, \"name\": \"Samsung 65W PD Power Adapter Trio ( Black )\", \"price\": 4499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 30.44, \"id\": \"samsung-galaxy-a06-black-64gb-4gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy A06\", \"mrp\": 11499.0, \"name\": \"Samsung Galaxy A06 ( Black, 4GB-64GB )\", \"price\": 7999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 25.0, \"id\": \"samsung-galaxy-buds-3-silver\", \"in_stock\": false, \"model\": \"Samsung Galaxy Buds 3\", \"mrp\": 19999.0, \"name\": \"Samsung Galaxy Buds 3 ( Silver )\", \"price\": 14999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 25.0, \"id\": \"samsung-galaxy-buds-3-white\", \"in_stock\": false, \"model\": \"Samsung Galaxy Buds 3\", \"mrp\": 19999.0, \"name\": \"Samsung Galaxy Buds 3 ( White )\", \"price\": 14999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 33.1, \"id\": \"samsung-led-smart-tv-t4310-hd-ready-32-inch\", \"in_stock\": false, \"model\": \"Samsung LED Smart TV T4310 HD Ready\\n\", \"mrp\": 23900.0, \"name\": \"Samsung LED Smart TV T4310 HD Ready ( 32 inch )\", \"price\": 15990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Speakers\", \"discount_percent\": 45.02, \"id\": \"samsung-hw-b550-2-1-ch-soundbar-black\", \"in_stock\": false, \"model\": \"Samsung HW-B550 2.1 Ch Soundbar 410W\", \"mrp\": 30900.0, \"name\": \"Samsung HW-B550 2.1 Ch Soundbar 410W ( Black )\", \"price\": 16990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 2.7, \"id\": \"samsung-book-cover-keyboard-for-galaxy-tab-s9-black\", \"in_stock\": false, \"model\": \"Samsung Book Cover Keyboard For Galaxy Tab S9\", \"mrp\": 18499.0, \"name\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 ( Black )\", \"price\": 17999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 4.76, \"id\": \"samsung-book-cover-keyboard-for-galaxy-tab-s9-plus-black\", \"in_stock\": false, \"model\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Plus\", \"mrp\": 20999.0, \"name\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Plus ( Black )\", \"price\": 19999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Washing Machine\", \"discount_percent\": 15.34, \"id\": \"samsung-8-0kg-fully-automatic-top-load-washing-machine-wa80bg4441bdtl-dark-grey\", \"in_stock\": false, \"model\": \"Samsung 8.0Kg Fully Automatic Top Load Washing Machine, WA80BG4441BDTL\\n\", \"mrp\": 25500.0, \"name\": \"Samsung 8.0Kg Fully Automatic Top Load Washing Machine, WA80BG4441BDTL ( Dark Grey )\", \"price\": 21589.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 49.91, \"id\": \"samsung-4k-ultra-hd-led-smart-tv-cu8000-43-inch\", \"in_stock\": false, \"model\": \"Samsung LED Smart TV CU8000 4K\", \"mrp\": 54900.0, \"name\": \"Samsung 4K Ultra HD LED Smart TV CU8000 ( 43 inch )\", \"price\": 27500.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Cases & Covers\", \"discount_percent\": 6.25, \"id\": \"samsung-book-cover-keyboard-for-galaxy-tab-s9-ultra-black\", \"in_stock\": false, \"model\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Ultra\", \"mrp\": 31999.0, \"name\": \"Samsung Book Cover Keyboard For Galaxy Tab S9 Ultra ( Black )\", \"price\": 29999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Refrigerators\", \"discount_percent\": 28.27, \"id\": \"samsung-314-l-frost-free-double-door-2-star-refrigerator-rt34b4612rz-hl-midnight-blossom-red\", \"in_stock\": false, \"model\": \"Samsung 314 L Frost Free Double Door 2 Star Refrigerator\", \"mrp\": 45990.0, \"name\": \"Samsung 314 L Frost Free Double Door 2 Star Refrigerator, RT34B4612RZ/HL ( Midnight Blossom Red )\", \"price\": 32990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Smartwatches\", \"discount_percent\": 11.91, \"id\": \"samsung-galaxy-watch6-lte-graphite-44-mm-sm-r945fzkains\", \"in_stock\": false, \"model\": \"Samsung Galaxy Watch6 LTE\", \"mrp\": 41999.0, \"name\": \"Samsung Galaxy Watch6 LTE ( Graphite,44 mm )\", \"price\": 36999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Refrigerators\", \"discount_percent\": 18.37, \"id\": \"samsung-301-l-frost-free-double-door-2-star-refrigerator-rt34c4522s8-hl-elegant-inox\", \"in_stock\": false, \"model\": \"Samsung 301 L Frost Free Double Door 2 Star Refrigerator\", \"mrp\": 48990.0, \"name\": \"Samsung 301 L Frost Free Double Door 2 Star Refrigerator, RT34C4522S8/HL ( Elegant Inox )\", \"price\": 39990.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Tablet\", \"discount_percent\": 18.18, \"id\": \"samsung-galaxy-tab-s9-fe-5g-x516bains-gray-128gb-6gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy Tab S9 FE 5G X516BAINS\", \"mrp\": 54999.0, \"name\": \"Samsung Galaxy Tab S9 FE 5G X516BAINS ( Gray, 6GB-128GB )\", \"price\": 44999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Tablet\", \"discount_percent\": 18.18, \"id\": \"samsung-galaxy-tab-s9-fe-5g-x516bainu-mint-128gb-6gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy Tab S9 FE 5G X516BAINU\", \"mrp\": 54999.0, \"name\": \"Samsung Galaxy Tab S9 FE 5G X516BAINU ( Mint, 6GB-128GB )\", \"price\": 44999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 45.27, \"id\": \"samsung-4k-ultra-hd-crystal-smart-tv-cu7700-65-inch\", \"in_stock\": false, \"model\": \"Samsung Crystal 4K UHD Smart TV CU7700\", \"mrp\": 110900.0, \"name\": \"Samsung 4K Ultra HD Crystal Smart TV CU7700 ( 65 inch )\", \"price\": 60700.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 49.37, \"id\": \"samsung-4k-ultra-hd-led-smart-tv-cu8000-65-inch\", \"in_stock\": false, \"model\": \"Samsung LED Smart TV CU8000 4K\", \"mrp\": 119900.0, \"name\": \"Samsung 4K Ultra HD LED Smart TV CU8000 (65 inch)\", \"price\": 60700.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 55.31, \"id\": \"samsung-4k-ultra-hd-qled-smart-tv-q60c-65-inch\", \"in_stock\": false, \"model\": \"Samsung QLED 4K Ultra HD Smart TV Q60C\\n\", \"mrp\": 179900.0, \"name\": \"Samsung 4K Ultra HD QLED Smart TV Q60C ( 65 inch )\", \"price\": 80400.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 45.93, \"id\": \"samsung-4k-ultra-hd-led-smart-tv-cu8000-75-inch-ua75cu8000klxl\", \"in_stock\": false, \"model\": \"Samsung LED Smart TV CU8000 4K\", \"mrp\": 214900.0, \"name\": \"Samsung 4K Ultra HD LED Smart TV CU8000 ( 75 inch )\", \"price\": 116200.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Mobile Phone\", \"discount_percent\": 7.69, \"id\": \"samsung-galaxy-s25-ultra-5g-titanium-silverblue-256gb-12gb-ram\", \"in_stock\": false, \"model\": \"Samsung Galaxy S25 Ultra 5G\", \"mrp\": 129999.0, \"name\": \"Samsung Galaxy S25 Ultra 5G ( Titanium Silverblue, 12GB-256GB )\", \"price\": 119999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Refrigerators\", \"discount_percent\": 22.82, \"id\": \"samsung-633-l-frost-free-side-by-side-refrigerator-rs78cg8543slhl-real-stainless\", \"in_stock\": false, \"model\": \"Samsung 633 L Frost Free Side By Side Refrigerator\", \"mrp\": 160000.0, \"name\": \"Samsung 633 L Frost Free Side By Side Refrigerator, RS78CG8543SLHL ( Real Stainless )\", \"price\": 123490.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Refrigerator\", \"discount_percent\": 26.66, \"id\": \"samsung-865-l-frost-free-french-door-bespoke-family-hub-refrigerator-rf87a9770sg-tl-black-caviar\", \"in_stock\": false, \"model\": \"Samsung 865 L Frost Free French Door BESPOKE Family Hub Refrigerator\", \"mrp\": 380000.0, \"name\": \"Samsung 865 L Frost Free French Door BESPOKE Family Hub Refrigerator, RF87A9770SG/TL ( Black Caviar )\", \"price\": 278690.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Television\", \"discount_percent\": 55.29, \"id\": \"samsung-4k-ultra-hd-qled-smart-tv-qa85q60cakxxl-85-inch\", \"in_stock\": false, \"model\": \"Samsung 4K Ultra HD QLED Smart TV, QA85Q60CAKXXL\", \"mrp\": 699900.0, \"name\": \"Samsung 4K Ultra HD QLED Smart TV, QA85Q60CAKXXL ( 85 inch )\", \"price\": 312900.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: Samsung Galaxy Watch5 Pro LTE ( Gray Titanium,45 mm ) — ₹49,999 (in stock); Samsung Galaxy Watch5 Pro LTE ( Black Titanium,45 mm ) — ₹49,999 (in stock); Samsung Galaxy S24 5G ( Onyx Black,8GB-256GB ) — ₹70,999 (in stock); Samsung Galaxy Watch4 Classic LTE ( Black,46 mm ) — ₹35,999 (in stock); Samsung Type-C Data Cable ( Black ) — ₹549 (in stock).\n\n[[SHOPAI_PRODUCTS:samsung-galaxy-watch5-pro-lte-45-mm-gray-titanium-sm-r925fztainu,samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu,samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram,samsung-galaxy-watch4-classic-lte-46mm-black-sm-r895fzkainu,samsung-type-c-data-cable-black-ep-dg930ibegin]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": null,
+          "category": null,
+          "brand": "Samsung",
+          "min_price": null,
+          "max_price": null,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "phones_under_20000",
+    "question": "I need a phone under 20000",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.2124,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": null,
+      "category": "Smartphones",
+      "brand": null,
+      "min_price": null,
+      "max_price": 20000.0,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 0,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:10:09.340526+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:11.668342+00:00",
+      "laya_duration_ms": 2327.8,
+      "product_search_start": "2026-10-02T09:10:11.668446+00:00",
+      "postgres_query_start": "2026-10-02T09:10:11.668824+00:00",
+      "postgres_query_count": 1,
+      "postgres_query_end": "2026-10-02T09:10:11.671382+00:00",
+      "postgres_query_duration_ms": 2.6,
+      "product_search_end": "2026-10-02T09:10:11.671423+00:00",
+      "product_search_duration_ms": 3.0,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [],
+    "reference_contexts": [],
+    "response": "I couldn't find matching products in the catalog. Try broadening your search or budget.",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": null,
+          "category": "Smartphones",
+          "brand": null,
+          "min_price": null,
+          "max_price": 20000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 0,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "headphones_under_2000",
+    "question": "Find headphones under 2000",
+    "laya_intent": "product_search",
+    "laya_confidence": 0.8163,
+    "intent_action": "product_search",
+    "extracted_filters": {
+      "query": "headphones",
+      "category": "Headphones",
+      "brand": null,
+      "min_price": null,
+      "max_price": 2000.0,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:10:11.672983+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:13.512441+00:00",
+      "laya_duration_ms": 1839.5,
+      "product_search_start": "2026-10-02T09:10:13.512544+00:00",
+      "postgres_query_start": "2026-10-02T09:10:13.518307+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:10:13.523710+00:00",
+      "postgres_query_duration_ms": 5.4,
+      "product_search_end": "2026-10-02T09:10:13.524381+00:00",
+      "product_search_duration_ms": 11.8,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 6.85, \"id\": \"sony-mdr-ex15ap-earphone-black\", \"in_stock\": true, \"model\": \"Sony MDR-EX15AP Earphone\", \"mrp\": 890.0, \"name\": \"Sony MDR-EX15AP Earphone ( Black )\", \"price\": 829.0, \"rating\": 5.0, \"rating_count\": 153, \"stock\": 316}, {\"brand\": \"Zebronics\", \"category\": \"Headphones\", \"discount_percent\": 41.2, \"id\": \"zebronics-zeb-yoga-2-bluetooth-headset-black\", \"in_stock\": true, \"model\": \"Zebronics Zeb-Yoga 2 Bluetooth Headset\", \"mrp\": 1699.0, \"name\": \"Zebronics Zeb-Yoga 2 Bluetooth Headset ( Black )\", \"price\": 999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 4}, {\"brand\": \"Skullcandy\", \"category\": \"Headphones\", \"discount_percent\": 72.54, \"id\": \"skullcandy-jib-mic-earphone-black\", \"in_stock\": true, \"model\": \"Skullcandy Jib Mic Earphone\", \"mrp\": 1999.0, \"name\": \"Skullcandy Jib Mic Earphone ( Black )\", \"price\": 549.0, \"rating\": 4.9, \"rating_count\": 210, \"stock\": 422}, {\"brand\": \"JBL\", \"category\": \"Headphones\", \"discount_percent\": 25.03, \"id\": \"jbl-t50hi-headphone-black\", \"in_stock\": true, \"model\": \"JBL T50HI headphone\", \"mrp\": 799.0, \"name\": \"JBL T50HI headphone ( Black )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 1347}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 9.1, \"id\": \"samsung-eo-ic050-type-c-earphone-black-eo-ic050bbegin\", \"in_stock\": true, \"model\": \"Samsung EO IC050 Type-C Earphone\", \"mrp\": 1099.0, \"name\": \"Samsung EO IC050 Type-C Earphone EO IC050BBEGIN ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 3}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Sony\", \"category\": \"Headphones\", \"discount_percent\": 6.85, \"id\": \"sony-mdr-ex15ap-earphone-black\", \"in_stock\": true, \"model\": \"Sony MDR-EX15AP Earphone\", \"mrp\": 890.0, \"name\": \"Sony MDR-EX15AP Earphone ( Black )\", \"price\": 829.0, \"rating\": 5.0, \"rating_count\": 153, \"stock\": 316}, {\"brand\": \"Zebronics\", \"category\": \"Headphones\", \"discount_percent\": 41.2, \"id\": \"zebronics-zeb-yoga-2-bluetooth-headset-black\", \"in_stock\": true, \"model\": \"Zebronics Zeb-Yoga 2 Bluetooth Headset\", \"mrp\": 1699.0, \"name\": \"Zebronics Zeb-Yoga 2 Bluetooth Headset ( Black )\", \"price\": 999.0, \"rating\": 5.0, \"rating_count\": 1, \"stock\": 4}, {\"brand\": \"Skullcandy\", \"category\": \"Headphones\", \"discount_percent\": 72.54, \"id\": \"skullcandy-jib-mic-earphone-black\", \"in_stock\": true, \"model\": \"Skullcandy Jib Mic Earphone\", \"mrp\": 1999.0, \"name\": \"Skullcandy Jib Mic Earphone ( Black )\", \"price\": 549.0, \"rating\": 4.9, \"rating_count\": 210, \"stock\": 422}, {\"brand\": \"JBL\", \"category\": \"Headphones\", \"discount_percent\": 25.03, \"id\": \"jbl-t50hi-headphone-black\", \"in_stock\": true, \"model\": \"JBL T50HI headphone\", \"mrp\": 799.0, \"name\": \"JBL T50HI headphone ( Black )\", \"price\": 599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 1347}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 9.1, \"id\": \"samsung-eo-ic050-type-c-earphone-black-eo-ic050bbegin\", \"in_stock\": true, \"model\": \"Samsung EO IC050 Type-C Earphone\", \"mrp\": 1099.0, \"name\": \"Samsung EO IC050 Type-C Earphone EO IC050BBEGIN ( Black )\", \"price\": 999.0, \"rating\": null, \"rating_count\": 0, \"stock\": 3}, {\"brand\": \"JBL\", \"category\": \"Headphones\", \"discount_percent\": 25.01, \"id\": \"jbl-tune-310c-usb-c-headphone-black\", \"in_stock\": true, \"model\": \"JBL Tune 310C USB-C Headphone\", \"mrp\": 1999.0, \"name\": \"JBL Tune 310C USB-C Headphone ( Black )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 2263}, {\"brand\": \"OnePlus\", \"category\": \"Headphones\", \"discount_percent\": 21.75, \"id\": \"oneplus-bullets-wireless-z2-bluetooth-headset-magico-black\", \"in_stock\": false, \"model\": \"OnePlus Bullets Wireless Z2 Bluetooth Headset\", \"mrp\": 2299.0, \"name\": \"OnePlus Bullets Wireless Z2 Bluetooth Headset ( Magico Black )\", \"price\": 1799.0, \"rating\": 5.0, \"rating_count\": 2, \"stock\": 0}, {\"brand\": \"Samsung\", \"category\": \"Headphones\", \"discount_percent\": 10.02, \"id\": \"samsung-earphone-ehs64avfbecinu-black\", \"in_stock\": false, \"model\": \"Samsung EHS64 Earphone\", \"mrp\": 499.0, \"name\": \"Samsung EHS64 Earphone ( Black )\", \"price\": 449.0, \"rating\": 4.9, \"rating_count\": 65, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 51.85, \"id\": \"boat-rockerz-109-bluetooth-headset-active-black\", \"in_stock\": false, \"model\": \"Boat Rockerz 109 Bluetooth Headset\", \"mrp\": 2490.0, \"name\": \"Boat Rockerz 109 Bluetooth Headset ( Active Black )\", \"price\": 1199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 51.85, \"id\": \"boat-rockerz-109-bluetooth-headset-cool-blue\", \"in_stock\": false, \"model\": \"Boat Rockerz 109 Bluetooth Headset\", \"mrp\": 2490.0, \"name\": \"Boat Rockerz 109 Bluetooth Headset ( Cool Blue )\", \"price\": 1199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 51.85, \"id\": \"boat-rockerz-109-bluetooth-headset-fern-green\", \"in_stock\": false, \"model\": \"Boat Rockerz 109 Bluetooth Headset\", \"mrp\": 2490.0, \"name\": \"Boat Rockerz 109 Bluetooth Headset ( Fern Green )\", \"price\": 1199.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Realme\", \"category\": \"Headphones\", \"discount_percent\": 48.02, \"id\": \"realme-buds-wireless-3-neo-dark-black\", \"in_stock\": false, \"model\": \"Realme Buds Wireless 3 Neo\", \"mrp\": 2499.0, \"name\": \"Realme Buds Wireless 3 Neo ( Dark Black )\", \"price\": 1299.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Realme\", \"category\": \"Headphones\", \"discount_percent\": 48.02, \"id\": \"realme-buds-wireless-3-neo-dark-blue\", \"in_stock\": false, \"model\": \"Realme Buds Wireless 3 Neo\", \"mrp\": 2499.0, \"name\": \"Realme Buds Wireless 3 Neo ( Dark Blue )\", \"price\": 1299.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 71.96, \"id\": \"boat-airdopes-ultra-plus-wireless-earbuds-active-black\", \"in_stock\": false, \"model\": \"Boat Airdopes Ultra Plus Wireless Earbuds\", \"mrp\": 4990.0, \"name\": \"Boat Airdopes Ultra Plus Wireless Earbuds ( Active Black )\", \"price\": 1399.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 71.96, \"id\": \"boat-airdopes-ultra-plus-wireless-earbuds-olive-slate\", \"in_stock\": false, \"model\": \"Boat Airdopes Ultra Plus Wireless Earbuds\", \"mrp\": 4990.0, \"name\": \"Boat Airdopes Ultra Plus Wireless Earbuds ( Olive Slate )\", \"price\": 1399.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Noise\", \"category\": \"Headphones\", \"discount_percent\": 62.52, \"id\": \"noise-buds-connect-truly-wireless-mint-green\", \"in_stock\": false, \"model\": \"Noise Buds Connect Truly Wireless\", \"mrp\": 3999.0, \"name\": \"Noise Buds Connect Truly Wireless ( Mint Green )\", \"price\": 1499.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 64.39, \"id\": \"boat-airdopes-170-true-wireless-frost-white\", \"in_stock\": false, \"model\": \"Boat Airdopes 170 True Wireless\", \"mrp\": 4490.0, \"name\": \"Boat Airdopes 170 True Wireless ( Frost White )\", \"price\": 1599.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Boat\", \"category\": \"Headphones\", \"discount_percent\": 71.68, \"id\": \"boat-rockerz-333-anc-bluetooth-headset-stellar-black\", \"in_stock\": false, \"model\": \"Boat Rockerz 333 ANC Bluetooth Headset\", \"mrp\": 5999.0, \"name\": \"Boat Rockerz 333 ANC Bluetooth Headset ( Stellar Black )\", \"price\": 1699.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: Sony MDR-EX15AP Earphone ( Black ) — ₹829 (in stock); Zebronics Zeb-Yoga 2 Bluetooth Headset ( Black ) — ₹999 (in stock); Skullcandy Jib Mic Earphone ( Black ) — ₹549 (in stock); JBL T50HI headphone ( Black ) — ₹599 (in stock); Samsung EO IC050 Type-C Earphone EO IC050BBEGIN ( Black ) — ₹999 (in stock).\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black,zebronics-zeb-yoga-2-bluetooth-headset-black,skullcandy-jib-mic-earphone-black,jbl-t50hi-headphone-black,samsung-eo-ic050-type-c-earphone-black-eo-ic050bbegin]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": "headphones",
+          "category": "Headphones",
+          "brand": null,
+          "min_price": null,
+          "max_price": 2000.0,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  },
+  {
+    "id": "apple_accessories",
+    "question": "Show me Apple accessories",
+    "laya_intent": "cart_action",
+    "laya_confidence": 0.2656,
+    "intent_action": "product_search (recovered from cart_action)",
+    "extracted_filters": {
+      "query": null,
+      "category": "accessories",
+      "brand": "Apple",
+      "min_price": null,
+      "max_price": null,
+      "sort_by": null,
+      "limit": 5
+    },
+    "product_search_result_count": 5,
+    "actual_ollama_called": false,
+    "ollama_failure": null,
+    "final_response_received": true,
+    "timings": {
+      "laya_start": "2026-10-02T09:10:13.526399+00:00",
+      "laya_call_count": 1,
+      "laya_end": "2026-10-02T09:10:15.724253+00:00",
+      "laya_duration_ms": 2197.9,
+      "product_search_start": "2026-10-02T09:10:15.724351+00:00",
+      "postgres_query_start": "2026-10-02T09:10:15.731663+00:00",
+      "postgres_query_count": 2,
+      "postgres_query_end": "2026-10-02T09:10:15.736410+00:00",
+      "postgres_query_duration_ms": 4.8,
+      "product_search_end": "2026-10-02T09:10:15.736913+00:00",
+      "product_search_duration_ms": 12.6,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    },
+    "case_classification": "A",
+    "retrieved_contexts": [
+      "{\"products\": [{\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.02, \"id\": \"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Wireless Charger 15W\", \"mrp\": 4500.0, \"name\": \"Apple MagSafe Wireless Charger 15W ( White )\", \"price\": 4499.0, \"rating\": 4.8, \"rating_count\": 71, \"stock\": 1}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-magsafe-power-adapter-45w-for-macbook-air-white-mc747hn-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Power Adapter 45W For MacBook Air\", \"mrp\": 7800.0, \"name\": \"Apple MagSafe Power Adapter 45W For MacBook Air ( White )\", \"price\": 7800.0, \"rating\": 4.8, \"rating_count\": 6, \"stock\": 1}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.22, \"id\": \"apple-lightning-to-3-5mm-headphone-jack-adaptor-mmx62zm-a\", \"in_stock\": false, \"model\": \"Apple Lightning to 3.5mm Headphone Jack Adaptor\", \"mrp\": 900.0, \"name\": \"Apple Lightning to 3.5mm Headphone Jack Adaptor ( White )\", \"price\": 898.0, \"rating\": 4.9, \"rating_count\": 58, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-3-5mm-headphone-jack-adapter-white-mu7e2zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C to 3.5mm Headphone Jack Adapter\", \"mrp\": 900.0, \"name\": \"Apple USB-C to 3.5mm Headphone Jack Adapter ( White )\", \"price\": 900.0, \"rating\": 4.9, \"rating_count\": 17, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 15.79, \"id\": \"apple-usb-c-to-usb-adapter-white-mj1m2zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C To USB Adapter\", \"mrp\": 1900.0, \"name\": \"Apple USB-C To USB Adapter ( White )\", \"price\": 1600.0, \"rating\": 4.9, \"rating_count\": 7, \"stock\": 0}]}"
+    ],
+    "reference_contexts": [
+      "{\"products\": [{\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.02, \"id\": \"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Wireless Charger 15W\", \"mrp\": 4500.0, \"name\": \"Apple MagSafe Wireless Charger 15W ( White )\", \"price\": 4499.0, \"rating\": 4.8, \"rating_count\": 71, \"stock\": 1}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-magsafe-power-adapter-45w-for-macbook-air-white-mc747hn-a\", \"in_stock\": true, \"model\": \"Apple MagSafe Power Adapter 45W For MacBook Air\", \"mrp\": 7800.0, \"name\": \"Apple MagSafe Power Adapter 45W For MacBook Air ( White )\", \"price\": 7800.0, \"rating\": 4.8, \"rating_count\": 6, \"stock\": 1}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.22, \"id\": \"apple-lightning-to-3-5mm-headphone-jack-adaptor-mmx62zm-a\", \"in_stock\": false, \"model\": \"Apple Lightning to 3.5mm Headphone Jack Adaptor\", \"mrp\": 900.0, \"name\": \"Apple Lightning to 3.5mm Headphone Jack Adaptor ( White )\", \"price\": 898.0, \"rating\": 4.9, \"rating_count\": 58, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-3-5mm-headphone-jack-adapter-white-mu7e2zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C to 3.5mm Headphone Jack Adapter\", \"mrp\": 900.0, \"name\": \"Apple USB-C to 3.5mm Headphone Jack Adapter ( White )\", \"price\": 900.0, \"rating\": 4.9, \"rating_count\": 17, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 15.79, \"id\": \"apple-usb-c-to-usb-adapter-white-mj1m2zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C To USB Adapter\", \"mrp\": 1900.0, \"name\": \"Apple USB-C To USB Adapter ( White )\", \"price\": 1600.0, \"rating\": 4.9, \"rating_count\": 7, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-lightning-to-usb-cable-1m-white-mxly2zm-a\", \"in_stock\": false, \"model\": \"Apple Lightning To USB Cable 1m\", \"mrp\": 1800.0, \"name\": \"Apple Lightning To USB Cable 1m ( White )\", \"price\": 1800.0, \"rating\": 4.9, \"rating_count\": 44, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.58, \"id\": \"apple-usb-c-power-adapter-20w-white-mhjd3hn-a\", \"in_stock\": false, \"model\": \"Apple USB-C Power Adapter 20W\", \"mrp\": 1900.0, \"name\": \"Apple USB-C Power Adapter 20W ( White ) MHJD3HN/A\", \"price\": 1889.0, \"rating\": 4.9, \"rating_count\": 201, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-digital-av-multiport-adapter-white-muf82zm-a\", \"in_stock\": false, \"model\": \"Apple USB-C Digital AV Multiport Adapter\", \"mrp\": 6900.0, \"name\": \"Apple USB-C Digital AV Multiport Adapter ( White )\", \"price\": 6900.0, \"rating\": 4.9, \"rating_count\": 7, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-magsafe-2-power-adapter-60w-for-macbook-pro-white-md565hn-a\", \"in_stock\": false, \"model\": \"Apple MagSafe 2 Power Adapter 60W For MacBook Pro\", \"mrp\": 7500.0, \"name\": \"Apple MagSafe 2 Power Adapter 60W For MacBook Pro ( White )\", \"price\": 7500.0, \"rating\": 4.7, \"rating_count\": 3, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"AirTag\", \"discount_percent\": 35.4, \"id\": \"apple-airtag-loop-deep-navy\", \"in_stock\": false, \"model\": \"Apple AirTag Loop\", \"mrp\": 3390.0, \"name\": \"Apple AirTag Loop ( Deep Navy )\", \"price\": 2190.0, \"rating\": 4.5, \"rating_count\": 21, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-lightning-cable-1m-white\", \"in_stock\": false, \"model\": \"Apple USB C To Lightning Cable 1m\", \"mrp\": 1900.0, \"name\": \"Apple USB C To Lightning Cable 1m ( White )\", \"price\": 1900.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Data Cables\", \"discount_percent\": 0.0, \"id\": \"apple-usb-c-to-lightning-cable-2m-white\", \"in_stock\": false, \"model\": \"Apple USB C To Lightning Cable 2M\", \"mrp\": 2900.0, \"name\": \"Apple USB C To Lightning Cable 2M ( White )\", \"price\": 2900.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}, {\"brand\": \"Apple\", \"category\": \"Battery Chargers\", \"discount_percent\": 0.0, \"id\": \"apple-35w-dual-usb-c-port-power-adapter-white-mnwp3hn-a\", \"in_stock\": false, \"model\": \"Apple 35W Dual USB-C Port Power Adapter\", \"mrp\": 5800.0, \"name\": \"Apple 35W Dual USB-C Port Power Adapter ( White )\", \"price\": 5800.0, \"rating\": null, \"rating_count\": 0, \"stock\": 0}]}"
+    ],
+    "response": "I found 5 matching products: Apple MagSafe Wireless Charger 15W ( White ) — ₹4,499 (in stock); Apple MagSafe Power Adapter 45W For MacBook Air ( White ) — ₹7,800 (in stock); Apple Lightning to 3.5mm Headphone Jack Adaptor ( White ) — ₹898 (out of stock); Apple USB-C to 3.5mm Headphone Jack Adapter ( White ) — ₹900 (out of stock); Apple USB-C To USB Adapter ( White ) — ₹1,600 (out of stock).\n\n[[SHOPAI_PRODUCTS:apple-magsafe-wireless-charger-15w-white-mhxh3zm-a,apple-magsafe-power-adapter-45w-for-macbook-air-white-mc747hn-a,apple-lightning-to-3-5mm-headphone-jack-adaptor-mmx62zm-a,apple-usb-c-to-3-5mm-headphone-jack-adapter-white-mu7e2zm-a,apple-usb-c-to-usb-adapter-white-mj1m2zm-a]]",
+    "response_source": "deterministic_catalog",
+    "evaluation_status": "deterministic_catalog",
+    "error": null,
+    "search_calls": [
+      {
+        "filters": {
+          "query": null,
+          "category": "accessories",
+          "brand": "Apple",
+          "min_price": null,
+          "max_price": null,
+          "sort_by": null,
+          "limit": 5
+        },
+        "result_count": 5,
+        "error": null
+      }
+    ],
+    "diagnostic_searches": [],
+    "faithfulness": null,
+    "answer_relevancy": null,
+    "context_precision": null,
+    "context_recall": null,
+    "evaluation_note": "Case A: Production intentionally returned deterministic catalog response without Ollama; excluded from quality scoring."
+  }
+]

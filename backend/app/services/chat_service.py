@@ -4,6 +4,7 @@ import json
 import logging
 import re
 import time
+from datetime import datetime, timezone
 from typing import Any, Dict, Tuple
 
 from sqlalchemy.orm import Session
@@ -46,7 +47,9 @@ class ChatService:
         parsed = LLMService._rule_based_intent_extraction(message)
         lowered = message.lower()
         # The bundled catalog distinguishes smartphones from headphones/accessories.
-        if re.search(r"\b(?:iphone|smartphones?|phones?|mobiles?|cell ?phones?)\b", lowered):
+        if re.search(r"\baccessor(?:y|ies)\b", lowered):
+            parsed["category"] = "accessories"
+        elif re.search(r"\b(?:iphone|smartphones?|phones?|mobiles?|cell ?phones?)\b", lowered):
             parsed["category"] = "Smartphones"
         if re.search(r"\biphone\b", lowered):
             parsed["brand"] = "Apple"
@@ -70,7 +73,9 @@ class ChatService:
                 "best", "phone", "phones", "smartphone", "smartphones", "mobile", "mobiles",
                 "cell", "under", "below", "less", "than", "within", "around", "about",
                 "approximately", "budget", "of", "for", "over", "above", "more", "inr", "rs",
-                "apple", "samsung", "sony", "philips", "mi",
+                "apple", "samsung", "sony", "philips", "mi", "product", "products",
+                "accessory", "accessories", "i", "need", "want", "do", "you", "have",
+                "which", "are", "available",
             }
             qualifiers = [
                 token for token in re.findall(r"[a-z0-9]+", lowered)
@@ -82,10 +87,23 @@ class ChatService:
     def _catalog_context(self, products: list, **extra: Any) -> Dict[str, Any]:
         return {**self.ollama.product_context(products), **extra}
 
-    def _ollama_answer(self, message: str, context: Dict[str, Any]) -> str:
+    @staticmethod
+    def _format_catalog_search_answer(products: list) -> str:
+        """Answer direct catalog lookups from the exact rows already returned by PostgreSQL."""
+        if not products:
+            return "I couldn't find matching products in the catalog. Try broadening your search or budget."
+
+        matches = [
+            f"{product['name']} — ₹{product['price']:,.0f} "
+            f"({'in stock' if product.get('in_stock') else 'out of stock'})"
+            for product in products
+        ]
+        return f"I found {len(matches)} matching product{'s' if len(matches) != 1 else ''}: " + "; ".join(matches) + "."
+
+    def _ollama_answer(self, message: str, context: Dict[str, Any], timings: Dict[str, Any]) -> str:
         try:
             logger.info("[AI FLOW] OLLAMA CALL: model=%s, url=%s", self.ollama.model, self.ollama.url)
-            answer = self.ollama.generate(message, context)
+            answer = self.ollama.generate(message, context, timings=timings)
             self._response_source = "ollama"
             logger.info("[AI FLOW] OLLAMA RESPONSE RECEIVED")
             return answer
@@ -102,7 +120,8 @@ class ChatService:
                 "Start it with `ollama serve`, then retry your message."
             )
 
-    async def generate_response(self, request: ChatRequest) -> ChatResponse:
+    async def generate_response(self, request: ChatRequest, timings: Dict[str, Any] | None = None) -> ChatResponse:
+        timings = timings if timings is not None else {}
         full_message = (request.message or "").strip()
         user_message, client_context = self._request_context(full_message)
         if not user_message:
@@ -110,17 +129,24 @@ class ChatService:
 
         # Laya must be the first decision step. Never fall back to a regex intent guess.
         laya_started = time.perf_counter()
+        timings["laya_start"] = datetime.now(timezone.utc).isoformat()
+        timings["laya_call_count"] = timings.get("laya_call_count", 0) + 1
         try:
             decision = self.laya.decide(user_message)
         except Exception:
+            timings["laya_end"] = datetime.now(timezone.utc).isoformat()
+            timings["laya_duration_ms"] = round((time.perf_counter() - laya_started) * 1000, 1)
             logger.info("CHAT TIMING laya_ms=%.1f", (time.perf_counter() - laya_started) * 1000)
             logger.exception("LAYA decision failed")
             return ChatResponse(
                 response="I couldn't reach the Laya decision service. Start it on port 5055 and try again."
             )
-        logger.info("CHAT TIMING laya_ms=%.1f", (time.perf_counter() - laya_started) * 1000)
+        timings["laya_end"] = datetime.now(timezone.utc).isoformat()
+        timings["laya_duration_ms"] = round((time.perf_counter() - laya_started) * 1000, 1)
+        logger.info("CHAT TIMING laya_ms=%.1f", timings["laya_duration_ms"])
 
-        action = decision["choice"]
+        laya_choice = decision["choice"]
+        action = laya_choice
         confidence = decision.get("confidence")
         logger.info(
             "[AI FLOW] LAYA DECISION: choice=%s, confidence=%s, source=%s",
@@ -131,12 +157,23 @@ class ChatService:
             logger.info("LOW CONFIDENCE: asking for clarification without executing an action")
             return ChatResponse(response="I’m not sure which action you meant. Could you rephrase what you’d like me to do?")
 
+        discovery_request = re.search(
+            r"\b(?:show|find|search|need|want|looking for|do you have)\b", user_message, re.I
+        )
+        cart_request = re.search(r"\b(?:cart|basket|checkout|add to)\b", user_message, re.I)
+        if action == "cart_action" and discovery_request and not cart_request:
+            action = "product_search"
+            logger.info("[AI FLOW] ACTION RECOVERY: explicit product discovery overrides Laya cart_action")
+
+        logger.info("[AI FLOW] INTENT/ACTION: %s (Laya choice: %s)", action, laya_choice)
         logger.info("TOOL/DATABASE action=%s", action)
         if action in ("product_search", "recommendation"):
             extraction_started = time.perf_counter()
             filters = self._filters(user_message)
             logger.info("CHAT TIMING product_filter_extraction_ms=%.1f filters=%s", (time.perf_counter() - extraction_started) * 1000, filters)
+            logger.info("[AI FLOW] EXTRACTED FILTERS: %s", filters)
             db_started = time.perf_counter()
+            timings["product_search_start"] = datetime.now(timezone.utc).isoformat()
             products = self.search_tool.search_products(
                 query=filters.get("search_term"),
                 category=filters.get("category"),
@@ -145,20 +182,26 @@ class ChatService:
                 max_price=filters.get("max_price"),
                 sort_by="rating" if action == "recommendation" else None,
                 limit=5,
+                timings=timings,
             )
-            logger.info("CHAT TIMING postgres_query_ms=%.1f", (time.perf_counter() - db_started) * 1000)
+            timings["product_search_end"] = datetime.now(timezone.utc).isoformat()
+            timings["product_search_duration_ms"] = round((time.perf_counter() - db_started) * 1000, 1)
+            logger.info("CHAT TIMING product_search_ms=%.1f postgres_query_ms=%.1f", timings["product_search_duration_ms"], timings.get("postgres_query_duration_ms", 0.0))
             logger.info("TOOL/DATABASE returned %d products", len(products))
             logger.info("[AI FLOW] PRODUCT TOOL: %d products found", len(products))
-            if not products:
-                return ChatResponse(
-                    response="I couldn't find products matching that request in the current catalog. Try a different brand, product type, or budget."
-                )
-            # The query has already been applied in PostgreSQL. Pass only the
-            # matched product rows to the answer model, without redundant filters.
-            context = self._catalog_context(products)
-            generation_started = time.perf_counter()
-            response = self._ollama_answer(user_message, context)
-            logger.info("CHAT TIMING final_response_generation_ms=%.1f", (time.perf_counter() - generation_started) * 1000)
+            if action == "product_search":
+                # The query has already been applied in PostgreSQL, and a
+                # direct lookup needs only exact catalog facts. Avoid an LLM
+                # round trip here; retain generation for recommendations.
+                response = self._format_catalog_search_answer(products)
+                self._response_source = "deterministic_catalog"
+                timings["ollama_skipped_reason"] = "deterministic_catalog_search"
+                logger.info("[AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL")
+            else:
+                context = self._catalog_context(products)
+                generation_started = time.perf_counter()
+                response = self._ollama_answer(user_message, context, timings)
+                logger.info("CHAT TIMING final_response_generation_ms=%.1f", (time.perf_counter() - generation_started) * 1000)
             if products:
                 ids = [str(product["id"]) for product in products]
                 response += f"\n\n[[SHOPAI_PRODUCTS:{','.join(ids)}]]"
@@ -177,7 +220,7 @@ class ChatService:
                 product = matches[0] if matches else None
             if not product:
                 return ChatResponse(response="Which product would you like details about? Share its name or select it from the catalog.")
-            return ChatResponse(response=self._ollama_answer(user_message, self._catalog_context([product])))
+            return ChatResponse(response=self._ollama_answer(user_message, self._catalog_context([product]), timings))
 
         if action == "add_to_cart":
             ids = client_context.get("recent_product_ids") or []
@@ -199,6 +242,6 @@ class ChatService:
                 cart = []
             if not cart:
                 return ChatResponse(response="Your cart is empty. Find a product in the catalog and add it to your cart to see it here.")
-            return ChatResponse(response=self._ollama_answer(user_message, {"cart": cart}))
+            return ChatResponse(response=self._ollama_answer(user_message, {"cart": cart}, timings))
 
-        return ChatResponse(response=self._ollama_answer(user_message, {"business": "Poorvika electronics retailer"}))
+        return ChatResponse(response=self._ollama_answer(user_message, {"business": "Poorvika electronics retailer"}, timings))

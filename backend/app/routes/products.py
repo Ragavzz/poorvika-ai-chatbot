@@ -20,8 +20,12 @@ async def get_products(
     brand: Optional[List[str]] = Query(None, description="Brand filter(s)"),
     min_price: Optional[float] = Query(None, description="Minimum price filter"),
     max_price: Optional[float] = Query(None, description="Maximum price filter"),
+    in_stock_only: bool = Query(False, description="Only show available products"),
+    min_rating: Optional[float] = Query(None, ge=0, le=5),
+    min_discount: Optional[float] = Query(None, ge=0, le=100),
     sort: Optional[str] = Query(None, description="Sorting parameter"),
-    limit: Optional[int] = Query(50, description="Max records to return"),
+    limit: int = Query(50, ge=1, le=100, description="Max records to return"),
+    offset: int = Query(0, ge=0, description="Number of matching records to skip"),
     db: Session = Depends(get_db),
 ):
     """
@@ -34,16 +38,15 @@ async def get_products(
         brand=brand,
         min_price=min_price,
         max_price=max_price,
+        in_stock_only=in_stock_only,
+        min_rating=min_rating,
+        min_discount=min_discount,
         sort_by=sort,
-        limit=limit or 50,
+        limit=limit,
+        offset=offset,
+        frontend_only=True,
     )
-    # Return formatted list expected by frontend api.ts
-    formatted = []
-    for item in items:
-        prod = db.query(Product).filter(Product.id == item["id"]).first()
-        if prod:
-            formatted.append(prod.to_frontend_dict())
-    return formatted
+    return items
 
 
 @products_router.get("/products/search")
@@ -53,8 +56,12 @@ async def search_products(
     brand: Optional[List[str]] = Query(None, description="Brand filter(s)"),
     min_price: Optional[float] = Query(None, description="Minimum price filter"),
     max_price: Optional[float] = Query(None, description="Maximum price filter"),
+    in_stock_only: bool = Query(False, description="Only show available products"),
+    min_rating: Optional[float] = Query(None, ge=0, le=5),
+    min_discount: Optional[float] = Query(None, ge=0, le=100),
     sort: Optional[str] = Query(None, description="Sorting parameter"),
-    limit: Optional[int] = Query(50, description="Max records to return"),
+    limit: int = Query(50, ge=1, le=100, description="Max records to return"),
+    offset: int = Query(0, ge=0, description="Number of matching records to skip"),
     db: Session = Depends(get_db),
 ):
     """
@@ -67,15 +74,15 @@ async def search_products(
         brand=brand,
         min_price=min_price,
         max_price=max_price,
+        in_stock_only=in_stock_only,
+        min_rating=min_rating,
+        min_discount=min_discount,
         sort_by=sort,
-        limit=limit or 50,
+        limit=limit,
+        offset=offset,
+        frontend_only=True,
     )
-    formatted = []
-    for item in items:
-        prod = db.query(Product).filter(Product.id == item["id"]).first()
-        if prod:
-            formatted.append(prod.to_frontend_dict())
-    return formatted
+    return items
 
 
 @products_router.get("/products/{product_id}")

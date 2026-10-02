@@ -3,6 +3,7 @@
 import json
 import logging
 import time
+from datetime import datetime, timezone
 from typing import Any, Dict, List
 
 import requests
@@ -15,7 +16,8 @@ HTTP = requests.Session()
 SYSTEM_PROMPT = (
     "Use only catalog data. Answer in one concise sentence with product name, exact INR price, "
     "and stock status. Use ₹ before the exact catalog price; never change its currency or value. "
-    "Do not invent or infer product details."
+    "Do not invent or infer product details. If the catalog context contains no products, say that "
+    "there are no matching catalog results and invite the customer to broaden the search."
 )
 
 
@@ -26,9 +28,12 @@ class OllamaService:
         self.url = settings.OLLAMA_API_URL
         self.model = settings.OLLAMA_MODEL
 
-    def generate(self, message: str, context: Dict[str, Any]) -> str:
+    def generate(self, message: str, context: Dict[str, Any], timings: Dict[str, Any] | None = None) -> str:
         logger.info("OLLAMA request: model=%s", self.model)
         started = time.perf_counter()
+        if timings is not None:
+            timings["ollama_call_count"] = timings.get("ollama_call_count", 0) + 1
+            timings["ollama_start"] = datetime.now(timezone.utc).isoformat()
         # Serialize only the already-filtered rows returned by PostgreSQL. This
         # is compact and avoids Python's verbose dict representation in prompts.
         products = context.get("products")
@@ -41,7 +46,12 @@ class OllamaService:
             prompt = f"Customer: {message}\nCatalog: {json.dumps(catalog, ensure_ascii=False, separators=(',', ':'))}"
         else:
             prompt = f"Customer: {message}\nContext: {json.dumps(context, ensure_ascii=False, separators=(',', ':'))}"
-        logger.info("OLLAMA prompt_chars=%d", len(SYSTEM_PROMPT) + len(prompt))
+        prompt_chars = len(SYSTEM_PROMPT) + len(prompt)
+        if timings is not None:
+            timings["ollama_prompt_chars"] = prompt_chars
+            timings["ollama_prompt_build_ms"] = round((time.perf_counter() - started) * 1000, 1)
+        logger.info("OLLAMA prompt_chars=%d", prompt_chars)
+        request_started = time.perf_counter()
         try:
             response = HTTP.post(
                 self.url,
@@ -60,10 +70,25 @@ class OllamaService:
             response.raise_for_status()
             data = response.json()
         except Exception as exc:
+            if timings is not None:
+                timings["ollama_end"] = datetime.now(timezone.utc).isoformat()
+                timings["ollama_duration_ms"] = round((time.perf_counter() - started) * 1000, 1)
+                timings["ollama_http_duration_ms"] = round((time.perf_counter() - request_started) * 1000, 1)
             status = getattr(getattr(exc, "response", None), "status_code", None)
             logger.info("CHAT TIMING ollama_call_ms=%.1f status=%s error=%s", (time.perf_counter() - started) * 1000, status, type(exc).__name__)
             raise
         content = (data.get("message") or {}).get("content", "").strip()
+        if timings is not None:
+            timings["ollama_end"] = datetime.now(timezone.utc).isoformat()
+            timings["ollama_duration_ms"] = round((time.perf_counter() - started) * 1000, 1)
+            timings["ollama_http_duration_ms"] = round((time.perf_counter() - request_started) * 1000, 1)
+            timings["ollama_model_load_ms"] = (data.get("load_duration") or 0) / 1_000_000
+            timings["ollama_prompt_eval_ms"] = (data.get("prompt_eval_duration") or 0) / 1_000_000
+            timings["ollama_generation_ms"] = (data.get("eval_duration") or 0) / 1_000_000
+            timings["ollama_server_total_ms"] = (data.get("total_duration") or 0) / 1_000_000
+            timings["ollama_client_overhead_ms"] = round(
+                max(0.0, timings["ollama_http_duration_ms"] - timings["ollama_server_total_ms"]), 1
+            )
         if not content:
             logger.info("CHAT TIMING ollama_call_ms=%.1f status=%s empty=true", (time.perf_counter() - started) * 1000, response.status_code)
             raise ValueError("Ollama returned an empty response")

@@ -1,7 +1,9 @@
 """Chat API route handling AI shopping assistant conversations."""
 
 import logging
+import json
 import time
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 from app.schemas.chat import ChatRequest, ChatResponse
@@ -21,12 +23,26 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)) -> ChatRespo
     Request:  POST /api/chat {"message": "..."}
     Response: {"response": "..."}
     """
-    if not request.message or not request.message.strip():
-        return ChatResponse(response="Please provide a message or question about what you're shopping for.")
-
     started = time.perf_counter()
+    timings = {
+        "request_received": datetime.now(timezone.utc).isoformat(),
+        "laya_start": None, "laya_end": None, "laya_duration_ms": None,
+        "laya_call_count": 0,
+        "product_search_start": None, "product_search_end": None,
+        "product_search_duration_ms": None, "postgres_query_duration_ms": None,
+        "postgres_query_start": None, "postgres_query_end": None, "postgres_query_count": 0,
+        "ollama_start": None, "ollama_end": None, "ollama_duration_ms": None,
+        "ollama_http_duration_ms": None, "ollama_client_overhead_ms": None,
+        "ollama_server_total_ms": None, "ollama_prompt_build_ms": None,
+        "ollama_model_load_ms": None, "ollama_prompt_eval_ms": None,
+        "ollama_generation_ms": None, "ollama_prompt_chars": None,
+        "ollama_call_count": 0, "ollama_skipped_reason": None,
+    }
     try:
+        if not request.message or not request.message.strip():
+            return ChatResponse(response="Please provide a message or question about what you're shopping for.")
         service = ChatService(db=db)
-        return await service.generate_response(request)
+        return await service.generate_response(request, timings=timings)
     finally:
-        logger.info("CHAT TIMING total_ms=%.1f", (time.perf_counter() - started) * 1000)
+        timings["response_total_ms"] = round((time.perf_counter() - started) * 1000, 1)
+        logger.info("[TIMING] %s", json.dumps(timings, separators=(",", ":")))

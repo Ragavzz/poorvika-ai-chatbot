@@ -1,0 +1,39 @@
+{
+  "generated_at_utc": "2026-10-02T09:11:30.061240+00:00",
+  "dataset_count": 12,
+  "actual_ollama_responses": 1,
+  "cases": {
+    "A_deterministic_catalog": 11,
+    "B_ollama_success": 1,
+    "C_ollama_failure": 0,
+    "D_evaluator_error": 0
+  },
+  "metrics": {
+    "faithfulness": 1.0,
+    "answer_relevancy": 0.7510140325375531,
+    "context_precision": 0.9999999999,
+    "context_recall": 1.0
+  },
+  "scored_rows": {
+    "faithfulness": 1,
+    "answer_relevancy": 1,
+    "context_precision": 1,
+    "context_recall": 1
+  },
+  "eligible_ollama_rows": 1,
+  "metric_coverage": {
+    "faithfulness": "1/1",
+    "answer_relevancy": "1/1",
+    "context_precision": "1/1",
+    "context_recall": "1/1"
+  },
+  "metrics_evaluated": [
+    "faithfulness",
+    "answer_relevancy",
+    "context_precision",
+    "context_recall"
+  ],
+  "metrics_unavailable": [],
+  "metrics_partial": [],
+  "failures": []
+}

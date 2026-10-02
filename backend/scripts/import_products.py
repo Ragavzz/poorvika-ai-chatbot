@@ -75,7 +75,10 @@ def run_import(file_path: str = None) -> Dict[str, int]:
     """
     dataset_path = file_path or settings.DATASET_PATH
     if not os.path.isabs(dataset_path):
-        dataset_path = os.path.abspath(os.path.join(backend_dir, dataset_path))
+        if os.path.exists(os.path.abspath(dataset_path)):
+            dataset_path = os.path.abspath(dataset_path)
+        else:
+            dataset_path = os.path.abspath(os.path.join(backend_dir, dataset_path))
 
     if not os.path.exists(dataset_path):
         # Fallback to direct path in workspace
@@ -252,7 +255,8 @@ if __name__ == "__main__":
         print(f"\n[WARNING] Database connection check: {msg}")
         print("If PostgreSQL is not running, start PostgreSQL and configure backend/.env")
 
-    stats = run_import()
+    target_file = sys.argv[1] if len(sys.argv) > 1 else None
+    stats = run_import(target_file)
 
     print("\n" + "=" * 50)
     print("POORVIKA PRODUCT DATASET INGESTION SUMMARY")

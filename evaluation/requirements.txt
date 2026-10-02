@@ -1,0 +1,5 @@
+# Evaluation-only dependencies; backend/requirements.txt is intentionally unchanged.
+ragas>=0.4.0,<0.5.0
+openai>=1.0.0,<3.0.0
+# Ragas 0.4.3 imports a Vertex AI adapter from this legacy module path.
+langchain-community>=0.3.0,<0.4.0

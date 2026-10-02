@@ -28,7 +28,7 @@ function ProductDetailsPage() {
   const { productId } = Route.useParams();
   const product = useQuery({
     queryKey: ["product", productId],
-    queryFn: () => api.getProduct(productId),
+    queryFn: ({ signal }) => api.getProduct(productId, signal),
     retry: false,
   });
   return (
