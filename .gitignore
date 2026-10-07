@@ -33,3 +33,9 @@ ecom-muse-main-backup/
 # Benchmark model cache
 evaluation/jev_benchmark/**/model_cache/
 evaluation/jev_benchmark/**/model_cache/
+evaluation/jev_benchmark/results/
+evaluation/laya_specialist_onnx_isolated/
+evaluation/results/raw_benchmark_results_*.csv
+evaluation/results/raw_benchmark_results_*.json
+evaluation/results/repeatability_results_*.json
+evaluation/results/summary_metrics*.json
