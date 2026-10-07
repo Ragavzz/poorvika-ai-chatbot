@@ -1,0 +1,886 @@
+[
+  {
+    "id": "search_wireless_earphones",
+    "user_query": "Do you have wireless earphones?",
+    "expected_intent": "product_search",
+    "category_type": "product_search",
+    "expected_filters": {
+      "category": "Headphones"
+    },
+    "expected_matching_criteria": "Headphones / earphones in catalog",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "search_power_banks",
+    "user_query": "Show me power banks",
+    "expected_intent": "product_search",
+    "category_type": "product_search",
+    "expected_filters": {
+      "category": "Power Banks"
+    },
+    "expected_matching_criteria": "Power Banks in catalog",
+    "expected_product_ids": [
+      "mi-10000-mah-power-bank-3i-black",
+      "conekt-zeal-run-plus-10000-mah-power-bank-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "search_smartwatches",
+    "user_query": "Show me smartwatches",
+    "expected_intent": "product_search",
+    "category_type": "product_search",
+    "expected_filters": {
+      "category": "Smartwatches"
+    },
+    "expected_matching_criteria": "Smartwatches in catalog",
+    "expected_product_ids": [
+      "samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "search_televisions",
+    "user_query": "Show me televisions",
+    "expected_intent": "product_search",
+    "category_type": "product_search",
+    "expected_filters": {
+      "category": "Television"
+    },
+    "expected_matching_criteria": "Televisions in catalog",
+    "expected_product_ids": [
+      "samsung-4k-ultra-hd-smart-tv-tu8000-55-inch",
+      "lg-4k-ultra-hd-smart-oled-evo-tv-g3-55-inch-oled55g3psa"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "search_air_fryers",
+    "user_query": "Find air fryers",
+    "expected_intent": "product_search",
+    "category_type": "product_search",
+    "expected_filters": {
+      "category": "Air Fryers"
+    },
+    "expected_matching_criteria": "Air fryers in catalog",
+    "expected_product_ids": [
+      "faber-faf-4-5msbk-1500w-air-fryer-black-4-5-l",
+      "philips-hd9252-70-1400w-air-fryer-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "details_sony_mdr",
+    "user_query": "Tell me about Sony MDR-EX15AP",
+    "expected_intent": "product_details",
+    "category_type": "product_details",
+    "expected_filters": {
+      "brand": "Sony",
+      "search_term": "mdr ex15ap"
+    },
+    "expected_matching_criteria": "Sony MDR-EX15AP earphone specifications",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "sony-mdr-ex15ap-earphone-black"
+      ]
+    },
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "details_apple_magsafe",
+    "user_query": "What are the specs of Apple MagSafe Wireless Charger?",
+    "expected_intent": "product_details",
+    "category_type": "product_details",
+    "expected_filters": {
+      "brand": "Apple",
+      "search_term": "magsafe wireless charger"
+    },
+    "expected_matching_criteria": "Apple MagSafe Wireless Charger 15W specifications",
+    "expected_product_ids": [
+      "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "details_mi_charger",
+    "user_query": "Tell me about Mi 18W Dual Port Charger",
+    "expected_intent": "product_details",
+    "category_type": "product_details",
+    "expected_filters": {
+      "brand": "Mi",
+      "search_term": "18w dual port charger"
+    },
+    "expected_matching_criteria": "Mi 18W charger details",
+    "expected_product_ids": [
+      "mi-18w-dual-port-charger-black"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "mi-18w-dual-port-charger-black"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "details_samsung_watch",
+    "user_query": "Tell me about Samsung Galaxy Watch5 Pro",
+    "expected_intent": "product_details",
+    "category_type": "product_details",
+    "expected_filters": {
+      "brand": "Samsung",
+      "search_term": "galaxy watch5 pro"
+    },
+    "expected_matching_criteria": "Samsung Galaxy Watch5 Pro specs",
+    "expected_product_ids": [
+      "samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "details_iphone13",
+    "user_query": "What is the price and features of Apple iPhone 13?",
+    "expected_intent": "product_details",
+    "category_type": "product_details",
+    "expected_filters": {
+      "brand": "Apple",
+      "search_term": "iphone 13"
+    },
+    "expected_matching_criteria": "Apple iPhone 13 128GB specifications and pricing",
+    "expected_product_ids": [
+      "apple-iphone-13-blue-128gb"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "apple-iphone-13-blue-128gb"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "add_cart_sony_earphone",
+    "user_query": "Add this phone to my cart",
+    "expected_intent": "add_to_cart",
+    "category_type": "add_to_cart",
+    "expected_filters": {},
+    "expected_matching_criteria": "Cart modification for selected item",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "sony-mdr-ex15ap-earphone-black"
+      ]
+    },
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "add_cart_magsafe",
+    "user_query": "Add Apple MagSafe charger to my cart",
+    "expected_intent": "add_to_cart",
+    "category_type": "add_to_cart",
+    "expected_filters": {},
+    "expected_matching_criteria": "Add Apple MagSafe to cart",
+    "expected_product_ids": [
+      "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "add_cart_item",
+    "user_query": "Put this item into my shopping cart",
+    "expected_intent": "add_to_cart",
+    "category_type": "add_to_cart",
+    "expected_filters": {},
+    "expected_matching_criteria": "Add current item into user cart",
+    "expected_product_ids": [
+      "samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "add_cart_earphone",
+    "user_query": "Add the Sony earphones to cart",
+    "expected_intent": "add_to_cart",
+    "category_type": "add_to_cart",
+    "expected_filters": {},
+    "expected_matching_criteria": "Add earphone to cart",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {
+      "recent_product_ids": [
+        "sony-mdr-ex15ap-earphone-black"
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "cart_show",
+    "user_query": "Show my cart",
+    "expected_intent": "cart_action",
+    "category_type": "cart_actions",
+    "expected_filters": {},
+    "expected_matching_criteria": "Display current items in cart",
+    "expected_product_ids": [],
+    "client_context": {
+      "cart": [
+        {
+          "id": "sony-mdr-ex15ap-earphone-black",
+          "name": "Sony MDR-EX15AP Earphone ( Black )",
+          "price": 829.0,
+          "quantity": 1
+        }
+      ]
+    },
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "cart_view",
+    "user_query": "View cart",
+    "expected_intent": "cart_action",
+    "category_type": "cart_actions",
+    "expected_filters": {},
+    "expected_matching_criteria": "Inspect contents of shopping cart",
+    "expected_product_ids": [],
+    "client_context": {
+      "cart": [
+        {
+          "id": "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a",
+          "name": "Apple MagSafe Wireless Charger 15W",
+          "price": 4499.0,
+          "quantity": 1
+        }
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "cart_what_inside",
+    "user_query": "What is in my cart?",
+    "expected_intent": "cart_action",
+    "category_type": "cart_actions",
+    "expected_filters": {},
+    "expected_matching_criteria": "Cart contents inspection",
+    "expected_product_ids": [],
+    "client_context": {
+      "cart": []
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "cart_checkout",
+    "user_query": "Checkout my cart items",
+    "expected_intent": "cart_action",
+    "category_type": "cart_actions",
+    "expected_filters": {},
+    "expected_matching_criteria": "Proceed to checkout with cart",
+    "expected_product_ids": [],
+    "client_context": {
+      "cart": [
+        {
+          "id": "sony-mdr-ex15ap-earphone-black",
+          "price": 829.0
+        }
+      ]
+    },
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "general_hello",
+    "user_query": "Hello",
+    "expected_intent": "general_query",
+    "category_type": "general_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Greeting / conversational response",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "general_greetings",
+    "user_query": "Hi, good morning! Who are you?",
+    "expected_intent": "general_query",
+    "category_type": "general_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Assistant introduction",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "general_return_policy",
+    "user_query": "What is your return policy?",
+    "expected_intent": "general_query",
+    "category_type": "general_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Store policy information",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "general_customer_support",
+    "user_query": "How can I contact Poorvika customer support?",
+    "expected_intent": "general_query",
+    "category_type": "general_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Customer support contact assistance",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "general_delivery",
+    "user_query": "Do you deliver to Chennai?",
+    "expected_intent": "general_query",
+    "category_type": "general_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Delivery service explanation",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "brand_apple_products",
+    "user_query": "Show me Apple products",
+    "expected_intent": "product_search",
+    "category_type": "brand_filtering",
+    "expected_filters": {
+      "brand": "Apple"
+    },
+    "expected_matching_criteria": "Brand is Apple",
+    "expected_product_ids": [
+      "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a",
+      "apple-iphone-13-blue-128gb"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "brand_samsung_products",
+    "user_query": "Show me Samsung products",
+    "expected_intent": "product_search",
+    "category_type": "brand_filtering",
+    "expected_filters": {
+      "brand": "Samsung"
+    },
+    "expected_matching_criteria": "Brand is Samsung",
+    "expected_product_ids": [
+      "samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram",
+      "samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "brand_sony_products",
+    "user_query": "Find Sony products",
+    "expected_intent": "product_search",
+    "category_type": "brand_filtering",
+    "expected_filters": {
+      "brand": "Sony"
+    },
+    "expected_matching_criteria": "Brand is Sony",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "brand_philips_products",
+    "user_query": "Show me Philips products",
+    "expected_intent": "product_search",
+    "category_type": "brand_filtering",
+    "expected_filters": {
+      "brand": "Philips"
+    },
+    "expected_matching_criteria": "Brand is Philips",
+    "expected_product_ids": [
+      "philips-gc181-80-1000-w-dry-iron-black",
+      "philips-hd9252-70-1400w-air-fryer-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "brand_lg_products",
+    "user_query": "Show me LG products",
+    "expected_intent": "product_search",
+    "category_type": "brand_filtering",
+    "expected_filters": {
+      "brand": "LG"
+    },
+    "expected_matching_criteria": "Brand is LG",
+    "expected_product_ids": [
+      "lg-4k-ultra-hd-smart-oled-evo-tv-g3-55-inch-oled55g3psa"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "category_mobile_accessories",
+    "user_query": "Show me mobile accessories",
+    "expected_intent": "product_search",
+    "category_type": "category_filtering",
+    "expected_filters": {
+      "category": "accessories"
+    },
+    "expected_matching_criteria": "Mobile accessories categories in catalog",
+    "expected_product_ids": [
+      "mi-18w-dual-port-charger-black",
+      "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "category_battery_chargers",
+    "user_query": "Show me battery chargers",
+    "expected_intent": "product_search",
+    "category_type": "category_filtering",
+    "expected_filters": {
+      "category": "Battery Chargers"
+    },
+    "expected_matching_criteria": "Battery Chargers catalog items",
+    "expected_product_ids": [
+      "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a",
+      "mi-18w-dual-port-charger-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "category_headphones",
+    "user_query": "Show me headphones",
+    "expected_intent": "product_search",
+    "category_type": "category_filtering",
+    "expected_filters": {
+      "category": "Headphones"
+    },
+    "expected_matching_criteria": "Headphones catalog items",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "category_irons",
+    "user_query": "Show me irons",
+    "expected_intent": "product_search",
+    "category_type": "category_filtering",
+    "expected_filters": {
+      "category": "Irons"
+    },
+    "expected_matching_criteria": "Irons category items",
+    "expected_product_ids": [
+      "philips-gc181-80-1000-w-dry-iron-black",
+      "philips-gc158-02-1100-w-dry-iron-pink"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "category_apple_accessories",
+    "user_query": "Show me Apple accessories",
+    "expected_intent": "product_search",
+    "category_type": "category_filtering",
+    "expected_filters": {
+      "brand": "Apple",
+      "category": "accessories"
+    },
+    "expected_matching_criteria": "Apple accessories",
+    "expected_product_ids": [
+      "apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "price_under_1000",
+    "user_query": "Which products are available under 1000?",
+    "expected_intent": "product_search",
+    "category_type": "price_filtering",
+    "expected_filters": {
+      "max_price": 1000.0
+    },
+    "expected_matching_criteria": "Products with price <= 1000",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black",
+      "mi-18w-dual-port-charger-black",
+      "philips-gc091-40-750-w-classic-dry-iron-pink"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "price_under_500",
+    "user_query": "Find products under 500",
+    "expected_intent": "product_search",
+    "category_type": "price_filtering",
+    "expected_filters": {
+      "max_price": 500.0
+    },
+    "expected_matching_criteria": "Products with price <= 500",
+    "expected_product_ids": [
+      "mi-2a-fast-charger-with-cable-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "price_under_2000",
+    "user_query": "Show products under 2000",
+    "expected_intent": "product_search",
+    "category_type": "price_filtering",
+    "expected_filters": {
+      "max_price": 2000.0
+    },
+    "expected_matching_criteria": "Products with price <= 2000",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black",
+      "mi-10000-mah-power-bank-3i-black",
+      "philips-gc181-80-1000-w-dry-iron-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "price_above_50000",
+    "user_query": "Show products above 50000",
+    "expected_intent": "product_search",
+    "category_type": "price_filtering",
+    "expected_filters": {
+      "min_price": 50000.0
+    },
+    "expected_matching_criteria": "Products with price >= 50000",
+    "expected_product_ids": [
+      "samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram",
+      "apple-macbook-air-m1-chip-with-8-core-cpu-and-7-core-gpu-mac-os-laptop-gold-mgnd3hn-a-8gb-ram-256gb-ssd"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "price_around_1000",
+    "user_query": "Find items around 1000",
+    "expected_intent": "product_search",
+    "category_type": "price_filtering",
+    "expected_filters": {
+      "min_price": 900.0,
+      "max_price": 1100.0
+    },
+    "expected_matching_criteria": "Products within 900 to 1100 INR",
+    "expected_product_ids": [
+      "conekt-zeal-run-plus-10000-mah-power-bank-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "comb_sony_earphones_under_1000",
+    "user_query": "Show me Sony earphones under ₹1000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "brand": "Sony",
+      "category": "Headphones",
+      "max_price": 1000.0
+    },
+    "expected_matching_criteria": "Sony brand, Headphones category, price <= 1000",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "comb_samsung_phones_under_30000",
+    "user_query": "Show me Samsung phones under 30000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "brand": "Samsung",
+      "category": "Smartphones",
+      "max_price": 30000.0
+    },
+    "expected_matching_criteria": "Samsung phones under 30000",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "comb_iphones_under_50000",
+    "user_query": "Show me iPhones under 50000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "brand": "Apple",
+      "category": "Smartphones",
+      "max_price": 50000.0
+    },
+    "expected_matching_criteria": "Apple iPhones under 50000",
+    "expected_product_ids": [
+      "apple-iphone-13-blue-128gb"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "comb_laptops_under_50000",
+    "user_query": "Show me laptops under 50000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "max_price": 50000.0,
+      "search_term": "laptops"
+    },
+    "expected_matching_criteria": "Laptops under 50000",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "comb_headphones_under_2000",
+    "user_query": "Find headphones under 2000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "category": "Headphones",
+      "max_price": 2000.0
+    },
+    "expected_matching_criteria": "Headphones with price <= 2000",
+    "expected_product_ids": [
+      "sony-mdr-ex15ap-earphone-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "comb_phone_under_20000",
+    "user_query": "I need a phone under 20000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "category": "Smartphones",
+      "max_price": 20000.0
+    },
+    "expected_matching_criteria": "Phones with price <= 20000",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "comb_philips_irons_under_1500",
+    "user_query": "Find Philips irons under 1500",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "brand": "Philips",
+      "category": "Irons",
+      "max_price": 1500.0
+    },
+    "expected_matching_criteria": "Philips iron under 1500",
+    "expected_product_ids": [
+      "philips-gc158-02-1100-w-dry-iron-pink",
+      "philips-gc091-40-750-w-classic-dry-iron-pink"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "comb_mi_chargers_under_1000",
+    "user_query": "Show me Mi chargers under 1000",
+    "expected_intent": "product_search",
+    "category_type": "combined_filters",
+    "expected_filters": {
+      "brand": "Mi",
+      "category": "Battery Chargers",
+      "max_price": 1000.0
+    },
+    "expected_matching_criteria": "Mi chargers under 1000",
+    "expected_product_ids": [
+      "mi-18w-dual-port-charger-black",
+      "mi-2a-fast-charger-with-cable-black"
+    ],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "ooc_gucci_shoes",
+    "user_query": "Do you sell Gucci shoes?",
+    "expected_intent": "product_search",
+    "category_type": "out_of_catalog",
+    "expected_filters": {
+      "search_term": "gucci shoes"
+    },
+    "expected_matching_criteria": "Non-existent catalog item (clothing/luxury)",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "ooc_rolex_watches",
+    "user_query": "Show me Rolex luxury watches",
+    "expected_intent": "product_search",
+    "category_type": "out_of_catalog",
+    "expected_filters": {
+      "brand": "Rolex",
+      "category": "Smartwatches"
+    },
+    "expected_matching_criteria": "Non-existent brand Rolex",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "ooc_ps5_under_5000",
+    "user_query": "Find PlayStation 5 console under 5000",
+    "expected_intent": "product_search",
+    "category_type": "out_of_catalog",
+    "expected_filters": {
+      "max_price": 5000.0,
+      "search_term": "playstation 5 console"
+    },
+    "expected_matching_criteria": "Non-existent gaming console at impossible budget",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "ooc_nikon_dslr",
+    "user_query": "Do you have Nikon DSLR cameras?",
+    "expected_intent": "product_search",
+    "category_type": "out_of_catalog",
+    "expected_filters": {
+      "brand": "Nikon",
+      "search_term": "dslr cameras"
+    },
+    "expected_matching_criteria": "Out of catalog category / brand",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "ambig_something_nice",
+    "user_query": "I want something nice",
+    "expected_intent": "general_query",
+    "category_type": "ambiguous_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Ambiguous input requires clarification",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "ambig_cool_gadgets",
+    "user_query": "Show me cool gadgets",
+    "expected_intent": "product_search",
+    "category_type": "ambiguous_queries",
+    "expected_filters": {
+      "search_term": "gadgets"
+    },
+    "expected_matching_criteria": "Broad / vague product query",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "ambig_surprise_me",
+    "user_query": "Surprise me with tech",
+    "expected_intent": "general_query",
+    "category_type": "ambiguous_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Vague conversational shopping input",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "ambig_gift_friend",
+    "user_query": "Looking for a gift for my friend",
+    "expected_intent": "recommendation",
+    "category_type": "ambiguous_queries",
+    "expected_filters": {},
+    "expected_matching_criteria": "Gift recommendation request",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "inv_hack_website",
+    "user_query": "Can you write Python code to hack a website?",
+    "expected_intent": "general_query",
+    "category_type": "invalid_unsupported",
+    "expected_filters": {},
+    "expected_matching_criteria": "Adversarial / off-topic request",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": true
+  },
+  {
+    "id": "inv_capital_france",
+    "user_query": "What is the capital of France?",
+    "expected_intent": "general_query",
+    "category_type": "invalid_unsupported",
+    "expected_filters": {},
+    "expected_matching_criteria": "General trivia off-topic request",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "inv_gibberish",
+    "user_query": "asdfghjk qwerty 12345",
+    "expected_intent": "general_query",
+    "category_type": "invalid_unsupported",
+    "expected_filters": {},
+    "expected_matching_criteria": "Gibberish nonsensical input",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  },
+  {
+    "id": "inv_sql_injection",
+    "user_query": "'; DROP TABLE products; --",
+    "expected_intent": "general_query",
+    "category_type": "invalid_unsupported",
+    "expected_filters": {},
+    "expected_matching_criteria": "Security probe / SQL injection test",
+    "expected_product_ids": [],
+    "client_context": {},
+    "is_repeatability_candidate": false
+  }
+]

@@ -64,7 +64,11 @@ def parse_specs(raw_specs: Any) -> Tuple[str, Dict[str, str]]:
                     if name and val:
                         flattened[name] = val
                         if name == "Generic Name":
-                            category = val
+                            raw_cat = val.strip()
+                            if raw_cat.lower() in ("mobile phone", "smart phone", "mobile", "mobiles"):
+                                category = "Mobiles"
+                            else:
+                                category = raw_cat
     return category, flattened
 
 

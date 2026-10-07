@@ -200,7 +200,9 @@ class LLMService:
         # Check brand
         detected_brand = None
         for b in KNOWN_BRANDS:
-            if b.lower() in q:
+            # Match the complete brand token; "Mi" must not be detected inside
+            # unrelated product words such as "Redmi".
+            if re.search(rf"(?<![a-z0-9]){re.escape(b.lower())}(?![a-z0-9])", q):
                 detected_brand = b
                 break
 

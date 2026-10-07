@@ -62,15 +62,18 @@ export function SiteFooter() {
             </span>
           </div>
           <p className="mt-3 text-xs leading-5 text-muted-foreground">
-            India’s trusted consumer electronics destination. Genuine smartphones, audio, wearables, and home appliances connected directly to verified PostgreSQL catalog.
+            India’s trusted consumer electronics destination. Shop genuine smartphones, audio, wearables, and home appliances.
           </p>
         </div>
 
         <div>
           <h2 className="text-xs font-extrabold uppercase tracking-wider text-foreground">Top Categories</h2>
           <div className="mt-3 space-y-2 text-xs text-muted-foreground">
+            <Link to="/products" search={{ category: "Mobiles" }} className="block hover:text-primary">
+              Mobiles & Smartphones
+            </Link>
             <Link to="/products" search={{ category: "Accessories" }} className="block hover:text-primary">
-              Mobiles & Accessories
+              Accessories
             </Link>
             <Link to="/products" search={{ category: "Audio" }} className="block hover:text-primary">
               Headphones & Audio
@@ -95,15 +98,15 @@ export function SiteFooter() {
         </div>
 
         <div>
-          <h2 className="text-xs font-extrabold uppercase tracking-wider text-foreground">AI Assisted Shopping</h2>
+          <h2 className="text-xs font-extrabold uppercase tracking-wider text-foreground">Shopping Help</h2>
           <p className="mt-3 text-xs leading-5 text-muted-foreground">
-            Need help finding the right model? Click the <strong>ShopAI Assistant</strong> at the bottom right for instant recommendations grounded in our live inventory.
+            Need help finding the right product? Click the <strong>Shopping Assistant</strong> at the bottom right for shopping suggestions.
           </p>
         </div>
       </div>
 
       <div className="border-t border-border px-4 py-4 text-center text-[11px] text-muted-foreground">
-        © 2026 POORVIKA Electronics Marketplace. Powered by FastAPI, PostgreSQL, and Ollama Cloud.
+        © 2026 POORVIKA Electronics Marketplace. Happy shopping!
       </div>
     </footer>
   );

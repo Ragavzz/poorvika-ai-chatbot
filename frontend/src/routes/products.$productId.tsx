@@ -55,9 +55,7 @@ function ProductDetailsPage() {
             <PackageOpen className="mx-auto size-12 text-primary" />
             <h1 className="mt-4 text-2xl font-bold">Product unavailable</h1>
             <p className="mt-2 max-w-md text-sm text-muted-foreground">
-              {product.error instanceof Error
-                ? product.error.message
-                : "This product could not be loaded."}
+              This product could not be loaded. Please try again later.
             </p>
             <Button asChild className="mt-5">
               <Link to="/products" search={{}}>

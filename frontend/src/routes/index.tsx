@@ -328,8 +328,8 @@ function Home() {
               <Zap className="size-5" />
             </div>
             <div>
-              <p className="text-xs font-black uppercase text-gray-900">ShopAI Assistant</p>
-              <p className="text-[11px] text-gray-500">Real-time catalog lookup</p>
+              <p className="text-xs font-black uppercase text-gray-900">Shopping Assistant</p>
+              <p className="text-[11px] text-gray-500">Help finding your next purchase</p>
             </div>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import { Link } from "@tanstack/react-router";
 
 export const navigationCategories = [
-  { label: "Mobiles & Accessories", category: "Accessories" },
+  { label: "Mobiles", category: "Mobiles" },
+  { label: "Accessories", category: "Accessories" },
   { label: "Computers & Tablets", category: "Computers & Tablets" },
   { label: "TV & Audio", category: "Audio" },
   { label: "Kitchen Appliances", category: "Kitchen Appliances" },
@@ -11,6 +12,7 @@ export const navigationCategories = [
 ];
 
 export const categories = [
+  "Mobiles",
   "Accessories",
   "Audio",
   "Smart Watches",

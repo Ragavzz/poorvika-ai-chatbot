@@ -26,8 +26,8 @@ export function ProductGrid({
     return (
       <div className="flex min-h-72 flex-col items-center justify-center border border-dashed border-border bg-muted/30 p-8 text-center">
         <PackageOpen className="mb-4 size-10 text-primary" />
-        <h3 className="font-bold">Products are waiting for your backend</h3>
-        <p className="mt-2 max-w-md text-sm text-muted-foreground">{error}</p>
+        <h3 className="font-bold">Products are temporarily unavailable</h3>
+        <p className="mt-2 max-w-md text-sm text-muted-foreground">Please try again in a moment.</p>
         {onRetry && (
           <Button variant="outline" className="mt-5" onClick={onRetry}>
             <RefreshCw /> Try again

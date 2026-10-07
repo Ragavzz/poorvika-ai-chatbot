@@ -96,7 +96,7 @@ export function CartDrawer() {
             </div>
             <h3 className="text-lg font-bold">Your cart is empty</h3>
             <p className="mt-1 max-w-xs text-sm text-muted-foreground">
-              Explore our real PostgreSQL catalog for earphones, chargers, cables, and more.
+              Explore earphones, chargers, cables, and more.
             </p>
             <Button asChild className="mt-6" onClick={closeCart}>
               <Link to="/products" search={{}}>

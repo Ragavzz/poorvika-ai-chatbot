@@ -59,11 +59,12 @@ class TestShopAIBackend(unittest.TestCase):
         # Ingest the real poorvika dataset records into the test database
         cls.db = cls.TestSessionLocal()
         dataset_path = settings.DATASET_PATH
-        if os.path.exists(dataset_path):
-            records = load_dataset_records(dataset_path)
-            cls.inserted, cls.updated = ingest_products(cls.db, records)
-        else:
-            cls.inserted = 0
+        if not os.path.isabs(dataset_path):
+            dataset_path = os.path.normpath(os.path.join(backend_dir, dataset_path))
+        if not os.path.isfile(dataset_path):
+            raise FileNotFoundError(f"Test product fixture not found: {dataset_path}")
+        records = load_dataset_records(dataset_path)
+        cls.inserted, cls.updated = ingest_products(cls.db, records)
 
     @classmethod
     def tearDownClass(cls):
@@ -77,9 +78,9 @@ class TestShopAIBackend(unittest.TestCase):
             pass
 
     def test_01_dataset_ingestion_counts(self):
-        """Verify all 100 products from poorvika_products.jsonl were ingested."""
+        """Verify the canonical 508-product poorvika_products.jsonl was ingested."""
         count = self.db.query(Product).count()
-        self.assertEqual(count, 100, f"Expected 100 products ingested, found {count}")
+        self.assertEqual(count, 508, f"Expected 508 products ingested, found {count}")
         print(f"\n[Test 1] Database contains {count} products (100% ingested).")
 
     def test_02_field_preservation_and_category_extraction(self):
@@ -91,7 +92,7 @@ class TestShopAIBackend(unittest.TestCase):
         self.assertEqual(prod.price, 829.0)
         self.assertEqual(prod.mrp, 890.0)
         self.assertGreater(prod.discount_percent, 0.0)
-        self.assertEqual(prod.stock, 316)
+        self.assertEqual(prod.stock, 64)
         self.assertTrue(prod.in_stock)
         self.assertIn("Model Name", prod.flattened_specs)
         print(f"\n[Test 2] Product '{prod.name}' verified: Category={prod.category}, Price=Rs.{prod.price}, Stock={prod.stock}")

@@ -120,3 +120,121 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Chatbot Markdown Table Styling */
+.shopping-chat .shopping-chat-bubble {
+  width: fit-content;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+  padding: 0.75rem 1rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  word-break: normal;
+  overflow: visible;
+}
+
+.shopping-chat .shopping-chat-bubble > * {
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
+.shopping-chat .is-assistant .shopping-chat-bubble {
+  white-space: normal;
+}
+
+.shopping-chat pre {
+  white-space: pre;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.shopping-chat [data-streamdown="table-wrapper"] {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Streamdown puts the table in an inner scroll container after its controls. */
+.shopping-chat [data-streamdown="table-wrapper"] > div:has(> table) {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.shopping-chat table {
+  display: table;
+  width: max-content;
+  min-width: 100%;
+  max-width: none;
+  table-layout: auto;
+  overflow: visible;
+  white-space: normal;
+}
+
+.shopping-chat th,
+.shopping-chat td {
+  min-width: 90px;
+  white-space: nowrap;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.shopping-chat th:first-child,
+.shopping-chat td:first-child {
+  min-width: 220px;
+  max-width: 320px;
+  white-space: normal;
+}
+
+.shopping-chat th:nth-child(5),
+.shopping-chat td:nth-child(5) {
+  min-width: 80px;
+}
+
+.shopping-chat th:nth-child(6),
+.shopping-chat td:nth-child(6) {
+  min-width: 100px;
+}
+
+.shopping-chat img {
+  max-width: 100%;
+  height: auto;
+}
+
+.prose table, table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0.75rem 0;
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  overflow-x: auto;
+  display: block;
+}
+.prose th, th {
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.5rem 0.625rem;
+  border: 1px solid #e2e8f0;
+  white-space: nowrap;
+}
+.prose td, td {
+  padding: 0.4rem 0.625rem;
+  border: 1px solid #e2e8f0;
+  color: #334155;
+  vertical-align: middle;
+}
+.prose tr:nth-child(even), tr:nth-child(even) {
+  background-color: #fbfcfe;
+}
+.prose tr:hover, tr:hover {
+  background-color: #f1f5f9;
+}

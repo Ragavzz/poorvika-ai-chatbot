@@ -5,10 +5,11 @@ prices, specifications, availability, or ratings.
 """
 
 import logging
+import re
 import time
 from datetime import datetime, timezone
 from typing import Optional, List, Dict, Any, Union
-from sqlalchemy import or_, and_, desc, asc
+from sqlalchemy import or_, and_, desc, asc, func
 from sqlalchemy.orm import Session, load_only
 from app.models.product import Product
 
@@ -17,36 +18,48 @@ logger = logging.getLogger("shopai.tools.product_search")
 # Category mapping connecting high-level UI categories and user synonyms to exact PostgreSQL categories
 CATEGORY_MAPPINGS = {
     # Parent categories from UI navigation
+    "mobiles": ["Mobiles", "Mobile Phone", "Smart Phone", "Mobile"],
+    "mobile": ["Mobiles", "Mobile Phone", "Smart Phone", "Mobile"],
+    "smartphones": ["Mobiles", "Mobile Phone", "Smart Phone", "Mobile"],
+    "smartphone": ["Mobiles", "Mobile Phone", "Smart Phone", "Mobile"],
+    "phones": ["Mobiles", "Mobile Phone", "Smart Phone", "Mobile"],
+    "phone": ["Mobiles", "Mobile Phone", "Smart Phone", "Mobile"],
     "accessories": [
         "Data Cables", "Battery Chargers", "Cases & Covers",
         "Power Banks", "Pendrives", "Memory Cards",
-        "Surge Protector", "AirTag"
+        "Surge Protector", "AirTag", "Temper glass", "Car Chargers"
     ],
-    "audio": ["Headphones"],
+    "audio": ["Headphones", "Speakers"],
     "smart watches": ["Smartwatches"],
     "smartwatches": ["Smartwatches"],
-    "mobiles": [],
-    "laptops": [],
-    "televisions": [],
+    "laptops": ["Computers"],
+    "televisions": ["Television"],
+    "television": ["Television"],
     "appliances": [
         "Air Coolers", "Air Fryers", "Fans", "Irons",
-        "Mixers Grinders & Juicers", "Voltage Stabilizers", "Voltage Stabilizer"
+        "Mixers Grinders & Juicers", "Voltage Stabilizers", "Voltage Stabilizer",
+        "Chimney", "Refrigerators", "Refrigerator", "Washing Machine",
+        "Water Purifiers", "Food Processor"
     ],
     "home appliances": [
-        "Air Coolers", "Air Fryers", "Fans", "Irons",
-        "Mixers Grinders & Juicers", "Voltage Stabilizers", "Voltage Stabilizer"
+        "Air Coolers", "Fans", "Irons",
+        "Voltage Stabilizers", "Voltage Stabilizer", "Washing Machine",
+        "Refrigerators", "Refrigerator"
     ],
     "mobiles & accessories": [
+        "Mobiles", "Mobile Phone", "Smart Phone", "Mobile",
         "Data Cables", "Battery Chargers", "Cases & Covers",
         "Power Banks", "Pendrives", "Memory Cards",
-        "Surge Protector", "AirTag"
+        "Surge Protector", "AirTag", "Temper glass", "Car Chargers"
     ],
     "computers & tablets": [
-        "Battery Chargers", "Pendrives", "Memory Cards"
+        "Computers", "Tablet", "Keyboards", "Mouse",
+        "Smart Keyboard", "Mother Board"
     ],
-    "tv & audio": ["Headphones"],
+    "tv & audio": ["Television", "Headphones", "Speakers"],
     "kitchen appliances": [
-        "Air Fryers", "Mixers Grinders & Juicers"
+        "Air Fryers", "Mixers Grinders & Juicers", "Chimney",
+        "Water Purifiers", "Food Processor"
     ],
     "smart technology": ["Smartwatches", "AirTag"],
     "personal & health care": ["Irons"],
@@ -115,6 +128,7 @@ class ProductSearchTool:
                 Product.rating, Product.rating_count, Product.in_stock, Product.flattened_specs,
             ))
         filters = []
+        query_rank_terms: List[str] = []
 
         # 1. Category filter (with normalization and parent-to-child mapping)
         if category and category.strip():
@@ -157,16 +171,27 @@ class ProductSearchTool:
 
         # 5. Text search across name, brand, category, model, description
         if query and query.strip():
-            q_clean = query.strip().lower()
+            # Normalize case, punctuation and repeated whitespace, then stem
+            # common plurals consistently ("iphones" -> "iphone").
+            raw_words = re.findall(r"[a-z0-9]+", query.casefold())
+            normalized_words = []
+            for word in raw_words:
+                if len(word) > 4 and word.endswith("ies"):
+                    word = word[:-3] + "y"
+                elif len(word) > 3 and word.endswith("s"):
+                    word = word[:-1]
+                normalized_words.append(word)
+            q_clean = " ".join(normalized_words)
             is_redundant = (
                 (brand and str(brand).lower() in q_clean and len(q_clean.split()) == 1) or
                 (category and category.lower() in q_clean and len(q_clean.split()) == 1)
             )
             if not is_redundant:
-                words = [w for w in q_clean.split() if len(w) > 2]
+                words = [w for w in normalized_words if len(w) > 2 or w.isdigit()]
                 word_clauses = []
                 for w in words:
                     stem = w[:-1] if w.endswith("s") and len(w) > 3 else w
+                    query_rank_terms.append(stem)
                     term = f"%{stem}%"
                     word_clauses.append(
                         or_(
@@ -178,7 +203,9 @@ class ProductSearchTool:
                         )
                     )
                 if word_clauses:
-                    filters.append(or_(*word_clauses))
+                    # Every meaningful product term must match; OR here lets
+                    # action words or model numbers pull unrelated rows in.
+                    filters.append(and_(*word_clauses))
 
         if filters:
             stmt = stmt.filter(and_(*filters))
@@ -193,9 +220,20 @@ class ProductSearchTool:
         elif sort_by in ["discount", "discount_desc"]:
             stmt = stmt.order_by(desc(Product.discount_percent), asc(Product.id))
         else:
-            # Default: in-stock first, then rating, then lowest price
+            # Prefer names that match the requested terms near the start. This
+            # ranks the actual model above accessory compatibility mentions,
+            # without brand/model-specific rules.
+            # SQLite instr and PostgreSQL strpos both return a 1-based position,
+            # zero for missing text, and NULL for NULL input. Keep PostgreSQL's
+            # existing expression and ranking unchanged.
+            position = func.instr if self.db.get_bind().dialect.name == "sqlite" else func.strpos
+            name_match_order = [
+                asc(func.nullif(position(func.lower(Product.name), term), 0)).nullslast()
+                for term in query_rank_terms
+            ]
+            # Then in-stock first, rating, and lowest price.
             stmt = stmt.order_by(
-                desc(Product.in_stock), desc(Product.rating).nullslast(),
+                *name_match_order, desc(Product.in_stock), desc(Product.rating).nullslast(),
                 asc(Product.price), asc(Product.id),
             )
 

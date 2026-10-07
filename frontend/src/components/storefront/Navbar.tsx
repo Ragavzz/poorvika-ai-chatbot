@@ -140,11 +140,19 @@ export function Navbar() {
           </Link>
           <Link
             to="/products"
+            search={{ category: "Mobiles" }}
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 text-sm font-medium text-gray-700 hover:text-primary"
+          >
+            Mobiles
+          </Link>
+          <Link
+            to="/products"
             search={{ category: "Accessories" }}
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-sm font-medium text-gray-700 hover:text-primary"
           >
-            Mobiles & Accessories
+            Accessories
           </Link>
           <Link
             to="/products"

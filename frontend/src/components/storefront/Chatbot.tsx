@@ -37,7 +37,7 @@ export function Chatbot() {
       >
         {open ? <X className="size-5" /> : <MessageCircle className="size-5" />}
         <span className="font-extrabold text-sm tracking-wide">
-          {open ? "Close" : "ShopAI Assistant"}
+          {open ? "Close" : "Shopping Assistant"}
         </span>
       </Button>
     </div>

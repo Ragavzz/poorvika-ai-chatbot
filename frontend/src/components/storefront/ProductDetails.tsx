@@ -99,7 +99,7 @@ export function ProductDetails({ product }: { product: Product }) {
       <div className="py-2">
         <div className="flex items-center justify-between">
           <p className="text-xs font-extrabold uppercase tracking-wider text-primary">
-            {product.brand ?? product.category ?? "Mobile Mart Catalog"}
+            {product.brand ?? product.category ?? "Poorvika"}
           </p>
           {product.category && (
             <span className="rounded-full bg-muted px-2.5 py-0.5 text-xs font-semibold text-muted-foreground">
@@ -212,7 +212,7 @@ export function ProductDetails({ product }: { product: Product }) {
             <ShieldCheck className="mb-2 size-5 text-primary" />
             <strong className="block text-sm">Secure purchase</strong>
             <span className="text-xs text-muted-foreground">
-              Direct PostgreSQL verified catalog
+              Shop with confidence
             </span>
           </div>
         </div>
@@ -238,7 +238,7 @@ export function ProductDetails({ product }: { product: Product }) {
             </dl>
           ) : (
             <p className="py-5 text-sm text-muted-foreground">
-              Detailed specifications will appear when supplied by the product API.
+              More product details will be available soon.
             </p>
           )}
         </section>

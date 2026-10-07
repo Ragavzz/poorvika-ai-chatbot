@@ -16,12 +16,12 @@ export const POORVIKA_LAYA_QUESTIONS = {
     type: "choice",
     instructions: "What shopping action should the assistant perform?",
     criteria: {
-      product_search: "search products, looking for phones or laptops, under budget, price check",
-      product_details: "tell me about this product, specifications, specs, features, details",
+      product_search: "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+      product_details: "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
       recommendation: "suggest a good phone, recommend, advice for gaming, best options",
-      add_to_cart: "explicitly add to cart, put item in my cart, add to my cart",
-      cart_action: "what is in my cart, view cart, checkout, show cart items",
-      general_query: "hello, hi, greetings, return policy, delivery, customer support",
+      add_to_cart: "explicitly add to cart, put item in my cart, add to my cart, buy this",
+      cart_action: "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+      general_query: "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support",
     },
   },
   needs_escalation: {
@@ -69,13 +69,20 @@ function fallbackSystemOne(state, questions) {
   let confidence = 0.90;
 
   if (
-    query.includes("add") && (query.includes("cart") || query.includes("basket") || query.includes("bag"))
+    /^(thank\s*you|thanks|okay|ok|great|nice|cool|got\s*it|perfect)[\s.!]*$/.test(query)
+  ) {
+    choice = "general_query";
+    confidence = 0.97;
+  } else if (
+    (query.includes("add") || query.includes("put") || query.includes("buy")) &&
+    (query.includes("cart") || query.includes("basket") || query.includes("bag") || query === "buy it" || query === "buy this")
   ) {
     choice = "add_to_cart";
     confidence = 0.98;
   } else if (
     query.includes("what is in my cart") || query.includes("view cart") || query.includes("checkout") ||
-    query.includes("cart items") || query === "cart" || query.includes("show cart")
+    query.includes("cart items") || query === "cart" || query.includes("show cart") ||
+    query.includes("cart total") || query.includes("how much is my cart") || query.includes("show items in cart")
   ) {
     choice = "cart_action";
     confidence = 0.95;
@@ -91,6 +98,8 @@ function fallbackSystemOne(state, questions) {
     confidence = 0.94;
   } else if (
     query.includes("tell me about") ||
+    query.includes("tell about") ||
+    query.includes("details") ||
     query.includes("spec") ||
     query.includes("feature") ||
     query.includes("camera quality") ||

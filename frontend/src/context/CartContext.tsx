@@ -51,6 +51,23 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     }
   }, [items]);
 
+  // Keep this tab's shared cart state current when another tab changes the cart.
+  useEffect(() => {
+    const syncFromStorage = (event: StorageEvent) => {
+      if (event.storageArea !== window.localStorage) return;
+      if (event.key !== CART_STORAGE_KEY && event.key !== null) return;
+      try {
+        const storedItems: unknown = event.newValue ? JSON.parse(event.newValue) : [];
+        if (Array.isArray(storedItems)) setItems(storedItems as CartItem[]);
+      } catch {
+        // Ignore malformed external storage values and preserve the current cart.
+      }
+    };
+
+    window.addEventListener("storage", syncFromStorage);
+    return () => window.removeEventListener("storage", syncFromStorage);
+  }, []);
+
   const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
   const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
 

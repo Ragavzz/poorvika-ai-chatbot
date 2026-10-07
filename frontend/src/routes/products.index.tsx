@@ -43,7 +43,9 @@ const sortOptions = [
   { label: "Price: Low to High", value: "price_asc" },
   { label: "Best Discount", value: "discount_desc" },
 ];
-const PAGE_SIZE = 24;
+// The backend caps a single catalog page at 100 rows. The current Mobiles
+// category has 91 variants, so show the complete category in one frontend view.
+const PAGE_SIZE = 100;
 
 function ProductsPage() {
   const search = Route.useSearch();
@@ -76,7 +78,7 @@ function ProductsPage() {
     ...(selectedBrands.length > 0 ? { brand: selectedBrands } : {}),
     ...(search.category ? { category: search.category } : {}),
     ...(search.sort ? { sort: search.sort } : {}),
-    limit: PAGE_SIZE + 1,
+    limit: Math.min(PAGE_SIZE + 1, 100),
     offset: (page - 1) * PAGE_SIZE,
   };
 

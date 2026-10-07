@@ -29,3 +29,7 @@ dist/
 powershell.bat
 
 ecom-muse-main-backup/
+
+# Benchmark model cache
+evaluation/jev_benchmark/**/model_cache/
+evaluation/jev_benchmark/**/model_cache/

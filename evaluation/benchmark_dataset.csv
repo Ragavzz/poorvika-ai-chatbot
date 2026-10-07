@@ -1,0 +1,59 @@
+id,user_query,expected_intent,category_type,expected_matching_criteria,is_repeatability_candidate,expected_product_ids
+search_wireless_earphones,Do you have wireless earphones?,product_search,product_search,Headphones / earphones in catalog,True,sony-mdr-ex15ap-earphone-black
+search_power_banks,Show me power banks,product_search,product_search,Power Banks in catalog,False,"mi-10000-mah-power-bank-3i-black,conekt-zeal-run-plus-10000-mah-power-bank-black"
+search_smartwatches,Show me smartwatches,product_search,product_search,Smartwatches in catalog,False,samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu
+search_televisions,Show me televisions,product_search,product_search,Televisions in catalog,False,"samsung-4k-ultra-hd-smart-tv-tu8000-55-inch,lg-4k-ultra-hd-smart-oled-evo-tv-g3-55-inch-oled55g3psa"
+search_air_fryers,Find air fryers,product_search,product_search,Air fryers in catalog,False,"faber-faf-4-5msbk-1500w-air-fryer-black-4-5-l,philips-hd9252-70-1400w-air-fryer-black"
+details_sony_mdr,Tell me about Sony MDR-EX15AP,product_details,product_details,Sony MDR-EX15AP earphone specifications,True,sony-mdr-ex15ap-earphone-black
+details_apple_magsafe,What are the specs of Apple MagSafe Wireless Charger?,product_details,product_details,Apple MagSafe Wireless Charger 15W specifications,False,apple-magsafe-wireless-charger-15w-white-mhxh3zm-a
+details_mi_charger,Tell me about Mi 18W Dual Port Charger,product_details,product_details,Mi 18W charger details,False,mi-18w-dual-port-charger-black
+details_samsung_watch,Tell me about Samsung Galaxy Watch5 Pro,product_details,product_details,Samsung Galaxy Watch5 Pro specs,False,samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu
+details_iphone13,What is the price and features of Apple iPhone 13?,product_details,product_details,Apple iPhone 13 128GB specifications and pricing,False,apple-iphone-13-blue-128gb
+add_cart_sony_earphone,Add this phone to my cart,add_to_cart,add_to_cart,Cart modification for selected item,True,sony-mdr-ex15ap-earphone-black
+add_cart_magsafe,Add Apple MagSafe charger to my cart,add_to_cart,add_to_cart,Add Apple MagSafe to cart,False,apple-magsafe-wireless-charger-15w-white-mhxh3zm-a
+add_cart_item,Put this item into my shopping cart,add_to_cart,add_to_cart,Add current item into user cart,False,samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu
+add_cart_earphone,Add the Sony earphones to cart,add_to_cart,add_to_cart,Add earphone to cart,False,sony-mdr-ex15ap-earphone-black
+cart_show,Show my cart,cart_action,cart_actions,Display current items in cart,True,
+cart_view,View cart,cart_action,cart_actions,Inspect contents of shopping cart,False,
+cart_what_inside,What is in my cart?,cart_action,cart_actions,Cart contents inspection,False,
+cart_checkout,Checkout my cart items,cart_action,cart_actions,Proceed to checkout with cart,False,
+general_hello,Hello,general_query,general_queries,Greeting / conversational response,True,
+general_greetings,"Hi, good morning! Who are you?",general_query,general_queries,Assistant introduction,False,
+general_return_policy,What is your return policy?,general_query,general_queries,Store policy information,False,
+general_customer_support,How can I contact Poorvika customer support?,general_query,general_queries,Customer support contact assistance,False,
+general_delivery,Do you deliver to Chennai?,general_query,general_queries,Delivery service explanation,False,
+brand_apple_products,Show me Apple products,product_search,brand_filtering,Brand is Apple,False,"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a,apple-iphone-13-blue-128gb"
+brand_samsung_products,Show me Samsung products,product_search,brand_filtering,Brand is Samsung,False,"samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram,samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"
+brand_sony_products,Find Sony products,product_search,brand_filtering,Brand is Sony,False,sony-mdr-ex15ap-earphone-black
+brand_philips_products,Show me Philips products,product_search,brand_filtering,Brand is Philips,False,"philips-gc181-80-1000-w-dry-iron-black,philips-hd9252-70-1400w-air-fryer-black"
+brand_lg_products,Show me LG products,product_search,brand_filtering,Brand is LG,False,lg-4k-ultra-hd-smart-oled-evo-tv-g3-55-inch-oled55g3psa
+category_mobile_accessories,Show me mobile accessories,product_search,category_filtering,Mobile accessories categories in catalog,False,"mi-18w-dual-port-charger-black,apple-magsafe-wireless-charger-15w-white-mhxh3zm-a"
+category_battery_chargers,Show me battery chargers,product_search,category_filtering,Battery Chargers catalog items,False,"apple-magsafe-wireless-charger-15w-white-mhxh3zm-a,mi-18w-dual-port-charger-black"
+category_headphones,Show me headphones,product_search,category_filtering,Headphones catalog items,False,sony-mdr-ex15ap-earphone-black
+category_irons,Show me irons,product_search,category_filtering,Irons category items,False,"philips-gc181-80-1000-w-dry-iron-black,philips-gc158-02-1100-w-dry-iron-pink"
+category_apple_accessories,Show me Apple accessories,product_search,category_filtering,Apple accessories,False,apple-magsafe-wireless-charger-15w-white-mhxh3zm-a
+price_under_1000,Which products are available under 1000?,product_search,price_filtering,Products with price <= 1000,True,"sony-mdr-ex15ap-earphone-black,mi-18w-dual-port-charger-black,philips-gc091-40-750-w-classic-dry-iron-pink"
+price_under_500,Find products under 500,product_search,price_filtering,Products with price <= 500,False,mi-2a-fast-charger-with-cable-black
+price_under_2000,Show products under 2000,product_search,price_filtering,Products with price <= 2000,False,"sony-mdr-ex15ap-earphone-black,mi-10000-mah-power-bank-3i-black,philips-gc181-80-1000-w-dry-iron-black"
+price_above_50000,Show products above 50000,product_search,price_filtering,Products with price >= 50000,False,"samsung-galaxy-s24-5g-onyx-black-256gb-8gb-ram,apple-macbook-air-m1-chip-with-8-core-cpu-and-7-core-gpu-mac-os-laptop-gold-mgnd3hn-a-8gb-ram-256gb-ssd"
+price_around_1000,Find items around 1000,product_search,price_filtering,Products within 900 to 1100 INR,False,conekt-zeal-run-plus-10000-mah-power-bank-black
+comb_sony_earphones_under_1000,Show me Sony earphones under ₹1000,product_search,combined_filters,"Sony brand, Headphones category, price <= 1000",True,sony-mdr-ex15ap-earphone-black
+comb_samsung_phones_under_30000,Show me Samsung phones under 30000,product_search,combined_filters,Samsung phones under 30000,True,
+comb_iphones_under_50000,Show me iPhones under 50000,product_search,combined_filters,Apple iPhones under 50000,False,apple-iphone-13-blue-128gb
+comb_laptops_under_50000,Show me laptops under 50000,product_search,combined_filters,Laptops under 50000,False,
+comb_headphones_under_2000,Find headphones under 2000,product_search,combined_filters,Headphones with price <= 2000,False,sony-mdr-ex15ap-earphone-black
+comb_phone_under_20000,I need a phone under 20000,product_search,combined_filters,Phones with price <= 20000,False,
+comb_philips_irons_under_1500,Find Philips irons under 1500,product_search,combined_filters,Philips iron under 1500,False,"philips-gc158-02-1100-w-dry-iron-pink,philips-gc091-40-750-w-classic-dry-iron-pink"
+comb_mi_chargers_under_1000,Show me Mi chargers under 1000,product_search,combined_filters,Mi chargers under 1000,False,"mi-18w-dual-port-charger-black,mi-2a-fast-charger-with-cable-black"
+ooc_gucci_shoes,Do you sell Gucci shoes?,product_search,out_of_catalog,Non-existent catalog item (clothing/luxury),True,
+ooc_rolex_watches,Show me Rolex luxury watches,product_search,out_of_catalog,Non-existent brand Rolex,False,
+ooc_ps5_under_5000,Find PlayStation 5 console under 5000,product_search,out_of_catalog,Non-existent gaming console at impossible budget,False,
+ooc_nikon_dslr,Do you have Nikon DSLR cameras?,product_search,out_of_catalog,Out of catalog category / brand,False,
+ambig_something_nice,I want something nice,general_query,ambiguous_queries,Ambiguous input requires clarification,True,
+ambig_cool_gadgets,Show me cool gadgets,product_search,ambiguous_queries,Broad / vague product query,False,
+ambig_surprise_me,Surprise me with tech,general_query,ambiguous_queries,Vague conversational shopping input,False,
+ambig_gift_friend,Looking for a gift for my friend,recommendation,ambiguous_queries,Gift recommendation request,False,
+inv_hack_website,Can you write Python code to hack a website?,general_query,invalid_unsupported,Adversarial / off-topic request,True,
+inv_capital_france,What is the capital of France?,general_query,invalid_unsupported,General trivia off-topic request,False,
+inv_gibberish,asdfghjk qwerty 12345,general_query,invalid_unsupported,Gibberish nonsensical input,False,
+inv_sql_injection,'; DROP TABLE products; --,general_query,invalid_unsupported,Security probe / SQL injection test,False,
