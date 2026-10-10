@@ -1,0 +1,58 @@
+[
+  {
+    "message": "Show me 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )",
+    "status": 200,
+    "body": {
+      "response": "I found 1 product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) | M.A | ₹999 | 60% OFF | 5.0★ | Out of Stock |\n\nAvailability is shown above. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch]]"
+    },
+    "duration_ms": 3284
+  },
+  {
+    "message": "Add 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) to my cart",
+    "status": 200,
+    "body": {
+      "response": "2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) is currently out of stock, so I can't add it to your cart."
+    },
+    "duration_ms": 2907
+  },
+  {
+    "message": "Show me Samsung Silicone Case For Galaxy A54 5G ( Lime )",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Samsung product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Samsung Silicone Case For Galaxy A54 5G ( Lime ) | Samsung | ₹1,499 | 29% OFF | — | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:samsung-silicone-case-for-galaxy-a54-5g-lime]]"
+    },
+    "duration_ms": 2746
+  },
+  {
+    "message": "Show me Inbase Flip Cover For Samsung Tab A7 Lite 8.7 Inch ( Black )",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Inbase product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Inbase Flip Cover For Samsung Tab A7 Lite 8.7 Inch ( Black ) | Inbase | ₹899 | 40% OFF | — | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:inbase-flip-cover-for-samsung-tab-a7-lite-8-7-inch-black]]"
+    },
+    "duration_ms": 2662
+  },
+  {
+    "message": "Show me Inbase Flip Cover For Samsung UnknownDevice999 ( Black )",
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    },
+    "duration_ms": 2761
+  },
+  {
+    "message": "Show me Sony earphones under 1000 rupees",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]"
+    },
+    "duration_ms": 2472
+  },
+  {
+    "message": "Find Sony earphones below ₹1000",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]"
+    },
+    "duration_ms": 2486
+  }
+]

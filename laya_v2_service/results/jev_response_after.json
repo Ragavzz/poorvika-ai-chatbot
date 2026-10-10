@@ -1,0 +1,205 @@
+{
+  "model": "Mass121/laya-typed-decisions-v2",
+  "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+  "latency_ms": 5013.238899991848,
+  "raw": {
+    "model": "laya-rl-agent",
+    "answers": {
+      "action": {
+        "type": "choice",
+        "choice": "continue",
+        "probabilities": {
+          "continue": 0.6557,
+          "human_review": 0.0192,
+          "observe": 0.3248,
+          "stop": 0.0004
+        },
+        "confidence": 0.4802,
+        "answer_confidence": 0.6557,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "needs_review": {
+        "type": "noul",
+        "noul": 0.0448,
+        "confidence": 0.9552,
+        "answer_confidence": 0.9552,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "outcome": {
+        "type": "choice",
+        "choice": "success",
+        "probabilities": {
+          "failure": 0.003,
+          "harmful": 0.0001,
+          "partial": 0.0211,
+          "success": 0.9757
+        },
+        "confidence": 0.9104,
+        "answer_confidence": 0.9757,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "risk": {
+        "type": "score",
+        "score": 0.9075,
+        "legend": {
+          "0": "Benign: read-only or clearly safe actions.",
+          "1": "Low: routine writes within scope.",
+          "2": "Moderate: irreversible or out-of-scope actions.",
+          "3": "High: destructive, security-relevant, or policy-violating actions."
+        },
+        "probabilities": {
+          "0": 0.1063,
+          "1": 0.8801,
+          "2": 0.0133,
+          "3": 0.0003
+        },
+        "confidence": 0.7039,
+        "answer_confidence": 0.8801,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "urgency": {
+        "type": "score",
+        "score": 0.158,
+        "legend": {
+          "0": "No time pressure; can wait indefinitely.",
+          "1": "Routine; handle within the normal queue.",
+          "2": "Elevated; should be handled within the same week.",
+          "3": "Critical; requires action within the same day."
+        },
+        "probabilities": {
+          "0": 0.855,
+          "1": 0.132,
+          "2": 0.0129,
+          "3": 0.0001
+        },
+        "confidence": 0.6696,
+        "answer_confidence": 0.855,
+        "action": {
+          "act_probability": 1.0
+        }
+      }
+    },
+    "usage": {
+      "input_tokens": 809,
+      "output_tokens": 0,
+      "state_tokens": 99,
+      "state_tokens_dropped": 0,
+      "truncated": false,
+      "truncated_questions": []
+    }
+  },
+  "answers": {
+    "action": {
+      "type": "choice",
+      "choice": "continue",
+      "probabilities": {
+        "continue": 0.6557,
+        "human_review": 0.0192,
+        "observe": 0.3248,
+        "stop": 0.0004
+      },
+      "confidence": 0.4802,
+      "answer_confidence": 0.6557,
+      "action": {
+        "act_probability": 1.0
+      }
+    },
+    "needs_review": {
+      "type": "noul",
+      "noul": 0.0448,
+      "confidence": 0.9552,
+      "answer_confidence": 0.9552,
+      "action": {
+        "act_probability": 1.0
+      }
+    },
+    "outcome": {
+      "type": "choice",
+      "choice": "success",
+      "probabilities": {
+        "failure": 0.003,
+        "harmful": 0.0001,
+        "partial": 0.0211,
+        "success": 0.9757
+      },
+      "confidence": 0.9104,
+      "answer_confidence": 0.9757,
+      "action": {
+        "act_probability": 1.0
+      }
+    },
+    "risk": {
+      "type": "score",
+      "score": 0.9075,
+      "legend": {
+        "0": "Benign: read-only or clearly safe actions.",
+        "1": "Low: routine writes within scope.",
+        "2": "Moderate: irreversible or out-of-scope actions.",
+        "3": "High: destructive, security-relevant, or policy-violating actions."
+      },
+      "probabilities": {
+        "0": 0.1063,
+        "1": 0.8801,
+        "2": 0.0133,
+        "3": 0.0003
+      },
+      "confidence": 0.7039,
+      "answer_confidence": 0.8801,
+      "action": {
+        "act_probability": 1.0
+      }
+    },
+    "urgency": {
+      "type": "score",
+      "score": 0.158,
+      "legend": {
+        "0": "No time pressure; can wait indefinitely.",
+        "1": "Routine; handle within the normal queue.",
+        "2": "Elevated; should be handled within the same week.",
+        "3": "Critical; requires action within the same day."
+      },
+      "probabilities": {
+        "0": 0.855,
+        "1": 0.132,
+        "2": 0.0129,
+        "3": 0.0001
+      },
+      "confidence": 0.6696,
+      "answer_confidence": 0.855,
+      "action": {
+        "act_probability": 1.0
+      }
+    }
+  },
+  "choices": {
+    "action": {
+      "choice": "continue",
+      "confidence": 0.4802,
+      "probabilities": {
+        "continue": 0.6557,
+        "human_review": 0.0192,
+        "observe": 0.3248,
+        "stop": 0.0004
+      }
+    },
+    "outcome": {
+      "choice": "success",
+      "confidence": 0.9104,
+      "probabilities": {
+        "failure": 0.003,
+        "harmful": 0.0001,
+        "partial": 0.0211,
+        "success": 0.9757
+      }
+    }
+  },
+  "shopai": null
+}

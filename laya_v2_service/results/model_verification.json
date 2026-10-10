@@ -1,0 +1,18 @@
+{
+  "model": "Mass121/laya-typed-decisions-v2",
+  "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+  "weights_file": "model.safetensors",
+  "weights_bytes": 842609220,
+  "weights_sha256": "c10b666f708e0e3dfbc6e512bfe4bae0340dcdac2ff167f38137c50e1089071d",
+  "loaded": true,
+  "infer_example": {
+    "choice": "billing issue",
+    "probabilities": {
+      "billing issue": 0.9996,
+      "technical support": 0.0004
+    },
+    "confidence": 0.9954,
+    "answer_confidence": 0.9996
+  },
+  "device": "cpu"
+}

@@ -1,0 +1,13 @@
+﻿{
+  "scope": "evaluation/jev_benchmark only",
+  "environment_variable": "LAYA_MODEL",
+  "values": {
+    "base": "Original @receptron/laya ONNX service at LAYA_BASE_ENDPOINT (default http://127.0.0.1:5055)",
+    "typed-decisions": "Official convaiinnovations/laya-typed-decisions checkpoint via the isolated pinned Python Laya runtime"
+  },
+  "default": "base",
+  "candidate_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+  "benchmark_adapter": "phase4_experiment/phase5_exact_evaluation.py",
+  "benchmark_endpoint": "http://127.0.0.1:5056",
+  "dataset": "dataset/typed_decisions_test.json"
+}

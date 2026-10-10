@@ -1,0 +1,119 @@
+exit=0
+PRODUCT {"id": "2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch", "name": "2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )", "brand": "M.A", "category": "Temper glass", "price": 999.0, "stock": 0, "in_stock": false}
+FILTERS {"intent": "product_search", "category": null, "brand": null, "max_price": null, "min_price": null, "search_term": "2 5d clear tempered glas screenshot protector samsung tab s7 plu 12 4 inch t735ne s7 fe samsung s7 fe transparent", "exact_name": "2.5d clear tempered glass screenshot protector for samsung tab s7 plus 12.4 inch/t735ne s7 fe/samsung s7 fe ( transparent )"}
+ROWS [{"id": "2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch", "name": "2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )", "brand": "M.A", "price": 999.0, "stock": 0, "in_stock": false}]
+SEARCH_SQL {"where": " lower(trim(products.name)) = %(lower_1)s::VARCHAR OR (products.name ILIKE %(name_1)s::VARCHAR OR products.brand ILIKE %(brand_1)s::VARCHAR OR products.category ILIKE %(category_1)s::VARCHAR OR products.model ILIKE %(model_1)s::VARCHAR OR products.description ILIKE %(description_1)s::VARCHAR) AND (products.name ILIKE %(name_2)s::VARCHAR OR products.brand ILIKE %(brand_2)s::VARCHAR OR products.category ILIKE %(category_2)s::VARCHAR OR products.model ILIKE %(model_2)s::VARCHAR OR products.description ILIKE %(description_2)s::VARCHAR) AND (products.name ILIKE %(name_3)s::VARCHAR OR products.brand ILIKE %(brand_3)s::VARCHAR OR products.category ILIKE %(category_3)s::VARCHAR OR products.model ILIKE %(model_3)s::VARCHAR OR products.description ILIKE %(description_3)s::VARCHAR) AND (products.name ILIKE %(name_4)s::VARCHAR OR products.brand ILIKE %(brand_4)s::VARCHAR OR products.category ILIKE %(category_4)s::VARCHAR OR products.model ILIKE %(model_4)s::VARCHAR OR products.description ILIKE %(description_4)s::VARCHAR) AND (products.name ILIKE %(name_5)s::VARCHAR OR products.brand ILIKE %(brand_5)s::VARCHAR OR products.category ILIKE %(category_5)s::VARCHAR OR products.model ILIKE %(model_5)s::VARCHAR OR products.description ILIKE %(description_5)s::VARCHAR) AND (products.name ILIKE %(name_6)s::VARCHAR OR products.brand ILIKE %(brand_6)s::VARCHAR OR products.category ILIKE %(category_6)s::VARCHAR OR products.model ILIKE %(model_6)s::VARCHAR OR products.description ILIKE %(description_6)s::VARCHAR) AND (products.name ILIKE %(name_7)s::VARCHAR OR products.brand ILIKE %(brand_7)s::VARCHAR OR products.category ILIKE %(category_7)s::VARCHAR OR products.model ILIKE %(model_7)s::VARCHAR OR products.description ILIKE %(description_7)s::VARCHAR) AND (products.name ILIKE %(name_8)s::VARCHAR OR products.brand ILIKE %(brand_8)s::VARCHAR OR products.category ILIKE %(category_8)s::VARCHAR OR products.model ILIKE %(model_8)s::VARCHAR OR products.description ILIKE %(description_8)s::VARCHAR) AND (products.name ILIKE %(name_9)s::VARCHAR OR products.brand ILIKE %(brand_9)s::VARCHAR OR products.category ILIKE %(category_9)s::VARCHAR OR products.model ILIKE %(model_9)s::VARCHAR OR products.description ILIKE %(description_9)s::VARCHAR) AND (products.name ILIKE %(name_10)s::VARCHAR OR products.brand ILIKE %(brand_10)s::VARCHAR OR products.category ILIKE %(category_10)s::VARCHAR OR products.model ILIKE %(model_10)s::VARCHAR OR products.description ILIKE %(description_10)s::VARCHAR) AND (products.name ILIKE %(name_11)s::VARCHAR OR products.brand ILIKE %(brand_11)s::VARCHAR OR products.category ILIKE %(category_11)s::VARCHAR OR products.model ILIKE %(model_11)s::VARCHAR OR products.description ILIKE %(description_11)s::VARCHAR) AND (products.name ILIKE %(name_12)s::VARCHAR OR products.brand ILIKE %(brand_12)s::VARCHAR OR products.category ILIKE %(category_12)s::VARCHAR OR products.model ILIKE %(model_12)s::VARCHAR OR products.description ILIKE %(description_12)s::VARCHAR) AND (products.name ILIKE %(name_13)s::VARCHAR OR products.brand ILIKE %(brand_13)s::VARCHAR OR products.category ILIKE %(category_13)s::VARCHAR OR products.model ILIKE %(model_13)s::VARCHAR OR products.description ILIKE %(description_13)s::VARCHAR) AND (products.name ILIKE %(name_14)s::VARCHAR OR products.brand ILIKE %(brand_14)s::VARCHAR OR products.category ILIKE %(category_14)s::VARCHAR OR products.model ILIKE %(model_14)s::VARCHAR OR products.description ILIKE %(description_14)s::VARCHAR) AND (products.name ILIKE %(name_15)s::VARCHAR OR products.brand ILIKE %(brand_15)s::VARCHAR OR products.category ILIKE %(category_15)s::VARCHAR OR products.model ILIKE %(model_15)s::VARCHAR OR products.description ILIKE %(description_15)s::VARCHAR) ORDER BY lower(trim(products.name)) = %(lower_1)s::VARCHAR DESC, nullif(strpos(lower(products.name), %(strpos_1)s::VARCHAR), %(nullif_1)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_2)s::VARCHAR), %(nullif_2)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_3)s::VARCHAR), %(nullif_3)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_4)s::VARCHAR), %(nullif_4)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_5)s::VARCHAR), %(nullif_5)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_6)s::VARCHAR), %(nullif_6)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_7)s::VARCHAR), %(nullif_7)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_8)s::VARCHAR), %(nullif_8)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_9)s::VARCHAR), %(nullif_9)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_10)s::VARCHAR), %(nullif_10)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_11)s::VARCHAR), %(nullif_11)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_12)s::VARCHAR), %(nullif_12)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_13)s::VARCHAR), %(nullif_13)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_14)s::VARCHAR), %(nullif_14)s::INTEGER) ASC NULLS LAST, nullif(strpos(lower(products.name), %(strpos_15)s::VARCHAR), %(nullif_15)s::INTEGER) ASC NULLS LAST, products.in_stock DESC, products.rating DESC NULLS LAST, products.price ASC, products.id ASC \n LIMIT %(param_1)s::INTEGER OFFSET %(param_2)s::INTEGER", "parameters": {"lower_1": "2.5d clear tempered glass screenshot protector for samsung tab s7 plus 12.4 inch/t735ne s7 fe/samsung s7 fe ( transparent )", "name_1": "%2%", "brand_1": "%2%", "category_1": "%2%", "model_1": "%2%", "description_1": "%2%", "name_2": "%clear%", "brand_2": "%clear%", "category_2": "%clear%", "model_2": "%clear%", "description_2": "%clear%", "name_3": "%tempered%", "brand_3": "%tempered%", "category_3": "%tempered%", "model_3": "%tempered%", "description_3": "%tempered%", "name_4": "%gla%", "brand_4": "%gla%", "category_4": "%gla%", "model_4": "%gla%", "description_4": "%gla%", "name_5": "%screenshot%", "brand_5": "%screenshot%", "category_5": "%screenshot%", "model_5": "%screenshot%", "description_5": "%screenshot%", "name_6": "%protector%", "brand_6": "%protector%", "category_6": "%protector%", "model_6": "%protector%", "description_6": "%protector%", "name_7": "%samsung%", "brand_7": "%samsung%", "category_7": "%samsung%", "model_7": "%samsung%", "description_7": "%samsung%", "name_8": "%tab%", "brand_8": "%tab%", "category_8": "%tab%", "model_8": "%tab%", "description_8": "%tab%", "name_9": "%plu%", "brand_9": "%plu%", "category_9": "%plu%", "model_9": "%plu%", "description_9": "%plu%", "name_10": "%12%", "brand_10": "%12%", "category_10": "%12%", "model_10": "%12%", "description_10": "%12%", "name_11": "%4%", "brand_11": "%4%", "category_11": "%4%", "model_11": "%4%", "description_11": "%4%", "name_12": "%inch%", "brand_12": "%inch%", "category_12": "%inch%", "model_12": "%inch%", "description_12": "%inch%", "name_13": "%t735ne%", "brand_13": "%t735ne%", "category_13": "%t735ne%", "model_13": "%t735ne%", "description_13": "%t735ne%", "name_14": "%samsung%", "brand_14": "%samsung%", "category_14": "%samsung%", "model_14": "%samsung%", "description_14": "%samsung%", "name_15": "%transparent%", "brand_15": "%transparent%", "category_15": "%transparent%", "model_15": "%transparent%", "description_15": "%transparent%", "strpos_1": "2", "nullif_1": 0, "strpos_2": "clear", "nullif_2": 0, "strpos_3": "tempered", "nullif_3": 0, "strpos_4": "gla", "nullif_4": 0, "strpos_5": "screenshot", "nullif_5": 0, "strpos_6": "protector", "nullif_6": 0, "strpos_7": "samsung", "nullif_7": 0, "strpos_8": "tab", "nullif_8": 0, "strpos_9": "plu", "nullif_9": 0, "strpos_10": "12", "nullif_10": 0, "strpos_11": "4", "nullif_11": 0, "strpos_12": "inch", "nullif_12": 0, "strpos_13": "t735ne", "nullif_13": 0, "strpos_14": "samsung", "nullif_14": 0, "strpos_15": "transparent", "nullif_15": 0, "param_1": 5, "param_2": 0}}
+ANSWER {"response": "The configured Laya decision service is unavailable or returned an invalid decision. Please try again shortly.", "timings": {"laya_start": "2026-10-10T03:02:35.411950+00:00", "laya_call_count": 1, "laya_end": "2026-10-10T03:02:37.656830+00:00", "laya_duration_ms": 2244.9}}
+
+INFO:shopai.services.laya:LAYA V2 request: Show me 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )
+INFO:shopai.services.chat:CHAT TIMING laya_ms=2244.9
+ERROR:shopai.services.chat:LAYA decision failed
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connection.py", line 239, in _new_conn
+    sock = connection.create_connection(
+        (self._dns_host, self.port),
+    ...<2 lines>...
+        socket_options=self.socket_options,
+    )
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\util\connection.py", line 85, in create_connection
+    raise err
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\util\connection.py", line 73, in create_connection
+    sock.connect(sa)
+    ~~~~~~~~~~~~^^^^
+ConnectionRefusedError: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connectionpool.py", line 793, in urlopen
+    response = self._make_request(
+        conn,
+    ...<10 lines>...
+        **response_kw,
+    )
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connectionpool.py", line 499, in _make_request
+    conn.request(
+    ~~~~~~~~~~~~^
+        method,
+        ^^^^^^^
+    ...<6 lines>...
+        enforce_content_length=enforce_content_length,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connection.py", line 567, in request
+    self.endheaders()
+    ~~~~~~~~~~~~~~~^^
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1333, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1093, in _send_output
+    self.send(msg)
+    ~~~~~~~~~^^^^^
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\http\client.py", line 1037, in send
+    self.connect()
+    ~~~~~~~~~~~~^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connection.py", line 398, in connect
+    self.sock = self._new_conn()
+                ~~~~~~~~~~~~~~^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connection.py", line 254, in _new_conn
+    raise NewConnectionError(
+        self, f"Failed to establish a new connection: {e}"
+    ) from e
+urllib3.exceptions.NewConnectionError: HTTPConnection(host='127.0.0.1', port=5056): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\adapters.py", line 696, in send
+    resp = conn.urlopen(
+        method=request.method,
+    ...<9 lines>...
+        chunked=chunked,
+    )
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\connectionpool.py", line 847, in urlopen
+    retries = retries.increment(
+        method, url, error=new_e, _pool=self, _stacktrace=sys.exc_info()[2]
+    )
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\urllib3\util\retry.py", line 555, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='127.0.0.1', port=5056): Max retries exceeded with url: /decide (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=5056): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\chat_service.py", line 379, in generate_response
+    decision = await run_in_threadpool(self.laya.decide, user_message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\laya_client.py", line 42, in decide
+    response = HTTP.post(
+        self.url,
+    ...<4 lines>...
+        timeout=self.timeout,
+    )
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\sessions.py", line 712, in post
+    return self.request("POST", url, data=data, json=json, **kwargs)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\sessions.py", line 651, in request
+    resp = self.send(prep, **send_kwargs)
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\sessions.py", line 784, in send
+    r = adapter.send(request, **kwargs)
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\adapters.py", line 729, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='127.0.0.1', port=5056): Max retries exceeded with url: /decide (Caused by NewConnectionError("HTTPConnection(host='127.0.0.1', port=5056): Failed to establish a new connection: [WinError 10061] No connection could be made because the target machine actively refused it"))

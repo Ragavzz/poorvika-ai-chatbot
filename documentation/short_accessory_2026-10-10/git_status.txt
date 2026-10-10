@@ -1,0 +1,44 @@
+ M .gitignore
+ M README.md
+ M backend/app/config.py
+ M backend/app/main.py
+ M backend/app/services/chat_service.py
+ M backend/app/services/laya_client.py
+ M backend/app/services/ollama_service.py
+ M backend/app/tools/product_search_tool.py
+ M frontend/src/components/storefront/CategoryNav.tsx
+ M frontend/src/components/storefront/Chatbot.tsx
+ M frontend/src/components/storefront/ChatbotPanel.tsx
+ M frontend/src/components/storefront/Navbar.tsx
+ M frontend/src/routes/products.index.tsx
+ M frontend/src/services/api.ts
+?? %SystemDrive%/
+?? backend/.env.example
+?? backend/app/routes/suggestions.py
+?? backend/app/schemas/suggestions.py
+?? backend/app/services/laya_client.py.backup
+?? backend/scripts/measure_suggestions.py
+?? backend/suggestion-click-flow.log
+?? backend/suggestion-click-results.json
+?? backend/suggestion-diagnostics.md
+?? backend/suggestion-performance-results.json
+?? backend/test_accessory_compatibility.py
+?? backend/test_chat_concurrency.py
+?? backend/test_laya_contract.py
+?? backend/test_search_budget_regressions.py
+?? backend/test_short_accessory.py
+?? backend/test_suggestion_click.py
+?? backend/test_suggestions.py
+?? documentation/
+?? evaluation/jev_benchmark/dataset/
+?? evaluation/jev_benchmark/phase4_experiment/
+?? evaluation/jev_benchmark/phase5_model_config.json
+?? evaluation/jev_benchmark/reference_validation.py
+?? frontend/.env.example
+?? frontend/src/components/storefront/ProductSuggestionPopup.tsx
+?? frontend/src/lib/product-suggestions.ts
+?? frontend/src/lib/suggestion-timing.ts
+?? frontend/tests/product-suggestions.test.cjs
+?? frontend/tests/suggestion-click.test.cjs
+?? laya_v2_service/
+?? run_v2_jev.py

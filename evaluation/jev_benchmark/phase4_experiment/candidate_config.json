@@ -1,0 +1,10 @@
+{
+  "experiment": "phase4-laya-typed-decisions",
+  "model_id": "convaiinnovations/laya-typed-decisions",
+  "runtime": "official Python laya package, isolated virtual environment",
+  "dataset": "../dataset/typed_decisions_test.json",
+  "baseline_raw": "../results/baseline_v2_20261004_raw.jsonl",
+  "pilot_cases": 20,
+  "candidate_results_prefix": "phase4_typed_decisions_candidate_20261004",
+  "production_enabled": false
+}

@@ -1,0 +1,1883 @@
+{
+  "report_date": "2026-10-10",
+  "timezone": "Asia/Calcutta",
+  "note": "Continuous investigation; captured runtime logs carry their original 2026-10-09 timestamps.",
+  "query": "Show me Sony earphones under 1000 rupees",
+  "dataset_product": {
+    "url": "https://www.poorvika.com/sony-mdr-ex15ap-earphone-black/p",
+    "canonical_url": "https://www.poorvika.com/sony-mdr-ex15ap-earphone-black/p",
+    "name": "Sony MDR-EX15AP Earphone ( Black )",
+    "brand": "Sony",
+    "model": "Sony MDR-EX15AP Earphone",
+    "sku": "MDR-EX15APBZIN",
+    "product_id": "sony-mdr-ex15ap-earphone-black",
+    "item_code": "13527",
+    "erp_item_code": "13527",
+    "online_price": 829,
+    "mrp": 890,
+    "shop_price": null,
+    "currency": "INR",
+    "availability": "https://schema.org/InStock",
+    "stock": 64,
+    "rating": 5,
+    "rating_count": 153,
+    "description": "Sony MDR-EX15AP Earphone ( Black )",
+    "images": [
+      "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png"
+    ],
+    "specifications": {
+      "attributeGroups": [
+        {
+          "code": "general",
+          "name": "GENERAL",
+          "isActive": true,
+          "attributes": [
+            {
+              "code": "model-name",
+              "name": "Model Name",
+              "type": "INPUT",
+              "value": "MDR-EX15AP Earphone"
+            },
+            {
+              "code": "model-number",
+              "name": "Model Number",
+              "type": "INPUT",
+              "value": ""
+            },
+            {
+              "code": "headphone-type",
+              "name": "Headphone Type",
+              "type": "INPUT",
+              "value": "In the Ear"
+            },
+            {
+              "code": "inline-remote",
+              "name": "Inline Remote",
+              "type": "INPUT",
+              "value": "Yes"
+            },
+            {
+              "code": "in-the-box",
+              "name": "In The Box",
+              "type": "INPUT",
+              "value": "1 x Earphone & Operating Instructions"
+            }
+          ]
+        },
+        {
+          "code": "product-details",
+          "name": "PRODUCT DETAILS",
+          "isActive": true,
+          "attributes": [
+            {
+              "code": "headphone-driver-units",
+              "name": "Headphone Driver Units",
+              "type": "INPUT",
+              "value": "9 mm"
+            },
+            {
+              "code": "driver-type",
+              "name": "Driver Type",
+              "type": "INPUT",
+              "value": "Neodymium drivers"
+            },
+            {
+              "code": "water-resistant",
+              "name": "Water Resistant",
+              "type": "INPUT",
+              "value": ""
+            },
+            {
+              "code": "sweat-proof",
+              "name": "Sweat Proof",
+              "type": "INPUT",
+              "value": ""
+            },
+            {
+              "code": "voice-support",
+              "name": "Voice Support",
+              "type": "INPUT",
+              "value": ""
+            },
+            {
+              "code": "cable-type",
+              "name": "Cable Type",
+              "type": "INPUT",
+              "value": "Y-type Cable"
+            }
+          ]
+        },
+        {
+          "code": "dimensions",
+          "name": "DIMENSIONS",
+          "isActive": true,
+          "attributes": [
+            {
+              "code": "cable-length",
+              "name": "Cable Length",
+              "type": "INPUT",
+              "value": ""
+            },
+            {
+              "code": "weight",
+              "name": "Weight",
+              "type": "INPUT",
+              "value": ""
+            }
+          ]
+        },
+        {
+          "code": "audio-features",
+          "name": "AUDIO FEATURES",
+          "isActive": true,
+          "attributes": [
+            {
+              "code": "impedance",
+              "name": "Impedance",
+              "type": "INPUT",
+              "value": "16 Ohms"
+            },
+            {
+              "code": "sensitivity",
+              "name": "Sensitivity",
+              "type": "INPUT",
+              "value": "100 dB/mW"
+            },
+            {
+              "code": "minimum-frequency-respons",
+              "name": "Minimum Frequency Respons",
+              "type": "INPUT",
+              "value": "8Hz"
+            },
+            {
+              "code": "maximum-frequency-response",
+              "name": "Maximum Frequency Response",
+              "type": "INPUT",
+              "value": "22000Hz"
+            }
+          ]
+        },
+        {
+          "code": "warranty",
+          "name": "WARRANTY",
+          "isActive": true,
+          "attributes": [
+            {
+              "code": "warranty-summary",
+              "name": "Warranty Summary",
+              "type": "INPUT",
+              "value": "1 Year Manufacturer Warranty"
+            },
+            {
+              "code": "not-covered-in-warranty",
+              "name": "Not Covered in Warranty",
+              "type": "INPUT",
+              "value": "Physical Damages Not Accepted"
+            }
+          ]
+        },
+        {
+          "code": "manufacturing-packing-and-impor",
+          "name": "MANUFACTURING, PACKING AND IMPORTED INFO",
+          "isActive": true,
+          "attributes": [
+            {
+              "code": "generic-name",
+              "name": "Generic Name",
+              "type": "INPUT",
+              "value": "Headphones"
+            },
+            {
+              "code": "country-of-origin",
+              "name": "Country of Origin",
+              "type": "INPUT",
+              "value": "Vietnam"
+            },
+            {
+              "code": "manufactured-by",
+              "name": "Manufactured by",
+              "type": "INPUT",
+              "value": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            },
+            {
+              "code": "imported-by",
+              "name": "Imported by",
+              "type": "INPUT",
+              "value": "SONY INDIA PVT.LTD A-18,Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044. INDIA"
+            },
+            {
+              "code": "packed-by",
+              "name": "Packed by",
+              "type": "INPUT",
+              "value": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            }
+          ]
+        }
+      ],
+      "attributeHighlights": [
+        {
+          "code": "headphone-type",
+          "name": "Comfortable Design"
+        },
+        {
+          "code": "inline-remote",
+          "name": "Lightweight for Ultimate music mobility"
+        },
+        {
+          "code": "in-the-box",
+          "name": "Secure-fitting silicone earbuds"
+        }
+      ]
+    },
+    "source_hash": "52e8036ca2ccbfcf25825fc1f10dfcbfc4aeb97d59da33a12188b722ada71406",
+    "scraped_at": "2026-09-21T13:16:21.563227+00:00"
+  },
+  "before_http": {
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    }
+  },
+  "before_trace": {
+    "exit": 0,
+    "stdout": "PRODUCT {\"id\": \"sony-mdr-ex15ap-earphone-black\", \"name\": \"Sony MDR-EX15AP Earphone ( Black )\", \"brand\": \"Sony\", \"price\": 829.0, \"online_price\": 829.0, \"mrp\": 890.0, \"stock\": 64, \"in_stock\": true, \"category\": \"Headphones\", \"availability\": \"https://schema.org/InStock\"}\r\nFILTER_TRACE {\"filters\": {\"intent\": \"product_search\", \"category\": \"Headphones\", \"brand\": \"Sony\", \"max_price\": 1000.0, \"min_price\": null, \"search_term\": \"rupee\"}, \"direct_ids\": [\"sony-mdr-ex15ap-earphone-black\"], \"parsed_filter_ids\": []}\r\nCHAT_TRACE {\"response\": \"I couldn't find any products matching those filters. Try increasing your budget or searching for another model.\", \"timings\": {\"laya_start\": \"2026-10-09T14:58:14.609675+00:00\", \"laya_call_count\": 1, \"laya_end\": \"2026-10-09T14:58:18.006236+00:00\", \"laya_duration_ms\": 3396.6, \"product_search_start\": \"2026-10-09T14:58:18.011461+00:00\", \"postgres_query_start\": \"2026-10-09T14:58:18.012834+00:00\", \"postgres_query_count\": 1, \"postgres_query_end\": \"2026-10-09T14:58:18.023397+00:00\", \"postgres_query_duration_ms\": 10.6, \"product_search_end\": \"2026-10-09T14:58:18.023450+00:00\", \"product_search_duration_ms\": 12.0, \"ollama_skipped_reason\": \"deterministic_catalog_search\"}}\r\n",
+    "stderr": "INFO:shopai.services.laya:LAYA V2 request: Show me Sony earphones under 1000 rupees\r\nINFO:shopai.services.laya:LAYA V2 decision: choice=product_search confidence=0.8949\r\nINFO:shopai.services.chat:CHAT TIMING laya_ms=3396.6\r\nINFO:shopai.services.chat:[AI FLOW] LAYA DECISION: choice=product_search, confidence=0.8949, source=laya-python-v2\r\nINFO:shopai.services.chat:DECISION action=product_search confidence=0.8949\r\nINFO:shopai.services.chat:[AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)\r\nINFO:shopai.services.chat:TOOL/DATABASE action=product_search\r\nINFO:shopai.services.chat:CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': 'rupee'}\r\nINFO:shopai.services.chat:[AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': 'rupee'}\r\nINFO:shopai.services.chat:CHAT TIMING product_search_ms=12.0 postgres_query_ms=10.6\r\nINFO:shopai.services.chat:TOOL/DATABASE returned 0 products\r\nINFO:shopai.services.chat:[AI FLOW] PRODUCT TOOL: 0 products found\r\nINFO:shopai.services.chat:[AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL\r\nINFO:shopai.services.chat:[AI FLOW] FINAL RESPONSE: source=deterministic_catalog\r\n"
+  },
+  "before_sql": {
+    "exit": 0,
+    "stdout": "{\"filters\": [{\"query\": \"Show me Sony earphones under 1000 rupees\", \"filters\": {\"intent\": \"product_search\", \"category\": \"Headphones\", \"brand\": \"Sony\", \"max_price\": 1000.0, \"min_price\": null, \"search_term\": \"rupee\"}, \"ids\": []}, {\"query\": \"Find Sony earphones below \\u20b91000\", \"filters\": {\"intent\": \"product_search\", \"category\": \"Headphones\", \"brand\": \"Sony\", \"max_price\": 1000.0, \"min_price\": null, \"search_term\": null}, \"ids\": [\"sony-mdr-ex15ap-earphone-black\"]}, {\"query\": \"Show me all Sony earphones\", \"filters\": {\"intent\": \"product_search\", \"category\": \"Headphones\", \"brand\": \"Sony\", \"max_price\": null, \"min_price\": null, \"search_term\": \"all\"}, \"ids\": []}, {\"query\": \"Find earphones under 1000\", \"filters\": {\"intent\": \"product_search\", \"category\": \"Headphones\", \"brand\": null, \"max_price\": 1000.0, \"min_price\": null, \"search_term\": null}, \"ids\": [\"sony-mdr-ex15ap-earphone-black\", \"zebronics-zeb-yoga-2-bluetooth-headset-black\", \"samsung-earphone-ehs64avfbecinu-black\", \"skullcandy-jib-mic-earphone-black\", \"jbl-t50hi-headphone-black\"]}], \"first_sql\": {\"where\": \"WHERE products.category ILIKE %(category_1)s::VARCHAR AND products.brand ILIKE %(brand_1)s::VARCHAR AND products.price <= %(price_1)s AND (products.name ILIKE %(name_1)s::VARCHAR OR products.brand ILIKE %(brand_2)s::VARCHAR OR products.category ILIKE %(category_2)s::VARCHAR OR products.model ILIKE %(model_1)s::VARCHAR OR products.description ILIKE %(description_1)s::VARCHAR) ORDER BY nullif(strpos(lower(products.name), %(strpos_1)s::VARCHAR), %(nullif_1)s::INTEGER) ASC NULLS LAST, products.in_stock DESC, products.rating DESC NULLS LAST, products.price ASC, products.id ASC \\n LIMIT %(param_1)s::INTEGER OFFSET %(param_2)s::INTEGER\", \"parameters\": {\"category_1\": \"%Headphones%\", \"brand_1\": \"%Sony%\", \"price_1\": 1000.0, \"name_1\": \"%rupee%\", \"brand_2\": \"%rupee%\", \"category_2\": \"%rupee%\", \"model_1\": \"%rupee%\", \"description_1\": \"%rupee%\", \"strpos_1\": \"rupee\", \"nullif_1\": 0, \"param_1\": 5, \"param_2\": 0}}}\r\n",
+    "stderr": ""
+  },
+  "after_trace": {
+    "exit": 0,
+    "stdout": "PRODUCT {\"id\": \"sony-mdr-ex15ap-earphone-black\", \"name\": \"Sony MDR-EX15AP Earphone ( Black )\", \"brand\": \"Sony\", \"price\": 829.0, \"online_price\": 829.0, \"mrp\": 890.0, \"stock\": 64, \"in_stock\": true, \"category\": \"Headphones\", \"availability\": \"https://schema.org/InStock\"}\r\nFILTER_TRACE {\"filters\": {\"intent\": \"product_search\", \"category\": \"Headphones\", \"brand\": \"Sony\", \"max_price\": 1000.0, \"min_price\": null, \"search_term\": null}, \"direct_ids\": [\"sony-mdr-ex15ap-earphone-black\"], \"parsed_filter_ids\": [\"sony-mdr-ex15ap-earphone-black\"]}\r\nCHAT_TRACE {\"response\": \"I found 1 Sony earphone under \\u20b91,000:\\n\\n| Product | Brand | Price | Discount | Rating | Stock |\\n|---|---|---:|---:|---:|---|\\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | \\u20b9829 | 7% OFF | 5.0\\u2605 | In Stock |\\n\\nThese options are currently in stock. Let me know if you'd like details about any of them.\\n\\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]\", \"timings\": {\"laya_start\": \"2026-10-09T15:00:50.365409+00:00\", \"laya_call_count\": 1, \"laya_end\": \"2026-10-09T15:00:57.666380+00:00\", \"laya_duration_ms\": 7301.0, \"product_search_start\": \"2026-10-09T15:00:57.672100+00:00\", \"postgres_query_start\": \"2026-10-09T15:00:57.673050+00:00\", \"postgres_query_count\": 1, \"postgres_query_end\": \"2026-10-09T15:00:57.676509+00:00\", \"postgres_query_duration_ms\": 3.5, \"product_search_end\": \"2026-10-09T15:00:57.676593+00:00\", \"product_search_duration_ms\": 4.5, \"ollama_skipped_reason\": \"deterministic_catalog_search\"}}\r\n",
+    "stderr": "INFO:shopai.services.laya:LAYA V2 request: Show me Sony earphones under 1000 rupees\r\nINFO:shopai.services.laya:LAYA V2 decision: choice=product_search confidence=0.8949\r\nINFO:shopai.services.chat:CHAT TIMING laya_ms=7301.0\r\nINFO:shopai.services.chat:[AI FLOW] LAYA DECISION: choice=product_search, confidence=0.8949, source=laya-python-v2\r\nINFO:shopai.services.chat:DECISION action=product_search confidence=0.8949\r\nINFO:shopai.services.chat:[AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)\r\nINFO:shopai.services.chat:TOOL/DATABASE action=product_search\r\nINFO:shopai.services.chat:CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}\r\nINFO:shopai.services.chat:[AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}\r\nINFO:shopai.services.chat:CHAT TIMING product_search_ms=4.5 postgres_query_ms=3.5\r\nINFO:shopai.services.chat:TOOL/DATABASE returned 1 products\r\nINFO:shopai.services.chat:[AI FLOW] PRODUCT TOOL: 1 products found\r\nINFO:shopai.services.chat:[AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL\r\nINFO:shopai.services.chat:[AI FLOW] FINAL RESPONSE: source=deterministic_catalog\r\n"
+  },
+  "laya_health": {
+    "status": "ok",
+    "model": "Mass121/laya-typed-decisions-v2",
+    "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+    "loaded": true
+  },
+  "regressions": [
+    {
+      "query": "Show me Sony earphones under 1000 rupees",
+      "kind": "sony_budget",
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 3749.4,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "sony-mdr-ex15ap-earphone-black"
+      ]
+    },
+    {
+      "query": "Find Sony earphones below ₹1000",
+      "kind": "sony_budget",
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2465.5,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "sony-mdr-ex15ap-earphone-black"
+      ]
+    },
+    {
+      "query": "Show me all Sony earphones",
+      "kind": "sony_all",
+      "status": 200,
+      "response": "I found 5 Sony earphones:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n| Sony WF-C500 Truly Wireless Headphones ( Black ) | Sony | ₹4,490 | 50% OFF | 5.0★ | In Stock |\n| Sony WH-CH520 Boom Headset ( Beige ) | Sony | ₹4,490 | 25% OFF | — | In Stock |\n| Sony WH-CH520 Boom Headset ( Black ) | Sony | ₹4,490 | 25% OFF | — | In Stock |\n| Sony WH-CH520 Boom Headset ( Blue ) | Sony | ₹4,490 | 25% OFF | — | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black,sony-wf-c500-truly-wireless-headphones-black,sony-wh-ch520-boom-headset-beige,sony-wh-ch520-boom-headset-black,sony-wh-ch520-boom-headset-blue]]",
+      "duration_ms": 2402.1,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "sony-mdr-ex15ap-earphone-black",
+        "sony-wf-c500-truly-wireless-headphones-black",
+        "sony-wh-ch520-boom-headset-beige",
+        "sony-wh-ch520-boom-headset-black",
+        "sony-wh-ch520-boom-headset-blue"
+      ]
+    },
+    {
+      "query": "Find earphones under 1000",
+      "kind": "earphones",
+      "status": 200,
+      "response": "I found 5 earphones under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n| Zebronics Zeb-Yoga 2 Bluetooth Headset ( Black ) | Zebronics | ₹999 | 41% OFF | 5.0★ | In Stock |\n| Samsung EHS64 Earphone ( Black ) | Samsung | ₹449 | 10% OFF | 4.9★ | In Stock |\n| Skullcandy Jib Mic Earphone ( Black ) | Skullcandy | ₹549 | 73% OFF | 4.9★ | In Stock |\n| JBL T50HI headphone ( Black ) | JBL | ₹599 | 25% OFF | — | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black,zebronics-zeb-yoga-2-bluetooth-headset-black,samsung-earphone-ehs64avfbecinu-black,skullcandy-jib-mic-earphone-black,jbl-t50hi-headphone-black]]",
+      "duration_ms": 2343,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "sony-mdr-ex15ap-earphone-black",
+        "zebronics-zeb-yoga-2-bluetooth-headset-black",
+        "samsung-earphone-ehs64avfbecinu-black",
+        "skullcandy-jib-mic-earphone-black",
+        "jbl-t50hi-headphone-black"
+      ]
+    },
+    {
+      "query": "Show me Samsung phones under 20000",
+      "kind": "samsung",
+      "status": 200,
+      "response": "I found 5 Samsung phones under ₹20,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) | Samsung | ₹15,999 | 20% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Gold, 6GB-128GB ) | Samsung | ₹15,999 | 20% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB ) | Samsung | ₹16,999 | 21% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Light Green, 8GB-128GB ) | Samsung | ₹16,999 | 21% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Gold, 8GB-128GB ) | Samsung | ₹17,499 | 19% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:samsung-galaxy-a16-5g-blue-black-6gb-128gb,samsung-galaxy-a16-5g-gold-6gb-128gb,samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram,samsung-galaxy-a16-5g-light-green-128gb-8gb-ram,samsung-galaxy-a16-5g-gold-128gb-8gb-ram]]",
+      "duration_ms": 2603.8,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+        "samsung-galaxy-a16-5g-gold-6gb-128gb",
+        "samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram",
+        "samsung-galaxy-a16-5g-light-green-128gb-8gb-ram",
+        "samsung-galaxy-a16-5g-gold-128gb-8gb-ram"
+      ]
+    },
+    {
+      "query": "Recommend a phone for gaming",
+      "kind": "recommendation",
+      "status": 200,
+      "response": "Here are in-stock options ranked by customer rating:\n\nI found 5 phones:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Apple iPhone 15 ( Black,256GB ) | Apple | ₹64,900 | 28% OFF | 5.0★ | In Stock |\n| Apple iPhone 15 ( Pink,256GB ) | Apple | ₹64,900 | 28% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB ) | Samsung | ₹16,999 | 21% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) | Samsung | ₹15,999 | 20% OFF | 5.0★ | In Stock |\n| Samsung Galaxy A16 5G ( Gold, 8GB-128GB ) | Samsung | ₹17,499 | 19% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\nI don't have verified performance comparisons for gaming, so these are suggestions based on availability, price and customer ratings.\n\n[[SHOPAI_PRODUCTS:apple-iphone-15-black-256gb,apple-iphone-15-pink-256gb,samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram,samsung-galaxy-a16-5g-blue-black-6gb-128gb,samsung-galaxy-a16-5g-gold-128gb-8gb-ram]]",
+      "duration_ms": 2391.3,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "apple-iphone-15-black-256gb",
+        "apple-iphone-15-pink-256gb",
+        "samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram",
+        "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+        "samsung-galaxy-a16-5g-gold-128gb-8gb-ram"
+      ]
+    },
+    {
+      "query": "Tell me the specifications of Sony MDR-EX15AP Earphone",
+      "kind": "details",
+      "status": 200,
+      "response": "### **Sony MDR-EX15AP Earphone ( Black )**\n- **Brand:** Sony\n- **Category:** Headphones\n- **Price:** ₹829 *(MRP: ₹890, 7% OFF)*\n- **Availability:** In Stock\n- **Rating:** 5.0★ (153 reviews)\n\n**Key Specifications:**\n- **Model Name:** MDR-EX15AP Earphone\n- **Headphone Type:** In the Ear\n- **Inline Remote:** Yes\n- **In The Box:** 1 x Earphone & Operating Instructions\n- **Headphone Driver Units:** 9 mm\n- **Driver Type:** Neodymium drivers\n- **Cable Type:** Y-type Cable\n- **Impedance:** 16 Ohms\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2539.7,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": [
+        "sony-mdr-ex15ap-earphone-black"
+      ]
+    },
+    {
+      "query": "Show me products from a nonexistent brand",
+      "kind": "empty",
+      "status": 200,
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model.",
+      "duration_ms": 2229.3,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": []
+    },
+    {
+      "query": "Show Sony earphones under 1 rupee",
+      "kind": "empty",
+      "status": 200,
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model.",
+      "duration_ms": 2383.6,
+      "statusLabel": "PASS",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": []
+    },
+    {
+      "query": "Show me 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )",
+      "kind": "out_of_stock",
+      "expected_id": "2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch",
+      "status": 200,
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model.",
+      "duration_ms": 2983.2,
+      "statusLabel": "FAIL",
+      "catalog_grounded": true,
+      "constraints_match": true,
+      "ids": []
+    }
+  ],
+  "public_catalog": [
+    {
+      "query": "Show me Sony earphones under 1000 rupees",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-mdr-ex15ap-earphone-black",
+            "name": "Sony MDR-EX15AP Earphone ( Black )",
+            "brand": "Sony",
+            "price": 829,
+            "originalPrice": 890,
+            "discount": 6.85,
+            "image": "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 153,
+            "inStock": true,
+            "description": "Sony MDR-EX15AP Earphone ( Black )",
+            "specifications": {
+              "Model Name": "MDR-EX15AP Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Earphone & Operating Instructions",
+              "Headphone Driver Units": "9 mm",
+              "Driver Type": "Neodymium drivers",
+              "Cable Type": "Y-type Cable",
+              "Impedance": "16 Ohms",
+              "Sensitivity": "100 dB/mW",
+              "Minimum Frequency Respons": "8Hz",
+              "Maximum Frequency Response": "22000Hz",
+              "Warranty Summary": "1 Year Manufacturer Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN",
+              "Imported by": "SONY INDIA PVT.LTD A-18,Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044. INDIA",
+              "Packed by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Find Sony earphones below ₹1000",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-mdr-ex15ap-earphone-black",
+            "name": "Sony MDR-EX15AP Earphone ( Black )",
+            "brand": "Sony",
+            "price": 829,
+            "originalPrice": 890,
+            "discount": 6.85,
+            "image": "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 153,
+            "inStock": true,
+            "description": "Sony MDR-EX15AP Earphone ( Black )",
+            "specifications": {
+              "Model Name": "MDR-EX15AP Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Earphone & Operating Instructions",
+              "Headphone Driver Units": "9 mm",
+              "Driver Type": "Neodymium drivers",
+              "Cable Type": "Y-type Cable",
+              "Impedance": "16 Ohms",
+              "Sensitivity": "100 dB/mW",
+              "Minimum Frequency Respons": "8Hz",
+              "Maximum Frequency Response": "22000Hz",
+              "Warranty Summary": "1 Year Manufacturer Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN",
+              "Imported by": "SONY INDIA PVT.LTD A-18,Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044. INDIA",
+              "Packed by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Show me all Sony earphones",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-mdr-ex15ap-earphone-black",
+            "name": "Sony MDR-EX15AP Earphone ( Black )",
+            "brand": "Sony",
+            "price": 829,
+            "originalPrice": 890,
+            "discount": 6.85,
+            "image": "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 153,
+            "inStock": true,
+            "description": "Sony MDR-EX15AP Earphone ( Black )",
+            "specifications": {
+              "Model Name": "MDR-EX15AP Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Earphone & Operating Instructions",
+              "Headphone Driver Units": "9 mm",
+              "Driver Type": "Neodymium drivers",
+              "Cable Type": "Y-type Cable",
+              "Impedance": "16 Ohms",
+              "Sensitivity": "100 dB/mW",
+              "Minimum Frequency Respons": "8Hz",
+              "Maximum Frequency Response": "22000Hz",
+              "Warranty Summary": "1 Year Manufacturer Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN",
+              "Imported by": "SONY INDIA PVT.LTD A-18,Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044. INDIA",
+              "Packed by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-wf-c500-truly-wireless-headphones-black",
+            "name": "Sony WF-C500 Truly Wireless Headphones ( Black )",
+            "brand": "Sony",
+            "price": 4490,
+            "originalPrice": 8990,
+            "discount": 50.06,
+            "image": "https://img-prd-pim.poorvika.com/product/Sony-WF-C500-Truly-Wireless-Headphones-Black-Open-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Sony-WF-C500-Truly-Wireless-Headphones-Black-Open-View.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 56,
+            "inStock": true,
+            "description": "Sony WF-C500 Truly Wireless Headphones ( Black )",
+            "specifications": {
+              "Model Name": "WF-C500 Truly Wireless Headphones",
+              "Inline Remote": "Yes",
+              "Connectivity": "Bluetooth",
+              "In The Box": "1 x Earbuds, Charging case, Type-C USB Cable, User Manual, Warranty Card, 2 x Earbud Tips",
+              "Additional Features": "Ergonomic Surface Design, Easier, Clearer Hands-Free Calling, Find your headphones easily with Fast Pair, Connect to your PC easily with Swift Pair, Optional use of one earbud only",
+              "With Microphone": "Yes, Built-in Microphone",
+              "Sweat Proof": "Yes, Splashes and Sweat Proof",
+              "Water Resistant": "Yes, IPX4",
+              "Voice Support": "Yes, Voice Assistant-compatible",
+              "Headphone Driver Units": "5.8 mm",
+              "Driver Type": "Dynamic",
+              "Minimum Frequency Respons": "20 Hz",
+              "Maximum Frequency Response": "20,000 Hz (44.1 kHz sampling)",
+              "Bluetooth Version": "v5.0",
+              "Bluetooth Range": "10m",
+              "Bluetooth Profiles": "A2DP, AVRCP, HFP, HSP",
+              "Charging Type": "USB Type-C",
+              "Battery Life": "Up to 10 hours Battery Life, Total Up to 20 hours with Charging Case",
+              "Charging Time": "3 hours Approx | 10 min Quick Charge for 60 min Of Playback",
+              "Music Playtime": "Up to 10 hours",
+              "Dimensions": "80.0 x 34.9 x 30.9 mm (Approx)",
+              "Weight": "35 g (Approx)",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Sony Tokyo, 1-7-1 Konan Minato-ku, Tokyo, 108-0075 Japan",
+              "Imported by": "A-18, Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044, India",
+              "Packed by": "A-18, Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044, India"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-wh-ch520-boom-headset-beige",
+            "name": "Sony WH-CH520 Boom Headset ( Beige )",
+            "brand": "Sony",
+            "price": 4490,
+            "originalPrice": 5990,
+            "discount": 25.04,
+            "image": "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-beige-front-view.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-beige-front-view.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-beige-side-view.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-beige-stright.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-beige-fold.png"
+            ],
+            "category": "Headphones",
+            "rating": null,
+            "reviewCount": 0,
+            "inStock": true,
+            "description": "Sony WH-CH520 Boom Headset ( Beige )",
+            "specifications": {
+              "Model Name": "WH-CH520 Boom Headset",
+              "Model Number": "WH-CH520/CZ",
+              "Headphone Type": "On the Ear",
+              "Inline Remote": "Yes",
+              "Connectivity": "Bluetooth",
+              "In The Box": "1x Boom Headset, USB cable, User manual & Warranty card",
+              "Headphone Driver Units": "30 mm",
+              "Voice Support": "Yes, Google or Siri",
+              "Audio Support": "SBC, AAC | SCMS-T",
+              "Minimum Frequency Respons": "20 Hz",
+              "Maximum Frequency Response": "20000 Hz",
+              "Sound Mode": "Volume Control, DSEE",
+              "Speaker frequency range": "2.4 GHz band (2.4000 GHz-2.4835 GHz)",
+              "Bluetooth Version": "v5.2",
+              "Bluetooth Range": "10 m",
+              "Bluetooth Profiles": "A2DP, AVRCP, HFP, HSP",
+              "Charger Type": "USB (Type-C)",
+              "Charging Time": "Approx 3 Hrs",
+              "Music Playtime": "NA",
+              "Talk time": "Max 40 Hrs",
+              "Stand-by": "Max 200 Hrs",
+              "Weight": "Approx. 147 g",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "India, Vietnam, Malaysia",
+              "Manufactured by": "Sony Corporation 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan",
+              "Imported by": "Sony India Pvt. Ltd., A-18, Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044, India",
+              "Packed by": "Sony Corporation 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-wh-ch520-boom-headset-black",
+            "name": "Sony WH-CH520 Boom Headset ( Black )",
+            "brand": "Sony",
+            "price": 4490,
+            "originalPrice": 5990,
+            "discount": 25.04,
+            "image": "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-black-front-view.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-black-front-view.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-black-side-view.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-black-stright.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-black-fold.png"
+            ],
+            "category": "Headphones",
+            "rating": null,
+            "reviewCount": 0,
+            "inStock": true,
+            "description": "Sony WH-CH520 Boom Headset ( Black )",
+            "specifications": {
+              "Model Name": "WH-CH520 Boom Headset",
+              "Model Number": "WH-CH520/BZ",
+              "Headphone Type": "On the Ear",
+              "Inline Remote": "Yes",
+              "Connectivity": "Bluetooth",
+              "In The Box": "1x Boom Headset, USB cable, User manual & Warranty card",
+              "Headphone Driver Units": "30 mm",
+              "Voice Support": "Yes, Google or Siri",
+              "Audio Support": "SBC, AAC | SCMS-T",
+              "Minimum Frequency Respons": "20 Hz",
+              "Maximum Frequency Response": "20000 Hz",
+              "Sound Mode": "Volume Control, DSEE",
+              "Speaker frequency range": "2.4 GHz band (2.4000 GHz-2.4835 GHz)",
+              "Bluetooth Version": "v5.2",
+              "Bluetooth Range": "10 m",
+              "Bluetooth Profiles": "A2DP, AVRCP, HFP, HSP",
+              "Charger Type": "USB (Type-C)",
+              "Charging Time": "Approx 3 Hrs",
+              "Music Playtime": "NA",
+              "Talk time": "Max 40 Hrs",
+              "Stand-by": "Max 200 Hrs",
+              "Weight": "Approx. 147 g",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "India, Vietnam, Malaysia",
+              "Manufactured by": "Sony Corporation 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan",
+              "Imported by": "Sony India Pvt. Ltd., A-18, Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044, India",
+              "Packed by": "Sony Corporation 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-wh-ch520-boom-headset-blue",
+            "name": "Sony WH-CH520 Boom Headset ( Blue )",
+            "brand": "Sony",
+            "price": 4490,
+            "originalPrice": 5990,
+            "discount": 25.04,
+            "image": "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-blue-front-view.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-blue-front-view.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-blue-side-view.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-blue-stright.png",
+              "https://img-prd-pim.poorvika.com/product/sony-wh-ch520-boom-headset-blue-fold.png"
+            ],
+            "category": "Headphones",
+            "rating": null,
+            "reviewCount": 0,
+            "inStock": true,
+            "description": "Sony WH-CH520 Boom Headset ( Blue )",
+            "specifications": {
+              "Model Name": "WH-CH520 Boom Headset",
+              "Model Number": "WH-CH520/LZ",
+              "Headphone Type": "On the Ear",
+              "Inline Remote": "Yes",
+              "Connectivity": "Bluetooth",
+              "In The Box": "1x Boom Headset, USB cable, User manual & Warranty card",
+              "Headphone Driver Units": "30 mm",
+              "Voice Support": "Yes, Google or Siri",
+              "Audio Support": "SBC, AAC | SCMS-T",
+              "Minimum Frequency Respons": "20 Hz",
+              "Maximum Frequency Response": "20000 Hz",
+              "Sound Mode": "Volume Control, DSEE",
+              "Speaker frequency range": "2.4 GHz band (2.4000 GHz-2.4835 GHz)",
+              "Bluetooth Version": "v5.2",
+              "Bluetooth Range": "10 m",
+              "Bluetooth Profiles": "A2DP, AVRCP, HFP, HSP",
+              "Charger Type": "USB (Type-C)",
+              "Charging Time": "Approx 3 Hrs",
+              "Music Playtime": "NA",
+              "Talk time": "Max 40 Hrs",
+              "Stand-by": "Max 200 Hrs",
+              "Weight": "Approx. 147 g",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "India, Vietnam, Malaysia",
+              "Manufactured by": "Sony Corporation 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan",
+              "Imported by": "Sony India Pvt. Ltd., A-18, Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044, India",
+              "Packed by": "Sony Corporation 1-7-1 Konan, Minato-ku, Tokyo, 108-0075 Japan"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Find earphones under 1000",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-mdr-ex15ap-earphone-black",
+            "name": "Sony MDR-EX15AP Earphone ( Black )",
+            "brand": "Sony",
+            "price": 829,
+            "originalPrice": 890,
+            "discount": 6.85,
+            "image": "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 153,
+            "inStock": true,
+            "description": "Sony MDR-EX15AP Earphone ( Black )",
+            "specifications": {
+              "Model Name": "MDR-EX15AP Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Earphone & Operating Instructions",
+              "Headphone Driver Units": "9 mm",
+              "Driver Type": "Neodymium drivers",
+              "Cable Type": "Y-type Cable",
+              "Impedance": "16 Ohms",
+              "Sensitivity": "100 dB/mW",
+              "Minimum Frequency Respons": "8Hz",
+              "Maximum Frequency Response": "22000Hz",
+              "Warranty Summary": "1 Year Manufacturer Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN",
+              "Imported by": "SONY INDIA PVT.LTD A-18,Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044. INDIA",
+              "Packed by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "zebronics-zeb-yoga-2-bluetooth-headset-black",
+            "name": "Zebronics Zeb-Yoga 2 Bluetooth Headset ( Black )",
+            "brand": "Zebronics",
+            "price": 999,
+            "originalPrice": 1699,
+            "discount": 41.2,
+            "image": "https://img-prd-pim.poorvika.com/product/zebronics-zeb-yoga-2-bluetooth-headset-black-01.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/zebronics-zeb-yoga-2-bluetooth-headset-black-01.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 1,
+            "inStock": true,
+            "description": "Zebronics Zeb-Yoga 2 Bluetooth Headset ( Black )",
+            "specifications": {
+              "Model Name": "Zeb-Yoga 2 Bluetooth Headset",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "Connectivity": "Bluetooth",
+              "In The Box": "1x Neckband, Earbuds (2 Pairs) & Charging Cable",
+              "Additional Features": "ENC (Environmentall Noise Cancellation), Voice assistant support, Magnetic Earpiece, Built-In Rechargeable Battery",
+              "Headphone Driver Units": "10 mm",
+              "Voice Support": "Yes",
+              "Impedance": "16 Ohms",
+              "Bluetooth Version": "v5.2",
+              "Bluetooth Range": "10 m",
+              "Bluetooth Profiles": "HSP / HFP / A2DP / AVRCP",
+              "Charging Time": "Up to 2 hours",
+              "Stand-by": "Up to 100 hours",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "China",
+              "Manufactured by": "Zebronics India Pvt. Ltd. 118 , Poonamallee High Road, Vepery, City - Chennai-600 084",
+              "Packed by": "Zebronics India Pvt. Ltd. 118 , Poonamallee High Road, Vepery, City - Chennai-600 084"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-earphone-ehs64avfbecinu-black",
+            "name": "Samsung EHS64 Earphone ( Black )",
+            "brand": "Samsung",
+            "price": 449,
+            "originalPrice": 499,
+            "discount": 10.02,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-EHS64-Earphone-Black-1.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-EHS64-Earphone-Black-1.png"
+            ],
+            "category": "Headphones",
+            "rating": 4.9,
+            "reviewCount": 65,
+            "inStock": true,
+            "description": "Samsung EHS64 Earphone ( Black )",
+            "specifications": {
+              "Model Name": "EHS64 Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Headset",
+              "Additional Features": "One button Universal remote, 3.5mm headphone jack",
+              "Warranty Summary": "6 Months Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Samsung Electronics VIETNAM Co. Pvt. Ltd., Samsung Electronic VIETNAM Co. Pvt. Ltd. Yen Phong Industrial Park, Yen Trunk Comillimetersune, Yen Phong District, Bac Ninh Province, Vietnam",
+              "Imported by": "Samsung India Electronics Pvt Itd, 6th Floor DLF Centre, Sansad Marg, New Delhi - 110001",
+              "Packed by": "Samsung Electronics VIETNAM Co. Pvt. Ltd., Samsung Electronic VIETNAM Co. Pvt. Ltd. Yen Phong Industrial Park, Yen Trunk Comillimetersune, Yen Phong District, Bac Ninh Province, Vietnam"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "skullcandy-jib-mic-earphone-black",
+            "name": "Skullcandy Jib Mic Earphone ( Black )",
+            "brand": "Skullcandy",
+            "price": 549,
+            "originalPrice": 1999,
+            "discount": 72.54,
+            "image": "https://img-prd-pim.poorvika.com/product/Skullcandy-Jib-Mic-Earphone-Black-1.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Skullcandy-Jib-Mic-Earphone-Black-1.png"
+            ],
+            "category": "Headphones",
+            "rating": 4.9,
+            "reviewCount": 210,
+            "inStock": true,
+            "description": "Skullcandy Jib Mic Earphone ( Black )",
+            "specifications": {
+              "Model Name": "Jib Mic Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Headset & Earbuds",
+              "Additional Features": "Noise Isolating Fit, Call & Track Control",
+              "Headphone Driver Units": "10 mm",
+              "Impedance": "17 ohms",
+              "Sensitivity": "83 dB (1mW/500Hz)",
+              "Minimum Frequency Respons": "20Hz",
+              "Maximum Frequency Response": "20000Hz",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Indonesia",
+              "Manufactured by": "Skullcandy inc., P.O. Box 25442, Salt Lake City, UT 84125 USA",
+              "Imported by": "Brand Eyes Distributors Pvt. Ltd 201, Second Floor Chandra Bhawan 67-68, Nehru Place Delhi - 110019",
+              "Packed by": "Skullcandy inc., P.O. Box 25442, Salt Lake City, UT 84125 USA"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "jbl-t50hi-headphone-black",
+            "name": "JBL T50HI headphone ( Black )",
+            "brand": "JBL",
+            "price": 599,
+            "originalPrice": 799,
+            "discount": 25.03,
+            "image": "https://img-prd-pim.poorvika.com/product/jbl-t50hi-headphone-black-front-view.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/jbl-t50hi-headphone-black-front-view.png",
+              "https://img-prd-pim.poorvika.com/product/jbl-t50hi-headphone-black-setup.png",
+              "https://img-prd-pim.poorvika.com/product/jbl-t50hi-headphone-black-jack.png",
+              "https://img-prd-pim.poorvika.com/product/jbl-t50hi-headphone-black-buttons.png"
+            ],
+            "category": "Headphones",
+            "rating": null,
+            "reviewCount": 0,
+            "inStock": true,
+            "description": "JBL T50HI headphone ( Black )",
+            "specifications": {
+              "Model Name": "T50HI headphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1x Headphone, 3 sets of ear tips (S, M, L)",
+              "Headphone Driver Units": "8.6 mm",
+              "Cable Length": "1.2 m",
+              "Impedance": "30±4.5 ohms",
+              "Sensitivity": "101±3dBSPL",
+              "Minimum Frequency Respons": "20Hz",
+              "Maximum Frequency Response": "20KHz",
+              "Warranty Summary": "1 Year Manufacturing Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "China",
+              "Manufactured by": "HARMAN International Industries, Incorporated 8500 Balboa Boulevard, Northridge, CA 91329 USA",
+              "Imported by": "HARMAN International (India) Pvt. Ltd. Prestige Technology Park, 4th Floor, Jupiter 2A Block, Marathali Ring Road, Bangalore- 560103, India",
+              "Packed by": "HARMAN International Industries, Incorporated 8500 Balboa Boulevard, Northridge, CA 91329 USA"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Show me Samsung phones under 20000",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+            "name": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+            "brand": "Samsung",
+            "price": 15999,
+            "originalPrice": 19999,
+            "discount": 20,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "6GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-gold-6gb-128gb",
+            "name": "Samsung Galaxy A16 5G ( Gold, 6GB-128GB )",
+            "brand": "Samsung",
+            "price": 15999,
+            "originalPrice": 19999,
+            "discount": 20,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-6gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-6gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-6gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-6gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-6gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-6gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Gold, 6GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "6GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )",
+            "brand": "Samsung",
+            "price": 16999,
+            "originalPrice": 21499,
+            "discount": 20.93,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "8GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-light-green-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Light Green, 8GB-128GB )",
+            "brand": "Samsung",
+            "price": 16999,
+            "originalPrice": 21499,
+            "discount": 20.93,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-light-green-128gb-8gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-light-green-128gb-8gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-light-green-128gb-8gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-light-green-128gb-8gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-light-green-128gb-8gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-light-green-128gb-8gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Light Green, 8GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "8GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-gold-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Gold, 8GB-128GB )",
+            "brand": "Samsung",
+            "price": 17499,
+            "originalPrice": 21499,
+            "discount": 18.61,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Gold, 8GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "8GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Recommend a phone for gaming",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "apple-iphone-15-black-256gb",
+            "name": "Apple iPhone 15 ( Black,256GB )",
+            "brand": "Apple",
+            "price": 64900,
+            "originalPrice": 89900,
+            "discount": 27.81,
+            "image": "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Black-256gb-front-back-view.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Black-256gb-front-back-view.png",
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Black-256gb-back-view.png",
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Black-256gb-cam.png",
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-black-256gb-box.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Apple iPhone 15 ( Black,256GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE supported",
+              "SIM Type": "Dual SIM (nano SIM and eSIM)",
+              "Width x Height x Depth": "71.6 x 147.6 x 7.80 mm",
+              "Weight": "171g",
+              "Display Size": "15.54 cm ( 6.1 inch )",
+              "Display Type": "Super Retina XDR, OLED display",
+              "Resolution": "2556 x 1179-pixel resolution at 460 ppi",
+              "Protection": "Fingerprint-resistant oleophobic coating",
+              "Loudspeaker": "Built‑in stereo speaker",
+              "Internal Storage": "256GB",
+              "WLAN": "Wi‑Fi 6 (802.11ax) with 2x2 MIMO",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB-C connector | USB 2 (up to 480 Mbps)",
+              "NFC Support": "NFC with reader mode",
+              "Primary Camera": "48MP(f/1.6) + 12MP(f/2.4)",
+              "Secondary Camera": "12MP(f/1.9)",
+              "Camera Features": "2x optical zoom in, 2x optical zoom out, 4x optical zoom range | Digital zoom up to 10x | Sapphire crystal lens cover | True Tone flash | Photonic Engine | Deep Fusion | Smart HDR 5 | Next-generation portraits with Focus and Depth Control",
+              "Video": "4K video recording at 24 fps, 25 fps, 30 fps or 60 fps | Slow‑motion video support for 1080p at 120 fps or 240 fps | 1080p HD video recording at 25 fps, 30 fps or 60 fps | 720p HD video recording at 30 fps | Cinematic mode up to 4K HDR at 30 fps",
+              "Operating System": "iOS 17",
+              "Chipset": "A16 Bionic chip",
+              "CPU": "6‑core CPU with 2 performance and 4 efficiency cores",
+              "GPU": "5‑core GPU ( 16‑core Neural Engine )",
+              "GPS": "GPS, GLONASS, Galileo, QZSS & BeiDou",
+              "Sensors": "Face ID, Barometer, High dynamic range gyro, High-g accelerometer, Proximity sensor, Dual ambient light sensors",
+              "Water Resistant": "Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529",
+              "Battery Capacity": "Built-in rechargeable lithium-ion Battery",
+              "Sales Package": "iPhone with iOS 17 | USB-C Charge Cable (1 m) | Documentation",
+              "Warranty Summary": "Brand Warranty for 1 Year",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "China",
+              "Manufactured by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+              "Imported by": "Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+              "Packed by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "apple-iphone-15-pink-256gb",
+            "name": "Apple iPhone 15 ( Pink,256GB )",
+            "brand": "Apple",
+            "price": 64900,
+            "originalPrice": 89900,
+            "discount": 27.81,
+            "image": "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Pink-256gb-front-back-view.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Pink-256gb-front-back-view.png",
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Pink-256gb-back-view.png",
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-Pink-256gb-cam.png",
+              "https://img-prd-pim.poorvika.com/product/apple-iphone-15-pink-256gb-box.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Apple iPhone 15 ( Pink,256GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE supported",
+              "SIM Type": "Dual SIM (nano SIM and eSIM)",
+              "Width x Height x Depth": "71.6 x 147.6 x 7.80 mm",
+              "Weight": "171g",
+              "Display Size": "15.54 cm ( 6.1 inch )",
+              "Display Type": "Super Retina XDR, OLED display",
+              "Resolution": "2556 x 1179-pixel resolution at 460 ppi",
+              "Protection": "Fingerprint-resistant oleophobic coating",
+              "Loudspeaker": "Built‑in stereo speaker",
+              "Internal Storage": "256GB",
+              "WLAN": "Wi‑Fi 6 (802.11ax) with 2x2 MIMO",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB-C connector | USB 2 (up to 480 Mbps)",
+              "NFC Support": "NFC with reader mode",
+              "Primary Camera": "48MP(f/1.6) + 12MP(f/2.4)",
+              "Secondary Camera": "12MP(f/1.9)",
+              "Camera Features": "2x optical zoom in, 2x optical zoom out, 4x optical zoom range | Digital zoom up to 10x | Sapphire crystal lens cover | True Tone flash | Photonic Engine | Deep Fusion | Smart HDR 5 | Next-generation portraits with Focus and Depth Control",
+              "Video": "4K video recording at 24 fps, 25 fps, 30 fps or 60 fps | Slow‑motion video support for 1080p at 120 fps or 240 fps | 1080p HD video recording at 25 fps, 30 fps or 60 fps | 720p HD video recording at 30 fps | Cinematic mode up to 4K HDR at 30 fps",
+              "Operating System": "iOS 17",
+              "Chipset": "A16 Bionic chip",
+              "CPU": "6‑core CPU with 2 performance and 4 efficiency cores",
+              "GPU": "5‑core GPU ( 16‑core Neural Engine )",
+              "GPS": "GPS, GLONASS, Galileo, QZSS & BeiDou",
+              "Sensors": "Face ID, Barometer, High dynamic range gyro, High-g accelerometer, Proximity sensor, Dual ambient light sensors",
+              "Water Resistant": "Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529",
+              "Battery Capacity": "Built-in rechargeable lithium-ion Battery",
+              "Sales Package": "iPhone with iOS 17 | USB-C Charge Cable (1 m) | Documentation",
+              "Warranty Summary": "Brand Warranty for 1 Year",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "China",
+              "Manufactured by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+              "Imported by": "Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+              "Packed by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )",
+            "brand": "Samsung",
+            "price": 16999,
+            "originalPrice": 21499,
+            "discount": 20.93,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "8GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+            "name": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+            "brand": "Samsung",
+            "price": 15999,
+            "originalPrice": 19999,
+            "discount": 20,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-blue-black-128gb-6gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "6GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        },
+        {
+          "status": 200,
+          "body": {
+            "id": "samsung-galaxy-a16-5g-gold-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Gold, 8GB-128GB )",
+            "brand": "Samsung",
+            "price": 17499,
+            "originalPrice": 21499,
+            "discount": 18.61,
+            "image": "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Front-Back-View.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Front-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Back-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Back-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Front-Left-View.png",
+              "https://img-prd-pim.poorvika.com/product/Samsung-galaxy-a16-5g-gold-128gb-8gb-ram-Side-View.png"
+            ],
+            "category": "Mobiles",
+            "rating": 5,
+            "reviewCount": 4,
+            "inStock": true,
+            "description": "Samsung Galaxy A16 5G ( Gold, 8GB-128GB )",
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM",
+              "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+              "Weight": "192 g",
+              "Display Size": "16.91 cm ( 6.66 inch )",
+              "Display Type": "Super AMOLED",
+              "Refresh Rate": "90 Hz",
+              "Resolution": "1080 x 2340 (FHD+)",
+              "Protection": "IP54",
+              "Multitouch": "Yes",
+              "Loudspeaker": "Yes",
+              "Headphone Type": "USB Type-C",
+              "RAM": "8GB",
+              "Internal Storage": "128GB",
+              "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+              "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+              "Bluetooth Version": "v5.3",
+              "USB Type": "USB Type-C (v2.0)",
+              "NFC Support": "Yes",
+              "OTG Support": "Yes",
+              "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+              "Secondary Camera": "13MP(f/2.0)",
+              "Camera Features": "Digital Zoom up to 10x",
+              "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+              "Operating System": "Android 14",
+              "Supported UI": "One UI 6.1",
+              "Processor": "Octa-Core",
+              "CPU": "2.4GHz, 2GHz",
+              "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+              "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+              "Battery Capacity": "5000 mAh",
+              "Charger Type": "25W Fast Charging Supports",
+              "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+              "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+              "Generic Name": "Mobile Phone",
+              "Country of Origin": "India",
+              "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+              "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Tell me the specifications of Sony MDR-EX15AP Earphone",
+      "rows": [
+        {
+          "status": 200,
+          "body": {
+            "id": "sony-mdr-ex15ap-earphone-black",
+            "name": "Sony MDR-EX15AP Earphone ( Black )",
+            "brand": "Sony",
+            "price": 829,
+            "originalPrice": 890,
+            "discount": 6.85,
+            "image": "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png",
+            "images": [
+              "https://img-prd-pim.poorvika.com/product/Sony-mdr-ex15ap-Earphone-Black-01-02.png"
+            ],
+            "category": "Headphones",
+            "rating": 5,
+            "reviewCount": 153,
+            "inStock": true,
+            "description": "Sony MDR-EX15AP Earphone ( Black )",
+            "specifications": {
+              "Model Name": "MDR-EX15AP Earphone",
+              "Headphone Type": "In the Ear",
+              "Inline Remote": "Yes",
+              "In The Box": "1 x Earphone & Operating Instructions",
+              "Headphone Driver Units": "9 mm",
+              "Driver Type": "Neodymium drivers",
+              "Cable Type": "Y-type Cable",
+              "Impedance": "16 Ohms",
+              "Sensitivity": "100 dB/mW",
+              "Minimum Frequency Respons": "8Hz",
+              "Maximum Frequency Response": "22000Hz",
+              "Warranty Summary": "1 Year Manufacturer Warranty",
+              "Not Covered in Warranty": "Physical Damages Not Accepted",
+              "Generic Name": "Headphones",
+              "Country of Origin": "Vietnam",
+              "Manufactured by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN",
+              "Imported by": "SONY INDIA PVT.LTD A-18,Mohan Co-operative Industrial Estate, Mathura Road, New Delhi - 110044. INDIA",
+              "Packed by": "Sony Corporation,1-7-1 Konan Minato-Ku, Tokyo 108-0075. JAPAN"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "query": "Show me products from a nonexistent brand",
+      "rows": []
+    },
+    {
+      "query": "Show Sony earphones under 1 rupee",
+      "rows": []
+    },
+    {
+      "query": "Show me 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )",
+      "rows": []
+    }
+  ],
+  "empty_searches": [
+    {
+      "status": 200,
+      "body": []
+    },
+    {
+      "status": 200,
+      "body": []
+    }
+  ],
+  "out_of_stock_product": {
+    "id": "2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch",
+    "name": "2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )",
+    "brand": "M.A",
+    "category": "Temper glass",
+    "price": 999,
+    "stock": 0,
+    "in_stock": false
+  },
+  "out_of_stock_probe": {
+    "exit": 0,
+    "stdout": "{\"id\": \"2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch\", \"brand\": \"M.A\", \"in_stock\": false, \"stock\": 0, \"filters\": {\"intent\": \"product_search\", \"category\": null, \"brand\": \"Samsung\", \"max_price\": null, \"min_price\": null, \"search_term\": \"2 5d clear tempered glas screenshot protector tab s7 plu 12 4 inch t735ne s7 fe s7 fe transparent\"}, \"result_ids\": []}\r\n",
+    "stderr": ""
+  },
+  "warm_http": {
+    "samples_ms": [
+      4752.3,
+      3862.7,
+      3637.2,
+      2609.4,
+      2714.4,
+      2771.4,
+      2818.5,
+      2987,
+      2544,
+      3339.6
+    ],
+    "median_ms": 2902.75,
+    "p95_nearest_rank_ms": 4752.3,
+    "n": 10
+  },
+  "warm_responses": [
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 4752.3
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 3862.7
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 3637.2
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2609.4
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2714.4
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2771.4
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2818.5
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2987
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 2544
+    },
+    {
+      "status": 200,
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+      "duration_ms": 3339.6
+    }
+  ],
+  "route_stage_timings": [
+    {
+      "request_received": "2026-10-09T15:05:21.991568+00:00",
+      "laya_start": "2026-10-09T15:05:21.991896+00:00",
+      "laya_end": "2026-10-09T15:05:26.149811+00:00",
+      "laya_duration_ms": 4157.9,
+      "laya_call_count": 1,
+      "product_search_start": "2026-10-09T15:05:26.157008+00:00",
+      "product_search_end": "2026-10-09T15:05:26.181460+00:00",
+      "product_search_duration_ms": 24.5,
+      "postgres_query_duration_ms": 20.6,
+      "postgres_query_start": "2026-10-09T15:05:26.160759+00:00",
+      "postgres_query_end": "2026-10-09T15:05:26.181379+00:00",
+      "postgres_query_count": 1,
+      "ollama_start": null,
+      "ollama_end": null,
+      "ollama_duration_ms": null,
+      "ollama_http_duration_ms": null,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": null,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": null,
+      "ollama_call_count": 0,
+      "ollama_skipped_reason": "deterministic_catalog_search",
+      "response_total_ms": 4190.2
+    },
+    {
+      "request_received": "2026-10-09T15:05:26.185620+00:00",
+      "laya_start": "2026-10-09T15:05:26.186021+00:00",
+      "laya_end": "2026-10-09T15:05:28.623189+00:00",
+      "laya_duration_ms": 2437.2,
+      "laya_call_count": 1,
+      "product_search_start": "2026-10-09T15:05:28.623492+00:00",
+      "product_search_end": "2026-10-09T15:05:28.626861+00:00",
+      "product_search_duration_ms": 3.4,
+      "postgres_query_duration_ms": 2.5,
+      "postgres_query_start": "2026-10-09T15:05:28.624355+00:00",
+      "postgres_query_end": "2026-10-09T15:05:28.626803+00:00",
+      "postgres_query_count": 1,
+      "ollama_start": null,
+      "ollama_end": null,
+      "ollama_duration_ms": null,
+      "ollama_http_duration_ms": null,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": null,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": null,
+      "ollama_call_count": 0,
+      "ollama_skipped_reason": "deterministic_catalog_search",
+      "response_total_ms": 2441.3
+    },
+    {
+      "request_received": "2026-10-09T15:05:28.629782+00:00",
+      "laya_start": "2026-10-09T15:05:28.630128+00:00",
+      "laya_end": "2026-10-09T15:05:31.053813+00:00",
+      "laya_duration_ms": 2423.7,
+      "laya_call_count": 1,
+      "product_search_start": "2026-10-09T15:05:31.054025+00:00",
+      "product_search_end": "2026-10-09T15:05:31.056912+00:00",
+      "product_search_duration_ms": 2.9,
+      "postgres_query_duration_ms": 2.2,
+      "postgres_query_start": "2026-10-09T15:05:31.054649+00:00",
+      "postgres_query_end": "2026-10-09T15:05:31.056855+00:00",
+      "postgres_query_count": 1,
+      "ollama_start": null,
+      "ollama_end": null,
+      "ollama_duration_ms": null,
+      "ollama_http_duration_ms": null,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": null,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": null,
+      "ollama_call_count": 0,
+      "ollama_skipped_reason": "deterministic_catalog_search",
+      "response_total_ms": 2427.2
+    }
+  ],
+  "live_suggestions": {
+    "status": 200,
+    "body": {
+      "suggestions": [
+        "Is the Sony MDR-EX15AP Earphone suitable for bass-heavy music genres like hip-hop?",
+        "Can I compare the Sony MDR-EX15AP Earphone with other earphones in the same price range?",
+        "Are there any alternative earphones from other brands that offer similar features and specifications?",
+        "What is the value of the Sony MDR-EX15AP Earphone considering its price and the quality of its neodymium drivers?"
+      ]
+    },
+    "duration_ms": 20591.484299999895,
+    "timing": "{\"backend_received\":\"2026-10-09T15:04:59.569307+00:00\",\"ollama_started\":\"2026-10-09T15:04:59.573911+00:00\",\"ollama_received\":\"2026-10-09T15:05:20.097436+00:00\",\"ollama_ms\":20523.551,\"ollama_server_generation_ms\":3470.693,\"validated\":\"2026-10-09T15:05:20.102289+00:00\",\"validation_ms\":4.832,\"backend_api_ms\":20534.326}"
+  },
+  "source_diff": [
+    {
+      "line": 88,
+      "before": "            r\"\\b(?:under|below|less\\s+than|within|above|more\\s+than|over|around|about|approximately)\\s*(?:rs\\.?|inr|[^\\w\\s])?\\s*\\d[\\d,]*(?:\\.\\d+)?\\s*k?\\b\",",
+      "after": "            r\"\\b(?:under|below|less\\s+than|within|above|more\\s+than|over|around|about|approximately)\\s*(?:rs\\.?|inr|rupees?|[^\\w\\s])?\\s*\\d[\\d,]*(?:\\.\\d+)?\\s*k?\\b(?:\\s*(?:rupees?|rs|inr)\\b\\.?)?\","
+    },
+    {
+      "line": 93,
+      "before": "            \"a\", \"an\", \"the\", \"good\", \"best\", \"me\", \"do\", \"does\", \"you\", \"have\",",
+      "after": "            \"a\", \"an\", \"the\", \"all\", \"good\", \"best\", \"me\", \"do\", \"does\", \"you\", \"have\","
+    }
+  ],
+  "preservation": {
+    "files_hashed": 273,
+    "changed_preexisting": [
+      "backend/app/services/chat_service.py"
+    ],
+    "scope": "Git tracked and nonignored untracked files, excluding new test; ignored env/model/build files not covered by this hash audit"
+  },
+  "git": {
+    "branch": "main",
+    "head": "fe36d13",
+    "initial_status": " M .gitignore\n M README.md\n M backend/app/config.py\n M backend/app/main.py\n M backend/app/services/chat_service.py\n M backend/app/services/laya_client.py\n M backend/app/services/ollama_service.py\n M frontend/src/components/storefront/CategoryNav.tsx\n M frontend/src/components/storefront/Chatbot.tsx\n M frontend/src/components/storefront/ChatbotPanel.tsx\n M frontend/src/components/storefront/Navbar.tsx\n M frontend/src/routes/products.index.tsx\n M frontend/src/services/api.ts\n?? backend/.env.example\n?? backend/app/routes/suggestions.py\n?? backend/app/schemas/suggestions.py\n?? backend/app/services/laya_client.py.backup\n?? backend/scripts/measure_suggestions.py\n?? backend/suggestion-click-flow.log\n?? backend/suggestion-click-results.json\n?? backend/suggestion-diagnostics.md\n?? backend/suggestion-performance-results.json\n?? backend/test_chat_concurrency.py\n?? backend/test_laya_contract.py\n?? backend/test_suggestion_click.py\n?? backend/test_suggestions.py\n?? documentation/\n?? evaluation/jev_benchmark/dataset/\n?? evaluation/jev_benchmark/phase4_experiment/\n?? evaluation/jev_benchmark/phase5_model_config.json\n?? evaluation/jev_benchmark/reference_validation.py\n?? frontend/.env.example\n?? frontend/src/components/storefront/ProductSuggestionPopup.tsx\n?? frontend/src/lib/product-suggestions.ts\n?? frontend/src/lib/suggestion-timing.ts\n?? frontend/tests/product-suggestions.test.cjs\n?? frontend/tests/suggestion-click.test.cjs\n?? laya_v2_service/\n?? run_v2_jev.py\n",
+    "final_status": " M .gitignore\n M README.md\n M backend/app/config.py\n M backend/app/main.py\n M backend/app/services/chat_service.py\n M backend/app/services/laya_client.py\n M backend/app/services/ollama_service.py\n M frontend/src/components/storefront/CategoryNav.tsx\n M frontend/src/components/storefront/Chatbot.tsx\n M frontend/src/components/storefront/ChatbotPanel.tsx\n M frontend/src/components/storefront/Navbar.tsx\n M frontend/src/routes/products.index.tsx\n M frontend/src/services/api.ts\n?? backend/.env.example\n?? backend/app/routes/suggestions.py\n?? backend/app/schemas/suggestions.py\n?? backend/app/services/laya_client.py.backup\n?? backend/scripts/measure_suggestions.py\n?? backend/suggestion-click-flow.log\n?? backend/suggestion-click-results.json\n?? backend/suggestion-diagnostics.md\n?? backend/suggestion-performance-results.json\n?? backend/test_chat_concurrency.py\n?? backend/test_laya_contract.py\n?? backend/test_search_budget_regressions.py\n?? backend/test_suggestion_click.py\n?? backend/test_suggestions.py\n?? documentation/\n?? evaluation/jev_benchmark/dataset/\n?? evaluation/jev_benchmark/phase4_experiment/\n?? evaluation/jev_benchmark/phase5_model_config.json\n?? evaluation/jev_benchmark/reference_validation.py\n?? frontend/.env.example\n?? frontend/src/components/storefront/ProductSuggestionPopup.tsx\n?? frontend/src/lib/product-suggestions.ts\n?? frontend/src/lib/suggestion-timing.ts\n?? frontend/tests/product-suggestions.test.cjs\n?? frontend/tests/suggestion-click.test.cjs\n?? laya_v2_service/\n?? run_v2_jev.py\n",
+    "no_commit_or_push": true,
+    "index_diff_empty": true
+  },
+  "tests": {
+    "backend_before": 105,
+    "backend_after": 109,
+    "frontend_before": 18,
+    "frontend_after": 18,
+    "typecheck_exit": 0,
+    "build_exit": 0,
+    "targeted_before": "4 tests, 7 assertion/subtest failures",
+    "targeted_after": "4 tests pass",
+    "diff_check_exit": 0
+  },
+  "browser": "BLOCKED: no enabled apps or browsers; UI acceptance not performed"
+}

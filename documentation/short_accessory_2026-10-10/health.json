@@ -1,0 +1,26 @@
+[
+  {
+    "url": "http://127.0.0.1:5056/health",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "model": "Mass121/laya-typed-decisions-v2",
+      "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+      "loaded": true
+    }
+  },
+  {
+    "url": "http://127.0.0.1:8000/api/health",
+    "status": 200,
+    "body": {
+      "status": "healthy",
+      "service": "ShopAI Backend",
+      "database": {
+        "type": "PostgreSQL",
+        "connected": true,
+        "details": "PostgreSQL connected successfully",
+        "product_count": 508
+      }
+    }
+  }
+]

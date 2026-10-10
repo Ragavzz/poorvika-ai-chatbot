@@ -1,0 +1,304 @@
+{
+  "audit_date_IST": "2026-10-07",
+  "captured_at_utc": "2026-10-07T05:44:47.906228+00:00",
+  "git_head": "fe36d13f52747b32f4ba058c045b30ff3effd543",
+  "initial_git_status": [
+    "?? evaluation/jev_benchmark/dataset/",
+    "?? evaluation/jev_benchmark/phase4_experiment/",
+    "?? evaluation/jev_benchmark/phase5_model_config.json",
+    "?? evaluation/jev_benchmark/reference_validation.py"
+  ],
+  "safe_configuration": {
+    "POSTGRES_HOST": "localhost",
+    "POSTGRES_PORT": 5432,
+    "POSTGRES_DB": "shopai",
+    "TESTING_MODE": false,
+    "LAYA_DECIDE_URL": "http://localhost:5055/decide",
+    "OLLAMA_API_URL": "http://localhost:11434/api/chat",
+    "OLLAMA_MODEL": "llama3.2:latest",
+    "DATASET_PATH": "../data/poorvika_products.jsonl"
+  },
+  "live_laya": {
+    "5055": {
+      "source": "receptron-laya-onnx",
+      "model_mode": "base",
+      "model_id": "convaiinnovations/laya",
+      "model_revision": null,
+      "weights_sha256": null,
+      "onnx_sha256": "a874eb254b58b0fcb1e7ad56fbb188c29d64e08c9a46b689433e1f52c66dba1e",
+      "fallback": false,
+      "bundle": "C:\\Users\\GURU\\.cache\\receptron-laya\\receptron--laya-onnx\\main",
+      "verification_ms": 4161.1277,
+      "load_ms": 8852.61,
+      "laya_loaded": true,
+      "config": {
+        "max_len": 512,
+        "head_max_len": 192,
+        "temperature": [
+          1.6369030475616455,
+          1.2514300346374512,
+          1.983399510383606
+        ],
+        "temperature_by_options": {
+          "choice:3-5": 1.7601518630981445,
+          "choice:6-10": 1.0000158548355103,
+          "score:3-5": 1.2514300346374512,
+          "noul:2": 1.983399510383606,
+          "choice:11+": 0.10058280825614929,
+          "choice:2": 1.9063563346862793
+        }
+      },
+      "memory": {
+        "rss": 9879552,
+        "heapTotal": 28073984,
+        "heapUsed": 25903968,
+        "external": 3724212,
+        "arrayBuffers": 72579
+      },
+      "cpu": {
+        "user": 251906000,
+        "system": 14156000
+      }
+    },
+    "5056": {
+      "reachable": false,
+      "error_type": "URLError"
+    }
+  },
+  "benchmarks": {
+    "base_historical": {
+      "raw_path": "evaluation/jev_benchmark/results/baseline_v2_20261004_raw.jsonl",
+      "cases": 400,
+      "decisions": 2000,
+      "recomputed_correct": 718,
+      "recomputed_accuracy": 0.359,
+      "recomputed_brier": 0.10040521721452925,
+      "recomputed_ece": 0.15341869999999996,
+      "model_ids": {
+        "MISSING": 400
+      },
+      "inputs_and_gold_match_current_dataset": true
+    },
+    "specialist_isolated": {
+      "raw_path": "evaluation/laya_specialist_onnx_isolated/benchmark/runs/20261005_184532_IST/specialist_raw.jsonl",
+      "cases": 400,
+      "decisions": 2000,
+      "recomputed_correct": 1530,
+      "recomputed_accuracy": 0.765,
+      "recomputed_brier": 0.01885936492948925,
+      "recomputed_ece": 0.41756050000000006,
+      "model_ids": {
+        "convaiinnovations/laya-typed-decisions": 400
+      },
+      "inputs_and_gold_match_current_dataset": true
+    },
+    "mislabeled_latest": {
+      "raw_path": "evaluation/jev_benchmark/results/baseline_v2_20261006_214159_raw.jsonl",
+      "cases": 400,
+      "decisions": 2000,
+      "recomputed_correct": 1530,
+      "recomputed_accuracy": 0.765,
+      "recomputed_brier": 0.01885936492948925,
+      "recomputed_ece": 0.41756050000000006,
+      "model_ids": {
+        "convaiinnovations/laya-typed-decisions": 400
+      },
+      "inputs_and_gold_match_current_dataset": true
+    }
+  },
+  "fresh_checks": {
+    "frontend_cart": {
+      "passed": 12,
+      "total": 12,
+      "command": "node --test frontend/tests/chat-cart.test.cjs"
+    },
+    "typescript": {
+      "exit_code": 0,
+      "command": "frontend/node_modules/.bin/tsc.cmd --noEmit -p frontend/tsconfig.json"
+    },
+    "backend_routing": {
+      "passed": 41,
+      "total": 41,
+      "method": "Existing TestChatRegressions loaded by unittest; only setup/teardown replaced in process with SQLite memory engine and canonical dataset; Laya and Ollama mocks remain unchanged; no temporary files or production DB writes"
+    }
+  },
+  "read_only_postgresql": {
+    "identity": [
+      [
+        "shopai",
+        "PostgreSQL 18.6 on x86_64-windows, compiled by msvc-19.44.35228, 64-bit"
+      ]
+    ],
+    "count": [
+      [
+        508
+      ]
+    ],
+    "duplicate_ids": [
+      [
+        0
+      ]
+    ],
+    "duplicate_names": [],
+    "stock_consistency_errors": [
+      [
+        0
+      ]
+    ],
+    "categories": [
+      [
+        "Mobiles",
+        91
+      ],
+      [
+        "Television",
+        56
+      ],
+      [
+        "Computers",
+        49
+      ],
+      [
+        "Smartwatches",
+        36
+      ],
+      [
+        "Headphones",
+        35
+      ],
+      [
+        "Tablet",
+        26
+      ],
+      [
+        "Data Cables",
+        23
+      ],
+      [
+        "Cases & Covers",
+        18
+      ],
+      [
+        "Mixers Grinders & Juicers",
+        15
+      ],
+      [
+        "Battery Chargers",
+        15
+      ],
+      [
+        "Irons",
+        14
+      ],
+      [
+        "Power Banks",
+        13
+      ],
+      [
+        "Refrigerators",
+        11
+      ],
+      [
+        "Temper glass",
+        11
+      ],
+      [
+        "Washing Machine",
+        11
+      ],
+      [
+        "Speakers",
+        11
+      ],
+      [
+        "Voltage Stabilizers",
+        10
+      ],
+      [
+        "Keyboards",
+        8
+      ],
+      [
+        "Chimney",
+        8
+      ],
+      [
+        "Electronics",
+        7
+      ],
+      [
+        "Air Coolers",
+        5
+      ],
+      [
+        "Fans",
+        5
+      ],
+      [
+        "Voltage Stabilizer",
+        4
+      ],
+      [
+        "Memory Cards",
+        4
+      ],
+      [
+        "Air Fryers",
+        4
+      ],
+      [
+        "Smart Keyboard",
+        3
+      ],
+      [
+        "Car Chargers",
+        3
+      ],
+      [
+        "Pendrives",
+        2
+      ],
+      [
+        "Mother Board",
+        2
+      ],
+      [
+        "AirTag",
+        1
+      ],
+      [
+        "Water Purifiers",
+        1
+      ],
+      [
+        "Mouse",
+        1
+      ],
+      [
+        "Refrigerator",
+        1
+      ],
+      [
+        "Keyboard",
+        1
+      ],
+      [
+        "Surge Protector",
+        1
+      ],
+      [
+        "Food Processor",
+        1
+      ],
+      [
+        "Console",
+        1
+      ]
+    ]
+  },
+  "dataset_hashes": {
+    "typed_decisions_test.json": "46beeb91b458bc737baddb2fe333268bb038847eafc31e55e54aaf3e3553280b",
+    "test-00000-of-00001.parquet": "4f294f218ea1da27f3efef936359389c62ea4d3973a41457732990f1d31b647c"
+  },
+  "catalog_sha256": "7d789404c6d93ce0b21550b36e62d1fd875f99a66ff9817f2345e473c0e71148"
+}

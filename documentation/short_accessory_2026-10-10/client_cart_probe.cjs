@@ -1,0 +1,24 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const path = require('node:path');
+const ts = require('../../frontend/node_modules/typescript');
+const compiled = ts.transpileModule(fs.readFileSync(path.resolve(__dirname, '../../frontend/src/lib/chat-cart.ts'), 'utf8'), {compilerOptions:{module:ts.ModuleKind.CommonJS}}).outputText;
+const loaded = {exports:{}};
+new Function('module', 'exports', compiled)(loaded, loaded.exports);
+const evidence = JSON.parse(fs.readFileSync(path.join(__dirname, 'after_live.json'), 'utf8'));
+const rejection = evidence.find(x => x.kind === 'add_out_of_stock');
+assert.equal(rejection.status, 200);
+assert.match(rejection.body.response, /out of stock/);
+assert.doesNotMatch(rejection.body.response, /SHOPAI_ADD_TO_CART|SHOPAI_CART_ACTION/);
+const context = JSON.parse(rejection.message.split('<shopai_client_context>')[1].split('</shopai_client_context>')[0]);
+const items = context.cart.map(item => ({product:{id:item.id,name:item.name,price:item.price},quantity:item.quantity}));
+const before = JSON.stringify(items);
+const calls = [];
+const cart = {getItems:()=>items,addToCart:()=>{calls.push('add');return true;},removeFromCart:()=>calls.push('remove'),updateQuantity:()=>calls.push('update')};
+(async()=>{
+ const visible = await loaded.exports.applyChatCartResponse(rejection.body.response,cart,async()=>{calls.push('lookup');throw Error('Unexpected lookup');});
+ assert.equal(visible,rejection.body.response);
+ assert.equal(JSON.stringify(items),before);
+ assert.deepEqual(calls,[]);
+ console.log('PASS: real API out-of-stock rejection leaves frontend helper cart unchanged; zero lookup/mutation callbacks. This is a helper harness, not browser acceptance.');
+})().catch(error=>{console.error(error);process.exitCode=1;});

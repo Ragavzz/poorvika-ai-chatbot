@@ -1,0 +1,27 @@
+--- before/chat_service.py
++++ after/chat_service.py
+@@ -56,8 +56,21 @@
+         compatibility = next((match for match in re.finditer(
+             r"\b(?:for|compatible\s+with|fits)\s+(?=[a-z])", lowered
+         ) if re.search(accessory_terms, lowered[:match.start()])), None)
+-        accessory = compatibility is not None
+-        attribute_text = lowered[:compatibility.start()] if accessory else lowered
++        # A device family plus an alphanumeric model also identifies compatibility
++        # in short names ("<device brand> <family> <model> <accessory>").
++        device = None
++        if re.search(accessory_terms, lowered):
++            brands = "|".join(re.escape(brand.lower()) for brand in KNOWN_BRANDS)
++            device = re.search(
++                rf"(?<![a-z0-9])(?:{brands})\s+"
++                r"(?:tabs?|tablets?|galaxy(?:\s+tab)?|ipad|iphone|pixel|surface|phones?|smartphones?)\s+"
++                r"(?=[a-z0-9-]*[a-z])(?=[a-z0-9-]*\d)[a-z0-9-]+\b",
++                lowered,
++            )
++        accessory = compatibility is not None or device is not None
++        attribute_text = lowered[:compatibility.start()] if compatibility else lowered
++        if device:
++            attribute_text = attribute_text.replace(device.group(0), " ")
+         if accessory:
+             attributes = LLMService._rule_based_intent_extraction(attribute_text)
+             parsed["brand"], parsed["category"] = attributes["brand"], attributes["category"]
+

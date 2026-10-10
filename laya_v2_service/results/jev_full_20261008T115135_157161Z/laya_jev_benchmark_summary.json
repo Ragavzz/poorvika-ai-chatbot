@@ -1,0 +1,99 @@
+{
+  "benchmark": "LocalLLaMA/typed-decisions",
+  "split": "test",
+  "total_cases_evaluated": 400,
+  "total_decisions_evaluated": 2000,
+  "successful_decisions": 2000,
+  "failed_decisions": 0,
+  "overall_accuracy": 0.788,
+  "choice_accuracy": 0.755,
+  "score_accuracy": 0.7525,
+  "score_mae": 0.2475,
+  "score_within_1_level_accuracy": 0.9812,
+  "noul_accuracy": 0.8683,
+  "brier_score": 0.0269,
+  "brier_score_hard_labels": 0.1463,
+  "ece": 0.1312,
+  "kl_from_gold": 0.2728,
+  "case_latency_ms": {
+    "mean_ms": 7874.12,
+    "p50_ms": 8542.74,
+    "p95_ms": 11390.68,
+    "p99_ms": 14465.97
+  },
+  "decision_latency_ms": {
+    "mean_ms": 1574.82,
+    "p50_ms": 1708.55,
+    "p95_ms": 2278.14,
+    "p99_ms": 2893.19
+  },
+  "by_decision_type": {
+    "choice": {
+      "total": 600,
+      "accuracy": 0.755,
+      "brier_score": 0.0305,
+      "ece": 0.134,
+      "kl_from_gold": 0.3839
+    },
+    "score": {
+      "total": 800,
+      "accuracy": 0.7525,
+      "brier_score": 0.0263,
+      "ece": 0.1907,
+      "kl_from_gold": 0.3262,
+      "mae": 0.2475,
+      "within_1_accuracy": 0.9812
+    },
+    "noul": {
+      "total": 600,
+      "accuracy": 0.8683,
+      "brier_score": 0.0241,
+      "ece": 0.0492,
+      "kl_from_gold": 0.0905
+    }
+  },
+  "by_workflow": {
+    "agent_trace_observability": {
+      "total_decisions": 500,
+      "overall_accuracy": 0.746,
+      "choice_accuracy": 0.715,
+      "score_accuracy": 0.735,
+      "noul_accuracy": 0.83,
+      "brier_score": 0.0263,
+      "ece": 0.1804,
+      "kl_from_gold": 0.2478
+    },
+    "customer_service": {
+      "total_decisions": 500,
+      "overall_accuracy": 0.772,
+      "choice_accuracy": 0.785,
+      "score_accuracy": 0.75,
+      "noul_accuracy": 0.79,
+      "brier_score": 0.0303,
+      "ece": 0.0792,
+      "kl_from_gold": 0.3455
+    },
+    "invoice_processing": {
+      "total_decisions": 500,
+      "overall_accuracy": 0.836,
+      "choice_accuracy": 0.76,
+      "score_accuracy": 0.775,
+      "noul_accuracy": 0.935,
+      "brier_score": 0.0247,
+      "ece": 0.0828,
+      "kl_from_gold": 0.2596
+    },
+    "security_incidents": {
+      "total_decisions": 500,
+      "overall_accuracy": 0.798,
+      "choice_accuracy": 0.77,
+      "score_accuracy": 0.75,
+      "noul_accuracy": 0.86,
+      "brier_score": 0.0263,
+      "ece": 0.1894,
+      "kl_from_gold": 0.2384
+    }
+  },
+  "evaluated_at": "2026-10-08T12:44:04.994148+00:00",
+  "endpoint": "http://127.0.0.1:5056/decide"
+}

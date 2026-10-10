@@ -1,0 +1,61 @@
+
+[Test 1] Database contains 508 products (100% ingested).
+
+[Test 2] Product 'Sony MDR-EX15AP Earphone ( Black )' verified: Category=Headphones, Price=Rs.829.0, Stock=64
+
+[Test 3] SearchTool: 24 Sony products, 35 Headphones.
+
+[Test 4] SearchTool: Found 50 items under Rs.1000.
+
+[Test 5] Intent extraction for 'Sony earphones under 1000': {'intent': 'product_search', 'category': None, 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+
+[Test 6] Chat Service Grounded Response preview:
+Here are in-stock options ranked by customer rating:
+
+I found 1 Sony earphone under ?1,000:
+
+| Product | Brand | Price | Discount | Rating | Stock |
+|---|---|---:|---:|---:|---|
+| Sony MDR-EX15AP Earp...
+
+[Test 7] Empty prompt handled cleanly.
+
+[Test 8] All FastAPI endpoints (/api/products, /api/products/search, /api/chat) passed.
+
+C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+..............................................Suggestion generation failed: ValidationError
+Suggestion generation failed: ValidationError
+Suggestion generation failed: ValidationError
+Suggestion generation failed: ValidationError
+Suggestion generation failed: ValidationError
+Suggestion generation failed: ValidationError
+.Suggestion generation failed: TimeoutError
+....................................................OLLAMA_API_KEY is not set. Using local fallback parsing/formatting.
+...2026-10-09 20:13:53,797 [INFO] httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-10-09 20:13:53,835 [INFO] httpx: HTTP Request: GET http://testserver/api/products?limit=5 "HTTP/1.1 200 OK"
+2026-10-09 20:13:53,859 [INFO] httpx: HTTP Request: GET http://testserver/api/products/search?q=Apple "HTTP/1.1 200 OK"
+2026-10-09 20:13:53,868 [INFO] shopai.services.laya: LAYA V2 request: Show me Apple accessories
+2026-10-09 20:13:56,408 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.3219
+2026-10-09 20:13:56,409 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2541.6
+2026-10-09 20:13:56,409 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.3219, source=laya-python-v2
+2026-10-09 20:13:56,409 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.3219
+2026-10-09 20:13:56,410 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-09 20:13:56,410 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-09 20:13:56,410 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-09 20:13:56,410 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.1 filters={'intent': 'product_search', 'category': 'accessories', 'brand': 'Apple', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-09 20:13:56,410 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'accessories', 'brand': 'Apple', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-09 20:13:56,421 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=11.2 postgres_query_ms=10.0
+2026-10-09 20:13:56,421 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-09 20:13:56,422 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-09 20:13:56,422 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-09 20:13:56,422 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-09 20:13:56,422 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-09T14:43:53.867494+00:00","laya_start":"2026-10-09T14:43:53.867895+00:00","laya_end":"2026-10-09T14:43:56.409510+00:00","laya_duration_ms":2541.6,"laya_call_count":1,"product_search_start":"2026-10-09T14:43:56.410558+00:00","product_search_end":"2026-10-09T14:43:56.421783+00:00","product_search_duration_ms":11.2,"postgres_query_duration_ms":10.0,"postgres_query_start":"2026-10-09T14:43:56.411652+00:00","postgres_query_end":"2026-10-09T14:43:56.421615+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2554.9}
+2026-10-09 20:13:56,425 [INFO] httpx: HTTP Request: POST http://testserver/api/chat "HTTP/1.1 200 OK"
+.
+----------------------------------------------------------------------
+Ran 103 tests in 9.228s
+
+OK
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000025DB9D6B4C0>
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000025DB9C85C60>

@@ -1,0 +1,8 @@
+{
+  "surfaces": {
+    "browsers": [],
+    "apps": []
+  },
+  "iab_creation_error": "Browser is not available: iab",
+  "acceptance": "BLOCKED; actual UI not tested"
+}

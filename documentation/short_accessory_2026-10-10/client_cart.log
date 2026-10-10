@@ -1,0 +1,5 @@
+{
+  "exit": 0,
+  "stdout": "PASS: real API out-of-stock rejection leaves frontend helper cart unchanged; zero lookup/mutation callbacks. This is a helper harness, not browser acceptance.\n",
+  "stderr": ""
+}

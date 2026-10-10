@@ -1,0 +1,66 @@
+exit=1
+
+C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+....F.F.F.FFF.
+======================================================================
+FAIL: test_inbase_implicit_device_accessory_keeps_actual_manufacturer (test_short_accessory.ShortAccessoryTests.test_inbase_implicit_device_accessory_keeps_actual_manufacturer)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\test_short_accessory.py", line 68, in test_inbase_implicit_device_accessory_keeps_actual_manufacturer
+    self.assertEqual(filters["brand"], "Inbase")
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'Samsung' != 'Inbase'
+- Samsung
++ Inbase
+
+
+======================================================================
+FAIL: test_manual_selection_context_does_not_override_named_search (test_short_accessory.ShortAccessoryTests.test_manual_selection_context_does_not_override_named_search)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\test_short_accessory.py", line 106, in test_manual_selection_context_does_not_override_named_search
+    self.assertIn(self.protector["name"], reply)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )' not found in "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+
+======================================================================
+FAIL: test_quantity_increase_rejected_without_mutating_context (test_short_accessory.ShortAccessoryTests.test_quantity_increase_rejected_without_mutating_context)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\test_short_accessory.py", line 99, in test_quantity_increase_rejected_without_mutating_context
+    self.assertIn("out of stock", reply)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'out of stock' not found in "That product isn't in your cart. Please check the product name or select an item in your cart."
+
+======================================================================
+FAIL: test_short_budget_constraint_is_retained (test_short_accessory.ShortAccessoryTests.test_short_budget_constraint_is_retained)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\test_short_accessory.py", line 112, in test_short_budget_constraint_is_retained
+    self.assertIn(self.protector["id"], ids)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: '2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch' not found in []
+
+======================================================================
+FAIL: test_short_out_of_stock_add_rejected_cart_context_unchanged (test_short_accessory.ShortAccessoryTests.test_short_out_of_stock_add_rejected_cart_context_unchanged)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\test_short_accessory.py", line 89, in test_short_out_of_stock_add_rejected_cart_context_unchanged
+    self.assertIn("out of stock", reply)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 'out of stock' not found in 'Tell me which product to add, or find it first in the catalog. I need a selected product before changing your cart.'
+
+======================================================================
+FAIL: test_short_query_resolves_real_out_of_stock_protector (test_short_accessory.ShortAccessoryTests.test_short_query_resolves_real_out_of_stock_protector)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\test_short_accessory.py", line 46, in test_short_query_resolves_real_out_of_stock_protector
+    self.assertIsNone(filters["brand"])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+AssertionError: 'Samsung' is not None
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.634s
+
+FAILED (failures=6)

@@ -1,0 +1,102 @@
+exit=0
+TAP version 13
+# Subtest: remove executes the client removal and strips internal command
+ok 1 - remove executes the client removal and strips internal command
+  ---
+  duration_ms: 7.1716
+  ...
+# Subtest: increase executes updateQuantity with the resulting client quantity
+ok 2 - increase executes updateQuantity with the resulting client quantity
+  ---
+  duration_ms: 0.896
+  ...
+# Subtest: decrease executes updateQuantity
+ok 3 - decrease executes updateQuantity
+  ---
+  duration_ms: 1.1044
+  ...
+# Subtest: decreasing the last item removes it
+ok 4 - decreasing the last item removes it
+  ---
+  duration_ms: 0.7212
+  ...
+# Subtest: missing cart item never changes the client cart
+ok 5 - missing cart item never changes the client cart
+  ---
+  duration_ms: 1.3744
+  ...
+# Subtest: stale server quantity never overwrites a newer client cart
+ok 6 - stale server quantity never overwrites a newer client cart
+  ---
+  duration_ms: 0.4423
+  ...
+# Subtest: invalid command cannot set an arbitrary quantity
+ok 7 - invalid command cannot set an arbitrary quantity
+  ---
+  duration_ms: 0.4681
+  ...
+# Subtest: existing add marker still adds the fetched real product
+ok 8 - existing add marker still adds the fetched real product
+  ---
+  duration_ms: 0.854
+  ...
+# Subtest: failed product lookup never retains a false added confirmation
+ok 9 - failed product lookup never retains a false added confirmation
+  ---
+  duration_ms: 8.8245
+  ...
+# Subtest: out-of-stock addition cannot claim success
+ok 10 - out-of-stock addition cannot claim success
+  ---
+  duration_ms: 1.1522
+  ...
+# Subtest: details and general replies never mutate a cart
+ok 11 - details and general replies never mutate a cart
+  ---
+  duration_ms: 0.5894
+  ...
+# Subtest: conflicting commands cannot execute two cart operations
+ok 12 - conflicting commands cannot execute two cart operations
+  ---
+  duration_ms: 0.313
+  ...
+# Subtest: no meaningful context produces no generation context
+ok 13 - no meaningful context produces no generation context
+  ---
+  duration_ms: 3.4028
+  ...
+# Subtest: sends existing product information and displays only model strings
+ok 14 - sends existing product information and displays only model strings
+  ---
+  duration_ms: 4.7796
+  ...
+# Subtest: reuses generated questions across revisits and refreshes
+ok 15 - reuses generated questions across revisits and refreshes
+  ---
+  duration_ms: 1.5824
+  ...
+# Subtest: query caching deduplicates concurrent requests
+ok 16 - query caching deduplicates concurrent requests
+  ---
+  duration_ms: 6.2464
+  ...
+# Subtest: generation failure rejects without static fallback or cached questions
+ok 17 - generation failure rejects without static fallback or cached questions
+  ---
+  duration_ms: 2.1438
+  ...
+# Subtest: popup selection opens the original chatbot and submits once with product context
+ok 18 - popup selection opens the original chatbot and submits once with product context
+  ---
+  duration_ms: 559.6168
+  ...
+1..18
+# tests 18
+# suites 0
+# pass 18
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3721.2789
+

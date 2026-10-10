@@ -1,0 +1,1384 @@
+{
+  "kind": "integration smoke test; not accuracy benchmark",
+  "cases": [
+    {
+      "prompt": "Show me Samsung phones under ₹20000",
+      "input": {
+        "state": {
+          "message": "Show me Samsung phones under ₹20000"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "product_search",
+        "confidence": 0.3536,
+        "probabilities": {
+          "product_search": 0.6443,
+          "product_details": 0.053,
+          "recommendation": 0.1049,
+          "add_to_cart": 0.0421,
+          "cart_action": 0.1355,
+          "general_query": 0.0202
+        },
+        "http_latency_ms": 8351.660700005596,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "product_search",
+              "probabilities": {
+                "product_search": 0.6443,
+                "product_details": 0.053,
+                "recommendation": 0.1049,
+                "add_to_cart": 0.0421,
+                "cart_action": 0.1355,
+                "general_query": 0.0202
+              },
+              "confidence": 0.3536,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.2345,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 238,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "product_search",
+        "confidence": 0.9841,
+        "probabilities": {
+          "product_search": 0.9963,
+          "product_details": 0.0002,
+          "recommendation": 0.0021,
+          "add_to_cart": 0.0003,
+          "cart_action": 0.0009,
+          "general_query": 0.0002
+        },
+        "http_latency_ms": 4790.866800001822,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 4785.343900002772,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "product_search",
+                "probabilities": {
+                  "product_search": 0.9963,
+                  "product_details": 0.0002,
+                  "recommendation": 0.0021,
+                  "add_to_cart": 0.0003,
+                  "cart_action": 0.0009,
+                  "general_query": 0.0002
+                },
+                "confidence": 0.9841,
+                "answer_confidence": 0.9963,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0039,
+                "confidence": 0.9961,
+                "answer_confidence": 0.9961,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 238,
+              "output_tokens": 0,
+              "state_tokens": 15,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "product_search",
+              "confidence": 0.9841,
+              "probabilities": {
+                "product_search": 0.9963,
+                "product_details": 0.0002,
+                "recommendation": 0.0021,
+                "add_to_cart": 0.0003,
+                "cart_action": 0.0009,
+                "general_query": 0.0002
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "product_search",
+                "probabilities": {
+                  "product_search": 0.9963,
+                  "product_details": 0.0002,
+                  "recommendation": 0.0021,
+                  "add_to_cart": 0.0003,
+                  "cart_action": 0.0009,
+                  "general_query": 0.0002
+                },
+                "confidence": 0.9841,
+                "answer_confidence": 0.9963,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0039,
+                "confidence": 0.9961,
+                "answer_confidence": 0.9961,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "product_search",
+            "confidence": 0.9841,
+            "probabilities": {
+              "product_search": 0.9963,
+              "product_details": 0.0002,
+              "recommendation": 0.0021,
+              "add_to_cart": 0.0003,
+              "cart_action": 0.0009,
+              "general_query": 0.0002
+            }
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Recommend a good phone for gaming",
+      "input": {
+        "state": {
+          "message": "Recommend a good phone for gaming"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "recommendation",
+        "confidence": 0.5927,
+        "probabilities": {
+          "product_search": 0.0702,
+          "product_details": 0.0273,
+          "recommendation": 0.8206,
+          "add_to_cart": 0.0444,
+          "cart_action": 0.028,
+          "general_query": 0.0095
+        },
+        "http_latency_ms": 4677.250299995649,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "recommendation",
+              "probabilities": {
+                "product_search": 0.0702,
+                "product_details": 0.0273,
+                "recommendation": 0.8206,
+                "add_to_cart": 0.0444,
+                "cart_action": 0.028,
+                "general_query": 0.0095
+              },
+              "confidence": 0.5927,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.2486,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 232,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "recommendation",
+        "confidence": 0.9925,
+        "probabilities": {
+          "product_search": 0.0005,
+          "product_details": 0.0003,
+          "recommendation": 0.9985,
+          "add_to_cart": 0.0004,
+          "cart_action": 0.0002,
+          "general_query": 0.0001
+        },
+        "http_latency_ms": 3848.6444000009215,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 3843.259199988097,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "recommendation",
+                "probabilities": {
+                  "product_search": 0.0005,
+                  "product_details": 0.0003,
+                  "recommendation": 0.9985,
+                  "add_to_cart": 0.0004,
+                  "cart_action": 0.0002,
+                  "general_query": 0.0001
+                },
+                "confidence": 0.9925,
+                "answer_confidence": 0.9985,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0036,
+                "confidence": 0.9964,
+                "answer_confidence": 0.9964,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 232,
+              "output_tokens": 0,
+              "state_tokens": 12,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "recommendation",
+              "confidence": 0.9925,
+              "probabilities": {
+                "product_search": 0.0005,
+                "product_details": 0.0003,
+                "recommendation": 0.9985,
+                "add_to_cart": 0.0004,
+                "cart_action": 0.0002,
+                "general_query": 0.0001
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "recommendation",
+                "probabilities": {
+                  "product_search": 0.0005,
+                  "product_details": 0.0003,
+                  "recommendation": 0.9985,
+                  "add_to_cart": 0.0004,
+                  "cart_action": 0.0002,
+                  "general_query": 0.0001
+                },
+                "confidence": 0.9925,
+                "answer_confidence": 0.9985,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0036,
+                "confidence": 0.9964,
+                "answer_confidence": 0.9964,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "recommendation",
+            "confidence": 0.9925,
+            "probabilities": {
+              "product_search": 0.0005,
+              "product_details": 0.0003,
+              "recommendation": 0.9985,
+              "add_to_cart": 0.0004,
+              "cart_action": 0.0002,
+              "general_query": 0.0001
+            }
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Tell me the price of this product",
+      "input": {
+        "state": {
+          "message": "Tell me the price of this product"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "product_details",
+        "confidence": 0.1372,
+        "probabilities": {
+          "product_search": 0.2046,
+          "product_details": 0.3219,
+          "recommendation": 0.0229,
+          "add_to_cart": 0.1546,
+          "cart_action": 0.2539,
+          "general_query": 0.0421
+        },
+        "http_latency_ms": 2958.7709000043105,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "product_details",
+              "probabilities": {
+                "product_search": 0.2046,
+                "product_details": 0.3219,
+                "recommendation": 0.0229,
+                "add_to_cart": 0.1546,
+                "cart_action": 0.2539,
+                "general_query": 0.0421
+              },
+              "confidence": 0.1372,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.2449,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 232,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "product_details",
+        "confidence": 0.66,
+        "probabilities": {
+          "product_search": 0.0308,
+          "product_details": 0.8508,
+          "recommendation": 0.0039,
+          "add_to_cart": 0.0506,
+          "cart_action": 0.0593,
+          "general_query": 0.0045
+        },
+        "http_latency_ms": 2223.2692999969004,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 2219.7962000063853,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "product_details",
+                "probabilities": {
+                  "product_search": 0.0308,
+                  "product_details": 0.8508,
+                  "recommendation": 0.0039,
+                  "add_to_cart": 0.0506,
+                  "cart_action": 0.0593,
+                  "general_query": 0.0045
+                },
+                "confidence": 0.66,
+                "answer_confidence": 0.8508,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0109,
+                "confidence": 0.9891,
+                "answer_confidence": 0.9891,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 232,
+              "output_tokens": 0,
+              "state_tokens": 12,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "product_details",
+              "confidence": 0.66,
+              "probabilities": {
+                "product_search": 0.0308,
+                "product_details": 0.8508,
+                "recommendation": 0.0039,
+                "add_to_cart": 0.0506,
+                "cart_action": 0.0593,
+                "general_query": 0.0045
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "product_details",
+                "probabilities": {
+                  "product_search": 0.0308,
+                  "product_details": 0.8508,
+                  "recommendation": 0.0039,
+                  "add_to_cart": 0.0506,
+                  "cart_action": 0.0593,
+                  "general_query": 0.0045
+                },
+                "confidence": 0.66,
+                "answer_confidence": 0.8508,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0109,
+                "confidence": 0.9891,
+                "answer_confidence": 0.9891,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "product_details",
+            "confidence": 0.66,
+            "probabilities": {
+              "product_search": 0.0308,
+              "product_details": 0.8508,
+              "recommendation": 0.0039,
+              "add_to_cart": 0.0506,
+              "cart_action": 0.0593,
+              "general_query": 0.0045
+            }
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Add this phone to cart",
+      "input": {
+        "state": {
+          "message": "Add this phone to cart"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "add_to_cart",
+        "confidence": 0.5821,
+        "probabilities": {
+          "product_search": 0.0247,
+          "product_details": 0.0164,
+          "recommendation": 0.0211,
+          "add_to_cart": 0.7829,
+          "cart_action": 0.1481,
+          "general_query": 0.0069
+        },
+        "http_latency_ms": 2865.1305999956094,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "add_to_cart",
+              "probabilities": {
+                "product_search": 0.0247,
+                "product_details": 0.0164,
+                "recommendation": 0.0211,
+                "add_to_cart": 0.7829,
+                "cart_action": 0.1481,
+                "general_query": 0.0069
+              },
+              "confidence": 0.5821,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.2441,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 228,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "add_to_cart",
+        "confidence": 0.9894,
+        "probabilities": {
+          "product_search": 0.0002,
+          "product_details": 0.0002,
+          "recommendation": 0.0002,
+          "add_to_cart": 0.9976,
+          "cart_action": 0.0016,
+          "general_query": 0.0001
+        },
+        "http_latency_ms": 2347.6290999969933,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 2344.3955999973696,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "add_to_cart",
+                "probabilities": {
+                  "product_search": 0.0002,
+                  "product_details": 0.0002,
+                  "recommendation": 0.0002,
+                  "add_to_cart": 0.9976,
+                  "cart_action": 0.0016,
+                  "general_query": 0.0001
+                },
+                "confidence": 0.9894,
+                "answer_confidence": 0.9976,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.007,
+                "confidence": 0.993,
+                "answer_confidence": 0.993,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 228,
+              "output_tokens": 0,
+              "state_tokens": 10,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "add_to_cart",
+              "confidence": 0.9894,
+              "probabilities": {
+                "product_search": 0.0002,
+                "product_details": 0.0002,
+                "recommendation": 0.0002,
+                "add_to_cart": 0.9976,
+                "cart_action": 0.0016,
+                "general_query": 0.0001
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "add_to_cart",
+                "probabilities": {
+                  "product_search": 0.0002,
+                  "product_details": 0.0002,
+                  "recommendation": 0.0002,
+                  "add_to_cart": 0.9976,
+                  "cart_action": 0.0016,
+                  "general_query": 0.0001
+                },
+                "confidence": 0.9894,
+                "answer_confidence": 0.9976,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.007,
+                "confidence": 0.993,
+                "answer_confidence": 0.993,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "add_to_cart",
+            "confidence": 0.9894,
+            "probabilities": {
+              "product_search": 0.0002,
+              "product_details": 0.0002,
+              "recommendation": 0.0002,
+              "add_to_cart": 0.9976,
+              "cart_action": 0.0016,
+              "general_query": 0.0001
+            }
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Show my cart",
+      "input": {
+        "state": {
+          "message": "Show my cart"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "cart_action",
+        "confidence": 0.4691,
+        "probabilities": {
+          "product_search": 0.0665,
+          "product_details": 0.0459,
+          "recommendation": 0.0123,
+          "add_to_cart": 0.1392,
+          "cart_action": 0.7205,
+          "general_query": 0.0156
+        },
+        "http_latency_ms": 2867.802799999481,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "cart_action",
+              "probabilities": {
+                "product_search": 0.0665,
+                "product_details": 0.0459,
+                "recommendation": 0.0123,
+                "add_to_cart": 0.1392,
+                "cart_action": 0.7205,
+                "general_query": 0.0156
+              },
+              "confidence": 0.4691,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.2745,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 224,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "cart_action",
+        "confidence": 0.9664,
+        "probabilities": {
+          "product_search": 0.0004,
+          "product_details": 0.0006,
+          "recommendation": 0.0001,
+          "add_to_cart": 0.0083,
+          "cart_action": 0.9903,
+          "general_query": 0.0002
+        },
+        "http_latency_ms": 2187.56810000923,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 2183.9299999992363,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "cart_action",
+                "probabilities": {
+                  "product_search": 0.0004,
+                  "product_details": 0.0006,
+                  "recommendation": 0.0001,
+                  "add_to_cart": 0.0083,
+                  "cart_action": 0.9903,
+                  "general_query": 0.0002
+                },
+                "confidence": 0.9664,
+                "answer_confidence": 0.9903,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0105,
+                "confidence": 0.9895,
+                "answer_confidence": 0.9895,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 224,
+              "output_tokens": 0,
+              "state_tokens": 8,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "cart_action",
+              "confidence": 0.9664,
+              "probabilities": {
+                "product_search": 0.0004,
+                "product_details": 0.0006,
+                "recommendation": 0.0001,
+                "add_to_cart": 0.0083,
+                "cart_action": 0.9903,
+                "general_query": 0.0002
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "cart_action",
+                "probabilities": {
+                  "product_search": 0.0004,
+                  "product_details": 0.0006,
+                  "recommendation": 0.0001,
+                  "add_to_cart": 0.0083,
+                  "cart_action": 0.9903,
+                  "general_query": 0.0002
+                },
+                "confidence": 0.9664,
+                "answer_confidence": 0.9903,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0105,
+                "confidence": 0.9895,
+                "answer_confidence": 0.9895,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "cart_action",
+            "confidence": 0.9664,
+            "probabilities": {
+              "product_search": 0.0004,
+              "product_details": 0.0006,
+              "recommendation": 0.0001,
+              "add_to_cart": 0.0083,
+              "cart_action": 0.9903,
+              "general_query": 0.0002
+            }
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Which phone has the best camera?",
+      "input": {
+        "state": {
+          "message": "Which phone has the best camera?"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "recommendation",
+        "confidence": 0.3868,
+        "probabilities": {
+          "product_search": 0.2443,
+          "product_details": 0.0357,
+          "recommendation": 0.6177,
+          "add_to_cart": 0.042,
+          "cart_action": 0.0438,
+          "general_query": 0.0165
+        },
+        "http_latency_ms": 3180.8302999997977,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "recommendation",
+              "probabilities": {
+                "product_search": 0.2443,
+                "product_details": 0.0357,
+                "recommendation": 0.6177,
+                "add_to_cart": 0.042,
+                "cart_action": 0.0438,
+                "general_query": 0.0165
+              },
+              "confidence": 0.3868,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.204,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 232,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "recommendation",
+        "confidence": 0.9672,
+        "probabilities": {
+          "product_search": 0.0076,
+          "product_details": 0.0004,
+          "recommendation": 0.9908,
+          "add_to_cart": 0.0006,
+          "cart_action": 0.0005,
+          "general_query": 0.0002
+        },
+        "http_latency_ms": 2944.3099000054644,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 2940.0537999899825,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "recommendation",
+                "probabilities": {
+                  "product_search": 0.0076,
+                  "product_details": 0.0004,
+                  "recommendation": 0.9908,
+                  "add_to_cart": 0.0006,
+                  "cart_action": 0.0005,
+                  "general_query": 0.0002
+                },
+                "confidence": 0.9672,
+                "answer_confidence": 0.9908,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0015,
+                "confidence": 0.9985,
+                "answer_confidence": 0.9985,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 232,
+              "output_tokens": 0,
+              "state_tokens": 12,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "recommendation",
+              "confidence": 0.9672,
+              "probabilities": {
+                "product_search": 0.0076,
+                "product_details": 0.0004,
+                "recommendation": 0.9908,
+                "add_to_cart": 0.0006,
+                "cart_action": 0.0005,
+                "general_query": 0.0002
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "recommendation",
+                "probabilities": {
+                  "product_search": 0.0076,
+                  "product_details": 0.0004,
+                  "recommendation": 0.9908,
+                  "add_to_cart": 0.0006,
+                  "cart_action": 0.0005,
+                  "general_query": 0.0002
+                },
+                "confidence": 0.9672,
+                "answer_confidence": 0.9908,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0015,
+                "confidence": 0.9985,
+                "answer_confidence": 0.9985,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "recommendation",
+            "confidence": 0.9672,
+            "probabilities": {
+              "product_search": 0.0076,
+              "product_details": 0.0004,
+              "recommendation": 0.9908,
+              "add_to_cart": 0.0006,
+              "cart_action": 0.0005,
+              "general_query": 0.0002
+            }
+          }
+        }
+      }
+    },
+    {
+      "prompt": "Hello",
+      "input": {
+        "state": {
+          "message": "Hello"
+        },
+        "questions": {
+          "intent": {
+            "type": "choice",
+            "instructions": "What shopping action should the assistant perform?",
+            "criteria": {
+              "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+              "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+              "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+              "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+              "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+              "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+            }
+          },
+          "needs_escalation": {
+            "type": "noul",
+            "instructions": "Does this query require human support escalation?"
+          }
+        }
+      },
+      "old_5055": {
+        "status": 200,
+        "decision": "general_query",
+        "confidence": 0.2285,
+        "probabilities": {
+          "product_search": 0.1121,
+          "product_details": 0.1275,
+          "recommendation": 0.0636,
+          "add_to_cart": 0.0532,
+          "cart_action": 0.0894,
+          "general_query": 0.5542
+        },
+        "http_latency_ms": 3032.029000009061,
+        "output": {
+          "model": "laya",
+          "answers": {
+            "intent": {
+              "type": "choice",
+              "choice": "general_query",
+              "probabilities": {
+                "product_search": 0.1121,
+                "product_details": 0.1275,
+                "recommendation": 0.0636,
+                "add_to_cart": 0.0532,
+                "cart_action": 0.0894,
+                "general_query": 0.5542
+              },
+              "confidence": 0.2285,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            },
+            "needs_escalation": {
+              "type": "noul",
+              "noul": 0.2375,
+              "rl_agent": {
+                "act_probability": 1
+              }
+            }
+          },
+          "usage": {
+            "input_tokens": 220,
+            "output_tokens": 0
+          },
+          "source": "receptron-laya-onnx",
+          "model_mode": "specialist",
+          "model_id": "convaiinnovations/laya-typed-decisions",
+          "model_revision": "1a793eb568e6718f15941d08f85432581df534e3",
+          "weights_sha256": "4fa56de72383a9d3efa9cfa78955733c81b9fc8067a587ca4beb82c78107a24e",
+          "onnx_sha256": "e2b4eeeb1347a94680839a0bdcd473de53c151ab6134193c82ba525459c59474",
+          "fallback": false,
+          "bundle": "C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\evaluation\\laya_specialist_onnx_isolated\\bundle",
+          "verification_ms": 5852.1793,
+          "load_ms": 10839.325799999999,
+          "inference_success": true
+        }
+      },
+      "v2_5056": {
+        "status": 200,
+        "decision": "general_query",
+        "confidence": 0.9507,
+        "probabilities": {
+          "product_search": 0.0029,
+          "product_details": 0.0047,
+          "recommendation": 0.002,
+          "add_to_cart": 0.0016,
+          "cart_action": 0.0018,
+          "general_query": 0.9871
+        },
+        "http_latency_ms": 2026.6040999995312,
+        "output": {
+          "model": "Mass121/laya-typed-decisions-v2",
+          "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+          "latency_ms": 2022.6514999958454,
+          "raw": {
+            "model": "laya-rl-agent",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "general_query",
+                "probabilities": {
+                  "product_search": 0.0029,
+                  "product_details": 0.0047,
+                  "recommendation": 0.002,
+                  "add_to_cart": 0.0016,
+                  "cart_action": 0.0018,
+                  "general_query": 0.9871
+                },
+                "confidence": 0.9507,
+                "answer_confidence": 0.9871,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0061,
+                "confidence": 0.9939,
+                "answer_confidence": 0.9939,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "usage": {
+              "input_tokens": 220,
+              "output_tokens": 0,
+              "state_tokens": 6,
+              "state_tokens_dropped": 0,
+              "truncated": false,
+              "truncated_questions": []
+            }
+          },
+          "choices": {
+            "intent": {
+              "choice": "general_query",
+              "confidence": 0.9507,
+              "probabilities": {
+                "product_search": 0.0029,
+                "product_details": 0.0047,
+                "recommendation": 0.002,
+                "add_to_cart": 0.0016,
+                "cart_action": 0.0018,
+                "general_query": 0.9871
+              }
+            }
+          },
+          "shopai": {
+            "model": "Mass121/laya-typed-decisions-v2",
+            "source": "laya-python-v2",
+            "answers": {
+              "intent": {
+                "type": "choice",
+                "choice": "general_query",
+                "probabilities": {
+                  "product_search": 0.0029,
+                  "product_details": 0.0047,
+                  "recommendation": 0.002,
+                  "add_to_cart": 0.0016,
+                  "cart_action": 0.0018,
+                  "general_query": 0.9871
+                },
+                "confidence": 0.9507,
+                "answer_confidence": 0.9871,
+                "action": {
+                  "act_probability": 1.0
+                }
+              },
+              "needs_escalation": {
+                "type": "noul",
+                "noul": 0.0061,
+                "confidence": 0.9939,
+                "answer_confidence": 0.9939,
+                "action": {
+                  "act_probability": 1.0
+                }
+              }
+            },
+            "decision": "general_query",
+            "confidence": 0.9507,
+            "probabilities": {
+              "product_search": 0.0029,
+              "product_details": 0.0047,
+              "recommendation": 0.002,
+              "add_to_cart": 0.0016,
+              "cart_action": 0.0018,
+              "general_query": 0.9871
+            }
+          }
+        }
+      }
+    }
+  ]
+}

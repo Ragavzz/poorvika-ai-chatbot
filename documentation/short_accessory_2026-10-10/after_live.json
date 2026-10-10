@@ -1,0 +1,119 @@
+[
+  {
+    "kind": "short",
+    "message": "Show me the Samsung Tab S7 screen protector",
+    "status": 200,
+    "body": {
+      "response": "I found 1 product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) | M.A | ₹999 | 60% OFF | 5.0★ | Out of Stock |\n\nAvailability is shown above. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch]]"
+    },
+    "duration_ms": 2687
+  },
+  {
+    "kind": "long",
+    "message": "Show me 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )",
+    "status": 200,
+    "body": {
+      "response": "I found 1 product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) | M.A | ₹999 | 60% OFF | 5.0★ | Out of Stock |\n\nAvailability is shown above. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch]]"
+    },
+    "duration_ms": 3209
+  },
+  {
+    "kind": "selected_protector_context",
+    "message": "Show me the Samsung Tab S7 screen protector\n\n<shopai_client_context>{\"recent_product_ids\":[\"2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch\"],\"cart\":[]}</shopai_client_context>",
+    "status": 200,
+    "body": {
+      "response": "I found 1 product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) | M.A | ₹999 | 60% OFF | 5.0★ | Out of Stock |\n\nAvailability is shown above. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch]]"
+    },
+    "duration_ms": 2403
+  },
+  {
+    "kind": "different_selection_and_cart",
+    "message": "Show me the Samsung Tab S7 screen protector\n\n<shopai_client_context>{\"recent_product_ids\":[\"sony-mdr-ex15ap-earphone-black\"],\"cart\":[{\"id\":\"sony-mdr-ex15ap-earphone-black\",\"name\":\"Sony MDR-EX15AP Earphone ( Black )\",\"price\":829,\"quantity\":2}]}</shopai_client_context>",
+    "status": 200,
+    "body": {
+      "response": "I found 1 product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) | M.A | ₹999 | 60% OFF | 5.0★ | Out of Stock |\n\nAvailability is shown above. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch]]"
+    },
+    "duration_ms": 2707
+  },
+  {
+    "kind": "add_out_of_stock",
+    "message": "Add the Samsung Tab S7 screen protector to my cart\n\n<shopai_client_context>{\"recent_product_ids\":[\"sony-mdr-ex15ap-earphone-black\"],\"cart\":[{\"id\":\"sony-mdr-ex15ap-earphone-black\",\"name\":\"Sony MDR-EX15AP Earphone ( Black )\",\"price\":829,\"quantity\":2}]}</shopai_client_context>",
+    "status": 200,
+    "body": {
+      "response": "2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent ) is currently out of stock, so I can't add it to your cart."
+    },
+    "duration_ms": 2634
+  },
+  {
+    "kind": "samsung_manufacturer",
+    "message": "Show me Samsung Silicone Case For Galaxy A54 5G ( Lime )",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Samsung product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Samsung Silicone Case For Galaxy A54 5G ( Lime ) | Samsung | ₹1,499 | 29% OFF | — | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:samsung-silicone-case-for-galaxy-a54-5g-lime]]"
+    },
+    "duration_ms": 2906
+  },
+  {
+    "kind": "inbase_implicit",
+    "message": "Show me Inbase Samsung Tab A7 Lite flip cover",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Inbase product:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Inbase Flip Cover For Samsung Tab A7 Lite 8.7 Inch ( Black ) | Inbase | ₹899 | 40% OFF | — | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:inbase-flip-cover-for-samsung-tab-a7-lite-8-7-inch-black]]"
+    },
+    "duration_ms": 2457
+  },
+  {
+    "kind": "different_model",
+    "message": "Show me the Samsung Tab S9 screen protector",
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    },
+    "duration_ms": 2671
+  },
+  {
+    "kind": "nonexistent",
+    "message": "Show me the Samsung Tab UnknownDevice999 holographic protector",
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    },
+    "duration_ms": 2585
+  },
+  {
+    "kind": "manufacturer_constraint",
+    "message": "Show me the Samsung Tab S7 screen protector by Samsung",
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    },
+    "duration_ms": 2912
+  },
+  {
+    "kind": "price_constraint",
+    "message": "Show me the Samsung Tab S7 screen protector under 500 rupees",
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    },
+    "duration_ms": 2588
+  },
+  {
+    "kind": "category_constraint",
+    "message": "Show me the Samsung Tab S7 screen protector in category Mobiles",
+    "status": 200,
+    "body": {
+      "response": "I couldn't find any products matching those filters. Try increasing your budget or searching for another model."
+    },
+    "duration_ms": 2606
+  },
+  {
+    "kind": "sony",
+    "message": "Show me Sony earphones under 1000 rupees",
+    "status": 200,
+    "body": {
+      "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]"
+    },
+    "duration_ms": 3008
+  }
+]

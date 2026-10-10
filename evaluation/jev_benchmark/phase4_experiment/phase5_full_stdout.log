@@ -1,0 +1,2 @@
+HEALTH {"status": "ok", "laya_loaded": true, "model": "convaiinnovations/laya-typed-decisions", "revision": "1a793eb568e6718f15941d08f85432581df534e3", "device": "cpu"}
+PROGRESS cases=10/400 decisions=50/2000 successful=50 failed=0 correct=34 last_case=agent_trace_observability_000009 latency_ms=7795.25 source=typed_decisions

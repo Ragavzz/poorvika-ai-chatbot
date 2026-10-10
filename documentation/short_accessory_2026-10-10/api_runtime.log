@@ -1,0 +1,251 @@
+INFO:     Will watch for changes in these directories: ['C:\\Users\\GURU\\OneDrive\\Pictures\\Documents\\cubeAI solutions\\poorvika-shopai\\backend']
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [28256] using WatchFiles
+INFO:     Started server process [17352]
+INFO:     127.0.0.1:50078 - "GET /api/products/sony-mdr-ex15ap-earphone-black HTTP/1.1" 200 OK
+2026-10-10 08:54:20,383 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector
+2026-10-10 08:54:23,023 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2072
+2026-10-10 08:54:23,024 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2640.7
+2026-10-10 08:54:23,024 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2072, source=laya-python-v2
+2026-10-10 08:54:23,024 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2072
+2026-10-10 08:54:23,028 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:54:23,028 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:54:23,028 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:23,035 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=6.5 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:23,035 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:23,061 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=25.7 postgres_query_ms=21.7
+2026-10-10 08:54:23,061 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:23,061 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:23,061 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:23,062 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:23,062 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:20.383037+00:00","laya_start":"2026-10-10T03:24:20.383385+00:00","laya_end":"2026-10-10T03:24:23.024085+00:00","laya_duration_ms":2640.7,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:23.035602+00:00","product_search_end":"2026-10-10T03:24:23.061331+00:00","product_search_duration_ms":25.7,"postgres_query_duration_ms":21.7,"postgres_query_start":"2026-10-10T03:24:23.039623+00:00","postgres_query_end":"2026-10-10T03:24:23.061274+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2679.1}
+INFO:     127.0.0.1:50080 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:23,068 [INFO] shopai.services.laya: LAYA V2 request: Show me 2.5D Clear Tempered Glass Screenshot Protector For Samsung Tab S7 Plus 12.4 Inch/T735NE S7 FE/Samsung S7 FE ( Transparent )
+2026-10-10 08:54:26,229 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.0476
+2026-10-10 08:54:26,229 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3161.2
+2026-10-10 08:54:26,229 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.0476, source=laya-python-v2
+2026-10-10 08:54:26,230 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.0476
+2026-10-10 08:54:26,230 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:54:26,230 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:54:26,230 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:26,230 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.5 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': '2 5d clear tempered glas screenshot protector samsung tab s7 plu 12 4 inch t735ne s7 fe samsung s7 fe transparent', 'exact_name': '2.5d clear tempered glass screenshot protector for samsung tab s7 plus 12.4 inch/t735ne s7 fe/samsung s7 fe ( transparent )'}
+2026-10-10 08:54:26,231 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': '2 5d clear tempered glas screenshot protector samsung tab s7 plu 12 4 inch t735ne s7 fe samsung s7 fe transparent', 'exact_name': '2.5d clear tempered glass screenshot protector for samsung tab s7 plus 12.4 inch/t735ne s7 fe/samsung s7 fe ( transparent )'}
+2026-10-10 08:54:26,272 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=41.5 postgres_query_ms=34.6
+2026-10-10 08:54:26,272 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:26,272 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:26,273 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:26,273 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:26,273 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:23.068150+00:00","laya_start":"2026-10-10T03:24:23.068579+00:00","laya_end":"2026-10-10T03:24:26.229779+00:00","laya_duration_ms":3161.2,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:26.231134+00:00","product_search_end":"2026-10-10T03:24:26.272634+00:00","product_search_duration_ms":41.5,"postgres_query_duration_ms":34.6,"postgres_query_start":"2026-10-10T03:24:26.237962+00:00","postgres_query_end":"2026-10-10T03:24:26.272555+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":3205.2}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:26,278 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector
+2026-10-10 08:54:28,663 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2072
+2026-10-10 08:54:28,664 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2386.0
+2026-10-10 08:54:28,664 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2072, source=laya-python-v2
+2026-10-10 08:54:28,664 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2072
+2026-10-10 08:54:28,664 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:54:28,664 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:54:28,664 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:28,665 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:28,665 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:28,676 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=11.5 postgres_query_ms=9.4
+2026-10-10 08:54:28,676 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:28,677 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:28,677 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:28,677 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:28,677 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:26.277691+00:00","laya_start":"2026-10-10T03:24:26.278094+00:00","laya_end":"2026-10-10T03:24:28.664114+00:00","laya_duration_ms":2386.0,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:28.665274+00:00","product_search_end":"2026-10-10T03:24:28.676757+00:00","product_search_duration_ms":11.5,"postgres_query_duration_ms":9.4,"postgres_query_start":"2026-10-10T03:24:28.667318+00:00","postgres_query_end":"2026-10-10T03:24:28.676690+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2399.7}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:28,682 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector
+2026-10-10 08:54:31,369 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2072
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2687.4
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2072, source=laya-python-v2
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2072
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:31,370 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:31,384 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=13.1 postgres_query_ms=11.0
+2026-10-10 08:54:31,384 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:31,384 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:31,384 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:31,384 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:31,384 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:28.682248+00:00","laya_start":"2026-10-10T03:24:28.682645+00:00","laya_end":"2026-10-10T03:24:31.370028+00:00","laya_duration_ms":2687.4,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:31.371019+00:00","product_search_end":"2026-10-10T03:24:31.384076+00:00","product_search_duration_ms":13.1,"postgres_query_duration_ms":11.0,"postgres_query_start":"2026-10-10T03:24:31.373018+00:00","postgres_query_end":"2026-10-10T03:24:31.383960+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2702.5}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:31,390 [INFO] shopai.services.laya: LAYA V2 request: Add the Samsung Tab S7 screen protector to my cart
+2026-10-10 08:54:34,002 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.9901
+2026-10-10 08:54:34,002 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2612.4
+2026-10-10 08:54:34,002 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.9901, source=laya-python-v2
+2026-10-10 08:54:34,002 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.9901
+2026-10-10 08:54:34,003 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: add_to_cart (Laya choice: add_to_cart)
+2026-10-10 08:54:34,003 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
+2026-10-10 08:54:34,015 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:31.389828+00:00","laya_start":"2026-10-10T03:24:31.390303+00:00","laya_end":"2026-10-10T03:24:34.002733+00:00","laya_duration_ms":2612.4,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":2625.9}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:34,025 [INFO] shopai.services.laya: LAYA V2 request: Show me Samsung Silicone Case For Galaxy A54 5G ( Lime )
+2026-10-10 08:54:36,908 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.3271
+2026-10-10 08:54:36,909 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2883.7
+2026-10-10 08:54:36,909 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.3271, source=laya-python-v2
+2026-10-10 08:54:36,909 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.3271
+2026-10-10 08:54:36,910 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-10 08:54:36,910 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-10 08:54:36,910 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:36,910 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': 'silicone case galaxy a54 5g lime', 'exact_name': 'samsung silicone case for galaxy a54 5g ( lime )'}
+2026-10-10 08:54:36,910 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': 'silicone case galaxy a54 5g lime', 'exact_name': 'samsung silicone case for galaxy a54 5g ( lime )'}
+2026-10-10 08:54:36,927 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=16.2 postgres_query_ms=12.9
+2026-10-10 08:54:36,927 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:36,927 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:36,927 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:36,927 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:36,927 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:34.025288+00:00","laya_start":"2026-10-10T03:24:34.025696+00:00","laya_end":"2026-10-10T03:24:36.909364+00:00","laya_duration_ms":2883.7,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:36.910833+00:00","product_search_end":"2026-10-10T03:24:36.927061+00:00","product_search_duration_ms":16.2,"postgres_query_duration_ms":12.9,"postgres_query_start":"2026-10-10T03:24:36.914088+00:00","postgres_query_end":"2026-10-10T03:24:36.927000+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2902.4}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:36,933 [INFO] shopai.services.laya: LAYA V2 request: Show me Inbase Samsung Tab A7 Lite flip cover
+2026-10-10 08:54:39,371 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.3355
+2026-10-10 08:54:39,372 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2438.9
+2026-10-10 08:54:39,372 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.3355, source=laya-python-v2
+2026-10-10 08:54:39,372 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.3355
+2026-10-10 08:54:39,372 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-10 08:54:39,372 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-10 08:54:39,372 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:39,373 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': 'Inbase', 'max_price': None, 'min_price': None, 'search_term': 'samsung tab a7 lite flip cover', 'exact_name': 'inbase samsung tab a7 lite flip cover'}
+2026-10-10 08:54:39,373 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': 'Inbase', 'max_price': None, 'min_price': None, 'search_term': 'samsung tab a7 lite flip cover', 'exact_name': 'inbase samsung tab a7 lite flip cover'}
+2026-10-10 08:54:39,385 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=11.9 postgres_query_ms=8.5
+2026-10-10 08:54:39,385 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:39,385 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:39,385 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:39,385 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:39,385 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:36.932862+00:00","laya_start":"2026-10-10T03:24:36.933211+00:00","laya_end":"2026-10-10T03:24:39.372139+00:00","laya_duration_ms":2438.9,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:39.373194+00:00","product_search_end":"2026-10-10T03:24:39.385056+00:00","product_search_duration_ms":11.9,"postgres_query_duration_ms":8.5,"postgres_query_start":"2026-10-10T03:24:39.376450+00:00","postgres_query_end":"2026-10-10T03:24:39.384965+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2452.7}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:39,391 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S9 screen protector
+2026-10-10 08:54:42,045 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2112
+2026-10-10 08:54:42,045 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2654.8
+2026-10-10 08:54:42,045 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2112, source=laya-python-v2
+2026-10-10 08:54:42,045 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2112
+2026-10-10 08:54:42,045 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:54:42,046 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:54:42,046 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:42,046 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s9 screen protector', 'exact_name': 'the samsung tab s9 screen protector'}
+2026-10-10 08:54:42,046 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s9 screen protector', 'exact_name': 'the samsung tab s9 screen protector'}
+2026-10-10 08:54:42,057 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=11.2 postgres_query_ms=9.2
+2026-10-10 08:54:42,058 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 08:54:42,058 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 08:54:42,058 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:42,058 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:42,058 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:39.390442+00:00","laya_start":"2026-10-10T03:24:39.390813+00:00","laya_end":"2026-10-10T03:24:42.045586+00:00","laya_duration_ms":2654.8,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:42.046677+00:00","product_search_end":"2026-10-10T03:24:42.057905+00:00","product_search_duration_ms":11.2,"postgres_query_duration_ms":9.2,"postgres_query_start":"2026-10-10T03:24:42.048712+00:00","postgres_query_end":"2026-10-10T03:24:42.057863+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2667.9}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:42,063 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab UnknownDevice999 holographic protector
+2026-10-10 08:54:44,628 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.4103
+2026-10-10 08:54:44,629 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2566.4
+2026-10-10 08:54:44,629 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.4103, source=laya-python-v2
+2026-10-10 08:54:44,629 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.4103
+2026-10-10 08:54:44,630 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-10 08:54:44,630 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-10 08:54:44,630 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:44,630 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab unknowndevice999 holographic protector', 'exact_name': 'the samsung tab unknowndevice999 holographic protector'}
+2026-10-10 08:54:44,630 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab unknowndevice999 holographic protector', 'exact_name': 'the samsung tab unknowndevice999 holographic protector'}
+2026-10-10 08:54:44,644 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=13.3 postgres_query_ms=10.7
+2026-10-10 08:54:44,644 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 08:54:44,644 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 08:54:44,644 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:44,644 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:44,644 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:42.062827+00:00","laya_start":"2026-10-10T03:24:42.063177+00:00","laya_end":"2026-10-10T03:24:44.629608+00:00","laya_duration_ms":2566.4,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:44.630730+00:00","product_search_end":"2026-10-10T03:24:44.643984+00:00","product_search_duration_ms":13.3,"postgres_query_duration_ms":10.7,"postgres_query_start":"2026-10-10T03:24:44.633243+00:00","postgres_query_end":"2026-10-10T03:24:44.643925+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2581.7}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:44,649 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector by Samsung
+2026-10-10 08:54:47,539 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.1949
+2026-10-10 08:54:47,539 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2890.3
+2026-10-10 08:54:47,540 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.1949, source=laya-python-v2
+2026-10-10 08:54:47,540 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.1949
+2026-10-10 08:54:47,540 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-10 08:54:47,540 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-10 08:54:47,540 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:47,540 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': 'tab s7 screen protector by', 'exact_name': 'the samsung tab s7 screen protector by samsung'}
+2026-10-10 08:54:47,541 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': 'tab s7 screen protector by', 'exact_name': 'the samsung tab s7 screen protector by samsung'}
+2026-10-10 08:54:47,556 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=15.6 postgres_query_ms=13.0
+2026-10-10 08:54:47,556 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 08:54:47,557 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 08:54:47,557 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:47,557 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:47,557 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:44.649210+00:00","laya_start":"2026-10-10T03:24:44.649616+00:00","laya_end":"2026-10-10T03:24:47.539906+00:00","laya_duration_ms":2890.3,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:47.541116+00:00","product_search_end":"2026-10-10T03:24:47.556723+00:00","product_search_duration_ms":15.6,"postgres_query_duration_ms":13.0,"postgres_query_start":"2026-10-10T03:24:47.543748+00:00","postgres_query_end":"2026-10-10T03:24:47.556677+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2908.0}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:47,563 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector under 500 rupees
+2026-10-10 08:54:50,129 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.1882
+2026-10-10 08:54:50,129 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2566.1
+2026-10-10 08:54:50,129 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.1882, source=laya-python-v2
+2026-10-10 08:54:50,129 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.1882
+2026-10-10 08:54:50,130 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 08:54:50,130 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:50,130 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': 500.0, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:50,130 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': 500.0, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:54:50,146 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=15.7 postgres_query_ms=13.5
+2026-10-10 08:54:50,146 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 08:54:50,146 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 08:54:50,146 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:50,146 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:50,146 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:47.563314+00:00","laya_start":"2026-10-10T03:24:47.563681+00:00","laya_end":"2026-10-10T03:24:50.129733+00:00","laya_duration_ms":2566.1,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:50.130565+00:00","product_search_end":"2026-10-10T03:24:50.146279+00:00","product_search_duration_ms":15.7,"postgres_query_duration_ms":13.5,"postgres_query_start":"2026-10-10T03:24:50.132769+00:00","postgres_query_end":"2026-10-10T03:24:50.146249+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2583.5}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:50,152 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector in category Mobiles
+2026-10-10 08:54:52,733 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.1426
+2026-10-10 08:54:52,734 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2581.9
+2026-10-10 08:54:52,734 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.1426, source=laya-python-v2
+2026-10-10 08:54:52,734 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.1426
+2026-10-10 08:54:52,734 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:54:52,734 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:54:52,734 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:52,735 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector in category', 'exact_name': 'the samsung tab s7 screen protector in category mobiles'}
+2026-10-10 08:54:52,735 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector in category', 'exact_name': 'the samsung tab s7 screen protector in category mobiles'}
+2026-10-10 08:54:52,754 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=19.1 postgres_query_ms=16.3
+2026-10-10 08:54:52,754 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 08:54:52,754 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 08:54:52,754 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:52,754 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:52,754 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:50.151952+00:00","laya_start":"2026-10-10T03:24:50.152337+00:00","laya_end":"2026-10-10T03:24:52.734176+00:00","laya_duration_ms":2581.9,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:52.735221+00:00","product_search_end":"2026-10-10T03:24:52.754288+00:00","product_search_duration_ms":19.1,"postgres_query_duration_ms":16.3,"postgres_query_start":"2026-10-10T03:24:52.737986+00:00","postgres_query_end":"2026-10-10T03:24:52.754259+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2602.8}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:54:52,764 [INFO] shopai.services.laya: LAYA V2 request: Show me Sony earphones under 1000 rupees
+2026-10-10 08:54:55,756 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.8949
+2026-10-10 08:54:55,756 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2992.4
+2026-10-10 08:54:55,756 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.8949, source=laya-python-v2
+2026-10-10 08:54:55,757 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.8949
+2026-10-10 08:54:55,757 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 08:54:55,757 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:54:55,758 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.8 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 08:54:55,758 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 08:54:55,765 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=7.3 postgres_query_ms=6.5
+2026-10-10 08:54:55,765 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:54:55,766 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:54:55,766 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:54:55,766 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:54:55,766 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:24:52.763963+00:00","laya_start":"2026-10-10T03:24:52.764350+00:00","laya_end":"2026-10-10T03:24:55.756711+00:00","laya_duration_ms":2992.4,"laya_call_count":1,"product_search_start":"2026-10-10T03:24:55.758448+00:00","product_search_end":"2026-10-10T03:24:55.765693+00:00","product_search_duration_ms":7.3,"postgres_query_duration_ms":6.5,"postgres_query_start":"2026-10-10T03:24:55.759112+00:00","postgres_query_end":"2026-10-10T03:24:55.765615+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":3002.4}
+INFO:     127.0.0.1:50078 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50388 - "GET /api/products/2-5d-clear-tempered-glass-screen-protector-for-samsung-tab-s7-plus-12-4-inch HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50389 - "GET /api/products/samsung-silicone-case-for-galaxy-a54-5g-lime HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50388 - "GET /api/products/inbase-flip-cover-for-samsung-tab-a7-lite-8-7-inch-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50389 - "GET /api/products/sony-mdr-ex15ap-earphone-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54274 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57712 - "OPTIONS /api/products/bosch-mgm4344bin-truemixx-bold-600w-mixer-grinder-4-jars-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57712 - "GET /api/products/bosch-mgm4344bin-truemixx-bold-600w-mixer-grinder-4-jars-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57712 - "GET /api/products/bosch-mgm4344bin-truemixx-bold-600w-mixer-grinder-4-jars-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63947 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:59:19,517 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector
+2026-10-10 08:59:27,631 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2072
+2026-10-10 08:59:27,632 [INFO] shopai.services.chat: CHAT TIMING laya_ms=8115.6
+2026-10-10 08:59:27,632 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2072, source=laya-python-v2
+2026-10-10 08:59:27,632 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2072
+2026-10-10 08:59:27,633 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 08:59:27,633 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 08:59:27,634 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 08:59:27,637 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=3.7 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:59:27,638 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 08:59:27,676 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=37.9 postgres_query_ms=22.1
+2026-10-10 08:59:27,676 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 08:59:27,676 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 08:59:27,677 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 08:59:27,677 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 08:59:27,680 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:29:19.512480+00:00","laya_start":"2026-10-10T03:29:19.516156+00:00","laya_end":"2026-10-10T03:29:27.631772+00:00","laya_duration_ms":8115.6,"laya_call_count":1,"product_search_start":"2026-10-10T03:29:27.638372+00:00","product_search_end":"2026-10-10T03:29:27.676194+00:00","product_search_duration_ms":37.9,"postgres_query_duration_ms":22.1,"postgres_query_start":"2026-10-10T03:29:27.651181+00:00","postgres_query_end":"2026-10-10T03:29:27.673238+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":8167.8}
+INFO:     127.0.0.1:63947 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 08:59:55,998 [INFO] shopai.services.laya: LAYA V2 request: Add the Samsung Tab S7 screen protector to my cart
+2026-10-10 09:00:00,330 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.9901
+2026-10-10 09:00:00,331 [INFO] shopai.services.chat: CHAT TIMING laya_ms=4333.6
+2026-10-10 09:00:00,331 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.9901, source=laya-python-v2
+2026-10-10 09:00:00,331 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.9901
+2026-10-10 09:00:00,331 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: add_to_cart (Laya choice: add_to_cart)
+2026-10-10 09:00:00,331 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
+2026-10-10 09:00:00,350 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:29:55.996643+00:00","laya_start":"2026-10-10T03:29:55.997762+00:00","laya_end":"2026-10-10T03:30:00.331304+00:00","laya_duration_ms":4333.6,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":4353.8}
+INFO:     127.0.0.1:49743 - "POST /api/chat HTTP/1.1" 200 OK
