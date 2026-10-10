@@ -1,0 +1,2 @@
+# Supplied dependency baseline, unchanged. HTTP service uses the Python standard library.
+-r laya_Model/requirements.txt

@@ -12,6 +12,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.routes import health_router, products_router, chat_router
+from app.routes.suggestions import suggestions_router
 from app.database import session as database_session
 from app.database.base import Base
 from app.database.ingest import run_dataset_ingestion
@@ -80,3 +81,4 @@ app.add_middleware(
 app.include_router(health_router)
 app.include_router(products_router)
 app.include_router(chat_router)
+app.include_router(suggestions_router)

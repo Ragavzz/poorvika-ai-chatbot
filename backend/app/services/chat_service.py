@@ -8,6 +8,7 @@ from datetime import datetime, timezone
 from typing import Any, Dict, List, Optional, Tuple
 
 from sqlalchemy.orm import Session
+from starlette.concurrency import run_in_threadpool
 
 from app.schemas.chat import ChatRequest, ChatResponse
 from app.services.laya_client import LayaClient
@@ -46,8 +47,35 @@ class ChatService:
         # filter values after that decision; it does not classify intent.
         parsed = LLMService._rule_based_intent_extraction(message)
         lowered = message.lower()
+        # In an accessory description, the device after a compatibility link
+        # is a search constraint, not the accessory's manufacturer/category.
+        accessory_terms = (
+            r"\b(?:accessor(?:y|ies)|case|cover|pouch|protector|tempered\s+glass|"
+            r"screen\s+guard|cable|charger|adapter|holder|stand)\b"
+        )
+        compatibility = next((match for match in re.finditer(
+            r"\b(?:for|compatible\s+with|fits)\s+(?=[a-z])", lowered
+        ) if re.search(accessory_terms, lowered[:match.start()])), None)
+        # A device family plus an alphanumeric model also identifies compatibility
+        # in short names ("<device brand> <family> <model> <accessory>").
+        device = None
+        if re.search(accessory_terms, lowered):
+            brands = "|".join(re.escape(brand.lower()) for brand in KNOWN_BRANDS)
+            device = re.search(
+                rf"(?<![a-z0-9])(?:{brands})\s+"
+                r"(?:tabs?|tablets?|galaxy(?:\s+tab)?|ipad|iphone|pixel|surface|phones?|smartphones?)\s+"
+                r"(?=[a-z0-9-]*[a-z])(?=[a-z0-9-]*\d)[a-z0-9-]+\b",
+                lowered,
+            )
+        accessory = compatibility is not None or device is not None
+        attribute_text = lowered[:compatibility.start()] if compatibility else lowered
+        if device:
+            attribute_text = attribute_text.replace(device.group(0), " ")
+        if accessory:
+            attributes = LLMService._rule_based_intent_extraction(attribute_text)
+            parsed["brand"], parsed["category"] = attributes["brand"], attributes["category"]
         use_case = None
-        if intent == "recommendation":
+        if intent == "recommendation" and not accessory:
             match = re.search(
                 r"\bfor\s+([a-z][a-z\s-]*?)(?=\s+(?:under|below|within|above|over|around|budget)\b|[?!.]|$)",
                 lowered,
@@ -57,15 +85,15 @@ class ChatService:
                 lowered = lowered[:match.start()] + lowered[match.end():]
         # Map category words as complete synonyms so "phone" cannot match
         # "Headphones" merely because the category contains that substring.
-        if re.search(r"\baccessor(?:y|ies)\b", lowered):
+        if re.search(r"\baccessor(?:y|ies)\b", attribute_text):
             parsed["category"] = "accessories"
-        elif re.search(r"\b(?:smartphones?|phones?|mobiles?|cell\s+phones?)\b", lowered):
+        elif re.search(r"\b(?:smartphones?|phones?|mobiles?|cell\s+phones?)\b", attribute_text):
             parsed["category"] = "Mobiles"
-        elif re.search(r"\bearphones?\b", lowered):
+        elif re.search(r"\bearphones?\b", attribute_text):
             parsed["category"] = "Headphones"
 
         # In a details/cart instruction, "about" introduces a name, not a budget.
-        around_terms = r"around|approximately|budget(?:\s+of)?|\bfor\b"
+        around_terms = r"around|approximately|budget(?:\s+of)?" + ("" if accessory else r"|\bfor\b")
         if intent == "product_search":
             around_terms += "|about"
         around = re.search(rf"(?:{around_terms})\D{{0,8}}(\d[\d,]*(?:\.\d+)?)\s*(k)?\b", lowered)
@@ -84,12 +112,22 @@ class ChatService:
         # Keep product/model terms (including model numbers), but remove
         # conversational, brand, category, and price-filter words generically.
         search_text = re.sub(
-            r"\b(?:under|below|less\s+than|within|above|more\s+than|over|around|about|approximately)\s*(?:rs\.?|inr|[^\w\s])?\s*\d[\d,]*(?:\.\d+)?\s*k?\b",
+            r"\b(?:under|below|less\s+than|within|above|more\s+than|over|around|about|approximately)\s*(?:rs\.?|inr|rupees?|[^\w\s])?\s*\d[\d,]*(?:\.\d+)?\s*k?\b(?:\s*(?:rupees?|rs|inr)\b\.?)?",
             " ", lowered,
         )
+        if accessory:
+            # Full catalog spelling can survive token stemming and punctuation.
+            # It is only an alternate text match; all attribute filters still apply.
+            name = re.sub(
+                r"^(?:please\s+)?(?:show(?:\s+me)?|find|search(?:\s+for)?|"
+                r"tell\s+me\s+about|add|put|buy|increase\s+quantity\s+of)\s+",
+                "", search_text,
+            )
+            name = re.sub(r"\s+(?:to|in)\s+(?:(?:my|the)\s+)?cart\s*$", "", name)
+            parsed["exact_name"] = " ".join(name.split())
         ignored = {
             "show", "find", "search", "suggest", "recommend", "looking", "for",
-            "a", "an", "the", "good", "best", "me", "do", "does", "you", "have",
+            "a", "an", "the", "all", "good", "best", "me", "do", "does", "you", "have",
             "is", "are", "any", "which", "available", "need", "want", "can", "i",
             "get", "got", "please", "under", "below", "less", "than", "within",
             "around", "about", "approximately", "budget", "of", "over", "above",
@@ -106,7 +144,10 @@ class ChatService:
                 "from", "increase", "decrease", "quantity", "the", "please",
                 "by", "pick", "choose",
             })
-        ignored.update(brand.lower() for brand in KNOWN_BRANDS)
+        ignored.update(brand.lower() for brand in KNOWN_BRANDS
+                       if not accessory or brand.lower() in attribute_text)
+        if accessory:
+            ignored.update({"compatible", "with", "fits"})
         qualifiers = []
         for token in re.findall(r"[a-z0-9]+", search_text):
             if token in ignored or token == "k":
@@ -131,6 +172,7 @@ class ChatService:
             brand=filters.get("brand"), min_price=filters.get("min_price"),
             max_price=filters.get("max_price"), in_stock_only=recommendation,
             sort_by="rating" if recommendation else None, limit=limit, timings=timings,
+            exact_name=filters.get("exact_name"),
         )
 
     def _resolve_product(self, message: str, context: Dict[str, Any], *, cart_only: bool = False) -> Optional[Dict[str, Any]]:
@@ -349,14 +391,14 @@ class ChatService:
         timings["laya_start"] = datetime.now(timezone.utc).isoformat()
         timings["laya_call_count"] = timings.get("laya_call_count", 0) + 1
         try:
-            decision = self.laya.decide(user_message)
+            decision = await run_in_threadpool(self.laya.decide, user_message)
         except Exception:
             timings["laya_end"] = datetime.now(timezone.utc).isoformat()
             timings["laya_duration_ms"] = round((time.perf_counter() - laya_started) * 1000, 1)
             logger.info("CHAT TIMING laya_ms=%.1f", (time.perf_counter() - laya_started) * 1000)
             logger.exception("LAYA decision failed")
             return ChatResponse(
-                response="I couldn't reach the Laya decision service. Start it on port 5055 and try again."
+                response="The configured Laya decision service is unavailable or returned an invalid decision. Please try again shortly."
             )
         timings["laya_end"] = datetime.now(timezone.utc).isoformat()
         timings["laya_duration_ms"] = round((time.perf_counter() - laya_started) * 1000, 1)
@@ -415,11 +457,30 @@ class ChatService:
             else:
                 action = "general_query"
 
+        # Only product-page suggestion clicks carry this existing-context extension.
+        # Laya has already run above; preserve ordinary manual search/cart behavior.
+        suggestion_product = None
+        suggestion_id = client_context.get("suggestion_product_id")
+        if isinstance(suggestion_id, str) and suggestion_id in (client_context.get("recent_product_ids") or []):
+            suggestion_product = self.search_tool.get_product_by_id(suggestion_id)
+        suggestion_discovery = re.search(
+            r"^(?:please\s+)?(?:show|find|search|suggest|recommend|compare|list)\b|\b(?:alternatives?|similar\s+products?|other\s+phones?)\b",
+            user_message, re.I,
+        )
+        suggestion_information = bool(
+            suggestion_product and not suggestion_discovery and not add_to_cart_re
+            and not cart_operation and not cart_view_re and not conversational_re
+            and re.search(r"^(?:is|are|does|do|can|could|will|would|how|what|which)\b", user_message, re.I)
+        )
+        if suggestion_information:
+            action = "general_query"
+            logger.info("[AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya %s", laya_choice)
+
         discovery_request = re.search(
             r"\b(?:show|find|search|need|want|looking for|do you have|have you got|can i get|available|any)\b",
             user_message, re.I,
         )
-        if discovery_request and not cart_operation and not cart_view_re and not add_to_cart_re and not details_re and action in (
+        if discovery_request and not suggestion_information and not cart_operation and not cart_view_re and not add_to_cart_re and not details_re and action in (
             "general_query", "cart_action", "product_details"
         ):
             action = "product_search"
@@ -431,7 +492,7 @@ class ChatService:
         # purchase command may mutate the cart.
         if (
             action in ("general_query", "add_to_cart")
-            and not conversational_re and not cart_operation and not details_re and not cart_view_re and not add_to_cart_re
+            and not suggestion_information and not conversational_re and not cart_operation and not details_re and not cart_view_re and not add_to_cart_re
         ):
             candidate_filters = self._filters(user_message)
             has_catalog_terms = bool(
@@ -449,6 +510,9 @@ class ChatService:
         if action in ("product_search", "recommendation"):
             extraction_started = time.perf_counter()
             filters = self._filters(user_message, action)
+            if suggestion_product and re.search(r"\bsimilar\s+products?\b", user_message, re.I):
+                filters["search_term"] = None
+                filters["category"] = suggestion_product.get("category")
             logger.info("CHAT TIMING product_filter_extraction_ms=%.1f filters=%s", (time.perf_counter() - extraction_started) * 1000, filters)
             logger.info("[AI FLOW] EXTRACTED FILTERS: %s", filters)
             db_started = time.perf_counter()
@@ -519,4 +583,11 @@ class ChatService:
             self._response_source = "conversational"
             return ChatResponse(response=conversational_reply)
 
-        return ChatResponse(response=self._ollama_answer(user_message, {"business": "Poorvika electronics retailer"}, timings))
+        context = {"business": "Poorvika electronics retailer"}
+        if suggestion_information:
+            context["suggestion_information"] = True
+            context["products"] = [{
+                key: suggestion_product.get(key)
+                for key in ("id", "name", "brand", "category", "price", "in_stock", "flattened_specs", "description")
+            }]
+        return ChatResponse(response=await run_in_threadpool(self._ollama_answer, user_message, context, timings))

@@ -156,7 +156,7 @@ export function Navbar() {
           </Link>
           <Link
             to="/products"
-            search={{ category: "Audio" }}
+            search={{ category: "TV & Audio" }}
             onClick={() => setMobileMenuOpen(false)}
             className="block py-2 text-sm font-medium text-gray-700 hover:text-primary"
           >

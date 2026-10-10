@@ -115,6 +115,7 @@ class ProductSearchTool:
         offset: int = 0,
         frontend_only: bool = False,
         timings: Optional[Dict[str, Any]] = None,
+        exact_name: Optional[str] = None,
     ) -> List[Dict[str, Any]]:
         """
         Executes a controlled query against PostgreSQL.
@@ -129,6 +130,8 @@ class ProductSearchTool:
             ))
         filters = []
         query_rank_terms: List[str] = []
+        exact_match = (func.lower(func.trim(Product.name)) == exact_name.strip().lower()
+                       if exact_name and exact_name.strip() else None)
 
         # 1. Category filter (with normalization and parent-to-child mapping)
         if category and category.strip():
@@ -187,7 +190,8 @@ class ProductSearchTool:
                 (category and category.lower() in q_clean and len(q_clean.split()) == 1)
             )
             if not is_redundant:
-                words = [w for w in normalized_words if len(w) > 2 or w.isdigit()]
+                words = [w for w in normalized_words if len(w) > 2 or w.isdigit()
+                         or (exact_match is not None and re.fullmatch(r"[a-z]\d|\d[a-z]", w))]
                 word_clauses = []
                 for w in words:
                     stem = w[:-1] if w.endswith("s") and len(w) > 3 else w
@@ -205,7 +209,11 @@ class ProductSearchTool:
                 if word_clauses:
                     # Every meaningful product term must match; OR here lets
                     # action words or model numbers pull unrelated rows in.
-                    filters.append(and_(*word_clauses))
+                    text_match = and_(*word_clauses)
+                    filters.append(or_(exact_match, text_match) if exact_match is not None else text_match)
+
+        if exact_match is not None and not (query and query.strip()):
+            filters.append(exact_match)
 
         if filters:
             stmt = stmt.filter(and_(*filters))
@@ -233,6 +241,7 @@ class ProductSearchTool:
             ]
             # Then in-stock first, rating, and lowest price.
             stmt = stmt.order_by(
+                *([desc(exact_match)] if exact_match is not None else []),
                 *name_match_order, desc(Product.in_stock), desc(Product.rating).nullslast(),
                 asc(Product.price), asc(Product.id),
             )

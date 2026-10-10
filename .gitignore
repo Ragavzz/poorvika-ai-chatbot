@@ -39,3 +39,33 @@ evaluation/results/raw_benchmark_results_*.csv
 evaluation/results/raw_benchmark_results_*.json
 evaluation/results/repeatability_results_*.json
 evaluation/results/summary_metrics*.json
+
+# Keep sanitized setup examples and generated frontend output separate.
+!.env.example
+.output/
+.wrangler/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Python environments and caches
+.venv/
+__pycache__/
+*.py[cod]
+
+# Frontend dependencies and build output
+node_modules/
+dist/
+
+# Accidental Windows cache directory inside repository
+/%SystemDrive%/
+
+# Local backup
+backend/app/services/laya_client.py.backup
+
+# Generated suggestion test artifacts
+backend/suggestion-click-flow.log
+backend/suggestion-click-results.json
+backend/suggestion-performance-results.json

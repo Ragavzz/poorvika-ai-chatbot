@@ -1,0 +1,18 @@
+{
+  "intent": {
+    "type": "choice",
+    "instructions": "What shopping action should the assistant perform?",
+    "criteria": {
+      "product_search": "search products, looking for phones or laptops or accessories, under budget, price check, find items, show products",
+      "product_details": "tell me about this product, tell about it, tell me more, specifications, specs, features, details, product info",
+      "recommendation": "suggest a good phone, recommend, advice for gaming, best options",
+      "add_to_cart": "explicitly add to cart, put item in my cart, add to my cart, buy this",
+      "cart_action": "what is in my cart, view cart, checkout, show cart items, cart total, how much is my cart",
+      "general_query": "hello, hi, greetings, thank you, thanks, okay, great, nice, got it, return policy, delivery, customer support"
+    }
+  },
+  "needs_escalation": {
+    "type": "noul",
+    "instructions": "Does this query require human support escalation?"
+  }
+}

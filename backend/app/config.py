@@ -29,7 +29,7 @@ class Settings(BaseSettings):
     OLLAMA_API_KEY: str = ""
     OLLAMA_API_URL: str = "http://localhost:11434/api/chat"
     OLLAMA_MODEL: str = "llama3.2:latest"
-    LAYA_DECIDE_URL: str = "http://localhost:5055/decide"
+    LAYA_DECIDE_URL: str = "http://127.0.0.1:5056/decide"
 
     # Dataset file path
     DATASET_PATH: str = os.path.join(

@@ -29,22 +29,24 @@ cd backend
 python run.py
 ```
 
-### Terminal 2 - Laya (port 5055)
+### Terminal 2 - Laya Python V2 (port 5056)
 
 ```powershell
-cd ecom-muse-main\laya_service
-npm.cmd ci
-npm.cmd start
+cd ecom-muse-main
+& .\laya_v2_service\.venv\Scripts\python.exe -u .\laya_v2_service\service.py
 ```
 
-On first start, Laya downloads its ONNX model bundle to the local user cache.
-Keep the cache outside the repository.
+The current backend expects `Mass121/laya-typed-decisions-v2` at
+`http://127.0.0.1:5056/decide`. Use the existing isolated V2 environment and
+checkpoint; see `laya_v2_service/README.md` for provisioning details. The old
+`laya_service/server.js` ONNX service on 5055 is a separate historical service
+and does not satisfy the V2 client identity check. Do not run both V2 and the
+old opt-in switchable service on 5056.
 
 ### Terminal 3 - Ollama (port 11434)
 
 ```powershell
 ollama serve
-ollama pull llama3.2:latest
 ```
 
 Pull the model only if it is not already available locally. FastAPI is

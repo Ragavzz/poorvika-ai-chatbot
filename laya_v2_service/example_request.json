@@ -1,0 +1,16 @@
+{
+  "state": {
+    "channel": "customer_support_ticket",
+    "ticket": "Double charged on my invoice #4921."
+  },
+  "questions": {
+    "cs_intent": {
+      "type": "choice",
+      "instructions": "Determine customer intent",
+      "criteria": {
+        "billing issue": "Billing/payment query",
+        "technical support": "System error"
+      }
+    }
+  }
+}

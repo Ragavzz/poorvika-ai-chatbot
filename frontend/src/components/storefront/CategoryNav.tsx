@@ -4,7 +4,7 @@ export const navigationCategories = [
   { label: "Mobiles", category: "Mobiles" },
   { label: "Accessories", category: "Accessories" },
   { label: "Computers & Tablets", category: "Computers & Tablets" },
-  { label: "TV & Audio", category: "Audio" },
+  { label: "TV & Audio", category: "TV & Audio" },
   { label: "Kitchen Appliances", category: "Kitchen Appliances" },
   { label: "Home Appliances", category: "Appliances" },
   { label: "Smart Technology", category: "Smart Watches" },

@@ -1,5 +1,6 @@
-import { lazy, Suspense, useState } from "react";
+import { lazy, Suspense, useRef, useState } from "react";
 import { MessageCircle, X } from "lucide-react";
+import { ProductSuggestionPopup } from "./ProductSuggestionPopup";
 import { Button } from "@/components/ui/button";
 
 const ChatbotPanel = lazy(() =>
@@ -10,6 +11,14 @@ export function Chatbot() {
   const [open, setOpen] = useState(false);
   const [hasOpened, setHasOpened] = useState(false);
 
+  const [suggestionRequest, setSuggestionRequest] = useState<{ id: number; text: string; productId?: string }>();
+  const suggestionId = useRef(0);
+  const selectSuggestion = (text: string, productId?: string) => {
+    setSuggestionRequest({ id: ++suggestionId.current, text, ...(productId ? { productId } : {}) });
+    setHasOpened(true);
+    setOpen(true);
+  };
+
   const toggle = () => {
     if (!hasOpened) setHasOpened(true);
     setOpen((value) => !value);
@@ -17,6 +26,7 @@ export function Chatbot() {
 
   return (
     <div className="fixed bottom-5 right-4 z-50 sm:bottom-7 sm:right-7">
+      <ProductSuggestionPopup open={open} onSelect={selectSuggestion} />
       {hasOpened && (
         <Suspense
           fallback={open ? (
@@ -25,7 +35,7 @@ export function Chatbot() {
             </div>
           ) : null}
         >
-          <ChatbotPanel open={open} onClose={() => setOpen(false)} />
+          <ChatbotPanel open={open} onClose={() => setOpen(false)} suggestionRequest={suggestionRequest} />
         </Suspense>
       )}
       <Button

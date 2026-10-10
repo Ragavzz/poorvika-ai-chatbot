@@ -1,5 +1,5 @@
 import { MessageCircle, Sparkles, X } from "lucide-react";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   Conversation,
@@ -28,7 +28,7 @@ const suggestionChips = [
   "Best power banks",
 ];
 
-export function ChatbotPanel({ open, onClose }: { open: boolean; onClose: () => void }) {
+export function ChatbotPanel({ open, onClose, suggestionRequest }: { open: boolean; onClose: () => void; suggestionRequest?: { id: number; text: string; productId?: string } | undefined }) {
   const { items, addToCart, removeFromCart, updateQuantity } = useCart();
   const latestCartItems = useRef(items);
   latestCartItems.current = items;
@@ -38,14 +38,15 @@ export function ChatbotPanel({ open, onClose }: { open: boolean; onClose: () => 
   ]);
   const [status, setStatus] = useState<"ready" | "submitted" | "error">("ready");
 
-  const send = async ({ text }: { text: string }) => {
+  const send = async ({ text, suggestionProductId }: { text: string; suggestionProductId?: string }) => {
     const clean = text.trim();
     if (!clean || status === "submitted") return;
     setMessages((current) => [...current, { id: Date.now(), role: "user", text: clean }]);
     setStatus("submitted");
     try {
       const clientContext = {
-        recent_product_ids: recentProductIds.current,
+        recent_product_ids: suggestionProductId ? [suggestionProductId] : recentProductIds.current,
+        ...(suggestionProductId ? { suggestion_product_id: suggestionProductId } : {}),
         cart: latestCartItems.current.map(({ product, quantity }) => ({
           id: product.id,
           name: product.name,
@@ -86,6 +87,16 @@ export function ChatbotPanel({ open, onClose }: { open: boolean; onClose: () => 
       setStatus("error");
     }
   };
+
+  const latestSend = useRef(send);
+  latestSend.current = send;
+  const consumedSuggestion = useRef<number | undefined>(undefined);
+  useEffect(() => {
+    if (!open || !suggestionRequest || status === "submitted" || consumedSuggestion.current === suggestionRequest.id) return;
+    consumedSuggestion.current = suggestionRequest.id;
+    if (suggestionRequest.productId) recentProductIds.current = [suggestionRequest.productId];
+    void latestSend.current({ text: suggestionRequest.text, ...(suggestionRequest.productId ? { suggestionProductId: suggestionRequest.productId } : {}) });
+  }, [open, suggestionRequest, status]);
 
   return (
     <section

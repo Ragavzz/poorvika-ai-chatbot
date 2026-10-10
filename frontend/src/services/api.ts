@@ -49,6 +49,7 @@ const request = async <T>(
   path: string,
   options?: RequestInit,
   query?: Record<string, string | number | boolean | string[] | undefined>,
+  onResponse?: (response: Response) => void,
 ): Promise<T> => {
   if (!baseUrl) throw new Error("Connect your FastAPI backend by setting VITE_API_BASE_URL.");
   const response = await fetch(buildUrl(path, query), {
@@ -62,6 +63,7 @@ const request = async <T>(
     } | null;
     throw new Error(body?.detail ?? body?.message ?? `Request failed (${response.status})`);
   }
+  onResponse?.(response);
   return response.json() as Promise<T>;
 };
 
@@ -110,6 +112,15 @@ export const api = {
   },
   getProduct(id: string, signal?: AbortSignal) {
     return request<Product>(`/api/products/${encodeURIComponent(id)}`, signal ? { signal } : undefined);
+  },
+  getChatSuggestions(product: Partial<Product> & { name: string }, onTiming?: (timings: Record<string, string | number>) => void) {
+    return request<{ suggestions: string[] }>("/api/chat/suggestions", {
+      method: "POST",
+      body: JSON.stringify({ product }),
+    }, undefined, (response) => {
+      const header = response.headers.get("X-ShopAI-Suggestion-Timing");
+      if (header && onTiming) { try { onTiming(JSON.parse(header)); } catch { /* Diagnostics never interrupt suggestions. */ } }
+    });
   },
   async chat(message: string) {
     const payload = await request<{ response?: string; message?: string; reply?: string }>(
