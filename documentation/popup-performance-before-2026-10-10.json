@@ -1,0 +1,366 @@
+{
+  "date": "2026-10-10",
+  "kind": "live_baseline_before_optimization",
+  "model": "llama3.2:latest",
+  "ollama_loaded_before": true,
+  "contexts": {
+    "iphone_id": "apple-iphone-15-black-256gb",
+    "samsung_id": "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+    "listing_filters": {
+      "brand": "Samsung",
+      "minPrice": 5000,
+      "maxPrice": 20000
+    },
+    "listing_visible_count": 7,
+    "request_payloads": {
+      "iphone_15": {
+        "id": "apple-iphone-15-black-256gb",
+        "name": "Apple iPhone 15 ( Black,256GB )",
+        "brand": "Apple",
+        "category": "Mobiles",
+        "price": 64900.0,
+        "description": "Apple iPhone 15 ( Black,256GB )",
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE supported",
+          "SIM Type": "Dual SIM (nano SIM and eSIM)",
+          "Width x Height x Depth": "71.6 x 147.6 x 7.80 mm",
+          "Weight": "171g",
+          "Display Size": "15.54 cm ( 6.1 inch )",
+          "Display Type": "Super Retina XDR, OLED display",
+          "Resolution": "2556 x 1179-pixel resolution at 460 ppi",
+          "Protection": "Fingerprint-resistant oleophobic coating",
+          "Loudspeaker": "Built\u2011in stereo speaker",
+          "Internal Storage": "256GB",
+          "WLAN": "Wi\u2011Fi 6 (802.11ax) with 2x2 MIMO",
+          "Bluetooth Version": "v5.3",
+          "USB Type": "USB-C connector | USB 2 (up to 480 Mbps)",
+          "NFC Support": "NFC with reader mode",
+          "Primary Camera": "48MP(f/1.6) + 12MP(f/2.4)",
+          "Secondary Camera": "12MP(f/1.9)",
+          "Camera Features": "2x optical zoom in, 2x optical zoom out, 4x optical zoom range | Digital zoom up to 10x | Sapphire crystal lens cover | True Tone flash | Photonic Engine | Deep Fusion | Smart HDR 5 | Next-generation portraits with Focus and Depth Control",
+          "Video": "4K video recording at 24 fps, 25 fps, 30 fps or 60 fps | Slow\u2011motion video support for 1080p at 120 fps or 240 fps | 1080p HD video recording at 25 fps, 30 fps or 60 fps | 720p HD video recording at 30 fps | Cinematic mode up to 4K HDR at 30 fps",
+          "Operating System": "iOS 17",
+          "Chipset": "A16 Bionic chip",
+          "CPU": "6\u2011core CPU with 2 performance and 4 efficiency cores",
+          "GPU": "5\u2011core GPU ( 16\u2011core Neural Engine )",
+          "GPS": "GPS, GLONASS, Galileo, QZSS & BeiDou",
+          "Sensors": "Face ID, Barometer, High dynamic range gyro, High-g accelerometer, Proximity sensor, Dual ambient light sensors",
+          "Water Resistant": "Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529",
+          "Battery Capacity": "Built-in rechargeable lithium-ion Battery",
+          "Sales Package": "iPhone with iOS 17 | USB-C Charge Cable (1 m) | Documentation",
+          "Warranty Summary": "Brand Warranty for 1 Year",
+          "Generic Name": "Mobile Phone",
+          "Country of Origin": "China",
+          "Manufactured by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+          "Imported by": "Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+          "Packed by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001"
+        }
+      },
+      "samsung_galaxy_a16_5g": {
+        "id": "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+        "name": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+        "brand": "Samsung",
+        "category": "Mobiles",
+        "price": 15999.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+          "SIM Type": "Dual Nano SIM",
+          "Width x Height x Depth": "77.9 x 164.4 7.9 mm",
+          "Weight": "192 g",
+          "Display Size": "16.91 cm ( 6.66 inch )",
+          "Display Type": "Super AMOLED",
+          "Refresh Rate": "90 Hz",
+          "Resolution": "1080 x 2340 (FHD+)",
+          "Protection": "IP54",
+          "Multitouch": "Yes",
+          "Loudspeaker": "Yes",
+          "Headphone Type": "USB Type-C",
+          "RAM": "6GB",
+          "Internal Storage": "128GB",
+          "Expandable Storage": "MicroSD (Up to 1.5 TB)",
+          "WLAN": "WI-FI: 802.11a/b/g/n/ac 2.4GHz+5GHz, VHT80",
+          "Bluetooth Version": "v5.3",
+          "USB Type": "USB Type-C (v2.0)",
+          "NFC Support": "Yes",
+          "OTG Support": "Yes",
+          "Primary Camera": "50MP(f/1.8) + 5MP(f/2.2) + 2MP(f/2.4)",
+          "Secondary Camera": "13MP(f/2.0)",
+          "Camera Features": "Digital Zoom up to 10x",
+          "Video": "FHD (1920 x 1080)@30fps | 120fps @HD",
+          "Operating System": "Android 14",
+          "Supported UI": "One UI 6.1",
+          "Processor": "Octa-Core",
+          "CPU": "2.4GHz, 2GHz",
+          "GPS": "GPS, Glonass, Beidou, Galileo, QZSS",
+          "Sensors": "Accelerometer, Fingerprint Sensor, Gyro Sensor, Geomagnetic Sensor, Light Sensor, Proximity Sensor",
+          "Battery Capacity": "5000 mAh",
+          "Charger Type": "25W Fast Charging Supports",
+          "Sales Package": "Mobile, Data Cable USB Type C-to-C, Ejection Pin, Quick Start Guide",
+          "Warranty Summary": "Brand Warranty of 1 Year Available for Mobile and 6 Months for Accessories",
+          "Generic Name": "Mobile Phone",
+          "Country of Origin": "India",
+          "Manufactured by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001",
+          "Packed by": "Samsung India Electronics Pvt. Ltd. having its Registered Office at: 6th Floor, DLF Centre, Sansad Marg, New Delhi-110001"
+        }
+      },
+      "mobiles_filtered": {
+        "name": "Mobiles",
+        "category": "Mobiles",
+        "query": "Mobiles",
+        "filters": {
+          "brand": "Samsung",
+          "minPrice": 5000,
+          "maxPrice": 20000
+        },
+        "products": [
+          {
+            "id": "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+            "name": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 15999.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          },
+          {
+            "id": "samsung-galaxy-a16-5g-gold-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Gold, 8GB-128GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 17499.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          },
+          {
+            "id": "samsung-galaxy-a16-5g-gold-6gb-128gb",
+            "name": "Samsung Galaxy A16 5G ( Gold, 6GB-128GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 15999.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          },
+          {
+            "id": "samsung-galaxy-a16-5g-light-green-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Light Green, 8GB-128GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 16999.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          },
+          {
+            "id": "samsung-galaxy-a06-black-64gb-4gb-ram",
+            "name": "Samsung Galaxy A06 ( Black, 4GB-64GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 7999.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/VoLTE supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          },
+          {
+            "id": "samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram",
+            "name": "Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 16999.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          },
+          {
+            "id": "samsung-galaxy-a16-5g-light-green-6gb-128gb",
+            "name": "Samsung Galaxy A16 5G ( Light Green, 6GB-128GB )",
+            "brand": "Samsung",
+            "category": "Mobiles",
+            "price": 15499.0,
+            "specifications": {
+              "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+              "SIM Type": "Dual Nano SIM"
+            }
+          }
+        ]
+      }
+    }
+  },
+  "results": [
+    {
+      "label": "iphone_first_cache_miss_high_load_observed",
+      "request_id": "perf-before-iphone_cold_cache_miss_model_warm-c941a1bc",
+      "status": 200,
+      "wall_ms": 20889.57,
+      "timing": {
+        "request_id": "perf-before-iphone_cold_cache_miss_model_warm-c941a1bc",
+        "backend_received": "2026-10-10T15:13:49.475954+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 1,
+        "cache": "miss",
+        "ollama_started": "2026-10-10T15:13:49.477803+00:00",
+        "ollama_received": "2026-10-10T15:14:10.346696+00:00",
+        "ollama_ms": 20868.911,
+        "ollama_server_generation_ms": 1963.139,
+        "ollama_load_ms": 10188.2193,
+        "ollama_prompt_eval_ms": 6635.607,
+        "ollama_server_total_ms": 18814.7997,
+        "validated": "2026-10-10T15:14:10.351275+00:00",
+        "validation_ms": 4.562,
+        "backend_api_ms": 20876.414,
+        "status": 200
+      },
+      "captured_prompt": {
+        "model": "llama3.2:latest",
+        "prompt_chars": 4538,
+        "system_prompt_chars": 1868,
+        "context_json_chars": 2670,
+        "options": {
+          "temperature": 0.4,
+          "num_predict": 300,
+          "num_ctx": 4096
+        }
+      },
+      "context_chars": 2670,
+      "body": {
+        "suggestions": [
+          "Is this product suitable for a heavy user who needs a powerful processor?",
+          "Does this phone have a good camera for taking portraits?",
+          "Can you compare the battery life of this phone with other similar models?",
+          "Is the display size of this phone ideal for watching videos?"
+        ]
+      }
+    },
+    {
+      "label": "samsung_a16_warm_cache_miss",
+      "request_id": "perf-before-samsung_a16_warm_cache_miss-be4b1d99",
+      "status": 200,
+      "wall_ms": 6329.09,
+      "timing": {
+        "request_id": "perf-before-samsung_a16_warm_cache_miss-be4b1d99",
+        "backend_received": "2026-10-10T15:14:10.355572+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 1,
+        "cache": "miss",
+        "ollama_started": "2026-10-10T15:14:10.356216+00:00",
+        "ollama_received": "2026-10-10T15:14:16.681408+00:00",
+        "ollama_ms": 6325.203,
+        "ollama_server_generation_ms": 2512.737,
+        "ollama_load_ms": 15.9296,
+        "ollama_prompt_eval_ms": 3699.945,
+        "ollama_server_total_ms": 6322.699,
+        "validated": "2026-10-10T15:14:16.681753+00:00",
+        "validation_ms": 0.335,
+        "backend_api_ms": 6326.685,
+        "status": 200
+      },
+      "captured_prompt": {
+        "model": "llama3.2:latest",
+        "prompt_chars": 3755,
+        "system_prompt_chars": 1868,
+        "context_json_chars": 1887,
+        "options": {
+          "temperature": 0.4,
+          "num_predict": 300,
+          "num_ctx": 4096
+        }
+      },
+      "context_chars": 1887,
+      "body": {
+        "suggestions": [
+          "Is this product suitable for heavy gaming due to its display and processor?",
+          "Are there any alternatives to this phone with better camera capabilities?",
+          "Can this phone be easily compared to other Android 14 smartphones in terms of performance and features?",
+          "Would a phone with a similar price range offer better value in terms of battery life and overall performance?"
+        ]
+      }
+    },
+    {
+      "label": "mobiles_filtered_warm_cache_miss",
+      "request_id": "perf-before-mobiles_filtered_warm_cache_miss-665609ef",
+      "status": 200,
+      "wall_ms": 11325.87,
+      "timing": {
+        "request_id": "perf-before-mobiles_filtered_warm_cache_miss-665609ef",
+        "backend_received": "2026-10-10T15:14:16.683826+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 1,
+        "cache": "miss",
+        "ollama_started": "2026-10-10T15:14:16.686084+00:00",
+        "ollama_received": "2026-10-10T15:14:28.007163+00:00",
+        "ollama_ms": 11321.091,
+        "ollama_server_generation_ms": 6197.831,
+        "ollama_load_ms": 12.6711,
+        "ollama_prompt_eval_ms": 5009.147,
+        "ollama_server_total_ms": 11319.1117,
+        "validated": "2026-10-10T15:14:28.007675+00:00",
+        "validation_ms": 0.499,
+        "backend_api_ms": 11324.356,
+        "status": 200
+      },
+      "captured_prompt": {
+        "model": "llama3.2:latest",
+        "prompt_chars": 2794,
+        "system_prompt_chars": 784,
+        "context_json_chars": 2010,
+        "options": {
+          "temperature": 0.4,
+          "num_predict": 300,
+          "num_ctx": 4096
+        }
+      },
+      "context_chars": 2010,
+      "body": {
+        "suggestions": [
+          "What is the price difference between the Samsung Galaxy A16 5G ( Gold, 8GB-128GB ) and the Samsung Galaxy A16 5G ( Gold, 6GB-128GB )?",
+          "Are the Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) and the Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB ) similar in terms of price?",
+          "Is there a price variation between the Samsung Galaxy A16 5G ( Light Green, 8GB-128GB ) and the Samsung Galaxy A16 5G ( Gold, 8GB-128GB )?",
+          "Are the Samsung Galaxy A06 ( Black, 4GB-64GB ) and the Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) similar in terms of price?"
+        ]
+      }
+    },
+    {
+      "label": "mobiles_filtered_cache_hit",
+      "request_id": "perf-before-mobiles_filtered_cache_hit-b401e24d",
+      "status": 200,
+      "wall_ms": 2.3,
+      "timing": {
+        "request_id": "perf-before-mobiles_filtered_cache_hit-b401e24d",
+        "backend_received": "2026-10-10T15:14:28.009778+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "backend_api_ms": 0.802,
+        "status": 200
+      },
+      "captured_prompt": {},
+      "context_chars": 2010,
+      "body": {
+        "suggestions": [
+          "What is the price difference between the Samsung Galaxy A16 5G ( Gold, 8GB-128GB ) and the Samsung Galaxy A16 5G ( Gold, 6GB-128GB )?",
+          "Are the Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) and the Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB ) similar in terms of price?",
+          "Is there a price variation between the Samsung Galaxy A16 5G ( Light Green, 8GB-128GB ) and the Samsung Galaxy A16 5G ( Gold, 8GB-128GB )?",
+          "Are the Samsung Galaxy A06 ( Black, 4GB-64GB ) and the Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) similar in terms of price?"
+        ]
+      }
+    }
+  ],
+  "prompt_revision": "questions-v9",
+  "measurement_notes": [
+    "The baseline began after /api/ps reported the model loaded, but its first request reported 10188.2 ms load_duration. Treat this as a measured high-load request, not a certified unloaded cold start.",
+    "Ollama sessions were not deliberately unloaded."
+  ]
+}

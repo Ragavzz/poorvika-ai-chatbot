@@ -7,9 +7,11 @@ import asyncio
 import json
 import re
 import unittest
-from unittest.mock import Mock
+from unittest.mock import Mock, patch
+from fastapi import HTTPException
 
 import test_backend as fixtures
+from app.config import settings
 from app.schemas.chat import ChatRequest
 from app.services.chat_service import ChatService
 
@@ -123,11 +125,11 @@ class TestChatRegressions(unittest.TestCase):
         self.assert_add("Can you please add Apple iPhone 13 to my cart", self.apple)
 
     def test_question_about_adding_does_not_mutate_cart(self):
-        response = self.answer("How do I add Apple iPhone 13 to my cart?", "add_to_cart", expected="product_search", recent=[self.apple["id"]])
+        response = self.answer("How do I add Apple iPhone 13 to my cart?", "add_to_cart", expected="cart_action", recent=[self.apple["id"]])
         self.assertNotIn("SHOPAI_ADD_TO_CART", response)
 
     def test_negated_add_does_not_mutate_cart(self):
-        response = self.answer("Do not add Apple iPhone 13 to my cart", "add_to_cart", expected="product_search", recent=[self.apple["id"]])
+        response = self.answer("Do not add Apple iPhone 13 to my cart", "add_to_cart", expected="cart_action", recent=[self.apple["id"]])
         self.assertNotIn("SHOPAI_ADD_TO_CART", response)
 
     def test_remove_named_apple(self):
@@ -164,9 +166,10 @@ class TestChatRegressions(unittest.TestCase):
         self.assert_details("Tell me about this phone", self.apple, recent=[self.apple["id"]])
 
     def test_thank_you_cannot_add_even_with_wrong_laya_decision(self):
-        response = self.answer("Thank you", "add_to_cart", expected="general_query", recent=[self.apple["id"]], cart=self.cart)
-        self.assertIn("You're welcome", response)
-        self.assertNotIn("SHOPAI_ADD_TO_CART", response)
+        with patch.object(settings, "OLLAMA_ENABLED", False):
+            with self.assertRaises(HTTPException):
+                self.answer("Thank you", "add_to_cart", expected="general_query", recent=[self.apple["id"]], cart=self.cart)
+        self.service.ollama.generate.assert_not_called()
 
     def test_cart_view_uses_client_cart_despite_wrong_laya_decision(self):
         response = self.answer("What's in my cart?", "product_search", expected="cart_action", cart=self.cart)
@@ -228,9 +231,11 @@ for name, query, brand, budget, results in [
 
 def general_test(query, expected):
     def run(self):
-        response = self.answer(query, "general_query")
-        self.assertIn(expected, response)
-        self.assertNotIn("SHOPAI_ADD_TO_CART", response)
+        with patch.object(settings, "OLLAMA_ENABLED", False):
+            with self.assertRaises(HTTPException) as failure:
+                self.answer(query, "general_query")
+            self.assertEqual(failure.exception.status_code, 503)
+            self.service.ollama.generate.assert_not_called()
     return run
 
 

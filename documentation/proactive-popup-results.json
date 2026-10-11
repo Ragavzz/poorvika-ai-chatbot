@@ -1,0 +1,53 @@
+{
+  "health": {
+    "status": "healthy",
+    "service": "ShopAI Backend",
+    "database": {
+      "type": "PostgreSQL",
+      "connected": true,
+      "details": "PostgreSQL connected successfully",
+      "product_count": 508
+    },
+    "decision_provider": "rules",
+    "ollama_enabled": false
+  },
+  "memory": {
+    "available_GiB": 1.29,
+    "total_GiB": 7.841,
+    "used_percent": 83
+  },
+  "products": [
+    {
+      "id": "samsung-galaxy-watch5-pro-lte-45-mm-gray-titanium-sm-r925fztainu",
+      "name": "Samsung Galaxy Watch5 Pro LTE ( Gray Titanium,45 mm )"
+    },
+    {
+      "id": "inbase-flip-cover-for-apple-ipad-pro-12-9-black",
+      "name": "Inbase Flip Cover For Apple iPad Pro 12.9 ( Black )"
+    }
+  ],
+  "http_checks": [
+    {
+      "url": "http://127.0.0.1:8080/products/samsung-galaxy-watch5-pro-lte-45-mm-gray-titanium-sm-r925fztainu",
+      "status": 200,
+      "html": true
+    },
+    {
+      "url": "http://127.0.0.1:8080/products/inbase-flip-cover-for-apple-ipad-pro-12-9-black",
+      "status": 200,
+      "html": true
+    }
+  ],
+  "updated_component_served": true,
+  "frontend_tests": {
+    "passed": 34,
+    "failed": 0,
+    "log": "proactive-popup-regressions-final.log"
+  },
+  "lint": "PASS (changed runtime files)",
+  "build": "PASS (client, SSR, Nitro; chunk-size and tsconfig-paths warnings)",
+  "measured_node_timer_ms": 1256.4,
+  "configured_delay_ms": 1200,
+  "browser_validation": "NOT PERFORMED: automation inventory has no browsers; HTTP checks are not visual validation",
+  "desktop_mobile_layout": "CSS constraints asserted only; viewport rendering not verified"
+}

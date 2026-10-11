@@ -12,6 +12,8 @@ class ChatRequest(BaseModel):
 
 
 class ChatResponse(BaseModel):
+    response_source: str | None = None
+    decision_provider: str | None = None
     response: str = Field(
         ...,
         description="AI shopping assistant response grounded in PostgreSQL product catalog",

@@ -26,7 +26,10 @@ function fixture(storage = new Map()) {
     },
   };
   new Function("require", "module", "exports", "sessionStorage", compiled)(
-    (id) => (id === "@/lib/suggestion-timing" ? { recordSuggestionTiming: () => {} } : { api }),
+    (id) =>
+      id === "@/lib/suggestion-timing"
+        ? { beginSuggestionTiming: () => "test-request", recordSuggestionTiming: () => {} }
+        : { api },
     loaded,
     loaded.exports,
     { getItem: (key) => storage.get(key), setItem: (key, value) => storage.set(key, value) },
@@ -53,6 +56,7 @@ test("no meaningful context produces no generation context", () => {
   const f = fixture();
   assert.equal(f.getProductSuggestionContext({}), null);
   assert.equal(f.getProductSuggestionContext({ q: "  " }), null);
+  assert.equal(f.getProductSuggestionContext({ category: "Mobiles", products: [] }), null);
 });
 
 test("sends existing product information and displays only model strings", async () => {
@@ -60,6 +64,7 @@ test("sends existing product information and displays only model strings", async
   const context = f.getProductSuggestionContext({}, product);
   assert.deepEqual(await f.getProductSuggestions(context), questions);
   assert.deepEqual(f.calls[0], {
+    id: product.id,
     name: product.name,
     brand: product.brand,
     category: product.category,
@@ -68,20 +73,41 @@ test("sends existing product information and displays only model strings", async
   });
 });
 
-test("reuses generated questions across revisits and refreshes", async () => {
-  const storage = new Map();
-  const f = fixture(storage);
-  const context = f.getProductSuggestionContext({}, product);
-  await f.getProductSuggestions(context);
-  await f.getProductSuggestions(context);
-  assert.equal(f.calls.length, 1);
-  const refreshed = fixture(storage);
-  assert.deepEqual(await refreshed.getProductSuggestions(context), questions);
-  assert.equal(refreshed.calls.length, 0);
-  await f.getProductSuggestions(
-    f.getProductSuggestionContext({}, { ...product, id: "other-phone", name: "Other Phone" }),
+test("category context carries actual listing results and filters without singular product context", () => {
+  const f = fixture();
+  const context = f.getProductSuggestionContext({
+    category: "Mobiles",
+    filters: { inStockOnly: true },
+    products: [product, { ...product, id: "second", name: "Second Mobile" }],
+  });
+  assert.equal(context.product.category, "Mobiles");
+  assert.equal(context.product.name, "Mobiles");
+  assert.equal(context.product.products.length, 2);
+  assert.equal(context.product.products[0].name, product.name);
+  assert.deepEqual(context.product.filters, { inStockOnly: true });
+  assert.notEqual(
+    context.key,
+    f.getProductSuggestionContext({ category: "Mobiles", products: [{ ...product, price: 7399 }] }).key,
   );
-  assert.equal(f.calls.length, 2);
+});
+
+test("query identity includes product data, listing result set and model prompt configuration", () => {
+  const f = fixture();
+  const phone = f.getProductSuggestionContext({}, product);
+  const revised = f.getProductSuggestionContext({}, { ...product, price: 7399 });
+  assert.notDeepEqual(f.getSuggestionQueryKey(phone, "model-v1"), f.getSuggestionQueryKey(revised, "model-v1"));
+  assert.notDeepEqual(f.getSuggestionQueryKey(phone, "model-v1"), f.getSuggestionQueryKey(phone, "model-v2"));
+});
+
+test("ignores persisted suggestions; output comes only from current provider", async () => {
+  const f = fixture(
+    new Map([["shopai:llm-suggestions:v1:product:test-phone", JSON.stringify(["Stale?"])]]),
+  );
+  const context = f.getProductSuggestionContext({}, product);
+  assert.deepEqual(await f.getProductSuggestions(context), questions);
+  assert.equal(f.calls.length, 1);
+  f.fail();
+  await assert.rejects(() => f.getProductSuggestions(context), /Model unavailable/);
 });
 
 test("query caching deduplicates concurrent requests", async () => {

@@ -1,0 +1,66 @@
+{
+  "verification": "Current Python source, live PostgreSQL and configured model services; no browser",
+  "hi": {
+    "passed": true,
+    "response": "\"Hello! Welcome to Poorvika. How can I assist you today? Are you looking for something in particular or just browsing?\"",
+    "timings": {
+      "laya_start": "2026-10-10T10:27:38.979819+00:00",
+      "decision_provider": "laya-python-v2",
+      "decision_call_count": 1,
+      "laya_call_count": 1,
+      "laya_end": "2026-10-10T10:27:44.423736+00:00",
+      "laya_duration_ms": 5444.0,
+      "resolved_action": "general_query",
+      "ollama_call_count": 1,
+      "ollama_start": "2026-10-10T10:27:44.424674+00:00",
+      "ollama_prompt_chars": 430,
+      "ollama_prompt_build_ms": 0.1,
+      "ollama_end": "2026-10-10T10:27:57.798804+00:00",
+      "ollama_duration_ms": 13374.2,
+      "ollama_http_duration_ms": 13374.1,
+      "ollama_model_load_ms": 9953.191,
+      "ollama_prompt_eval_ms": 833.699,
+      "ollama_generation_ms": 531.07,
+      "ollama_server_total_ms": 11336.8814,
+      "ollama_client_overhead_ms": 2037.2
+    }
+  },
+  "Show me Sony earphones under ₹1000": {
+    "passed": true,
+    "response": "I found 1 Sony earphone under ₹1,000:\n\n| Product | Brand | Price | Discount | Rating | Stock |\n|---|---|---:|---:|---:|---|\n| Sony MDR-EX15AP Earphone ( Black ) | Sony | ₹829 | 7% OFF | 5.0★ | In Stock |\n\nThese options are currently in stock. Let me know if you'd like details about any of them.\n\n[[SHOPAI_PRODUCTS:sony-mdr-ex15ap-earphone-black]]",
+    "timings": {
+      "laya_start": "2026-10-10T10:27:57.802229+00:00",
+      "decision_provider": "laya-python-v2",
+      "decision_call_count": 1,
+      "laya_call_count": 1,
+      "laya_end": "2026-10-10T10:28:02.863778+00:00",
+      "laya_duration_ms": 5061.6,
+      "resolved_action": "product_search",
+      "product_search_start": "2026-10-10T10:28:03.042188+00:00",
+      "postgres_query_start": "2026-10-10T10:28:03.043674+00:00",
+      "postgres_query_count": 1,
+      "postgres_query_end": "2026-10-10T10:28:03.063344+00:00",
+      "postgres_query_duration_ms": 19.7,
+      "product_search_end": "2026-10-10T10:28:03.063428+00:00",
+      "product_search_duration_ms": 21.3,
+      "ollama_skipped_reason": "deterministic_catalog_search"
+    }
+  },
+  "suggestion_context": {
+    "name": "Apple iPhone 13 (Blue,128GB)",
+    "brand": "Apple",
+    "category": "Mobiles",
+    "price": 49900.0
+  },
+  "actual_product_suggestions": {
+    "passed": true,
+    "output": {
+      "suggestions": [
+        "Is the 128GB storage sufficient for this phone?",
+        "How does the Apple iPhone 13 compare in terms of camera quality to other flagship phones in its category?",
+        "Are there any alternative mobile brands that offer similar features at a lower price point?",
+        "Can the phone's battery life meet the daily usage needs of a heavy user?"
+      ]
+    }
+  }
+}

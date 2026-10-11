@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-10",
+  "kind": "live_suggestion_api_semantic_grounding_check",
+  "method": "FastAPI TestClient against actual /api/chat/suggestions route with configured Ollama HTTP calls; no browser; Laya is not used by the suggestion endpoint",
+  "model": "llama3.2:latest",
+  "request_id": "semantic-grounding-mobiles-live",
+  "context_source": "documentation/popup-performance-after-2026-10-10.json contexts.request_payloads.mobiles_filtered",
+  "status": 200,
+  "ollama_calls": 2,
+  "semantic_retries": 1,
+  "timings": {
+    "backend_api_ms": 7992.725,
+    "ollama_ms": 7989.09,
+    "ollama_server_total_ms_last_attempt": 1568.0686,
+    "ollama_load_ms_last_attempt": 22.7915,
+    "ollama_prompt_eval_ms_last_attempt": 346.703,
+    "ollama_generation_ms_last_attempt": 1179.925,
+    "output_parse_ms": 0.006,
+    "association_validation_ms": 1.699,
+    "validation_ms": 2.976
+  },
+  "response": {
+    "suggestions": [
+      "What is the price range of the Samsung Galaxy A06?",
+      "Is the Samsung Galaxy A16 5G available in Light Green?",
+      "Can the Samsung Galaxy A06 be expanded with more storage?",
+      "Are all Samsung Galaxy A16 5G variants 5G enabled?"
+    ]
+  },
+  "notes": [
+    "The initial Ollama result failed an existing unsupported-number check; it was not returned or cached.",
+    "One fresh generation was requested and validated successfully. The returned values and named models occur in the corresponding listing rows.",
+    "Association validation added about 1.7 ms across both attempts. The request took about 8.0 seconds because validation failure incurred a second Ollama generation.",
+    "This is API evidence only and does not certify rendered popup behavior or browser timing."
+  ]
+}

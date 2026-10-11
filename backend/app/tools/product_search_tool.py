@@ -116,6 +116,7 @@ class ProductSearchTool:
         frontend_only: bool = False,
         timings: Optional[Dict[str, Any]] = None,
         exact_name: Optional[str] = None,
+        exclude_ids: Optional[List[str]] = None,
     ) -> List[Dict[str, Any]]:
         """
         Executes a controlled query against PostgreSQL.
@@ -126,9 +127,11 @@ class ProductSearchTool:
             stmt = stmt.options(load_only(
                 Product.id, Product.name, Product.brand, Product.price, Product.mrp,
                 Product.discount_percent, Product.image, Product.images, Product.category,
-                Product.rating, Product.rating_count, Product.in_stock, Product.flattened_specs,
+                Product.rating, Product.rating_count, Product.in_stock, Product.stock, Product.flattened_specs,
             ))
         filters = []
+        if exclude_ids:
+            filters.append(Product.id.notin_(exclude_ids))
         query_rank_terms: List[str] = []
         exact_match = (func.lower(func.trim(Product.name)) == exact_name.strip().lower()
                        if exact_name and exact_name.strip() else None)
@@ -269,6 +272,7 @@ class ProductSearchTool:
                     "rating": product.rating,
                     "reviewCount": product.rating_count,
                     "inStock": product.in_stock,
+                    "stock": product.stock,
                     "specifications": dict(list((product.flattened_specs or {}).items())[:2]),
                 }
                 for product in results

@@ -1,0 +1,14 @@
+{
+  "changed_since_post_test_snapshot": [
+    "README.md",
+    "documentation/accessory_compatibility_2026-10-10/laya_restart.log",
+    "documentation/short_accessory_2026-10-10/api_runtime.log"
+  ],
+  "application_source_changed": false,
+  "prior_reports_unchanged": true,
+  "naturally_appended_runtime_logs": [
+    "documentation/accessory_compatibility_2026-10-10/laya_restart.log",
+    "documentation/short_accessory_2026-10-10/api_runtime.log"
+  ],
+  "staged_diff_empty": true
+}

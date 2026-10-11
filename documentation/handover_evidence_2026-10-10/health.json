@@ -1,0 +1,114 @@
+[
+  {
+    "url": "http://127.0.0.1:8000/api/health",
+    "status": 200,
+    "body": {
+      "status": "healthy",
+      "service": "ShopAI Backend",
+      "database": {
+        "type": "PostgreSQL",
+        "connected": true,
+        "details": "PostgreSQL connected successfully",
+        "product_count": 508
+      }
+    }
+  },
+  {
+    "url": "http://127.0.0.1:5056/health",
+    "status": 200,
+    "body": {
+      "status": "ok",
+      "model": "Mass121/laya-typed-decisions-v2",
+      "revision": "6fb41711ea5ff81097e6fc09ccebf31138b06e4d",
+      "loaded": true
+    }
+  },
+  {
+    "url": "http://127.0.0.1:5055/health",
+    "error": "ECONNREFUSED"
+  },
+  {
+    "url": "http://127.0.0.1:8080",
+    "status": 200,
+    "body": "HTML reachable"
+  },
+  {
+    "url": "http://127.0.0.1:11434/api/tags",
+    "status": 200,
+    "body": {
+      "models": [
+        {
+          "name": "nomic-embed-text:latest",
+          "model": "nomic-embed-text:latest",
+          "modified_at": "2026-10-01T11:25:08.3851273+05:30",
+          "size": 274302450,
+          "digest": "0a109f422b47e3a30ba2b10eca18548e944e8a23073ee3f3e947efcf3c45e59f",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "nomic-bert",
+            "families": [
+              "nomic-bert"
+            ],
+            "parameter_size": "137M",
+            "quantization_level": "F16",
+            "context_length": 2048,
+            "embedding_length": 768,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "embedding"
+          ]
+        },
+        {
+          "name": "gpt-oss:20b-cloud",
+          "model": "gpt-oss:20b-cloud",
+          "remote_model": "gpt-oss:20b",
+          "remote_host": "https://ollama.com",
+          "modified_at": "2026-09-21T13:12:31.7753699+05:30",
+          "size": 306,
+          "digest": "9a01793d9ef8de5309f157c06dbcbadfb598001b4a6f13cbc699cdff5042eaae",
+          "details": {
+            "parent_model": "",
+            "format": "",
+            "family": "",
+            "families": null,
+            "parameter_size": "20.9B",
+            "quantization_level": "MXFP4",
+            "context_length": 131072,
+            "embedding_length": 2880
+          },
+          "capabilities": [
+            "completion",
+            "tools",
+            "thinking"
+          ]
+        },
+        {
+          "name": "llama3.2:latest",
+          "model": "llama3.2:latest",
+          "modified_at": "2026-09-21T13:09:12.463796+05:30",
+          "size": 2019393189,
+          "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+          "details": {
+            "parent_model": "",
+            "format": "gguf",
+            "family": "llama",
+            "families": [
+              "llama"
+            ],
+            "parameter_size": "3.2B",
+            "quantization_level": "Q4_K_M",
+            "context_length": 131072,
+            "embedding_length": 3072,
+            "runner": "ggml"
+          },
+          "capabilities": [
+            "completion",
+            "tools"
+          ]
+        }
+      ]
+    }
+  }
+]

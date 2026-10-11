@@ -1,0 +1,46 @@
+11:25:27 am [vite] (client) Re-optimizing dependencies because lockfile has changed
+
+  VITE v8.1.5  ready in 17434 ms
+
+  ➜  Local:   http://127.0.0.1:8080/
+11:25:29 am [vite] (ssr) connected.
+11:25:29 am [vite] (client) [optimizer] scanning dependencies...
+11:25:30 am [vite] (client) [optimizer] bundling dependencies...
+11:58:07 am [vite] (client) hmr update /src/components/storefront/ProductSuggestionPopup.tsx, /src/routes/index.tsx?tsr-split=component, /src/components/storefront/ChatbotPanel.tsx, /src/styles.css?direct
+11:58:07 am [vite] (ssr) page reload src/services/api.ts
+11:58:07 am [vite] (ssr) program reload
+11:58:08 am [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx
+11:59:26 am [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx
+12:00:39 pm [vite] (client) hmr update /src/styles.css?direct, /src/context/CartContext.tsx
+12:00:39 pm [vite] (ssr) page reload src/context/CartContext.tsx
+12:00:39 pm [vite] (client) hmr invalidate /src/context/CartContext.tsx Could not Fast Refresh ("useCart" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:00:39 pm [vite] (client) hmr update /src/routes/__root.tsx, /src/components/storefront/Navbar.tsx, /src/components/storefront/CartDrawer.tsx, /src/components/storefront/ProductCard.tsx, /src/components/storefront/ChatbotPanel.tsx
+12:01:26 pm [vite] (client) hmr update /src/context/CartContext.tsx, /src/styles.css?direct
+12:01:26 pm [vite] (client) hmr invalidate /src/context/CartContext.tsx Could not Fast Refresh ("useCart" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:01:26 pm [vite] (client) hmr update /src/routes/__root.tsx, /src/components/storefront/Navbar.tsx, /src/components/storefront/CartDrawer.tsx, /src/components/storefront/ProductCard.tsx, /src/components/storefront/ChatbotPanel.tsx
+12:01:27 pm [vite] (client) hmr update /src/styles.css?direct, /src/context/CartContext.tsx
+12:01:27 pm [vite] (ssr) page reload src/context/CartContext.tsx
+12:01:27 pm [vite] (client) hmr invalidate /src/context/CartContext.tsx Could not Fast Refresh ("useCart" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:01:27 pm [vite] (client) hmr update /src/routes/__root.tsx, /src/components/storefront/Navbar.tsx, /src/components/storefront/CartDrawer.tsx, /src/components/storefront/ProductCard.tsx, /src/components/storefront/ChatbotPanel.tsx
+12:01:28 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx
+12:01:30 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx
+12:03:30 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx
+12:03:30 pm [vite] (client) hmr update /src/context/CartContext.tsx, /src/styles.css?direct
+12:03:30 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx
+12:03:30 pm [vite] (client) hmr invalidate /src/context/CartContext.tsx Could not Fast Refresh ("useCart" export is incompatible). Learn more at https://github.com/vitejs/vite-plugin-react/tree/main/packages/plugin-react#consistent-components-exports
+12:03:30 pm [vite] (client) hmr update /src/routes/__root.tsx, /src/components/storefront/Navbar.tsx, /src/components/storefront/CartDrawer.tsx, /src/components/storefront/ProductCard.tsx, /src/components/storefront/ChatbotPanel.tsx
+12:03:30 pm [vite] (client) hmr update /src/components/storefront/ProductSuggestionPopup.tsx, /src/routes/index.tsx?tsr-split=component, /src/components/storefront/ChatbotPanel.tsx, /src/styles.css?direct
+12:03:30 pm [vite] (ssr) page reload src/services/api.ts
+12:03:30 pm [vite] (client) hmr update /src/styles.css?direct, /src/context/CartContext.tsx
+12:03:30 pm [vite] (ssr) page reload src/context/CartContext.tsx
+12:52:39 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+12:52:39 pm [vite] (ssr) page reload src/lib/product-suggestions.ts
+12:52:39 pm [vite] (ssr) program reload
+12:52:40 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+12:52:40 pm [vite] (ssr) page reload src/components/storefront/ProductSuggestionPopup.tsx
+12:54:26 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+12:54:26 pm [vite] (ssr) page reload src/lib/product-suggestions.ts
+12:54:29 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+12:54:29 pm [vite] (ssr) page reload src/components/storefront/ProductSuggestionPopup.tsx
+12:54:29 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+12:54:29 pm [vite] (ssr) page reload src/lib/product-suggestions.ts

@@ -1,0 +1,17 @@
+[
+  {
+    "exit": 0,
+    "stdout": "{\"python\": \"3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]\", \"packages\": {\"fastapi\": \"0.142.2\", \"uvicorn\": \"0.54.0\", \"pydantic\": \"2.13.5\", \"pydantic-settings\": \"2.15.0\", \"sqlalchemy\": \"2.1.2\", \"psycopg\": \"3.3.6\", \"requests\": \"2.34.2\", \"httpx\": \"0.28.1\"}}\r\n",
+    "stderr": ""
+  },
+  {
+    "exit": 0,
+    "stdout": "{\"python\": \"3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]\", \"packages\": {\"laya\": \"0.4.0\", \"torch\": \"2.14.1\", \"transformers\": \"5.19.0\", \"datasets\": \"5.1.0\"}}\r\n",
+    "stderr": ""
+  },
+  {
+    "exit": 0,
+    "stdout": "v22.14.0\r\n",
+    "stderr": ""
+  }
+]

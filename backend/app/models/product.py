@@ -98,6 +98,7 @@ class Product(Base):
             "rating": self.rating,
             "reviewCount": self.rating_count,
             "inStock": self.in_stock,
+            "stock": self.stock,
             "description": self.description,
             "specifications": self.flattened_specs or {},
         }

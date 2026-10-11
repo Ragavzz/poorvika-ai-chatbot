@@ -40,6 +40,22 @@ function harness() {
   };
 }
 const jsx = { jsx: (type, props) => ({ type, props }), jsxs: (type, props) => ({ type, props }) };
+test("manual assistant toggle opens and retains the mounted chat panel", () => {
+  const outer = harness();
+  const { Chatbot } = load("Chatbot.tsx", {
+    react: outer.hooks,
+    "react/jsx-runtime": jsx,
+    "./ProductSuggestionPopup": { ProductSuggestionPopup: "popup" },
+  });
+  let tree = outer.render(Chatbot);
+  assert.equal(find(tree, item => item.type === "panel"), null);
+  find(tree, item => item.props?.["aria-label"] === "Open shopping assistant").props.onClick();
+  tree = outer.render(Chatbot);
+  assert.equal(find(tree, item => item.type === "panel").props.open, true);
+  find(tree, item => item.props?.["aria-label"] === "Close shopping assistant").props.onClick();
+  tree = outer.render(Chatbot);
+  assert.equal(find(tree, item => item.type === "panel").props.open, false);
+});
 function load(file, modules) {
   const output = ts.transpileModule(
     fs.readFileSync(path.join(__dirname, "../src/components/storefront", file), "utf8"),
@@ -128,4 +144,54 @@ test("popup selection opens the original chatbot and submits once with product c
   );
   assert.equal(manualContext.suggestion_product_id, undefined);
   assert.deepEqual(manualContext.recent_product_ids, [productId]);
+});
+
+test("cart-total submissions send the latest client snapshot after cart changes", async () => {
+  const inner = harness();
+  const requests = [];
+  let items = [];
+  const product = { id: 'total-test-product', name: 'Current Product', price: 17250 };
+  const { ChatbotPanel } = load('ChatbotPanel.tsx', {
+    react: inner.hooks,
+    'react/jsx-runtime': jsx,
+    '@/services/api': { api: { chat: async text => { requests.push(text); return 'Cart summary'; } } },
+    '@/context/CartContext': { useCart: () => ({ items, addToCart() {}, removeFromCart() {}, updateQuantity() {} }) },
+    '@/lib/shopping-response': { formatShoppingResponse: text => text },
+    '@/lib/chat-cart': { applyChatCartResponse: async text => text },
+  });
+  const props = { open: true, onClose() {} };
+  const phrases = ['What is my current total?', 'What is the total price of all items?', 'How much is my cart?', 'What is my updated total?', 'How much do I owe?'];
+  const quantities = [0, 1, 3, 2, 0];
+  for (let i = 0; i < phrases.length; i++) {
+    items = quantities[i] ? [{ product, quantity: quantities[i] }] : [];
+    const tree = inner.render(ChatbotPanel, props);
+    await find(tree, node => node.type === 'PromptInput').props.onSubmit({ text: phrases[i] });
+    const context = JSON.parse(requests.at(-1).match(/<shopai_client_context>(.*?)<\/shopai_client_context>/)[1]);
+    assert.deepEqual(context.cart, items.map(({ product, quantity }) => ({ id: product.id, name: product.name, price: product.price, quantity })));
+  }
+  assert.equal(new Set(requests.map(request => JSON.parse(request.match(/<shopai_client_context>(.*?)<\/shopai_client_context>/)[1]).session_id)).size, 1);
+});
+
+
+test("welcome survives reopen once; provider errors stay separate from assistant answers", async () => {
+  const inner = harness();
+  const { ChatbotPanel } = load("ChatbotPanel.tsx", {
+    react: inner.hooks, "react/jsx-runtime": jsx,
+    "@/services/api": { api: { chat: async () => { throw new Error("Provider disabled by configuration"); } } },
+    "@/context/CartContext": { useCart: () => ({ items: [], addToCart() {}, removeFromCart() {}, updateQuantity() {} }) },
+    "@/lib/shopping-response": { formatShoppingResponse: text => text },
+    "@/lib/chat-cart": { applyChatCartResponse: async text => text },
+  });
+  const props = { open: true, onClose() {} };
+  let tree = inner.render(ChatbotPanel, props);
+  const welcome = find(tree, node => node.type === "MessageResponse").props.children;
+  assert.match(welcome, /Hi! Welcome to Poorvika Shopping Assistant/);
+  inner.render(ChatbotPanel, { ...props, open: false });
+  tree = inner.render(ChatbotPanel, props);
+  assert.equal(find(tree, node => node.type === "MessageResponse").props.children, welcome);
+  assert.equal(find(tree, node => node.props?.children === "Apple accessories"), null);
+  await find(tree, node => node.type === "PromptInput").props.onSubmit({ text: "hello" });
+  tree = inner.render(ChatbotPanel, props);
+  assert.equal(find(tree, node => node.props?.role === "status").props.children, "Provider disabled by configuration");
+  assert.equal(find(tree, node => node.type === "MessageResponse").props.children, welcome);
 });

@@ -1,0 +1,618 @@
+{
+  "kind": "q13 after-tuning API measurements; actual configured Ollama via FastAPI TestClient; model already warm; no browser timing",
+  "contexts": {
+    "iphone": {
+      "misses": [
+        {
+          "request_id": "arrival-final-iphone-0",
+          "status": 200,
+          "wall_ms": 4005.463,
+          "timing": {
+            "request_id": "arrival-final-iphone-0",
+            "backend_received": "2026-10-10T17:16:14.288660+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.014,
+            "cache": "miss",
+            "prompt_build_ms": 0.714,
+            "prompt_chars": 887,
+            "context_chars": 576,
+            "context_bytes": 576,
+            "request_context_chars": 2665,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 3964.635,
+                "model_load_ms": 34.0786,
+                "prompt_eval_ms": 247.395,
+                "generation_ms": 1008.647,
+                "server_total_ms": 1866.2919,
+                "parse_ms": 0.004,
+                "validation_ms": 3.552
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:14.294803+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.004,
+            "validated": "2026-10-10T17:16:18.259409+00:00",
+            "ollama_ms": 3964.621,
+            "ollama_server_generation_ms": 1008.647,
+            "ollama_load_ms": 34.0786,
+            "ollama_prompt_eval_ms": 247.395,
+            "ollama_server_total_ms": 1866.2919,
+            "ollama_prompt_eval_tokens": 264,
+            "ollama_generation_tokens": 34,
+            "association_validation_ms": 0.0,
+            "validation_ms": 3.552,
+            "backend_api_ms": 3973.501,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the phone's storage capacity?",
+              "Is it water-resistant?",
+              "Does it support 5G?",
+              "Is the phone available in other colors?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-final-iphone-1",
+          "status": 200,
+          "wall_ms": 1128.814,
+          "timing": {
+            "request_id": "arrival-final-iphone-1",
+            "backend_received": "2026-10-10T17:16:18.267953+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.014,
+            "cache": "miss",
+            "prompt_build_ms": 0.539,
+            "prompt_chars": 887,
+            "context_chars": 576,
+            "context_bytes": 576,
+            "request_context_chars": 2665,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 1121.087,
+                "model_load_ms": 16.3302,
+                "prompt_eval_ms": 19.767,
+                "generation_ms": 1074.853,
+                "server_total_ms": 1117.8885,
+                "parse_ms": 0.006,
+                "validation_ms": 0.698
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:18.269719+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.006,
+            "validated": "2026-10-10T17:16:19.390770+00:00",
+            "ollama_ms": 1121.067,
+            "ollama_server_generation_ms": 1074.853,
+            "ollama_load_ms": 16.3302,
+            "ollama_prompt_eval_ms": 19.767,
+            "ollama_server_total_ms": 1117.8885,
+            "ollama_prompt_eval_tokens": 264,
+            "ollama_generation_tokens": 36,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.698,
+            "backend_api_ms": 1123.808,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Is Apple iPhone 15 waterproof?",
+              "Does it have expandable storage?",
+              "Can it be used with non-Apple accessories?",
+              "Is the screen touch responsive?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-final-iphone-2",
+          "status": 200,
+          "wall_ms": 1347.799,
+          "timing": {
+            "request_id": "arrival-final-iphone-2",
+            "backend_received": "2026-10-10T17:16:19.397162+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.013,
+            "cache": "miss",
+            "prompt_build_ms": 0.573,
+            "prompt_chars": 887,
+            "context_chars": 576,
+            "context_bytes": 576,
+            "request_context_chars": 2665,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 1339.891,
+                "model_load_ms": 22.5326,
+                "prompt_eval_ms": 20.091,
+                "generation_ms": 1286.609,
+                "server_total_ms": 1336.089,
+                "parse_ms": 0.006,
+                "validation_ms": 0.871
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:19.398942+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.006,
+            "validated": "2026-10-10T17:16:20.738790+00:00",
+            "ollama_ms": 1339.879,
+            "ollama_server_generation_ms": 1286.609,
+            "ollama_load_ms": 22.5326,
+            "ollama_prompt_eval_ms": 20.091,
+            "ollama_server_total_ms": 1336.089,
+            "ollama_prompt_eval_tokens": 264,
+            "ollama_generation_tokens": 44,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.871,
+            "backend_api_ms": 1342.483,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the price of Apple iPhone 15?",
+              "Does it have 5G network support?",
+              "Is the display Super Retina XDR, OLED?",
+              "Is the battery rechargeable lithium-ion?"
+            ]
+          }
+        }
+      ],
+      "median_ms": 1347.799,
+      "p95_ms": 4005.463
+    },
+    "samsung_a16": {
+      "misses": [
+        {
+          "request_id": "arrival-final-samsung_a16-0",
+          "status": 200,
+          "wall_ms": 4156.966,
+          "timing": {
+            "request_id": "arrival-final-samsung_a16-0",
+            "backend_received": "2026-10-10T17:16:20.752043+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 2,
+            "cache_lookup_ms": 0.013,
+            "cache": "miss",
+            "prompt_build_ms": 0.918,
+            "prompt_chars": 745,
+            "context_chars": 434,
+            "context_bytes": 434,
+            "request_context_chars": 1872,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 1694.149,
+                "model_load_ms": 23.6685,
+                "prompt_eval_ms": 21.702,
+                "generation_ms": 1599.125,
+                "server_total_ms": 1690.8345,
+                "parse_ms": 0.007,
+                "validation_ms": 0.657
+              },
+              {
+                "attempt": 2,
+                "http_status": 200,
+                "ollama_wall_ms": 2453.605,
+                "model_load_ms": 31.4244,
+                "prompt_eval_ms": 369.37,
+                "generation_ms": 1991.5,
+                "server_total_ms": 2449.2185,
+                "parse_ms": 0.011,
+                "validation_ms": 0.983
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:22.448392+00:00",
+            "generation_attempts": 2,
+            "semantic_retry_count": 1,
+            "output_parse_ms": 0.011,
+            "association_validation_ms": 0.0,
+            "validation_ms": 1.64,
+            "validated": "2026-10-10T17:16:24.901957+00:00",
+            "ollama_ms": 4147.743,
+            "ollama_server_generation_ms": 1991.5,
+            "ollama_load_ms": 31.4244,
+            "ollama_prompt_eval_ms": 369.37,
+            "ollama_server_total_ms": 2449.2185,
+            "ollama_prompt_eval_tokens": 298,
+            "ollama_generation_tokens": 67,
+            "backend_api_ms": 4151.002,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the price of the Samsung Galaxy A16 5G?",
+              "Is the Samsung Galaxy A16 5G available in Blue Black color?",
+              "Does the Samsung Galaxy A16 5G have a Super AMOLED display?",
+              "Can the Samsung Galaxy A16 5G support 5G network?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-final-samsung_a16-1",
+          "status": 200,
+          "wall_ms": 1059.607,
+          "timing": {
+            "request_id": "arrival-final-samsung_a16-1",
+            "backend_received": "2026-10-10T17:16:24.910814+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.028,
+            "cache": "miss",
+            "prompt_build_ms": 1.363,
+            "prompt_chars": 745,
+            "context_chars": 434,
+            "context_bytes": 434,
+            "request_context_chars": 1872,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 1046.311,
+                "model_load_ms": 32.3293,
+                "prompt_eval_ms": 24.732,
+                "generation_ms": 973.385,
+                "server_total_ms": 1039.8138,
+                "parse_ms": 0.011,
+                "validation_ms": 1.095
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:24.913997+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.011,
+            "validated": "2026-10-10T17:16:25.960253+00:00",
+            "ollama_ms": 1046.287,
+            "ollama_server_generation_ms": 973.385,
+            "ollama_load_ms": 32.3293,
+            "ollama_prompt_eval_ms": 24.732,
+            "ollama_server_total_ms": 1039.8138,
+            "ollama_prompt_eval_tokens": 242,
+            "ollama_generation_tokens": 33,
+            "association_validation_ms": 0.0,
+            "validation_ms": 1.095,
+            "backend_api_ms": 1050.982,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the phone's battery life?",
+              "Is the phone 5G enabled?",
+              "Can the phone be unlocked?",
+              "Is the phone waterproof?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-final-samsung_a16-2",
+          "status": 200,
+          "wall_ms": 1683.85,
+          "timing": {
+            "request_id": "arrival-final-samsung_a16-2",
+            "backend_received": "2026-10-10T17:16:25.972495+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.037,
+            "cache": "miss",
+            "prompt_build_ms": 1.999,
+            "prompt_chars": 745,
+            "context_chars": 434,
+            "context_bytes": 434,
+            "request_context_chars": 1872,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 1668.731,
+                "model_load_ms": 47.6256,
+                "prompt_eval_ms": 34.546,
+                "generation_ms": 1569.942,
+                "server_total_ms": 1662.9715,
+                "parse_ms": 0.006,
+                "validation_ms": 0.643
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:25.977606+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.006,
+            "validated": "2026-10-10T17:16:27.646305+00:00",
+            "ollama_ms": 1668.721,
+            "ollama_server_generation_ms": 1569.942,
+            "ollama_load_ms": 47.6256,
+            "ollama_prompt_eval_ms": 34.546,
+            "ollama_server_total_ms": 1662.9715,
+            "ollama_prompt_eval_tokens": 242,
+            "ollama_generation_tokens": 51,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.643,
+            "backend_api_ms": 1674.879,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Is the Samsung Galaxy A16 5G available in other colors?",
+              "What is the difference between Primary and Secondary Camera?",
+              "Does the phone support 5G network only?",
+              "Is the 6GB RAM sufficient for daily usage?"
+            ]
+          }
+        }
+      ],
+      "median_ms": 1683.85,
+      "p95_ms": 4156.966
+    },
+    "filtered_mobiles": {
+      "misses": [
+        {
+          "request_id": "arrival-final-filtered_mobiles-0",
+          "status": 503,
+          "wall_ms": 6471.398,
+          "timing": {
+            "request_id": "arrival-final-filtered_mobiles-0",
+            "backend_received": "2026-10-10T17:16:27.662624+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 2,
+            "cache_lookup_ms": 0.017,
+            "cache": "miss",
+            "prompt_build_ms": 0.615,
+            "prompt_chars": 1597,
+            "context_chars": 1134,
+            "context_bytes": 1134,
+            "request_context_chars": 2052,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 4153.184,
+                "model_load_ms": 27.9565,
+                "prompt_eval_ms": 2204.219,
+                "generation_ms": 1875.773,
+                "server_total_ms": 4142.4329,
+                "parse_ms": 0.012,
+                "validation_ms": 6.967
+              },
+              {
+                "attempt": 2,
+                "http_status": 200,
+                "ollama_wall_ms": 2260.179,
+                "model_load_ms": 37.6002,
+                "prompt_eval_ms": 438.979,
+                "generation_ms": 1753.986,
+                "server_total_ms": 2254.9243,
+                "parse_ms": 0.01,
+                "validation_ms": 1.38
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:31.818897+00:00",
+            "generation_attempts": 2,
+            "semantic_retry_count": 1,
+            "output_parse_ms": 0.01,
+            "association_validation_ms": 7.859,
+            "validation_ms": 8.346,
+            "ollama_ms": 6414.098,
+            "failure_reason": "invalid_model_output",
+            "backend_api_ms": 6463.131,
+            "status": 503
+          },
+          "response": {
+            "detail": "Suggestions are unavailable (invalid_model_output)."
+          }
+        },
+        {
+          "request_id": "arrival-final-filtered_mobiles-1",
+          "status": 200,
+          "wall_ms": 2211.065,
+          "timing": {
+            "request_id": "arrival-final-filtered_mobiles-1",
+            "backend_received": "2026-10-10T17:16:34.138121+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.03,
+            "cache": "miss",
+            "prompt_build_ms": 1.135,
+            "prompt_chars": 1597,
+            "context_chars": 1134,
+            "context_bytes": 1134,
+            "request_context_chars": 2052,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 2195.261,
+                "model_load_ms": 48.313,
+                "prompt_eval_ms": 33.369,
+                "generation_ms": 2100.781,
+                "server_total_ms": 2197.4311,
+                "parse_ms": 0.006,
+                "validation_ms": 1.275
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:34.141703+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.006,
+            "validated": "2026-10-10T17:16:36.336927+00:00",
+            "ollama_ms": 2195.246,
+            "ollama_server_generation_ms": 2100.781,
+            "ollama_load_ms": 48.313,
+            "ollama_prompt_eval_ms": 33.369,
+            "ollama_server_total_ms": 2197.4311,
+            "ollama_prompt_eval_tokens": 488,
+            "ollama_generation_tokens": 68,
+            "association_validation_ms": 0.979,
+            "validation_ms": 1.275,
+            "backend_api_ms": 2200.136,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the price range of the Samsung Galaxy A16 5G?",
+              "Is the Samsung Galaxy A06 4GB-64GB available?",
+              "Can the Samsung Galaxy A16 5G be used in multiple regions?",
+              "Is the Gold variant of the Samsung Galaxy A16 5G 5G supported?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-final-filtered_mobiles-2",
+          "status": 200,
+          "wall_ms": 2035.954,
+          "timing": {
+            "request_id": "arrival-final-filtered_mobiles-2",
+            "backend_received": "2026-10-10T17:16:36.347103+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache_lookup_ms": 0.023,
+            "cache": "miss",
+            "prompt_build_ms": 0.881,
+            "prompt_chars": 1597,
+            "context_chars": 1134,
+            "context_bytes": 1134,
+            "request_context_chars": 2052,
+            "ollama_attempts": [
+              {
+                "attempt": 1,
+                "http_status": 200,
+                "ollama_wall_ms": 2022.052,
+                "model_load_ms": 33.524,
+                "prompt_eval_ms": 32.136,
+                "generation_ms": 1935.074,
+                "server_total_ms": 2015.0678,
+                "parse_ms": 0.01,
+                "validation_ms": 1.634
+              }
+            ],
+            "ollama_started": "2026-10-10T17:16:36.349760+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.01,
+            "validated": "2026-10-10T17:16:38.371767+00:00",
+            "ollama_ms": 2022.034,
+            "ollama_server_generation_ms": 1935.074,
+            "ollama_load_ms": 33.524,
+            "ollama_prompt_eval_ms": 32.136,
+            "ollama_server_total_ms": 2015.0678,
+            "ollama_prompt_eval_tokens": 488,
+            "ollama_generation_tokens": 64,
+            "association_validation_ms": 1.191,
+            "validation_ms": 1.634,
+            "backend_api_ms": 2025.967,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the network type supported by Samsung Galaxy A16 5G?",
+              "Is Samsung Galaxy A06 4GB-64GB available?",
+              "Can I get a 6GB RAM version of Samsung Galaxy A16 5G?",
+              "Are Samsung Galaxy A06 phones available in Light Green color?"
+            ]
+          }
+        }
+      ],
+      "median_ms": 2211.065,
+      "p95_ms": 6471.398
+    }
+  },
+  "cache_hits": [
+    {
+      "context": "iphone",
+      "request_id": "arrival-final-iphone-cache-hit",
+      "status": 200,
+      "wall_ms": 6.954,
+      "timing": {
+        "request_id": "arrival-final-iphone-cache-hit",
+        "backend_received": "2026-10-10T17:16:20.745066+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "cache_lookup_ms": 0.011,
+        "backend_api_ms": 1.963,
+        "status": 200
+      },
+      "response": {
+        "suggestions": [
+          "What is the price of Apple iPhone 15?",
+          "Does it have 5G network support?",
+          "Is the display Super Retina XDR, OLED?",
+          "Is the battery rechargeable lithium-ion?"
+        ]
+      }
+    },
+    {
+      "context": "samsung_a16",
+      "request_id": "arrival-final-samsung_a16-cache-hit",
+      "status": 200,
+      "wall_ms": 8.758,
+      "timing": {
+        "request_id": "arrival-final-samsung_a16-cache-hit",
+        "backend_received": "2026-10-10T17:16:27.654030+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "cache_lookup_ms": 0.01,
+        "backend_api_ms": 2.263,
+        "status": 200
+      },
+      "response": {
+        "suggestions": [
+          "Is the Samsung Galaxy A16 5G available in other colors?",
+          "What is the difference between Primary and Secondary Camera?",
+          "Does the phone support 5G network only?",
+          "Is the 6GB RAM sufficient for daily usage?"
+        ]
+      }
+    },
+    {
+      "context": "filtered_mobiles",
+      "request_id": "arrival-final-filtered_mobiles-cache-hit",
+      "status": 200,
+      "wall_ms": 10.409,
+      "timing": {
+        "request_id": "arrival-final-filtered_mobiles-cache-hit",
+        "backend_received": "2026-10-10T17:16:38.383013+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "cache_lookup_ms": 0.011,
+        "backend_api_ms": 2.843,
+        "status": 200
+      },
+      "response": {
+        "suggestions": [
+          "What is the network type supported by Samsung Galaxy A16 5G?",
+          "Is Samsung Galaxy A06 4GB-64GB available?",
+          "Can I get a 6GB RAM version of Samsung Galaxy A16 5G?",
+          "Are Samsung Galaxy A06 phones available in Light Green color?"
+        ]
+      }
+    }
+  ]
+}

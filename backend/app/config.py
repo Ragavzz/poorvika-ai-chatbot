@@ -1,7 +1,7 @@
 """Application configuration management using Pydantic Settings."""
 
 import os
-from typing import Optional
+from typing import Optional, Literal
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -30,6 +30,9 @@ class Settings(BaseSettings):
     OLLAMA_API_URL: str = "http://localhost:11434/api/chat"
     OLLAMA_MODEL: str = "llama3.2:latest"
     LAYA_DECIDE_URL: str = "http://127.0.0.1:5056/decide"
+    DECISION_PROVIDER: Literal["laya", "rules"] = "laya"
+    OLLAMA_ENABLED: bool = True
+    SUGGESTION_TIMEOUT_SECONDS: float = 45
 
     # Dataset file path
     DATASET_PATH: str = os.path.join(

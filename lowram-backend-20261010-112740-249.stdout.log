@@ -1,0 +1,11 @@
+INFO:     127.0.0.1:49225 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49227 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49229 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49230 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49231 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49232 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49233 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49234 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49235 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49236 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49238 - "GET /api/products?limit=2 HTTP/1.1" 200 OK

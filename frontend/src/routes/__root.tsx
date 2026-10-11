@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { CartProvider } from "@/context/CartContext";
 import { CartDrawer } from "@/components/storefront/CartDrawer";
 import { Toaster } from "@/components/ui/sonner";
+import { ListingSuggestionProvider } from "@/components/storefront/ProductSuggestionPopup";
 
 function NotFoundComponent() {
   return (
@@ -99,6 +100,7 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       <CartProvider>
+      <ListingSuggestionProvider>
         <Navbar />
         <main>
           <Outlet />
@@ -107,6 +109,7 @@ function RootComponent() {
         <Chatbot />
         <CartDrawer />
         <Toaster position="bottom-right" />
+      </ListingSuggestionProvider>
       </CartProvider>
     </QueryClientProvider>
   );

@@ -1,0 +1,348 @@
+exit=0
+
+[Test 1] Database contains 508 products (100% ingested).
+
+[Test 2] Product 'Sony MDR-EX15AP Earphone ( Black )' verified: Category=Headphones, Price=Rs.829.0, Stock=64
+
+[Test 3] SearchTool: 24 Sony products, 35 Headphones.
+
+[Test 4] SearchTool: Found 50 items under Rs.1000.
+
+[Test 5] Intent extraction for 'Sony earphones under 1000': {'intent': 'product_search', 'category': None, 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+
+[Test 6] Chat Service Grounded Response preview:
+Here are in-stock options ranked by customer rating:
+
+I found 1 Sony earphone under ?1,000:
+
+| Product | Brand | Price | Discount | Rating | Stock |
+|---|---|---:|---:|---:|---|
+| Sony MDR-EX15AP Earp...
+
+[Test 7] Empty prompt handled cleanly.
+
+[Test 8] All FastAPI endpoints (/api/products, /api/products/search, /api/chat) passed.
+
+C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+  from starlette.testclient import TestClient as TestClient  # noqa
+....OLLAMA_API_KEY is not set. Using local fallback parsing/formatting.
+...2026-10-10 09:18:31,766 [INFO] httpx: HTTP Request: GET http://testserver/ "HTTP/1.1 200 OK"
+2026-10-10 09:18:31,983 [INFO] httpx: HTTP Request: GET http://testserver/api/products?limit=5 "HTTP/1.1 200 OK"
+2026-10-10 09:18:32,035 [INFO] httpx: HTTP Request: GET http://testserver/api/products/search?q=Apple "HTTP/1.1 200 OK"
+2026-10-10 09:18:32,059 [INFO] shopai.services.laya: LAYA V2 request: Show me Apple accessories
+2026-10-10 09:18:48,077 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.3219
+2026-10-10 09:18:48,079 [INFO] shopai.services.chat: CHAT TIMING laya_ms=16021.4
+2026-10-10 09:18:48,079 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.3219, source=laya-python-v2
+2026-10-10 09:18:48,079 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.3219
+2026-10-10 09:18:48,080 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-10 09:18:48,080 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-10 09:18:48,080 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:48,083 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=2.9 filters={'intent': 'product_search', 'category': 'accessories', 'brand': 'Apple', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:48,083 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'accessories', 'brand': 'Apple', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:48,125 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=41.6 postgres_query_ms=38.2
+2026-10-10 09:18:48,125 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 09:18:48,125 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 09:18:48,125 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:48,125 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 09:18:48,127 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:48:32.057564+00:00","laya_start":"2026-10-10T03:48:32.057990+00:00","laya_end":"2026-10-10T03:48:48.079374+00:00","laya_duration_ms":16021.4,"laya_call_count":1,"product_search_start":"2026-10-10T03:48:48.083610+00:00","product_search_end":"2026-10-10T03:48:48.125159+00:00","product_search_duration_ms":41.6,"postgres_query_duration_ms":38.2,"postgres_query_start":"2026-10-10T03:48:48.086507+00:00","postgres_query_end":"2026-10-10T03:48:48.124691+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":16069.3}
+2026-10-10 09:18:48,138 [INFO] httpx: HTTP Request: POST http://testserver/api/chat "HTTP/1.1 200 OK"
+.2026-10-10 09:18:49,763 [INFO] shopai.database.ingest: Ingestion complete: 508 inserted, 0 updated.
+.........................................2026-10-10 09:18:50,790 [INFO] shopai.services.ollama: OLLAMA request: model=llama3.2:latest
+2026-10-10 09:18:50,791 [INFO] shopai.services.ollama: OLLAMA prompt_chars=1221
+2026-10-10 09:18:50,791 [INFO] shopai.services.ollama: OLLAMA response received (10 characters)
+2026-10-10 09:18:50,791 [INFO] shopai.services.ollama: CHAT TIMING ollama_call_ms=0.6 status=<Mock name='mock.status_code' id='1780440682512'> load_ms=0.0 prompt_eval_ms=0.0 eval_ms=0.0 eval_tokens=None
+.2026-10-10 09:18:50,792 [INFO] shopai.services.ollama: OLLAMA request: model=llama3.2:latest
+2026-10-10 09:18:50,792 [INFO] shopai.services.ollama: OLLAMA prompt_chars=489
+2026-10-10 09:18:50,793 [INFO] shopai.services.ollama: OLLAMA response received (10 characters)
+2026-10-10 09:18:50,793 [INFO] shopai.services.ollama: CHAT TIMING ollama_call_ms=0.5 status=<Mock name='mock.status_code' id='1780440682176'> load_ms=0.0 prompt_eval_ms=0.0 eval_ms=0.0 eval_tokens=None
+.2026-10-10 09:18:50,794 [INFO] shopai.services.ollama: OLLAMA request: model=llama3.2:latest
+2026-10-10 09:18:50,794 [INFO] shopai.services.ollama: OLLAMA prompt_chars=1136
+2026-10-10 09:18:50,794 [INFO] shopai.services.ollama: OLLAMA response received (10 characters)
+2026-10-10 09:18:50,795 [INFO] shopai.services.ollama: CHAT TIMING ollama_call_ms=0.8 status=<Mock name='mock.status_code' id='1780440689232'> load_ms=0.0 prompt_eval_ms=0.0 eval_ms=0.0 eval_tokens=None
+.2026-10-10 09:18:50,814 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.802809+00:00","ollama_started":"2026-10-10T03:48:50.807259+00:00","ollama_received":"2026-10-10T03:48:50.809021+00:00","ollama_ms":1.783,"ollama_server_generation_ms":0.0,"validated":"2026-10-10T03:48:50.813592+00:00","validation_ms":4.567,"backend_api_ms":11.553}
+2026-10-10 09:18:50,816 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 200 OK"
+.2026-10-10 09:18:50,827 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 09:18:50,834 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 422 Unprocessable Entity"
+2026-10-10 09:18:50,848 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 422 Unprocessable Entity"
+.2026-10-10 09:18:50,859 [WARNING] shopai.routes.suggestions: Suggestion generation failed: ValidationError
+2026-10-10 09:18:50,860 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.855921+00:00","ollama_started":"2026-10-10T03:48:50.857617+00:00","ollama_received":"2026-10-10T03:48:50.858886+00:00","ollama_ms":1.293,"ollama_server_generation_ms":0.0,"backend_api_ms":4.313}
+2026-10-10 09:18:50,862 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+2026-10-10 09:18:50,872 [WARNING] shopai.routes.suggestions: Suggestion generation failed: ValidationError
+2026-10-10 09:18:50,873 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.869778+00:00","ollama_started":"2026-10-10T03:48:50.870970+00:00","ollama_received":"2026-10-10T03:48:50.872378+00:00","ollama_ms":1.43,"ollama_server_generation_ms":0.0,"backend_api_ms":3.801}
+2026-10-10 09:18:50,875 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+2026-10-10 09:18:50,888 [WARNING] shopai.routes.suggestions: Suggestion generation failed: ValidationError
+2026-10-10 09:18:50,889 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.885322+00:00","ollama_started":"2026-10-10T03:48:50.886581+00:00","ollama_received":"2026-10-10T03:48:50.887456+00:00","ollama_ms":0.907,"ollama_server_generation_ms":0.0,"backend_api_ms":3.711}
+2026-10-10 09:18:50,891 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+2026-10-10 09:18:50,905 [WARNING] shopai.routes.suggestions: Suggestion generation failed: ValidationError
+2026-10-10 09:18:50,906 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.897491+00:00","ollama_started":"2026-10-10T03:48:50.900054+00:00","ollama_received":"2026-10-10T03:48:50.904486+00:00","ollama_ms":4.456,"ollama_server_generation_ms":0.0,"backend_api_ms":9.053}
+2026-10-10 09:18:50,908 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+2026-10-10 09:18:50,918 [WARNING] shopai.routes.suggestions: Suggestion generation failed: ValidationError
+2026-10-10 09:18:50,919 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.913926+00:00","ollama_started":"2026-10-10T03:48:50.917321+00:00","ollama_received":"2026-10-10T03:48:50.918663+00:00","ollama_ms":1.363,"ollama_server_generation_ms":0.0,"backend_api_ms":5.465}
+2026-10-10 09:18:50,921 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+2026-10-10 09:18:50,928 [WARNING] shopai.routes.suggestions: Suggestion generation failed: ValidationError
+2026-10-10 09:18:50,928 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.925503+00:00","ollama_started":"2026-10-10T03:48:50.927083+00:00","ollama_received":"2026-10-10T03:48:50.927948+00:00","ollama_ms":0.88,"ollama_server_generation_ms":0.0,"backend_api_ms":3.104}
+2026-10-10 09:18:50,930 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+.2026-10-10 09:18:50,939 [WARNING] shopai.routes.suggestions: Suggestion generation failed: TimeoutError
+2026-10-10 09:18:50,940 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.937581+00:00","ollama_started":"2026-10-10T03:48:50.938763+00:00","backend_api_ms":2.35}
+2026-10-10 09:18:50,942 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 503 Service Unavailable"
+.2026-10-10 09:18:50,992 [INFO] shopai.routes.suggestions: [SUGGESTION TIMING] {"backend_received":"2026-10-10T03:48:50.966063+00:00","ollama_started":"2026-10-10T03:48:50.973176+00:00","ollama_received":"2026-10-10T03:48:50.976131+00:00","ollama_ms":2.981,"ollama_server_generation_ms":0.0,"validated":"2026-10-10T03:48:50.976388+00:00","validation_ms":0.231,"backend_api_ms":26.001}
+2026-10-10 09:18:50,994 [INFO] httpx: HTTP Request: POST http://testserver/api/chat/suggestions "HTTP/1.1 200 OK"
+.2026-10-10 09:18:52,138 [INFO] shopai.database.ingest: Ingestion complete: 508 inserted, 0 updated.
+........................2026-10-10 09:18:52,688 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.0
+2026-10-10 09:18:52,689 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=recommendation, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,689 [INFO] shopai.services.chat: DECISION action=recommendation confidence=0.2
+2026-10-10 09:18:52,691 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya recommendation
+2026-10-10 09:18:52,691 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: recommendation)
+2026-10-10 09:18:52,691 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,691 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,692 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,695 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.1
+2026-10-10 09:18:52,695 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=recommendation, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,695 [INFO] shopai.services.chat: DECISION action=recommendation confidence=0.2
+2026-10-10 09:18:52,697 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya recommendation
+2026-10-10 09:18:52,697 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: recommendation)
+2026-10-10 09:18:52,697 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,697 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,698 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,701 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.9
+2026-10-10 09:18:52,701 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=recommendation, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,701 [INFO] shopai.services.chat: DECISION action=recommendation confidence=0.2
+2026-10-10 09:18:52,703 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya recommendation
+2026-10-10 09:18:52,703 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: recommendation)
+2026-10-10 09:18:52,703 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,703 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,703 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,706 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.9
+2026-10-10 09:18:52,707 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=recommendation, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,707 [INFO] shopai.services.chat: DECISION action=recommendation confidence=0.2
+2026-10-10 09:18:52,708 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya recommendation
+2026-10-10 09:18:52,708 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: recommendation)
+2026-10-10 09:18:52,708 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,709 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,709 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,712 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.1
+2026-10-10 09:18:52,713 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,713 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.2
+2026-10-10 09:18:52,714 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_search
+2026-10-10 09:18:52,715 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_search)
+2026-10-10 09:18:52,715 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,715 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,715 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,720 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.5
+2026-10-10 09:18:52,720 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,720 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.2
+2026-10-10 09:18:52,722 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_search
+2026-10-10 09:18:52,722 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_search)
+2026-10-10 09:18:52,722 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,723 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,723 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,727 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.3
+2026-10-10 09:18:52,727 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,727 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.2
+2026-10-10 09:18:52,729 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_search
+2026-10-10 09:18:52,729 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_search)
+2026-10-10 09:18:52,730 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,730 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,730 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,734 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.0
+2026-10-10 09:18:52,734 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,734 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.2
+2026-10-10 09:18:52,736 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_search
+2026-10-10 09:18:52,736 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_search)
+2026-10-10 09:18:52,736 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,737 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,737 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,741 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.4
+2026-10-10 09:18:52,741 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=general_query, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,741 [INFO] shopai.services.chat: DECISION action=general_query confidence=0.2
+2026-10-10 09:18:52,742 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya general_query
+2026-10-10 09:18:52,743 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: general_query)
+2026-10-10 09:18:52,743 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,743 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,743 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,747 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.3
+2026-10-10 09:18:52,747 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=general_query, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,747 [INFO] shopai.services.chat: DECISION action=general_query confidence=0.2
+2026-10-10 09:18:52,749 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya general_query
+2026-10-10 09:18:52,749 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: general_query)
+2026-10-10 09:18:52,750 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,750 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,750 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,754 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.1
+2026-10-10 09:18:52,754 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=general_query, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,754 [INFO] shopai.services.chat: DECISION action=general_query confidence=0.2
+2026-10-10 09:18:52,756 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya general_query
+2026-10-10 09:18:52,756 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: general_query)
+2026-10-10 09:18:52,756 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,756 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,756 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,760 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.2
+2026-10-10 09:18:52,760 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=general_query, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,760 [INFO] shopai.services.chat: DECISION action=general_query confidence=0.2
+2026-10-10 09:18:52,761 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya general_query
+2026-10-10 09:18:52,762 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: general_query)
+2026-10-10 09:18:52,762 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,762 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,762 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,765 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.8
+2026-10-10 09:18:52,765 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,765 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.2
+2026-10-10 09:18:52,767 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_details
+2026-10-10 09:18:52,767 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_details)
+2026-10-10 09:18:52,767 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,767 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,767 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,770 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.9
+2026-10-10 09:18:52,770 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,770 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.2
+2026-10-10 09:18:52,772 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_details
+2026-10-10 09:18:52,772 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_details)
+2026-10-10 09:18:52,772 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,772 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,772 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,776 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.5
+2026-10-10 09:18:52,776 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,776 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.2
+2026-10-10 09:18:52,778 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_details
+2026-10-10 09:18:52,778 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_details)
+2026-10-10 09:18:52,778 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,778 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,778 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+2026-10-10 09:18:52,784 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.9
+2026-10-10 09:18:52,784 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.2, source=receptron-laya-onnx
+2026-10-10 09:18:52,784 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.2
+2026-10-10 09:18:52,787 [INFO] shopai.services.chat: [AI FLOW] SUGGESTION CONTEXT: informational question uses general_query after Laya product_details
+2026-10-10 09:18:52,787 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: product_details)
+2026-10-10 09:18:52,787 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:52,787 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:52,787 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+.2026-10-10 09:18:52,796 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.8
+2026-10-10 09:18:52,796 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.5, source=receptron-laya-onnx
+2026-10-10 09:18:52,796 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.5
+2026-10-10 09:18:52,798 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:18:52,798 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:52,798 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.4 filters={'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': 10000.0, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:52,798 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': 10000.0, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:52,805 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=6.3 postgres_query_ms=5.5
+2026-10-10 09:18:52,805 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 09:18:52,805 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 09:18:52,805 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:52,805 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 09:18:52,808 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.0
+2026-10-10 09:18:52,809 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.5, source=receptron-laya-onnx
+2026-10-10 09:18:52,809 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.5
+2026-10-10 09:18:52,810 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:18:52,810 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:52,811 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:52,811 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:52,817 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=6.5 postgres_query_ms=5.9
+2026-10-10 09:18:52,818 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 09:18:52,818 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 09:18:52,818 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:52,818 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+..................2026-10-10 09:18:53,097 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,098 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.96
+.2026-10-10 09:18:53,099 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,099 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,100 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,100 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,101 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,102 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,103 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,103 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,104 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+.2026-10-10 09:18:53,106 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,107 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,107 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,108 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,109 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+2026-10-10 09:18:53,110 [INFO] shopai.services.laya: LAYA V2 request: Show phones
+.2026-10-10 09:18:53,263 [INFO] shopai.services.chat: CHAT TIMING laya_ms=151.4
+2026-10-10 09:18:53,263 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=general_query, confidence=0.9, source=None
+2026-10-10 09:18:53,263 [INFO] shopai.services.chat: DECISION action=general_query confidence=0.9
+2026-10-10 09:18:53,263 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: general_query)
+2026-10-10 09:18:53,263 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+.2026-10-10 09:18:53,267 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.9
+2026-10-10 09:18:53,267 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=general_query, confidence=0.9, source=None
+2026-10-10 09:18:53,267 [INFO] shopai.services.chat: DECISION action=general_query confidence=0.9
+2026-10-10 09:18:53,267 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: general_query (Laya choice: general_query)
+2026-10-10 09:18:53,267 [INFO] shopai.services.chat: TOOL/DATABASE action=general_query
+2026-10-10 09:18:53,268 [INFO] shopai.services.chat: [AI FLOW] OLLAMA CALL: model=llama3.2:latest, url=http://localhost:11434/api/chat
+2026-10-10 09:18:53,418 [INFO] shopai.services.chat: [AI FLOW] OLLAMA RESPONSE RECEIVED
+.2026-10-10 09:18:54,302 [INFO] shopai.database.ingest: Ingestion complete: 508 inserted, 0 updated.
+.2026-10-10 09:18:54,325 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.0
+2026-10-10 09:18:54,325 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.9, source=None
+2026-10-10 09:18:54,326 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.9
+2026-10-10 09:18:54,326 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:18:54,326 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:54,326 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:54,326 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 09:18:54,332 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=5.2 postgres_query_ms=4.4
+2026-10-10 09:18:54,332 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 09:18:54,332 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 09:18:54,332 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:54,332 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+...2026-10-10 09:18:55,286 [INFO] shopai.database.ingest: Ingestion complete: 508 inserted, 0 updated.
+..2026-10-10 09:18:55,389 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.1
+2026-10-10 09:18:55,389 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.5, source=None
+2026-10-10 09:18:55,389 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.5
+2026-10-10 09:18:55,389 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:18:55,389 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:55,389 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': '2 5d clear tempered glas screenshot protector samsung tab s7 plu 12 4 inch t735ne s7 fe samsung s7 fe transparent', 'exact_name': '2.5d clear tempered glass screenshot protector for samsung tab s7 plus 12.4 inch/t735ne s7 fe/samsung s7 fe ( transparent )'}
+2026-10-10 09:18:55,390 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': '2 5d clear tempered glas screenshot protector samsung tab s7 plu 12 4 inch t735ne s7 fe samsung s7 fe transparent', 'exact_name': '2.5d clear tempered glass screenshot protector for samsung tab s7 plus 12.4 inch/t735ne s7 fe/samsung s7 fe ( transparent )'}
+2026-10-10 09:18:55,407 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=17.1 postgres_query_ms=6.8
+2026-10-10 09:18:55,407 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 09:18:55,407 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 09:18:55,407 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:55,407 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+..2026-10-10 09:18:55,447 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.9
+2026-10-10 09:18:55,447 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.5, source=None
+2026-10-10 09:18:55,447 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.5
+2026-10-10 09:18:55,447 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: add_to_cart (Laya choice: add_to_cart)
+2026-10-10 09:18:55,447 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
+2026-10-10 09:18:55,460 [INFO] shopai.services.chat: CART action=add product_id=inbase-flip-cover-for-samsung-tab-a7-lite-8-7-inch-black
+.....2026-10-10 09:18:55,511 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.1
+2026-10-10 09:18:55,511 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.5, source=None
+2026-10-10 09:18:55,511 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.5
+2026-10-10 09:18:55,511 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: add_to_cart (Laya choice: add_to_cart)
+2026-10-10 09:18:55,511 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
+......2026-10-10 09:18:56,365 [INFO] shopai.database.ingest: Ingestion complete: 508 inserted, 0 updated.
+......2026-10-10 09:18:56,516 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.1
+2026-10-10 09:18:56,517 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.5, source=None
+2026-10-10 09:18:56,517 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.5
+2026-10-10 09:18:56,517 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:18:56,517 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:56,517 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 09:18:56,517 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 09:18:56,523 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=5.6 postgres_query_ms=3.7
+2026-10-10 09:18:56,523 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 09:18:56,523 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 09:18:56,523 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:56,523 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+.....2026-10-10 09:18:56,575 [INFO] shopai.services.chat: CHAT TIMING laya_ms=1.2
+2026-10-10 09:18:56,575 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.5, source=None
+2026-10-10 09:18:56,575 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.5
+2026-10-10 09:18:56,575 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: add_to_cart (Laya choice: add_to_cart)
+2026-10-10 09:18:56,575 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
+.2026-10-10 09:18:56,591 [INFO] shopai.services.chat: CHAT TIMING laya_ms=0.7
+2026-10-10 09:18:56,591 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.5, source=None
+2026-10-10 09:18:56,591 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.5
+2026-10-10 09:18:56,591 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:18:56,591 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:18:56,591 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 09:18:56,591 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 09:18:56,597 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=5.6 postgres_query_ms=3.2
+2026-10-10 09:18:56,597 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 09:18:56,597 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 09:18:56,597 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:18:56,597 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+..
+----------------------------------------------------------------------
+Ran 138 tests in 41.684s
+
+OK
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000019E8A898A90>
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000019E8AFB8130>
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000019E8A89B4C0>
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000019E8AFB8F40>
+<sys>:0: ResourceWarning: unclosed database in <sqlite3.Connection object at 0x0000019E8ACE3970>

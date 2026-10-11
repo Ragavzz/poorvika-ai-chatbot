@@ -1,0 +1,6 @@
+
+  VITE v8.1.5  ready in 4156 ms
+
+  ➜  Local:   http://127.0.0.1:8080/
+12:58:07 pm [vite] (ssr) connected.
+1:02:01 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ChatbotPanel.tsx

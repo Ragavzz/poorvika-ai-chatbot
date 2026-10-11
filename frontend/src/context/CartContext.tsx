@@ -1,6 +1,22 @@
-import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react";
+import React, {
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { toast } from "sonner";
 import type { Product } from "@/services/api";
+import {
+  CART_STORAGE_KEY,
+  cartQuantityAllowed,
+  cartTotals,
+  readCartItems,
+  saveCartItems,
+  setCartQuantity,
+} from "@/lib/cart-state";
 
 export interface CartItem {
   product: Product;
@@ -17,14 +33,12 @@ interface CartState {
 interface CartActions {
   addToCart: (product: Product, quantity?: number) => boolean;
   removeFromCart: (productId: string | number) => void;
-  updateQuantity: (productId: string | number, quantity: number) => void;
+  updateQuantity: (productId: string | number, quantity: number, verifiedProduct?: Product) => void;
   clearCart: () => void;
   openCart: () => void;
   closeCart: () => void;
   toggleCart: () => void;
 }
-
-const CART_STORAGE_KEY = "shopai_cart_items";
 
 const CartStateContext = createContext<CartState | undefined>(undefined);
 const CartActionsContext = createContext<CartActions | undefined>(undefined);
@@ -33,19 +47,20 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const [items, setItems] = useState<CartItem[]>(() => {
     if (typeof window === "undefined") return [];
     try {
-      const stored = localStorage.getItem(CART_STORAGE_KEY);
-      return stored ? JSON.parse(stored) : [];
+      return readCartItems(localStorage);
     } catch {
       return [];
     }
   });
 
   const [isOpen, setIsOpen] = useState(false);
+  const currentItems = useRef(items);
+  currentItems.current = items;
 
   // Sync to localStorage whenever items change
   useEffect(() => {
     try {
-      localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(items));
+      saveCartItems(localStorage, items);
     } catch (e) {
       console.error("Failed to save cart to localStorage", e);
     }
@@ -68,13 +83,23 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     return () => window.removeEventListener("storage", syncFromStorage);
   }, []);
 
-  const totalItems = items.reduce((sum, item) => sum + item.quantity, 0);
-  const subtotal = items.reduce((sum, item) => sum + item.product.price * item.quantity, 0);
+  const { totalItems, subtotal } = cartTotals(items);
 
   const addToCart = useCallback((product: Product, quantity: number = 1): boolean => {
     // Prevent adding out-of-stock products
     if (product.inStock === false) {
       toast.error(`${product.name} is currently out of stock.`);
+      return false;
+    }
+    const existingQuantity =
+      currentItems.current.find((item) => String(item.product.id) === String(product.id))
+        ?.quantity ?? 0;
+    if (
+      !Number.isSafeInteger(quantity) ||
+      quantity <= 0 ||
+      !cartQuantityAllowed(product, existingQuantity + quantity)
+    ) {
+      toast.error(`Can't add this quantity; available stock is ${product.stock ?? "unknown"}.`);
       return false;
     }
 
@@ -88,14 +113,18 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         const item = updated[existingIndex];
         if (item) {
           updated[existingIndex] = {
-            product: item.product,
+            product,
             quantity: item.quantity + quantity,
           };
+          if (!cartQuantityAllowed(product, item.quantity + quantity)) return prevItems;
+          currentItems.current = updated;
           return updated;
         }
       }
 
-      return [...prevItems, { product, quantity }];
+      const updated = [...prevItems, { product, quantity }];
+      currentItems.current = updated;
+      return updated;
     });
 
     toast.success(`Added to cart`, {
@@ -109,18 +138,34 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     toast.info("Item removed from cart");
   }, []);
 
-  const updateQuantity = useCallback((productId: string | number, quantity: number) => {
-    if (quantity <= 0) {
-      removeFromCart(productId);
-      return;
-    }
+  const updateQuantity = useCallback(
+    (productId: string | number, quantity: number, verifiedProduct?: Product) => {
+      if (quantity <= 0) {
+        removeFromCart(productId);
+        return;
+      }
 
-    setItems((prev) =>
-      prev.map((item) =>
-        String(item.product.id) === String(productId) ? { ...item, quantity } : item,
-      ),
-    );
-  }, [removeFromCart]);
+      const item = currentItems.current.find(
+        (item) => String(item.product.id) === String(productId),
+      );
+      const product =
+        verifiedProduct && String(verifiedProduct.id) === String(productId)
+          ? verifiedProduct
+          : item?.product;
+      if (item && product && quantity > item.quantity && !cartQuantityAllowed(product, quantity)) {
+        toast.error(
+          `Can't increase this quantity; available stock is ${item.product.stock ?? "unknown"}.`,
+        );
+        return;
+      }
+      setItems((prev) => {
+        const updated = setCartQuantity(prev, productId, quantity, verifiedProduct);
+        currentItems.current = updated;
+        return updated;
+      });
+    },
+    [removeFromCart],
+  );
 
   const clearCart = useCallback(() => {
     setItems([]);
@@ -131,7 +176,15 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
   const toggleCart = useCallback(() => setIsOpen((prev) => !prev), []);
 
   const actions = useMemo(
-    () => ({ addToCart, removeFromCart, updateQuantity, clearCart, openCart, closeCart, toggleCart }),
+    () => ({
+      addToCart,
+      removeFromCart,
+      updateQuantity,
+      clearCart,
+      openCart,
+      closeCart,
+      toggleCart,
+    }),
     [addToCart, removeFromCart, updateQuantity, clearCart, openCart, closeCart, toggleCart],
   );
   const state = useMemo(

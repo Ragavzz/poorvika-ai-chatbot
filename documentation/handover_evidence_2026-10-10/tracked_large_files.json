@@ -1,0 +1,22 @@
+[
+  {
+    "path": "data/poorvika_products.jsonl",
+    "bytes": 3478197
+  },
+  {
+    "path": "data/poorvika_products_expanded.jsonl",
+    "bytes": 3478197
+  },
+  {
+    "path": "data/poorvika_sitemap_product.xml",
+    "bytes": 1491197
+  },
+  {
+    "path": "evaluation/jev_benchmark/dataset/typed_decisions_test.json",
+    "bytes": 1824509
+  },
+  {
+    "path": "laya_v2_service/results/jev_full_20261008T115135_157161Z/laya_jev_benchmark_results.json",
+    "bytes": 1522417
+  }
+]

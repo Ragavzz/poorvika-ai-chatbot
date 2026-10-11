@@ -44,4 +44,6 @@ async def health_check():
             "details": db_msg,
             "product_count": product_count,
         },
+        "decision_provider": settings.DECISION_PROVIDER,
+        "ollama_enabled": settings.OLLAMA_ENABLED,
     }

@@ -1,0 +1,83 @@
+{
+  "validation_date": "2026-10-10",
+  "method": "FastAPI TestClient exercised the actual /api/chat/suggestions route; Ollama calls used the configured local llama3.2:latest service. This is API evidence, not a rendered browser run.",
+  "results": [
+    {
+      "context": "Apple iPhone 15 product",
+      "http_status": 200,
+      "request_id": "popup-acceptance-iphone",
+      "cache": "miss",
+      "ollama_call_count": 1,
+      "suggestions": [
+        "Is this product suitable for heavy gaming?",
+        "Can this phone's battery life meet daily usage needs?",
+        "Does this model have a good camera for taking night-time photos?",
+        "How does the A16 Bionic chip compare to other high-end processors?"
+      ],
+      "timing_ms": {
+        "backend_api": 4889.168,
+        "ollama_wall": 4867.981,
+        "ollama_load": 22.0827,
+        "ollama_prompt_eval": 765.074,
+        "ollama_generation": 1922.397,
+        "ollama_server_total": 2828.604,
+        "validation": 4.853
+      }
+    },
+    {
+      "context": "Samsung Galaxy A16 5G product",
+      "http_status": 200,
+      "request_id": "popup-acceptance-samsung",
+      "cache": "miss",
+      "ollama_call_count": 1,
+      "suggestions": [
+        "Is this product suitable for heavy gaming?",
+        "What are the key features of the 5G connectivity in this mobile?",
+        "Is the 128GB storage sufficient for a long-term user?",
+        "Can this mobile be easily charged and maintained?"
+      ],
+      "timing_ms": {
+        "backend_api": 2445.994,
+        "ollama_wall": 2443.968,
+        "ollama_load": 20.8173,
+        "ollama_prompt_eval": 480.646,
+        "ollama_generation": 1891.331,
+        "ollama_server_total": 2440.7046,
+        "validation": 0.235
+      }
+    },
+    {
+      "context": "Mobiles listing with two supplied result rows",
+      "http_status": 200,
+      "request_id": "popup-acceptance-mobiles-listing",
+      "cache": "miss",
+      "ollama_call_count": 1,
+      "suggestions": [
+        "What is the difference between the A16 Bionic chip and the 5G network?",
+        "Are there any other mobile options available with 256GB of storage?",
+        "Is the Samsung Galaxy A16 5G a popular choice among budget-conscious shoppers?"
+      ],
+      "timing_ms": {
+        "backend_api": 3186.242,
+        "ollama_wall": 3182.77,
+        "ollama_load": 19.9039,
+        "ollama_prompt_eval": 757.678,
+        "ollama_generation": 2334.478,
+        "ollama_server_total": 3178.0487,
+        "validation": 0.624
+      }
+    }
+  ],
+  "cache_repeat": {
+    "context": "Same Apple iPhone 15 payload",
+    "http_status": 200,
+    "request_id": "popup-final-iphone-repeat",
+    "cache": "hit",
+    "ollama_call_count": 0,
+    "backend_api_ms": 1.645
+  },
+  "limits": [
+    "Ollama generation is nondeterministic; rejected generations are documented in the validation report and were not cached or displayed.",
+    "The FastAPI route ran in-process; no browser rendering, frontend timing, or visual acceptance was measured."
+  ]
+}

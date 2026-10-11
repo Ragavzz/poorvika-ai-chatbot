@@ -5,12 +5,16 @@ from pydantic import BaseModel, Field, StrictStr, field_validator
 
 
 class SuggestionProduct(BaseModel):
+    id: str | None = Field(default=None, max_length=180)
     name: str = Field(min_length=1, max_length=300)
     brand: str | None = Field(default=None, max_length=150)
     category: str | None = Field(default=None, max_length=150)
     price: float | None = Field(default=None, ge=0, allow_inf_nan=False)
     description: str | None = Field(default=None, max_length=4000)
     specifications: dict[str, str | int | float] | list[dict[str, str | int | float]] | None = None
+    query: str | None = Field(default=None, max_length=180)
+    filters: dict[str, str | int | float | bool | list[str] | None] | None = None
+    products: list[dict[str, object]] | None = Field(default=None, max_length=8)
 
     @field_validator("name")
     @classmethod
@@ -25,6 +29,14 @@ class SuggestionProduct(BaseModel):
         import json
         if value is not None and (len(value) > 80 or len(json.dumps(value)) > 12000):
             raise ValueError("Specifications are too large")
+        return value
+
+    @field_validator("products")
+    @classmethod
+    def bounded_results(cls, value):
+        import json
+        if value is not None and len(json.dumps(value, ensure_ascii=False)) > 18000:
+            raise ValueError("Listing results are too large")
         return value
 
 

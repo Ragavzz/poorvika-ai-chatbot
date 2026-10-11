@@ -8,9 +8,12 @@ export function formatShoppingResponse(response: string): string {
     .trim();
   // Hide implementation diagnostics without removing legitimate product specs
   // such as model numbers, operating systems, or AI features.
-  if (/\b(?:PostgreSQL|FastAPI|Ollama|LLM|backend|database|grounded|AI assistant|AI model|chatbot|API|tool call|system prompt|intent extraction|shopping agent)\b/i.test(text)) {
-    return "Sorry, we couldn't complete your request. Please try again.";
+  if (
+    /^(?:Traceback\b|(?:Runtime|Value|Type|HTTP)Error:)|\[AI FLOW\]|Active filters:/im.test(text)
+  ) {
+    throw new Error("Invalid response from chat service");
   }
 
-  return text || "Please try again so we can help with your shopping.";
+  if (!text) throw new Error("Empty response from chat service");
+  return text;
 }

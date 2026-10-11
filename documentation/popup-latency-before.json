@@ -1,0 +1,120 @@
+{
+  "kind": "HTTP only; browser unavailable; first request is not proven cold",
+  "runs": [
+    {
+      "product_id": "apple-iphone-15-black-256gb",
+      "run": 0,
+      "context_fetch_ms": 4038.0686999997124,
+      "elapsed_ms": 31656.624400027795,
+      "status": 200,
+      "output": {
+        "suggestions": [
+          "Is this 256GB storage sufficient for a heavy user like me?",
+          "How does the iPhone 15 compare to other flagship models in terms of camera capabilities?",
+          "What are the alternatives to the iPhone 15 in the same price range?",
+          "Will the 6-core CPU and A16 Bionic chip provide smooth performance for gaming on this device?"
+        ]
+      },
+      "timing": "{\"backend_received\":\"2026-10-10T10:40:22.385385+00:00\",\"ollama_started\":\"2026-10-10T10:40:22.387881+00:00\",\"ollama_received\":\"2026-10-10T10:40:54.022723+00:00\",\"ollama_ms\":31634.87,\"ollama_server_generation_ms\":3359.477,\"validated\":\"2026-10-10T10:40:54.031269+00:00\",\"validation_ms\":8.526,\"backend_api_ms\":31649.597}",
+      "context": {
+        "name": "Apple iPhone 15 ( Black,256GB )",
+        "brand": "Apple",
+        "category": "Mobiles",
+        "price": 64900.0,
+        "description": "Apple iPhone 15 ( Black,256GB )",
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE supported",
+          "SIM Type": "Dual SIM (nano SIM and eSIM)",
+          "Width x Height x Depth": "71.6 x 147.6 x 7.80 mm",
+          "Weight": "171g",
+          "Display Size": "15.54 cm ( 6.1 inch )",
+          "Display Type": "Super Retina XDR, OLED display",
+          "Resolution": "2556 x 1179-pixel resolution at 460 ppi",
+          "Protection": "Fingerprint-resistant oleophobic coating",
+          "Loudspeaker": "Built‑in stereo speaker",
+          "Internal Storage": "256GB",
+          "WLAN": "Wi‑Fi 6 (802.11ax) with 2x2 MIMO",
+          "Bluetooth Version": "v5.3",
+          "USB Type": "USB-C connector | USB 2 (up to 480 Mbps)",
+          "NFC Support": "NFC with reader mode",
+          "Primary Camera": "48MP(f/1.6) + 12MP(f/2.4)",
+          "Secondary Camera": "12MP(f/1.9)",
+          "Camera Features": "2x optical zoom in, 2x optical zoom out, 4x optical zoom range | Digital zoom up to 10x | Sapphire crystal lens cover | True Tone flash | Photonic Engine | Deep Fusion | Smart HDR 5 | Next-generation portraits with Focus and Depth Control",
+          "Video": "4K video recording at 24 fps, 25 fps, 30 fps or 60 fps | Slow‑motion video support for 1080p at 120 fps or 240 fps | 1080p HD video recording at 25 fps, 30 fps or 60 fps | 720p HD video recording at 30 fps | Cinematic mode up to 4K HDR at 30 fps",
+          "Operating System": "iOS 17",
+          "Chipset": "A16 Bionic chip",
+          "CPU": "6‑core CPU with 2 performance and 4 efficiency cores",
+          "GPU": "5‑core GPU ( 16‑core Neural Engine )",
+          "GPS": "GPS, GLONASS, Galileo, QZSS & BeiDou",
+          "Sensors": "Face ID, Barometer, High dynamic range gyro, High-g accelerometer, Proximity sensor, Dual ambient light sensors",
+          "Water Resistant": "Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529",
+          "Battery Capacity": "Built-in rechargeable lithium-ion Battery",
+          "Sales Package": "iPhone with iOS 17 | USB-C Charge Cable (1 m) | Documentation",
+          "Warranty Summary": "Brand Warranty for 1 Year",
+          "Generic Name": "Mobile Phone",
+          "Country of Origin": "China",
+          "Manufactured by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+          "Imported by": "Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+          "Packed by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001"
+        }
+      }
+    },
+    {
+      "product_id": "apple-iphone-15-black-256gb",
+      "run": 1,
+      "context_fetch_ms": 4038.0686999997124,
+      "elapsed_ms": 3710.8562999928836,
+      "status": 503,
+      "output": {
+        "detail": "Suggestions are unavailable"
+      },
+      "timing": "{\"backend_received\":\"2026-10-10T10:40:54.041241+00:00\",\"ollama_started\":\"2026-10-10T10:40:54.041936+00:00\",\"ollama_received\":\"2026-10-10T10:40:57.687699+00:00\",\"ollama_ms\":3645.823,\"ollama_server_generation_ms\":3497.358,\"backend_api_ms\":3666.455}",
+      "context": {
+        "name": "Apple iPhone 15 ( Black,256GB )",
+        "brand": "Apple",
+        "category": "Mobiles",
+        "price": 64900.0,
+        "description": "Apple iPhone 15 ( Black,256GB )",
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE supported",
+          "SIM Type": "Dual SIM (nano SIM and eSIM)",
+          "Width x Height x Depth": "71.6 x 147.6 x 7.80 mm",
+          "Weight": "171g",
+          "Display Size": "15.54 cm ( 6.1 inch )",
+          "Display Type": "Super Retina XDR, OLED display",
+          "Resolution": "2556 x 1179-pixel resolution at 460 ppi",
+          "Protection": "Fingerprint-resistant oleophobic coating",
+          "Loudspeaker": "Built‑in stereo speaker",
+          "Internal Storage": "256GB",
+          "WLAN": "Wi‑Fi 6 (802.11ax) with 2x2 MIMO",
+          "Bluetooth Version": "v5.3",
+          "USB Type": "USB-C connector | USB 2 (up to 480 Mbps)",
+          "NFC Support": "NFC with reader mode",
+          "Primary Camera": "48MP(f/1.6) + 12MP(f/2.4)",
+          "Secondary Camera": "12MP(f/1.9)",
+          "Camera Features": "2x optical zoom in, 2x optical zoom out, 4x optical zoom range | Digital zoom up to 10x | Sapphire crystal lens cover | True Tone flash | Photonic Engine | Deep Fusion | Smart HDR 5 | Next-generation portraits with Focus and Depth Control",
+          "Video": "4K video recording at 24 fps, 25 fps, 30 fps or 60 fps | Slow‑motion video support for 1080p at 120 fps or 240 fps | 1080p HD video recording at 25 fps, 30 fps or 60 fps | 720p HD video recording at 30 fps | Cinematic mode up to 4K HDR at 30 fps",
+          "Operating System": "iOS 17",
+          "Chipset": "A16 Bionic chip",
+          "CPU": "6‑core CPU with 2 performance and 4 efficiency cores",
+          "GPU": "5‑core GPU ( 16‑core Neural Engine )",
+          "GPS": "GPS, GLONASS, Galileo, QZSS & BeiDou",
+          "Sensors": "Face ID, Barometer, High dynamic range gyro, High-g accelerometer, Proximity sensor, Dual ambient light sensors",
+          "Water Resistant": "Rated IP68 (maximum depth of 6 metres up to 30 minutes) under IEC standard 60529",
+          "Battery Capacity": "Built-in rechargeable lithium-ion Battery",
+          "Sales Package": "iPhone with iOS 17 | USB-C Charge Cable (1 m) | Documentation",
+          "Warranty Summary": "Brand Warranty for 1 Year",
+          "Generic Name": "Mobile Phone",
+          "Country of Origin": "China",
+          "Manufactured by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+          "Imported by": "Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001",
+          "Packed by": "Apple Computer, Apple Inc, One Apple Park Way, Cupertino, CA 95014, USA. or Apple India Private Limited No.24, 19th floor, Concorde Tower C, UB City, Vittal Mallya Road, Bangalore - 560 001"
+        }
+      }
+    },
+    {
+      "product_id": "samsung-galaxy-watch5-pro-lte-black-titanium",
+      "product_status": 404
+    }
+  ]
+}

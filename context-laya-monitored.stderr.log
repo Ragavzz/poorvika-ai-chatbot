@@ -1,0 +1,24 @@
+Fetching 5 files:   0%|          | 0/5 [00:00<?, ?it/s]Fetching 5 files: 100%|##########| 5/5 [00:00<00:00, 433.32it/s]
+Windows fatal exception: access violation
+
+Thread 0x00004b94 (most recent call first):
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 363 in wait
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 659 in wait
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\tqdm\_monitor.py", line 69 in run
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 1041 in _bootstrap_inner
+  File "C:\Users\GURU\AppData\Local\Programs\Python\Python313\Lib\threading.py", line 1012 in _bootstrap
+
+Current thread 0x00002784 (most recent call first):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\torch\nn\modules\linear.py", line 109 in __init__
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\transformers\models\modernbert\modeling_modernbert.py", line 83 in __init__
+  File "__init__", line ??? in __init__
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\transformers\models\modernbert\modeling_modernbert.py", line 304 in __init__
+  File "__init__", line ??? in __init__
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\transformers\models\modernbert\modeling_modernbert.py", line 407 in __init__
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\transformers\modeling_utils.py", line 1454 in _from_config
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\transformers\models\auto\auto_factory.py", line 253 in from_config
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\laya\common.py", line 709 in build_model
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\laya\agent.py", line 677 in __init__
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\.venv\Lib\site-packages\laya\agent.py", line 2144 in load
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\service.py", line 89 in main
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\laya_v2_service\service.py", line 101 in <module>

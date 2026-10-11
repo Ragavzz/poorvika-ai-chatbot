@@ -1,0 +1,319 @@
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:37:25 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:37:25 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:37:26 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:37:26 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:02 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:02 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:02 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:02 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:04 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:04 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:04 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:04 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:06 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:38:06 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:58:08 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+11:58:08 am [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:00:40 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:00:40 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:00:40 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:00:40 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:00:40 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:00:40 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:27 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:27 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:28 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:28 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:28 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:28 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:28 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:01:28 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:03:31 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:03:31 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:03:31 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:03:31 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:03:31 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:03:31 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:14 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:14 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:56 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:56 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:56 pm [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <CatchNotFound fallback={function fallback}>
+      <CatchBoundary getResetKey={function getResetKey} onCatch={function onCatch} ...>
+        <CatchBoundaryImpl getResetKey={function getResetKey} onCatch={function onCatch}>
+          <MatchInnerImpl matchId="__root__/">
+            <RootComponent>
+              <QueryClientProvider client={{}} data-tsd-source="/src/route...">
+                <CartProvider data-tsd-source="/src/route...">
+                  <Navbar data-tsd-source="/src/route...">
+                    <header className="sticky top..." data-tsd-source="/src/compo...">
+                      <div className="bg-[#ff550..." data-tsd-source="/src/compo...">
+                        <div className="mx-auto fl..." data-tsd-source="/src/compo...">
+                          <_c>
+                          <a>
+                          <div>
+                          <div className="flex items..." data-tsd-source="/src/compo...">
+                            <div>
+                            <div>
+                            <button
+                              type="button"
+                              onClick={function}
+                              className="flex items-center gap-2 text-left cursor-pointer hover:opacity-90 transition ..."
++                             aria-label="Shopping cart with 1 items"
+-                             aria-label="Shopping cart with 0 items"
+                              data-tsd-source="/src/components/storefront/Navbar.tsx:74:13"
+                            >
+                              <div className="text-right..." data-tsd-source="/src/compo...">
+                                <span className="block text..." data-tsd-source="/src/compo...">
++                                 1
+-                                 0
+                                  ...
+                                ...
+                              ...
+                            ...
+                        ...
+                      ...
+                  ...
+
+ > throwOnHydrationMismatch node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > completeWork node_modules/react-dom/cjs/react-dom-client.development.js:13206:25
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopConcurrentByScheduler node_modules/react-dom/cjs/react-dom-client.development.js:19170:8
+ > renderRootConcurrent node_modules/react-dom/cjs/react-dom-client.development.js:19152:14
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:18014:10
+ > performWorkOnRootViaSchedulerTask node_modules/react-dom/cjs/react-dom-client.development.js:20665:6
+ > MessagePort.performWorkUntilDeadline node_modules/scheduler/cjs/scheduler.development.js:45:47
+
+12:19:56 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:56 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:57 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:19:57 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:23:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:23:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:23:26 pm [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <CatchNotFound fallback={function fallback}>
+      <CatchBoundary getResetKey={function getResetKey} onCatch={function onCatch} ...>
+        <CatchBoundaryImpl getResetKey={function getResetKey} onCatch={function onCatch}>
+          <MatchInnerImpl matchId="__root__/">
+            <RootComponent>
+              <QueryClientProvider client={{}} data-tsd-source="/src/route...">
+                <CartProvider data-tsd-source="/src/route...">
+                  <Navbar data-tsd-source="/src/route...">
+                    <header className="sticky top..." data-tsd-source="/src/compo...">
+                      <div className="bg-[#ff550..." data-tsd-source="/src/compo...">
+                        <div className="mx-auto fl..." data-tsd-source="/src/compo...">
+                          <_c>
+                          <a>
+                          <div>
+                          <div className="flex items..." data-tsd-source="/src/compo...">
+                            <div>
+                            <div>
+                            <button
+                              type="button"
+                              onClick={function}
+                              className="flex items-center gap-2 text-left cursor-pointer hover:opacity-90 transition ..."
++                             aria-label="Shopping cart with 1 items"
+-                             aria-label="Shopping cart with 0 items"
+                              data-tsd-source="/src/components/storefront/Navbar.tsx:74:13"
+                            >
+                              <div className="text-right..." data-tsd-source="/src/compo...">
+                                <span className="block text..." data-tsd-source="/src/compo...">
++                                 1
+-                                 0
+                                  ...
+                                ...
+                              ...
+                            ...
+                        ...
+                      ...
+                  ...
+
+ > throwOnHydrationMismatch node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > completeWork node_modules/react-dom/cjs/react-dom-client.development.js:13206:25
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopConcurrentByScheduler node_modules/react-dom/cjs/react-dom-client.development.js:19170:8
+ > renderRootConcurrent node_modules/react-dom/cjs/react-dom-client.development.js:19152:14
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:18014:10
+ > performWorkOnRootViaSchedulerTask node_modules/react-dom/cjs/react-dom-client.development.js:20665:6
+ > MessagePort.performWorkUntilDeadline node_modules/scheduler/cjs/scheduler.development.js:45:47
+
+12:23:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:23:26 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:23:27 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:23:27 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+[["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:03 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:03 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:04 pm [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <CatchNotFound fallback={function fallback}>
+      <CatchBoundary getResetKey={function getResetKey} onCatch={function onCatch} ...>
+        <CatchBoundaryImpl getResetKey={function getResetKey} onCatch={function onCatch}>
+          <MatchInnerImpl matchId="__root__/">
+            <RootComponent>
+              <QueryClientProvider client={{}} data-tsd-source="/src/route...">
+                <CartProvider data-tsd-source="/src/route...">
+                  <Navbar data-tsd-source="/src/route...">
+                    <header className="sticky top..." data-tsd-source="/src/compo...">
+                      <div className="bg-[#ff550..." data-tsd-source="/src/compo...">
+                        <div className="mx-auto fl..." data-tsd-source="/src/compo...">
+                          <_c>
+                          <a>
+                          <div>
+                          <div className="flex items..." data-tsd-source="/src/compo...">
+                            <div>
+                            <div>
+                            <button
+                              type="button"
+                              onClick={function}
+                              className="flex items-center gap-2 text-left cursor-pointer hover:opacity-90 transition ..."
++                             aria-label="Shopping cart with 3 items"
+-                             aria-label="Shopping cart with 0 items"
+                              data-tsd-source="/src/components/storefront/Navbar.tsx:74:13"
+                            >
+                              <div className="text-right..." data-tsd-source="/src/compo...">
+                                <span className="block text..." data-tsd-source="/src/compo...">
++                                 3
+-                                 0
+                                  ...
+                                ...
+                              ...
+                            ...
+                        ...
+                      ...
+                  ...
+
+ > throwOnHydrationMismatch node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > completeWork node_modules/react-dom/cjs/react-dom-client.development.js:13206:25
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopConcurrentByScheduler node_modules/react-dom/cjs/react-dom-client.development.js:19170:8
+ > renderRootConcurrent node_modules/react-dom/cjs/react-dom-client.development.js:19152:14
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:18014:10
+ > performWorkOnRootViaSchedulerTask node_modules/react-dom/cjs/react-dom-client.development.js:20665:6
+ > MessagePort.performWorkUntilDeadline node_modules/scheduler/cjs/scheduler.development.js:45:47
+
+12:49:04 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:04 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:05 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:05 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:06 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:06 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:09 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:09 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:11 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:11 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:11 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:11 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:12 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:12 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:16 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:16 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:20 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:20 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:22 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:22 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:30 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:30 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:31 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:31 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:32 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:32 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:33 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:33 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:34 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:34 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:34 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:34 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:35 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:35 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:35 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:35 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:53 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:53 pm [vite] (client) [console.error] [["product","apple-iphone-15-black-256gb"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:53 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:53 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:55 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:55 pm [vite] (client) [console.error] [["product",null]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:55 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:55 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:55 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:55 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:59 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:49:59 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:01 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:01 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:03 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:03 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:12 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:12 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:13 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:13 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:14 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:14 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:14 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:14 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:58 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:58 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:59 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:50:59 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:52:40 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function
+12:52:40 pm [vite] (client) [console.error] [["product","samsung-galaxy-watch5-pro-lte-45mm-black-titanium-sm-r925fzkainu"]]: No queryFn was passed as an option, and no default queryFn was found. The queryFn parameter is only optional when using a default queryFn. More info here: https://tanstack.com/query/latest/docs/framework/react/guides/default-query-function

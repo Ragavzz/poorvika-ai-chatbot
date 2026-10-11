@@ -11,6 +11,7 @@ export type Product = {
   rating?: number;
   reviewCount?: number;
   inStock?: boolean;
+  stock?: number;
   description?: string;
   specifications?:
     Record<string, string | number> | Array<{ label: string; value: string | number }>;
@@ -32,7 +33,10 @@ export type ProductQuery = {
 
 const baseUrl = (import.meta.env["VITE_API_BASE_URL"] ?? "").replace(/\/$/, "");
 
-const buildUrl = (path: string, query?: Record<string, string | number | boolean | string[] | undefined>) => {
+const buildUrl = (
+  path: string,
+  query?: Record<string, string | number | boolean | string[] | undefined>,
+) => {
   const url = `${baseUrl}${path}`;
   if (!query) return url;
   const params = new URLSearchParams();
@@ -56,6 +60,7 @@ const request = async <T>(
     ...options,
     headers: { "Content-Type": "application/json", ...options?.headers },
   });
+  onResponse?.(response);
   if (!response.ok) {
     const body = (await response.json().catch(() => null)) as {
       detail?: string;
@@ -63,7 +68,6 @@ const request = async <T>(
     } | null;
     throw new Error(body?.detail ?? body?.message ?? `Request failed (${response.status})`);
   }
-  onResponse?.(response);
   return response.json() as Promise<T>;
 };
 
@@ -71,6 +75,12 @@ const normalizeProducts = (payload: Product[] | { products?: Product[]; items?: 
   Array.isArray(payload) ? payload : (payload.products ?? payload.items ?? []);
 
 export const api = {
+  getChatCapabilities(signal?: AbortSignal) {
+    return request<{ ollama_enabled: boolean; model_configuration: string; timeout_ms: number }>(
+      "/api/chat/suggestion-capabilities",
+      { signal: AbortSignal.any([AbortSignal.timeout(8000), ...(signal ? [signal] : [])]) },
+    );
+  },
   async getProducts(query: ProductQuery = {}, signal?: AbortSignal) {
     const payload = await request<Product[] | { products?: Product[]; items?: Product[] }>(
       "/api/products",
@@ -111,16 +121,36 @@ export const api = {
     return normalizeProducts(payload);
   },
   getProduct(id: string, signal?: AbortSignal) {
-    return request<Product>(`/api/products/${encodeURIComponent(id)}`, signal ? { signal } : undefined);
+    return request<Product>(
+      `/api/products/${encodeURIComponent(id)}`,
+      signal ? { signal } : undefined,
+    );
   },
-  getChatSuggestions(product: Partial<Product> & { name: string }, onTiming?: (timings: Record<string, string | number>) => void) {
-    return request<{ suggestions: string[] }>("/api/chat/suggestions", {
-      method: "POST",
-      body: JSON.stringify({ product }),
-    }, undefined, (response) => {
-      const header = response.headers.get("X-ShopAI-Suggestion-Timing");
-      if (header && onTiming) { try { onTiming(JSON.parse(header)); } catch { /* Diagnostics never interrupt suggestions. */ } }
-    });
+  getChatSuggestions(
+    product: Partial<Product> & { name: string },
+    onTiming?: (timings: Record<string, string | number>) => void,
+    options?: { signal?: AbortSignal; requestId?: string },
+  ) {
+    return request<{ suggestions: string[] }>(
+      "/api/chat/suggestions",
+      {
+        method: "POST",
+        body: JSON.stringify({ product }),
+        signal: options?.signal,
+        headers: options?.requestId ? { "X-ShopAI-Request-ID": options.requestId } : {},
+      },
+      undefined,
+      (response) => {
+        const header = response.headers.get("X-ShopAI-Suggestion-Timing");
+        if (header && onTiming) {
+          try {
+            onTiming(JSON.parse(header));
+          } catch {
+            /* Diagnostics never interrupt suggestions. */
+          }
+        }
+      },
+    );
   },
   async chat(message: string) {
     const payload = await request<{ response?: string; message?: string; reply?: string }>(
@@ -130,11 +160,8 @@ export const api = {
         body: JSON.stringify({ message }),
       },
     );
-    return (
-      payload.response ??
-      payload.reply ??
-      payload.message ??
-      "I received your message, but the response was empty."
-    );
+    const reply = payload.response ?? payload.reply ?? payload.message;
+    if (!reply?.trim()) throw new Error("Empty response from chat service");
+    return reply;
   },
 };

@@ -1,0 +1,20 @@
+
+  VITE v8.1.5  ready in 4018 ms
+
+  ➜  Local:   http://127.0.0.1:8080/
+1:04:45 pm [vite] (ssr) connected.
+1:08:47 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx, /src/routes/index.tsx?tsr-split=component, /src/routes/products.index.tsx?tsr-split=component, /src/routes/products.$productId.tsx?tsr-split=component
+1:08:47 pm [vite] (ssr) page reload src/services/api.ts
+1:08:47 pm [vite] (ssr) program reload
+1:08:47 pm [vite] (client) hmr update /src/styles.css?direct
+1:08:47 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+1:08:47 pm [vite] (ssr) page reload src/components/storefront/ProductSuggestionPopup.tsx
+1:08:47 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+1:08:47 pm [vite] (ssr) page reload src/lib/product-suggestions.ts
+1:09:13 pm [vite] (client) hmr update /src/styles.css?direct
+1:09:13 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx, /src/routes/index.tsx?tsr-split=component, /src/routes/products.index.tsx?tsr-split=component, /src/routes/products.$productId.tsx?tsr-split=component
+1:09:13 pm [vite] (ssr) page reload src/services/api.ts
+1:09:13 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+1:09:13 pm [vite] (ssr) page reload src/components/storefront/ProductSuggestionPopup.tsx
+1:09:13 pm [vite] (client) hmr update /src/styles.css?direct, /src/components/storefront/ProductSuggestionPopup.tsx
+1:09:13 pm [vite] (ssr) page reload src/lib/product-suggestions.ts

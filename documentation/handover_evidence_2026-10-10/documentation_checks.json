@@ -1,0 +1,16 @@
+{
+  "checked_at_utc": "2026-10-10T04:00:50.858Z",
+  "scope": "New/updated handover Markdown only; bounded secret patterns, file links/anchors/fences/trailing whitespace. Not an exhaustive secret or rendered-Mermaid audit.",
+  "counts": {
+    "documents": 6,
+    "localLinks": 125,
+    "anchors": 2,
+    "mermaidBlocks": 2
+  },
+  "issues": [],
+  "pass": true,
+  "new_evidence_secret_pattern_matches": [],
+  "repo_diff_check_exit": 2,
+  "readme_diff_check_exit": 0,
+  "diagram_rendering": "not verified; no browser used"
+}

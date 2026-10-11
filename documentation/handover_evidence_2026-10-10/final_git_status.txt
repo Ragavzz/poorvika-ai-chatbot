@@ -1,0 +1,10 @@
+ M README.md
+ M documentation/accessory_compatibility_2026-10-10/laya_restart.log
+ M documentation/short_accessory_2026-10-10/api_runtime.log
+?? documentation/API_REFERENCE.md
+?? documentation/ARCHITECTURE.md
+?? documentation/DEPLOYMENT_AND_OPERATIONS.md
+?? documentation/FINAL_PROJECT_HANDOVER.md
+?? documentation/TESTING_AND_BENCHMARKS.md
+?? documentation/handover_evidence_2026-10-10/
+?? q

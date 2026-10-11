@@ -1,0 +1,384 @@
+[
+  {
+    "case": "laya-timeout",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "message": "Hi"
+    },
+    "http_status": 200,
+    "latency_ms": 249.5065999974031,
+    "payload": {
+      "response_source": "decision_service_error",
+      "decision_provider": "laya",
+      "response": "The configured decision service is unavailable or returned an invalid decision. Please try again shortly."
+    },
+    "timings": {
+      "request_received": "2026-10-10T11:10:50.784214+00:00",
+      "laya_start": "2026-10-10T11:10:50.785299+00:00",
+      "laya_end": "2026-10-10T11:10:50.785981+00:00",
+      "laya_duration_ms": 0.7,
+      "laya_call_count": 1,
+      "product_search_start": null,
+      "product_search_end": null,
+      "product_search_duration_ms": null,
+      "postgres_query_duration_ms": null,
+      "postgres_query_start": null,
+      "postgres_query_end": null,
+      "postgres_query_count": 0,
+      "ollama_start": null,
+      "ollama_end": null,
+      "ollama_duration_ms": null,
+      "ollama_http_duration_ms": null,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": null,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": null,
+      "ollama_call_count": 0,
+      "ollama_skipped_reason": null,
+      "request_id": "laya-timeout",
+      "decision_provider": "laya",
+      "decision_call_count": 1,
+      "response_source": "decision_service_error",
+      "response_total_ms": 158.5
+    },
+    "pass": true
+  },
+  {
+    "case": "laya-malformed",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "message": "Hi"
+    },
+    "http_status": 200,
+    "latency_ms": 13.10030001332052,
+    "payload": {
+      "response_source": "decision_service_error",
+      "decision_provider": "laya",
+      "response": "The configured decision service is unavailable or returned an invalid decision. Please try again shortly."
+    },
+    "timings": {
+      "request_received": "2026-10-10T11:10:50.956305+00:00",
+      "laya_start": "2026-10-10T11:10:50.956731+00:00",
+      "laya_end": "2026-10-10T11:10:50.957392+00:00",
+      "laya_duration_ms": 0.7,
+      "laya_call_count": 1,
+      "product_search_start": null,
+      "product_search_end": null,
+      "product_search_duration_ms": null,
+      "postgres_query_duration_ms": null,
+      "postgres_query_start": null,
+      "postgres_query_end": null,
+      "postgres_query_count": 0,
+      "ollama_start": null,
+      "ollama_end": null,
+      "ollama_duration_ms": null,
+      "ollama_http_duration_ms": null,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": null,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": null,
+      "ollama_call_count": 0,
+      "ollama_skipped_reason": null,
+      "request_id": "laya-malformed",
+      "decision_provider": "laya",
+      "decision_call_count": 1,
+      "response_source": "decision_service_error",
+      "response_total_ms": 3.4
+    },
+    "pass": true
+  },
+  {
+    "case": "ollama-timeout",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "message": "Hi"
+    },
+    "http_status": 503,
+    "latency_ms": 14.563599979737774,
+    "payload": {
+      "detail": "Response generation is unavailable."
+    },
+    "timings": {
+      "request_received": "2026-10-10T11:10:50.968633+00:00",
+      "laya_start": "2026-10-10T11:10:50.968987+00:00",
+      "laya_end": "2026-10-10T11:10:50.969923+00:00",
+      "laya_duration_ms": 1.0,
+      "laya_call_count": 1,
+      "product_search_start": null,
+      "product_search_end": null,
+      "product_search_duration_ms": null,
+      "postgres_query_duration_ms": null,
+      "postgres_query_start": null,
+      "postgres_query_end": null,
+      "postgres_query_count": 0,
+      "ollama_start": "2026-10-10T11:10:50.970498+00:00",
+      "ollama_end": "2026-10-10T11:10:50.970600+00:00",
+      "ollama_duration_ms": 0.1,
+      "ollama_http_duration_ms": 0.1,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": 0.0,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": 430,
+      "ollama_call_count": 1,
+      "ollama_skipped_reason": null,
+      "request_id": "ollama-timeout",
+      "decision_provider": "laya-python-v2",
+      "decision_call_count": 1,
+      "predicted_intent": "general_query",
+      "decision_confidence": 1,
+      "decision_probabilities": {
+        "add_to_cart": 0,
+        "general_query": 1,
+        "recommendation": 0,
+        "product_details": 0,
+        "product_search": 0,
+        "cart_action": 0
+      },
+      "resolved_action": "general_query",
+      "http_status": 503,
+      "failure_reason": "Response generation is unavailable.",
+      "response_source": "generation_service_error",
+      "response_total_ms": 5.8
+    },
+    "pass": true
+  },
+  {
+    "case": "ollama-connection",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "message": "Hi"
+    },
+    "http_status": 503,
+    "latency_ms": 14.34490000247024,
+    "payload": {
+      "detail": "Response generation is unavailable."
+    },
+    "timings": {
+      "request_received": "2026-10-10T11:10:50.982356+00:00",
+      "laya_start": "2026-10-10T11:10:50.982714+00:00",
+      "laya_end": "2026-10-10T11:10:50.983292+00:00",
+      "laya_duration_ms": 0.6,
+      "laya_call_count": 1,
+      "product_search_start": null,
+      "product_search_end": null,
+      "product_search_duration_ms": null,
+      "postgres_query_duration_ms": null,
+      "postgres_query_start": null,
+      "postgres_query_end": null,
+      "postgres_query_count": 0,
+      "ollama_start": "2026-10-10T11:10:50.983468+00:00",
+      "ollama_end": "2026-10-10T11:10:50.983553+00:00",
+      "ollama_duration_ms": 0.1,
+      "ollama_http_duration_ms": 0.1,
+      "ollama_client_overhead_ms": null,
+      "ollama_server_total_ms": null,
+      "ollama_prompt_build_ms": 0.0,
+      "ollama_model_load_ms": null,
+      "ollama_prompt_eval_ms": null,
+      "ollama_generation_ms": null,
+      "ollama_prompt_chars": 430,
+      "ollama_call_count": 1,
+      "ollama_skipped_reason": null,
+      "request_id": "ollama-connection",
+      "decision_provider": "laya-python-v2",
+      "decision_call_count": 1,
+      "predicted_intent": "general_query",
+      "decision_confidence": 1,
+      "decision_probabilities": {
+        "add_to_cart": 0,
+        "general_query": 1,
+        "recommendation": 0,
+        "product_details": 0,
+        "product_search": 0,
+        "cart_action": 0
+      },
+      "resolved_action": "general_query",
+      "http_status": 503,
+      "failure_reason": "Response generation is unavailable.",
+      "response_source": "generation_service_error",
+      "response_total_ms": 6.0
+    },
+    "pass": true
+  },
+  {
+    "case": "ollama-empty",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "message": "Hi"
+    },
+    "http_status": 503,
+    "latency_ms": 11.629400018136948,
+    "payload": {
+      "detail": "Response generation is unavailable."
+    },
+    "timings": {
+      "request_received": "2026-10-10T11:10:50.997839+00:00",
+      "laya_start": "2026-10-10T11:10:50.998212+00:00",
+      "laya_end": "2026-10-10T11:10:50.998731+00:00",
+      "laya_duration_ms": 0.5,
+      "laya_call_count": 1,
+      "product_search_start": null,
+      "product_search_end": null,
+      "product_search_duration_ms": null,
+      "postgres_query_duration_ms": null,
+      "postgres_query_start": null,
+      "postgres_query_end": null,
+      "postgres_query_count": 0,
+      "ollama_start": "2026-10-10T11:10:50.998887+00:00",
+      "ollama_end": "2026-10-10T11:10:50.999211+00:00",
+      "ollama_duration_ms": 0.3,
+      "ollama_http_duration_ms": 0.3,
+      "ollama_client_overhead_ms": 0.3,
+      "ollama_server_total_ms": 0.0,
+      "ollama_prompt_build_ms": 0.0,
+      "ollama_model_load_ms": 0.0,
+      "ollama_prompt_eval_ms": 0.0,
+      "ollama_generation_ms": 0.0,
+      "ollama_prompt_chars": 430,
+      "ollama_call_count": 1,
+      "ollama_skipped_reason": null,
+      "request_id": "ollama-empty",
+      "decision_provider": "laya-python-v2",
+      "decision_call_count": 1,
+      "predicted_intent": "general_query",
+      "decision_confidence": 1,
+      "decision_probabilities": {
+        "add_to_cart": 0,
+        "general_query": 1,
+        "recommendation": 0,
+        "product_details": 0,
+        "product_search": 0,
+        "cart_action": 0
+      },
+      "resolved_action": "general_query",
+      "http_status": 503,
+      "failure_reason": "Response generation is unavailable.",
+      "response_source": "generation_service_error",
+      "response_total_ms": 3.2
+    },
+    "pass": true
+  },
+  {
+    "case": "suggestion-timeout",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "product": {
+        "name": "Phone"
+      }
+    },
+    "http_status": 504,
+    "latency_ms": 17.646299995249137,
+    "payload": {
+      "detail": "Suggestions are unavailable (timeout)."
+    },
+    "timings": {
+      "request_id": "suggestion-timeout",
+      "backend_received": "2026-10-10T11:10:51.010906+00:00",
+      "laya_ms": 0,
+      "laya_call_count": 0,
+      "ollama_call_count": 1,
+      "cache": "miss",
+      "ollama_started": "2026-10-10T11:10:51.016952+00:00",
+      "ollama_ms": 1.17,
+      "failure_reason": "timeout",
+      "backend_api_ms": 7.873,
+      "status": 504
+    },
+    "pass": true
+  },
+  {
+    "case": "suggestion-connection",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "product": {
+        "name": "Phone"
+      }
+    },
+    "http_status": 503,
+    "latency_ms": 9.416300017619506,
+    "payload": {
+      "detail": "Suggestions are unavailable (model_connection_or_service_failure)."
+    },
+    "timings": {
+      "request_id": "suggestion-connection",
+      "backend_received": "2026-10-10T11:10:51.025766+00:00",
+      "laya_ms": 0,
+      "laya_call_count": 0,
+      "ollama_call_count": 1,
+      "cache": "miss",
+      "ollama_started": "2026-10-10T11:10:51.026912+00:00",
+      "ollama_ms": 0.635,
+      "failure_reason": "model_connection_or_service_failure",
+      "backend_api_ms": 2.447,
+      "status": 503
+    },
+    "pass": true
+  },
+  {
+    "case": "suggestion-malformed",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "product": {
+        "name": "Phone"
+      }
+    },
+    "http_status": 503,
+    "latency_ms": 12.329700024565682,
+    "payload": {
+      "detail": "Suggestions are unavailable (invalid_model_output)."
+    },
+    "timings": {
+      "request_id": "suggestion-malformed",
+      "backend_received": "2026-10-10T11:10:51.035484+00:00",
+      "laya_ms": 0,
+      "laya_call_count": 0,
+      "ollama_call_count": 1,
+      "cache": "miss",
+      "ollama_started": "2026-10-10T11:10:51.037320+00:00",
+      "ollama_received": "2026-10-10T11:10:51.038562+00:00",
+      "ollama_ms": 1.263,
+      "ollama_server_generation_ms": 0.0,
+      "ollama_load_ms": 0.0,
+      "ollama_prompt_eval_ms": 0.0,
+      "ollama_server_total_ms": 0.0,
+      "failure_reason": "invalid_model_output",
+      "backend_api_ms": 5.009,
+      "status": 503
+    },
+    "pass": true
+  },
+  {
+    "case": "suggestion-empty-context",
+    "execution": "Isolated TestClient network-failure injection; not a live outage",
+    "input": {
+      "product": {}
+    },
+    "http_status": 422,
+    "latency_ms": 8.475000009639189,
+    "payload": {
+      "detail": [
+        {
+          "type": "missing",
+          "loc": [
+            "body",
+            "product",
+            "name"
+          ],
+          "msg": "Field required",
+          "input": {}
+        }
+      ]
+    },
+    "timings": null,
+    "pass": true
+  }
+]

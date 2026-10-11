@@ -1,0 +1,50 @@
+{
+  "react": {
+    "version": "19.3.0",
+    "engines": {
+      "node": ">=0.10.0"
+    }
+  },
+  "vite": {
+    "version": "8.1.5",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    }
+  },
+  "typescript": {
+    "version": "5.9.3",
+    "engines": {
+      "node": ">=14.17"
+    }
+  },
+  "@tanstack/react-start": {
+    "version": "1.168.32",
+    "engines": {
+      "node": ">=22.12.0"
+    }
+  },
+  "@tanstack/react-router": {
+    "version": "1.170.18",
+    "engines": {
+      "node": ">=20.19"
+    }
+  },
+  "@tanstack/react-query": {
+    "version": "5.103.2"
+  },
+  "tailwindcss": {
+    "version": "4.3.3"
+  },
+  "nitro": {
+    "version": "3.0.260603-beta",
+    "engines": {
+      "node": "^20.19.0 || >=22.12.0"
+    }
+  },
+  "@receptron/laya": {
+    "version": "0.1.2",
+    "engines": {
+      "node": ">=20"
+    }
+  }
+}

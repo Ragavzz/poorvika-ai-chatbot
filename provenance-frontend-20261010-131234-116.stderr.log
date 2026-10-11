@@ -1,0 +1,123 @@
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+1:13:57 pm [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <CatchNotFound fallback={function fallback}>
+      <CatchBoundary getResetKey={function getResetKey} onCatch={function onCatch} ...>
+        <CatchBoundaryImpl getResetKey={function getResetKey} onCatch={function onCatch}>
+          <MatchInnerImpl matchId="__root__/">
+            <RootComponent>
+              <QueryClientProvider client={{}} data-tsd-source="/src/route...">
+                <CartProvider data-tsd-source="/src/route...">
+                  <Navbar data-tsd-source="/src/route...">
+                    <header className="sticky top..." data-tsd-source="/src/compo...">
+                      <div className="bg-[#ff550..." data-tsd-source="/src/compo...">
+                        <div className="mx-auto fl..." data-tsd-source="/src/compo...">
+                          <_c>
+                          <a>
+                          <div>
+                          <div className="flex items..." data-tsd-source="/src/compo...">
+                            <div>
+                            <div>
+                            <button
+                              type="button"
+                              onClick={function}
+                              className="flex items-center gap-2 text-left cursor-pointer hover:opacity-90 transition ..."
++                             aria-label="Shopping cart with 3 items"
+-                             aria-label="Shopping cart with 0 items"
+                              data-tsd-source="/src/components/storefront/Navbar.tsx:74:13"
+                            >
+                              <div className="text-right..." data-tsd-source="/src/compo...">
+                                <span className="block text..." data-tsd-source="/src/compo...">
++                                 3
+-                                 0
+                                  ...
+                                ...
+                              ...
+                            ...
+                        ...
+                      ...
+                  ...
+
+ > throwOnHydrationMismatch node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > completeWork node_modules/react-dom/cjs/react-dom-client.development.js:13206:25
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopConcurrentByScheduler node_modules/react-dom/cjs/react-dom-client.development.js:19170:8
+ > renderRootConcurrent node_modules/react-dom/cjs/react-dom-client.development.js:19152:14
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:18014:10
+ > performWorkOnRootViaSchedulerTask node_modules/react-dom/cjs/react-dom-client.development.js:20665:6
+ > MessagePort.performWorkUntilDeadline node_modules/scheduler/cjs/scheduler.development.js:45:47
+
+1:37:30 pm [vite] (client) [Unhandled error] Error: Hydration failed because the server rendered text didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <CatchNotFound fallback={function fallback}>
+      <CatchBoundary getResetKey={function getResetKey} onCatch={function onCatch} ...>
+        <CatchBoundaryImpl getResetKey={function getResetKey} onCatch={function onCatch}>
+          <MatchInnerImpl matchId="__root__/">
+            <RootComponent>
+              <QueryClientProvider client={{}} data-tsd-source="/src/route...">
+                <CartProvider data-tsd-source="/src/route...">
+                  <Navbar data-tsd-source="/src/route...">
+                    <header className="sticky top..." data-tsd-source="/src/compo...">
+                      <div className="bg-[#ff550..." data-tsd-source="/src/compo...">
+                        <div className="mx-auto fl..." data-tsd-source="/src/compo...">
+                          <_c>
+                          <a>
+                          <div>
+                          <div className="flex items..." data-tsd-source="/src/compo...">
+                            <div>
+                            <div>
+                            <button
+                              type="button"
+                              onClick={function}
+                              className="flex items-center gap-2 text-left cursor-pointer hover:opacity-90 transition ..."
++                             aria-label="Shopping cart with 3 items"
+-                             aria-label="Shopping cart with 0 items"
+                              data-tsd-source="/src/components/storefront/Navbar.tsx:74:13"
+                            >
+                              <div className="text-right..." data-tsd-source="/src/compo...">
+                                <span className="block text..." data-tsd-source="/src/compo...">
++                                 3
+-                                 0
+                                  ...
+                                ...
+                              ...
+                            ...
+                        ...
+                      ...
+                  ...
+
+ > throwOnHydrationMismatch node_modules/react-dom/cjs/react-dom-client.development.js:5547:10
+ > completeWork node_modules/react-dom/cjs/react-dom-client.development.js:13206:25
+ > runWithFiberInDEV node_modules/react-dom/cjs/react-dom-client.development.js:1045:29
+ > completeUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19320:18
+ > performUnitOfWork node_modules/react-dom/cjs/react-dom-client.development.js:19193:10
+ > workLoopConcurrentByScheduler node_modules/react-dom/cjs/react-dom-client.development.js:19170:8
+ > renderRootConcurrent node_modules/react-dom/cjs/react-dom-client.development.js:19152:14
+ > performWorkOnRoot node_modules/react-dom/cjs/react-dom-client.development.js:18014:10
+ > performWorkOnRootViaSchedulerTask node_modules/react-dom/cjs/react-dom-client.development.js:20665:6
+ > MessagePort.performWorkUntilDeadline node_modules/scheduler/cjs/scheduler.development.js:45:47
+

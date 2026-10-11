@@ -1,0 +1,478 @@
+{
+  "kind": "v11 pre-optimization API baseline; actual Ollama calls through FastAPI TestClient; browser not measured; model was already warm",
+  "contexts": {
+    "iphone": {
+      "misses": [
+        {
+          "request_id": "arrival-baseline-iphone-0",
+          "status": 200,
+          "wall_ms": 4801.644,
+          "timing": {
+            "request_id": "arrival-baseline-iphone-0",
+            "backend_received": "2026-10-10T17:04:39.274384+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.881,
+            "prompt_chars": 900,
+            "context_chars": 576,
+            "context_bytes": 576,
+            "request_context_chars": 2668,
+            "ollama_started": "2026-10-10T17:04:39.281155+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.004,
+            "validated": "2026-10-10T17:04:44.037199+00:00",
+            "ollama_ms": 4756.067,
+            "ollama_server_generation_ms": 1075.318,
+            "ollama_load_ms": 76.1815,
+            "ollama_prompt_eval_ms": 1297.198,
+            "ollama_server_total_ms": 2678.3743,
+            "ollama_prompt_eval_tokens": 267,
+            "ollama_generation_tokens": 52,
+            "association_validation_ms": 0.0,
+            "validation_ms": 4.373,
+            "backend_api_ms": 4765.654,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the brand of the Apple iPhone 15?",
+              "What are the camera features of the Apple iPhone 15?",
+              "What is the display type of the Apple iPhone 15?",
+              "What is the price of the Apple iPhone 15 in the catalog?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-baseline-iphone-1",
+          "status": 200,
+          "wall_ms": 1035.927,
+          "timing": {
+            "request_id": "arrival-baseline-iphone-1",
+            "backend_received": "2026-10-10T17:04:44.046358+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.668,
+            "prompt_chars": 900,
+            "context_chars": 576,
+            "context_bytes": 576,
+            "request_context_chars": 2668,
+            "ollama_started": "2026-10-10T17:04:44.047998+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.007,
+            "validated": "2026-10-10T17:04:45.075500+00:00",
+            "ollama_ms": 1027.522,
+            "ollama_server_generation_ms": 974.762,
+            "ollama_load_ms": 21.5081,
+            "ollama_prompt_eval_ms": 20.724,
+            "ollama_server_total_ms": 1024.3804,
+            "ollama_prompt_eval_tokens": 267,
+            "ollama_generation_tokens": 48,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.915,
+            "backend_api_ms": 1030.214,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Is this product suitable for heavy camera users?",
+              "Does the phone support 5G networks?",
+              "Can the phone be used with a low-cost network provider?",
+              "Is the phone's display size suitable for watching videos?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-baseline-iphone-2",
+          "status": 200,
+          "wall_ms": 1160.115,
+          "timing": {
+            "request_id": "arrival-baseline-iphone-2",
+            "backend_received": "2026-10-10T17:04:45.084795+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.884,
+            "prompt_chars": 900,
+            "context_chars": 576,
+            "context_bytes": 576,
+            "request_context_chars": 2668,
+            "ollama_started": "2026-10-10T17:04:45.087222+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.006,
+            "validated": "2026-10-10T17:04:46.235753+00:00",
+            "ollama_ms": 1148.553,
+            "ollama_server_generation_ms": 1100.184,
+            "ollama_load_ms": 16.9432,
+            "ollama_prompt_eval_ms": 20.794,
+            "ollama_server_total_ms": 1144.8249,
+            "ollama_prompt_eval_tokens": 267,
+            "ollama_generation_tokens": 54,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.948,
+            "backend_api_ms": 1152.202,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Does this phone have a water-resistant design?",
+              "Is the display size of 15.54 cm ( 6.1 inch ) suitable for watching videos?",
+              "Can the phone be charged wirelessly?",
+              "Does the phone have a headphone jack?"
+            ]
+          }
+        }
+      ],
+      "median_ms": 1160.115,
+      "p95_ms": 4801.644
+    },
+    "samsung_a16": {
+      "misses": [
+        {
+          "request_id": "arrival-baseline-samsung_a16-0",
+          "status": 200,
+          "wall_ms": 4553.686,
+          "timing": {
+            "request_id": "arrival-baseline-samsung_a16-0",
+            "backend_received": "2026-10-10T17:04:46.249213+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 2,
+            "cache": "miss",
+            "prompt_build_ms": 0.836,
+            "prompt_chars": 758,
+            "context_chars": 434,
+            "context_bytes": 434,
+            "request_context_chars": 1875,
+            "ollama_started": "2026-10-10T17:04:48.857500+00:00",
+            "generation_attempts": 2,
+            "semantic_retry_count": 1,
+            "output_parse_ms": 0.005,
+            "association_validation_ms": 0.0,
+            "validation_ms": 1.132,
+            "validated": "2026-10-10T17:04:50.797120+00:00",
+            "ollama_ms": 4546.005,
+            "ollama_server_generation_ms": 1575.476,
+            "ollama_load_ms": 16.6161,
+            "ollama_prompt_eval_ms": 334.123,
+            "ollama_server_total_ms": 1936.7366,
+            "ollama_prompt_eval_tokens": 289,
+            "ollama_generation_tokens": 80,
+            "backend_api_ms": 4548.717,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What is the brand of the Samsung Galaxy A16 5G?",
+              "Is the Samsung Galaxy A16 5G available in 6GB-128GB storage variant?",
+              "Does the Samsung Galaxy A16 5G have a Super AMOLED display?",
+              "Is the Samsung Galaxy A16 5G's battery capacity 5000 mAh?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-baseline-samsung_a16-1",
+          "status": 200,
+          "wall_ms": 1128.909,
+          "timing": {
+            "request_id": "arrival-baseline-samsung_a16-1",
+            "backend_received": "2026-10-10T17:04:50.802738+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.536,
+            "prompt_chars": 758,
+            "context_chars": 434,
+            "context_bytes": 434,
+            "request_context_chars": 1875,
+            "ollama_started": "2026-10-10T17:04:50.804226+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.004,
+            "validated": "2026-10-10T17:04:51.926968+00:00",
+            "ollama_ms": 1122.754,
+            "ollama_server_generation_ms": 1073.741,
+            "ollama_load_ms": 17.7459,
+            "ollama_prompt_eval_ms": 22.803,
+            "ollama_server_total_ms": 1120.5016,
+            "ollama_prompt_eval_tokens": 245,
+            "ollama_generation_tokens": 53,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.356,
+            "backend_api_ms": 1124.834,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Is this phone suitable for heavy gaming?",
+              "Can I charge this phone using a USB-C cable?",
+              "Does Samsung Galaxy A16 5G have a fingerprint scanner?",
+              "Is the phone's battery capacity sufficient for a full day of use?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-baseline-samsung_a16-2",
+          "status": 200,
+          "wall_ms": 1169.484,
+          "timing": {
+            "request_id": "arrival-baseline-samsung_a16-2",
+            "backend_received": "2026-10-10T17:04:51.931365+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.503,
+            "prompt_chars": 758,
+            "context_chars": 434,
+            "context_bytes": 434,
+            "request_context_chars": 1875,
+            "ollama_started": "2026-10-10T17:04:51.932807+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.003,
+            "validated": "2026-10-10T17:04:53.096364+00:00",
+            "ollama_ms": 1163.571,
+            "ollama_server_generation_ms": 1118.109,
+            "ollama_load_ms": 15.9158,
+            "ollama_prompt_eval_ms": 21.651,
+            "ollama_server_total_ms": 1161.4813,
+            "ollama_prompt_eval_tokens": 245,
+            "ollama_generation_tokens": 57,
+            "association_validation_ms": 0.0,
+            "validation_ms": 0.365,
+            "backend_api_ms": 1165.572,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Does the Samsung Galaxy A16 5G support 5G networks?",
+              "Can the phone's 50MP primary camera take low-light photos?",
+              "Is the phone's display size suitable for watching movies?",
+              "Does the phone come with a fast charging feature?"
+            ]
+          }
+        }
+      ],
+      "median_ms": 1169.484,
+      "p95_ms": 4553.686
+    },
+    "filtered_mobiles": {
+      "misses": [
+        {
+          "request_id": "arrival-baseline-filtered_mobiles-0",
+          "status": 200,
+          "wall_ms": 6880.698,
+          "timing": {
+            "request_id": "arrival-baseline-filtered_mobiles-0",
+            "backend_received": "2026-10-10T17:04:53.106043+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 2,
+            "cache": "miss",
+            "prompt_build_ms": 0.392,
+            "prompt_chars": 1605,
+            "context_chars": 1134,
+            "context_bytes": 1134,
+            "request_context_chars": 2055,
+            "ollama_started": "2026-10-10T17:04:57.268563+00:00",
+            "generation_attempts": 2,
+            "semantic_retry_count": 1,
+            "output_parse_ms": 0.004,
+            "association_validation_ms": 2.893,
+            "validation_ms": 3.166,
+            "validated": "2026-10-10T17:04:59.982464+00:00",
+            "ollama_ms": 6865.86,
+            "ollama_server_generation_ms": 2307.228,
+            "ollama_load_ms": 15.039,
+            "ollama_prompt_eval_ms": 377.439,
+            "ollama_server_total_ms": 2711.1089,
+            "ollama_prompt_eval_tokens": 533,
+            "ollama_generation_tokens": 113,
+            "backend_api_ms": 6877.048,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "Does the Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB ) support 5G networks?",
+              "Is the Samsung Galaxy A06 ( Black, 4GB-64GB ) available in gold color?",
+              "Can the Samsung Galaxy A16 5G ( Gold, 8GB-128GB ) be used with both Nano SIM and eSIM?",
+              "Does the Samsung Galaxy A16 5G ( Light Green, 8GB-128GB ) support 2G networks?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-baseline-filtered_mobiles-1",
+          "status": 200,
+          "wall_ms": 1445.488,
+          "timing": {
+            "request_id": "arrival-baseline-filtered_mobiles-1",
+            "backend_received": "2026-10-10T17:04:59.986742+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.451,
+            "prompt_chars": 1605,
+            "context_chars": 1134,
+            "context_bytes": 1134,
+            "request_context_chars": 2055,
+            "ollama_started": "2026-10-10T17:04:59.988485+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.003,
+            "validated": "2026-10-10T17:05:01.428092+00:00",
+            "ollama_ms": 1439.62,
+            "ollama_server_generation_ms": 1395.379,
+            "ollama_load_ms": 13.2186,
+            "ollama_prompt_eval_ms": 22.551,
+            "ollama_server_total_ms": 1437.3147,
+            "ollama_prompt_eval_tokens": 487,
+            "ollama_generation_tokens": 69,
+            "association_validation_ms": 0.484,
+            "validation_ms": 0.651,
+            "backend_api_ms": 1441.931,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What are the available network types for the Samsung Galaxy A16 5G?",
+              "How many GB of RAM does the Samsung Galaxy A06 have?",
+              "What is the price range for Samsung Galaxy A16 5G models with 8GB of RAM?",
+              "Are Samsung Galaxy A06 models available in the Blue Black color?"
+            ]
+          }
+        },
+        {
+          "request_id": "arrival-baseline-filtered_mobiles-2",
+          "status": 200,
+          "wall_ms": 1595.676,
+          "timing": {
+            "request_id": "arrival-baseline-filtered_mobiles-2",
+            "backend_received": "2026-10-10T17:05:01.432780+00:00",
+            "laya_ms": 0,
+            "laya_call_count": 0,
+            "ollama_call_count": 1,
+            "cache": "miss",
+            "prompt_build_ms": 0.414,
+            "prompt_chars": 1605,
+            "context_chars": 1134,
+            "context_bytes": 1134,
+            "request_context_chars": 2055,
+            "ollama_started": "2026-10-10T17:05:01.434052+00:00",
+            "generation_attempts": 1,
+            "semantic_retry_count": 0,
+            "output_parse_ms": 0.006,
+            "validated": "2026-10-10T17:05:03.023835+00:00",
+            "ollama_ms": 1589.794,
+            "ollama_server_generation_ms": 1542.536,
+            "ollama_load_ms": 14.8916,
+            "ollama_prompt_eval_ms": 22.107,
+            "ollama_server_total_ms": 1587.567,
+            "ollama_prompt_eval_tokens": 487,
+            "ollama_generation_tokens": 76,
+            "association_validation_ms": 0.616,
+            "validation_ms": 0.805,
+            "backend_api_ms": 1591.667,
+            "status": 200
+          },
+          "response": {
+            "suggestions": [
+              "What are the network types supported by the Samsung Galaxy A16 5G products?",
+              "Are the Samsung Galaxy A06 and A16 5G products available in other colors?",
+              "Can the Samsung Galaxy A16 5G products be expanded with additional storage?",
+              "Do the Samsung Galaxy A06 and A16 5G products support 5G networks?"
+            ]
+          }
+        }
+      ],
+      "median_ms": 1595.676,
+      "p95_ms": 6880.698
+    }
+  },
+  "cache_hits": [
+    {
+      "context": "iphone",
+      "request_id": "arrival-baseline-iphone-cache-hit",
+      "status": 200,
+      "wall_ms": 6.646,
+      "timing": {
+        "request_id": "arrival-baseline-iphone-cache-hit",
+        "backend_received": "2026-10-10T17:04:46.242510+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "backend_api_ms": 1.937,
+        "status": 200
+      },
+      "response": {
+        "suggestions": [
+          "Does this phone have a water-resistant design?",
+          "Is the display size of 15.54 cm ( 6.1 inch ) suitable for watching videos?",
+          "Can the phone be charged wirelessly?",
+          "Does the phone have a headphone jack?"
+        ]
+      }
+    },
+    {
+      "context": "samsung_a16",
+      "request_id": "arrival-baseline-samsung_a16-cache-hit",
+      "status": 200,
+      "wall_ms": 5.145,
+      "timing": {
+        "request_id": "arrival-baseline-samsung_a16-cache-hit",
+        "backend_received": "2026-10-10T17:04:53.100727+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "backend_api_ms": 1.5,
+        "status": 200
+      },
+      "response": {
+        "suggestions": [
+          "Does the Samsung Galaxy A16 5G support 5G networks?",
+          "Can the phone's 50MP primary camera take low-light photos?",
+          "Is the phone's display size suitable for watching movies?",
+          "Does the phone come with a fast charging feature?"
+        ]
+      }
+    },
+    {
+      "context": "filtered_mobiles",
+      "request_id": "arrival-baseline-filtered_mobiles-cache-hit",
+      "status": 200,
+      "wall_ms": 5.051,
+      "timing": {
+        "request_id": "arrival-baseline-filtered_mobiles-cache-hit",
+        "backend_received": "2026-10-10T17:05:03.028190+00:00",
+        "laya_ms": 0,
+        "laya_call_count": 0,
+        "ollama_call_count": 0,
+        "cache": "hit",
+        "ollama_ms": 0,
+        "backend_api_ms": 1.408,
+        "status": 200
+      },
+      "response": {
+        "suggestions": [
+          "What are the network types supported by the Samsung Galaxy A16 5G products?",
+          "Are the Samsung Galaxy A06 and A16 5G products available in other colors?",
+          "Can the Samsung Galaxy A16 5G products be expanded with additional storage?",
+          "Do the Samsung Galaxy A06 and A16 5G products support 5G networks?"
+        ]
+      }
+    }
+  ]
+}

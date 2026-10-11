@@ -1,0 +1,463 @@
+[
+  {
+    "path": "laya_v2_service/results/jev_validation_2026-10-08T103503963Z/laya_jev_benchmark_report.md",
+    "bytes": 4091,
+    "outline": [
+      "# Laya — LocalLLaMA typed-decisions Benchmark Report\r"
+    ]
+  },
+  {
+    "path": "laya_v2_service/results/jev_full_20261008T115135_157161Z/laya_jev_benchmark_report.md",
+    "bytes": 4406,
+    "outline": [
+      "# Laya — LocalLLaMA typed-decisions Benchmark Report\r"
+    ]
+  },
+  {
+    "path": "laya_v2_service/results/jev_compatibility_note.md",
+    "bytes": 1449,
+    "outline": [
+      "# JEV V2 compatibility validation"
+    ]
+  },
+  {
+    "path": "evaluation/results/benchmark_report.md",
+    "bytes": 8801,
+    "outline": [
+      "# Poorvika ShopAI Comprehensive Pipeline Benchmark Report\r"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/validation_report.md",
+    "bytes": 6494,
+    "outline": [
+      "# Isolated specialist ONNX validation report\r"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/README.md",
+    "bytes": 2324,
+    "outline": [
+      "# Isolated Laya specialist ONNX validation"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/node_validate.mjs",
+    "bytes": 4265,
+    "outline": []
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/make_report.py",
+    "bytes": 6937,
+    "outline": []
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/validate.py",
+    "bytes": 9002,
+    "outline": [
+      "def save(name,obj): (RUN/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False),encoding='utf8')",
+      "def hashes():",
+      "def port():",
+      "def wait(url,process,timeout=150):",
+      "def stats(values):",
+      "    env=dict(os.environ,LAYA_MODEL='specialist',PORT=str(lp),PYTHONIOENCODING='utf-8')"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/service.mjs",
+    "bytes": 6326,
+    "outline": [
+      "export const questions=vm.runInNewContext('('+source.match(/export const POORVIKA_LAYA_QUESTIONS = ([\\s\\S]*?);/)[1]+')');",
+      "export function createServer(engine, identity) {",
+      "export async function start() {",
+      "  const mode=process.env.LAYA_MODEL||'base';",
+      "  if(!['base','specialist'].includes(mode)) throw Error('LAYA_MODEL must be base or specialist');"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/backend_test_host.py",
+    "bytes": 1285,
+    "outline": [
+      "def postgres_string_position(connection, _):"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/backend_regression.py",
+    "bytes": 1785,
+    "outline": [
+      "    process=subprocess.Popen(['node','laya_service/switchable_server.mjs'],cwd=root,env=dict(os.environ,LAYA_MODEL='specialist',PORT=str(port)),stdout=log,stderr=subprocess.STDOUT)"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/export_validate.py",
+    "bytes": 11433,
+    "outline": [
+      "def digest(p):",
+      "def save(name, obj):",
+      "def protected():",
+      "def assemble():",
+      "def fixtures():",
+      "def probabilities(logits, q, cfg):",
+      "def main():",
+      "    parser=argparse.ArgumentParser(); parser.add_argument('--validate-only',action='store_true'); args=parser.parse_args()"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/live_runs/20261005_210712_regression_fixes/validation_report.md",
+    "bytes": 3605,
+    "outline": [
+      "# Regression blocker fixes and specialist revalidation\r"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/live_runs/20261005_205325/shopai_integration_report.md",
+    "bytes": 10027,
+    "outline": [
+      "# ShopAI specialist staging integration\r",
+      "LAYA_MODEL selects base/specialist. PORT=5056 isolates decision service; LAYA_DECIDE_URL=http://127.0.0.1:5056/decide selects it for an independent process of the existing FastAPI app; frontend VITE_API_BASE_URL=http://127.0.0.1:8001 selects that backend. Backend environment uses real PostgreSQL with TESTING_MODE=false. The old configured dataset path was missing; explicit DATASET_PATH points to the existing workspace file without altering data.\r",
+      "$env:LAYA_MODEL='specialist'; $env:PORT='5056'\r",
+      "$env:LAYA_MODEL='base'; $env:PORT='5056'\r"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/live_report.py",
+    "bytes": 12339,
+    "outline": [
+      "def read(name):return json.loads((run/name).read_text(encoding='utf8'))",
+      "'LAYA_MODEL selects base/specialist. PORT=5056 isolates decision service; LAYA_DECIDE_URL=http://127.0.0.1:5056/decide selects it for an independent process of the existing FastAPI app; frontend VITE_API_BASE_URL=http://127.0.0.1:8001 selects that backend. Backend environment uses real PostgreSQL with TESTING_MODE=false. The old configured dataset path was missing; explicit DATASET_PATH points to the existing workspace file without altering data.',",
+      "'Run each block in a separate terminal from the repository root. Stop only these opt-in processes to switch modes.','```powershell',\"$env:LAYA_MODEL='specialist'; $env:PORT='5056'\",'node laya_service/switchable_server.mjs','```','',",
+      "'Switch isolated decision layer to base (backend/frontend configuration unchanged):','```powershell',\"$env:LAYA_MODEL='base'; $env:PORT='5056'\",'node laya_service/switchable_server.mjs','```','',"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/frontend_wiring.py",
+    "bytes": 2964,
+    "outline": [
+      "def launch(command,env,name,cwd=root):",
+      "def wait(url,process):",
+      "    node=launch(['node','laya_service/switchable_server.mjs'],{'LAYA_MODEL':'specialist','PORT':'5056'},'wiring_laya.log')"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/failure_test.mjs",
+    "bytes": 769,
+    "outline": []
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/entry_smoke.py",
+    "bytes": 1669,
+    "outline": [
+      "        process=subprocess.Popen(['node','laya_service/switchable_server.mjs'],cwd=root,env=dict(os.environ,LAYA_MODEL=mode,PORT=str(port)),stdout=log,stderr=subprocess.STDOUT)"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/base_smoke.py",
+    "bytes": 1288,
+    "outline": [
+      "proc=subprocess.Popen(['node',str(here/'service.mjs')],env=dict(os.environ,LAYA_MODEL='base',PORT=str(port)),stdout=log,stderr=subprocess.STDOUT)"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/README.md",
+    "bytes": 2581,
+    "outline": [
+      "$env:LAYA_MODEL='specialist'; $env:PORT='5056'; node evaluation/laya_specialist_onnx_isolated/integration/service.mjs",
+      "$env:LAYA_MODEL='base'; $env:PORT='5056'; node evaluation/laya_specialist_onnx_isolated/integration/service.mjs"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/make_report.py",
+    "bytes": 7662,
+    "outline": [
+      "'Runtime: installed @receptron/laya 0.1.2, CPU, intraOpNumThreads=2, interOpNumThreads=1. Base remains production default; isolated adapter also defaults to base. LAYA_MODEL selects base/specialist. No automatic fallback or downloads.',",
+      "'Specialist:','$env:LAYA_MODEL=\\'specialist\\'; $env:PORT=\\'5056\\'; node evaluation/laya_specialist_onnx_isolated/integration/service.mjs',",
+      "'Stop the isolated process first, then base:','$env:LAYA_MODEL=\\'base\\'; $env:PORT=\\'5056\\'; node evaluation/laya_specialist_onnx_isolated/integration/service.mjs',"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/live_validate.py",
+    "bytes": 11864,
+    "outline": [
+      "def save(name,value): (RUN/name).write_text(json.dumps(value,indent=2,ensure_ascii=False),encoding='utf8')",
+      "def protect():",
+      "def free_port():",
+      "def ready(url,proc,timeout=180):",
+      "def stats(v):",
+      "def launch(command,env,name,cwd=ROOT):",
+      "    start=time.perf_counter();node=launch(['node','laya_service/switchable_server.mjs'],{'LAYA_MODEL':'specialist','PORT':str(lp)},'laya.log')"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase5_rollback_20261004/run_baseline_v2.py",
+    "bytes": 18678,
+    "outline": [
+      "from config import DATASET_JSON, LAYA_DECIDE_ENDPOINT, LAYA_HEALTH_ENDPOINT, LAYA_REQUEST_TIMEOUT, RESULTS_DIR",
+      "def sha256(path: Path) -> str:",
+      "def latency_summary(values: list[float]) -> dict[str, float | None]:",
+      "def classify_source(body: dict[str, Any] | None) -> str:",
+      "def make_summary(",
+      "def render_report(summary: dict[str, Any], failures: list[dict[str, Any]]) -> str:",
+      "def main() -> None:",
+      "    parser.add_argument(\"--full\", action=\"store_true\", help=\"required confirmation to run the full 400-case test split\")",
+      "        \"raw\": RESULTS_DIR / f\"{PREFIX}_raw.jsonl\",",
+      "        \"summary\": RESULTS_DIR / f\"{PREFIX}_summary.json\",",
+      "        \"report\": RESULTS_DIR / f\"{PREFIX}_report.md\",",
+      "        \"failures\": RESULTS_DIR / f\"{PREFIX}_failures.jsonl\",",
+      "        RESULTS_DIR.mkdir(parents=True, exist_ok=True)"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase5_rollback_20261004/benchmark_config.py",
+    "bytes": 894,
+    "outline": [
+      "# Paths",
+      "RESULTS_DIR = BASE_DIR / \"results\"",
+      "# Laya Service Configuration",
+      "# Uses the user's existing running Laya decision service",
+      "# Benchmark Constants"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase5_optimized_typed_decisions_20261004_report.md",
+    "bytes": 2355,
+    "outline": []
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/PHASE5_OPTIMIZATION_REPORT.md",
+    "bytes": 5642,
+    "outline": [
+      "# Phase 5 — Laya model optimization",
+      "**PASS.** The isolated `LAYA_MODEL=typed-decisions` benchmark path scored **1,532/2,000 = 76.60%** with **0 failures**, exceeding the 60% target by 16.60 percentage points. The base Laya result remains **718/2,000 = 35.90%**.",
+      "- `LAYA_MODEL=base` (default) proxies to the existing base service at `LAYA_BASE_ENDPOINT` (default `http://127.0.0.1:5055`).",
+      "- `LAYA_MODEL=typed-decisions` loads the pinned checkpoint in the isolated Python runtime and serves the benchmark adapter on port 5056.",
+      "For rollback, set `$env:LAYA_MODEL='base'` and ensure the original base Laya service is available at `LAYA_BASE_ENDPOINT`. To select the candidate, set `$env:LAYA_MODEL='typed-decisions'`, activate the isolated runtime, and use a fresh `BENCHMARK_RUN_PREFIX` for a new artifact set. No file restore is required to switch models."
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_typed_decisions_candidate_20261004_pilot_report.md",
+    "bytes": 5840,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_typed_decisions_candidate_20261004_full_report.md",
+    "bytes": 5846,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_rollback_20261004/run_baseline_v2.py",
+    "bytes": 18678,
+    "outline": [
+      "from config import DATASET_JSON, LAYA_DECIDE_ENDPOINT, LAYA_HEALTH_ENDPOINT, LAYA_REQUEST_TIMEOUT, RESULTS_DIR",
+      "def sha256(path: Path) -> str:",
+      "def latency_summary(values: list[float]) -> dict[str, float | None]:",
+      "def classify_source(body: dict[str, Any] | None) -> str:",
+      "def make_summary(",
+      "def render_report(summary: dict[str, Any], failures: list[dict[str, Any]]) -> str:",
+      "def main() -> None:",
+      "    parser.add_argument(\"--full\", action=\"store_true\", help=\"required confirmation to run the full 400-case test split\")",
+      "        \"raw\": RESULTS_DIR / f\"{PREFIX}_raw.jsonl\",",
+      "        \"summary\": RESULTS_DIR / f\"{PREFIX}_summary.json\",",
+      "        \"report\": RESULTS_DIR / f\"{PREFIX}_report.md\",",
+      "        \"failures\": RESULTS_DIR / f\"{PREFIX}_failures.jsonl\",",
+      "        RESULTS_DIR.mkdir(parents=True, exist_ok=True)"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_rollback_20261004/runner.py",
+    "bytes": 21116,
+    "outline": [
+      "# Ensure package imports work regardless of execution location",
+      "    RESULTS_DIR,",
+      "def check_laya_health(health_url: str = LAYA_HEALTH_ENDPOINT) -> Dict[str, Any]:",
+      "def load_benchmark_dataset(dataset_path: Optional[Path] = None) -> List[Dict[str, Any]]:",
+      "def parse_laya_decision(",
+      "def run_benchmark(",
+      "    out_dir = results_dir or RESULTS_DIR",
+      "def generate_markdown_report(",
+      "def main() -> None:",
+      "    parser.add_argument(\"--sample\", type=int, default=None, help=\"Run on first N sample cases (e.g. 5)\")",
+      "    parser.add_argument(\"--full\", action=\"store_true\", help=\"Run full 400 cases (2,000 decisions)\")",
+      "    parser.add_argument(\"--workflow\", type=str, default=None, help=\"Filter by specific workflow\")",
+      "    parser.add_argument(\"--endpoint\", type=str, default=LAYA_DECIDE_ENDPOINT, help=\"Laya decide endpoint\")"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_rollback_20261004/PHASE3_REFERENCE_VALIDATION.md",
+    "bytes": 5488,
+    "outline": [
+      "# Phase 3: Reference Validation & Error Attribution"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_rollback_20261004/config.py",
+    "bytes": 894,
+    "outline": [
+      "# Paths",
+      "RESULTS_DIR = BASE_DIR / \"results\"",
+      "# Laya Service Configuration",
+      "# Uses the user's existing running Laya decision service",
+      "# Benchmark Constants"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase4_rollback_20261004/baseline_v2_20261004_report.md",
+    "bytes": 2143,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase3_rollback_20261004/run_baseline_v2.py",
+    "bytes": 18678,
+    "outline": [
+      "from config import DATASET_JSON, LAYA_DECIDE_ENDPOINT, LAYA_HEALTH_ENDPOINT, LAYA_REQUEST_TIMEOUT, RESULTS_DIR",
+      "def sha256(path: Path) -> str:",
+      "def latency_summary(values: list[float]) -> dict[str, float | None]:",
+      "def classify_source(body: dict[str, Any] | None) -> str:",
+      "def make_summary(",
+      "def render_report(summary: dict[str, Any], failures: list[dict[str, Any]]) -> str:",
+      "def main() -> None:",
+      "    parser.add_argument(\"--full\", action=\"store_true\", help=\"required confirmation to run the full 400-case test split\")",
+      "        \"raw\": RESULTS_DIR / f\"{PREFIX}_raw.jsonl\",",
+      "        \"summary\": RESULTS_DIR / f\"{PREFIX}_summary.json\",",
+      "        \"report\": RESULTS_DIR / f\"{PREFIX}_report.md\",",
+      "        \"failures\": RESULTS_DIR / f\"{PREFIX}_failures.jsonl\",",
+      "        RESULTS_DIR.mkdir(parents=True, exist_ok=True)"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase3_rollback_20261004/runner.py",
+    "bytes": 21116,
+    "outline": [
+      "# Ensure package imports work regardless of execution location",
+      "    RESULTS_DIR,",
+      "def check_laya_health(health_url: str = LAYA_HEALTH_ENDPOINT) -> Dict[str, Any]:",
+      "def load_benchmark_dataset(dataset_path: Optional[Path] = None) -> List[Dict[str, Any]]:",
+      "def parse_laya_decision(",
+      "def run_benchmark(",
+      "    out_dir = results_dir or RESULTS_DIR",
+      "def generate_markdown_report(",
+      "def main() -> None:",
+      "    parser.add_argument(\"--sample\", type=int, default=None, help=\"Run on first N sample cases (e.g. 5)\")",
+      "    parser.add_argument(\"--full\", action=\"store_true\", help=\"Run full 400 cases (2,000 decisions)\")",
+      "    parser.add_argument(\"--workflow\", type=str, default=None, help=\"Filter by specific workflow\")",
+      "    parser.add_argument(\"--endpoint\", type=str, default=LAYA_DECIDE_ENDPOINT, help=\"Laya decide endpoint\")"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/phase3_rollback_20261004/ERROR_ANALYSIS_V2.md",
+    "bytes": 37285,
+    "outline": [
+      "# ERROR_ANALYSIS_V2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/PHASE3_REFERENCE_VALIDATION.md",
+    "bytes": 5488,
+    "outline": [
+      "# Phase 3: Reference Validation & Error Attribution"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/laya_jev_benchmark_report.md",
+    "bytes": 4095,
+    "outline": [
+      "# Laya — LocalLLaMA typed-decisions Benchmark Report\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/jev_verification_typed_decisions_20261004_report.md",
+    "bytes": 2184,
+    "outline": [
+      "# LocalLLaMA typed-decisions â€” Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/ERROR_ANALYSIS_V2.md",
+    "bytes": 37285,
+    "outline": [
+      "# ERROR_ANALYSIS_V2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/baseline_v2_20261006_214159_report.md",
+    "bytes": 2150,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/baseline_v2_20261005_212216_report.md",
+    "bytes": 2143,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/baseline_v2_20261005_125336_report.md",
+    "bytes": 2143,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/baseline_v2_20261004_rerun_report.md",
+    "bytes": 2143,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/baseline_v2_20261004_report.md",
+    "bytes": 2143,
+    "outline": [
+      "# LocalLLaMA typed-decisions — Baseline v2\r"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/runs/20261005_202712/integration_report.md",
+    "bytes": 6283,
+    "outline": [
+      "# Isolated Laya service integration validation\r",
+      "Runtime: installed @receptron/laya 0.1.2, CPU, intraOpNumThreads=2, interOpNumThreads=1. Base remains production default; isolated adapter also defaults to base. LAYA_MODEL selects base/specialist. No automatic fallback or downloads.\r",
+      "$env:LAYA_MODEL='specialist'; $env:PORT='5056'; node evaluation/laya_specialist_onnx_isolated/integration/service.mjs\r",
+      "$env:LAYA_MODEL='base'; $env:PORT='5056'; node evaluation/laya_specialist_onnx_isolated/integration/service.mjs\r"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/integration/regression_fix_checks.py",
+    "bytes": 3231,
+    "outline": [
+      "# Reconstruct only the exact expression changed in this patch, preserving all",
+      "# other existing search logic. No production queries or data are rewritten.",
+      "def capture(connection,cursor,statement,parameters,context,executemany):captured.append((statement,parameters))"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/benchmark/specialist_service.mjs",
+    "bytes": 2151,
+    "outline": []
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/benchmark/run_experiment.py",
+    "bytes": 8945,
+    "outline": [
+      "def read(p): return json.loads(Path(p).read_text(encoding='utf8'))",
+      "def digest(p):",
+      "def write(p,obj): Path(p).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\\n',encoding='utf8')",
+      "def main():",
+      "        original.RESULTS_DIR=run"
+    ]
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/benchmark/runs/20261005_184532_IST/specialist_report.md",
+    "bytes": 4623,
+    "outline": [
+      "# Isolated Laya specialist benchmark\r"
+    ]
+  }
+]

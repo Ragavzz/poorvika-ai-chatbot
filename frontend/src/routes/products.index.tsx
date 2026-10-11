@@ -6,6 +6,8 @@ import { z } from "zod";
 import { Button } from "@/components/ui/button";
 import { ProductFilters } from "@/components/storefront/ProductFilters";
 import { ProductGrid } from "@/components/storefront/ProductGrid";
+import { ListingSuggestionContext } from "@/components/storefront/ProductSuggestionPopup";
+import { useContext, useEffect } from "react";
 import { api } from "@/services/api";
 
 const searchSchema = z.object({
@@ -48,6 +50,7 @@ const sortOptions = [
 const PAGE_SIZE = 99;
 
 function ProductsPage() {
+  const setListing = useContext(ListingSuggestionContext)?.setListing;
   const search = Route.useSearch();
   const navigate = useNavigate({ from: "/products/" });
   const page = search.page ?? 1;
@@ -104,6 +107,14 @@ function ProductsPage() {
 
   const hasNextPage = (query.data?.length ?? 0) > PAGE_SIZE;
   const filteredProducts = (query.data ?? []).slice(0, PAGE_SIZE);
+  const suggestionListing = {
+    products: filteredProducts,
+    filters: { maxPrice, inStockOnly, minRating, minDiscount, brands: [...selectedBrands].sort(), sort: search.sort, page },
+  };
+  useEffect(() => {
+    setListing?.(query.data && !query.isError ? suggestionListing : null);
+    return () => setListing?.(null);
+  }, [setListing, query.data, query.isError, maxPrice, inStockOnly, minRating, minDiscount, selectedBrands, search.sort, page]);
 
   const setCategory = (category?: string) =>
     void navigate({ search: (previous) => ({ ...previous, category, page: undefined }) });

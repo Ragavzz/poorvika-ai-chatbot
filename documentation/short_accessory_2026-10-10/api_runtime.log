@@ -249,3 +249,359 @@ INFO:     127.0.0.1:63947 - "POST /api/chat HTTP/1.1" 200 OK
 2026-10-10 09:00:00,331 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
 2026-10-10 09:00:00,350 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:29:55.996643+00:00","laya_start":"2026-10-10T03:29:55.997762+00:00","laya_end":"2026-10-10T03:30:00.331304+00:00","laya_duration_ms":4333.6,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":4353.8}
 INFO:     127.0.0.1:49743 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50443 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49954 - "GET /openapi.json HTTP/1.1" 200 OK
+2026-10-10 09:19:36,206 [INFO] shopai.services.laya: LAYA V2 request: Show me the Samsung Tab S7 screen protector
+2026-10-10 09:19:40,382 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2072
+2026-10-10 09:19:40,384 [INFO] shopai.services.chat: CHAT TIMING laya_ms=4177.0
+2026-10-10 09:19:40,384 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2072, source=laya-python-v2
+2026-10-10 09:19:40,384 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2072
+2026-10-10 09:19:40,385 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya add_to_cart
+2026-10-10 09:19:40,386 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 09:19:40,386 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:19:40,388 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=2.7 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 09:19:40,389 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'samsung tab s7 screen protector', 'exact_name': 'the samsung tab s7 screen protector'}
+2026-10-10 09:19:40,464 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=75.0 postgres_query_ms=49.1
+2026-10-10 09:19:40,464 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 09:19:40,464 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 09:19:40,464 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:19:40,465 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 09:19:40,465 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:49:36.204687+00:00","laya_start":"2026-10-10T03:49:36.206527+00:00","laya_end":"2026-10-10T03:49:40.383459+00:00","laya_duration_ms":4177.0,"laya_call_count":1,"product_search_start":"2026-10-10T03:49:40.389250+00:00","product_search_end":"2026-10-10T03:49:40.464208+00:00","product_search_duration_ms":75.0,"postgres_query_duration_ms":49.1,"postgres_query_start":"2026-10-10T03:49:40.414886+00:00","postgres_query_end":"2026-10-10T03:49:40.463975+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":4260.5}
+INFO:     127.0.0.1:49969 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 09:19:40,474 [INFO] shopai.services.laya: LAYA V2 request: Show me Sony earphones under 1000 rupees
+2026-10-10 09:19:43,205 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.8949
+2026-10-10 09:19:43,205 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2732.6
+2026-10-10 09:19:43,206 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.8949, source=laya-python-v2
+2026-10-10 09:19:43,206 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.8949
+2026-10-10 09:19:43,206 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 09:19:43,206 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 09:19:43,206 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.4 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 09:19:43,206 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 09:19:43,213 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=6.6 postgres_query_ms=5.3
+2026-10-10 09:19:43,213 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 09:19:43,213 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 09:19:43,213 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 09:19:43,214 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 09:19:43,214 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:49:40.472859+00:00","laya_start":"2026-10-10T03:49:40.473319+00:00","laya_end":"2026-10-10T03:49:43.205868+00:00","laya_duration_ms":2732.6,"laya_call_count":1,"product_search_start":"2026-10-10T03:49:43.207026+00:00","product_search_end":"2026-10-10T03:49:43.213572+00:00","product_search_duration_ms":6.6,"postgres_query_duration_ms":5.3,"postgres_query_start":"2026-10-10T03:49:43.208243+00:00","postgres_query_end":"2026-10-10T03:49:43.213495+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":2741.3}
+INFO:     127.0.0.1:49972 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 09:19:43,219 [INFO] shopai.services.laya: LAYA V2 request: Add the Samsung Tab S7 screen protector to my cart
+2026-10-10 09:19:45,944 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.9901
+2026-10-10 09:19:45,944 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2725.9
+2026-10-10 09:19:45,945 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.9901, source=laya-python-v2
+2026-10-10 09:19:45,945 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.9901
+2026-10-10 09:19:45,945 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: add_to_cart (Laya choice: add_to_cart)
+2026-10-10 09:19:45,945 [INFO] shopai.services.chat: TOOL/DATABASE action=add_to_cart
+2026-10-10 09:19:45,960 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T03:49:43.218428+00:00","laya_start":"2026-10-10T03:49:43.218960+00:00","laya_end":"2026-10-10T03:49:45.944809+00:00","laya_duration_ms":2725.9,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":2742.2}
+INFO:     127.0.0.1:49969 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60256 - "OPTIONS /api/products/bosch-mgm4344bin-truemixx-bold-600w-mixer-grinder-4-jars-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50854 - "OPTIONS /api/products/bosch-mgm4344bin-truemixx-bold-600w-mixer-grinder-4-jars-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50854 - "GET /api/products/bosch-mgm4344bin-truemixx-bold-600w-mixer-grinder-4-jars-black HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51986 - "OPTIONS /api/products?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51986 - "GET /api/products?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:65311 - "OPTIONS /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:39:27,653 [INFO] shopai.services.laya: LAYA V2 request: Show me Samsung mobiles.
+2026-10-10 10:39:40,633 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.3735
+2026-10-10 10:39:40,635 [INFO] shopai.services.chat: CHAT TIMING laya_ms=12982.6
+2026-10-10 10:39:40,639 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.3735, source=laya-python-v2
+2026-10-10 10:39:40,639 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.3735
+2026-10-10 10:39:40,645 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:39:40,645 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:39:40,648 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=2.2 filters={'intent': 'product_search', 'category': 'Mobiles', 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 10:39:40,648 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Mobiles', 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 10:39:40,779 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=130.9 postgres_query_ms=122.8
+2026-10-10 10:39:40,779 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 10:39:40,779 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 10:39:40,780 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:39:40,780 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:39:40,798 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:09:27.644185+00:00","laya_start":"2026-10-10T05:09:27.652304+00:00","laya_end":"2026-10-10T05:09:40.634430+00:00","laya_duration_ms":12982.6,"laya_call_count":1,"product_search_start":"2026-10-10T05:09:40.648367+00:00","product_search_end":"2026-10-10T05:09:40.779280+00:00","product_search_duration_ms":130.9,"postgres_query_duration_ms":122.8,"postgres_query_start":"2026-10-10T05:09:40.655806+00:00","postgres_query_end":"2026-10-10T05:09:40.778625+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":13154.5}
+INFO:     127.0.0.1:65311 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:39:51,970 [INFO] shopai.services.laya: LAYA V2 request: Show me Sony earphones under \u20b91000.
+2026-10-10 10:39:58,128 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.7351
+2026-10-10 10:39:58,133 [INFO] shopai.services.chat: CHAT TIMING laya_ms=6159.8
+2026-10-10 10:39:58,133 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.7351, source=laya-python-v2
+2026-10-10 10:39:58,133 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.7351
+2026-10-10 10:39:58,133 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:39:58,139 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:39:58,142 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=1.9 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 10:39:58,142 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 10:39:58,153 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=11.3 postgres_query_ms=10.1
+2026-10-10 10:39:58,154 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 10:39:58,154 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 10:39:58,155 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:39:58,155 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:39:58,155 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:09:51.967470+00:00","laya_start":"2026-10-10T05:09:51.970266+00:00","laya_end":"2026-10-10T05:09:58.128889+00:00","laya_duration_ms":6159.8,"laya_call_count":1,"product_search_start":"2026-10-10T05:09:58.142455+00:00","product_search_end":"2026-10-10T05:09:58.153770+00:00","product_search_duration_ms":11.3,"postgres_query_duration_ms":10.1,"postgres_query_start":"2026-10-10T05:09:58.143615+00:00","postgres_query_end":"2026-10-10T05:09:58.153667+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":6188.1}
+INFO:     127.0.0.1:50106 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:40:11,121 [INFO] shopai.services.laya: LAYA V2 request: Find laptops under \u20b950,000.
+2026-10-10 10:40:17,887 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.7928
+2026-10-10 10:40:17,888 [INFO] shopai.services.chat: CHAT TIMING laya_ms=6767.5
+2026-10-10 10:40:17,888 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.7928, source=laya-python-v2
+2026-10-10 10:40:17,888 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.7928
+2026-10-10 10:40:17,889 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:40:17,889 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:40:17,889 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': 'Laptops', 'brand': None, 'max_price': 50000.0, 'min_price': None, 'search_term': 'laptop'}
+2026-10-10 10:40:17,889 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Laptops', 'brand': None, 'max_price': 50000.0, 'min_price': None, 'search_term': 'laptop'}
+2026-10-10 10:40:17,921 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=30.9 postgres_query_ms=28.5
+2026-10-10 10:40:17,921 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 10:40:17,921 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 10:40:17,922 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:40:17,922 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:40:17,923 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:10:11.119819+00:00","laya_start":"2026-10-10T05:10:11.120920+00:00","laya_end":"2026-10-10T05:10:17.888412+00:00","laya_duration_ms":6767.5,"laya_call_count":1,"product_search_start":"2026-10-10T05:10:17.890068+00:00","product_search_end":"2026-10-10T05:10:17.921001+00:00","product_search_duration_ms":30.9,"postgres_query_duration_ms":28.5,"postgres_query_start":"2026-10-10T05:10:17.892316+00:00","postgres_query_end":"2026-10-10T05:10:17.920820+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":6803.5}
+INFO:     127.0.0.1:51036 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:40:42,459 [INFO] shopai.services.laya: LAYA V2 request: tell me about HP 15s Ryzen 3 5300U Windows 11 Home Laptop, 15s-eq2212AU
+2026-10-10 10:40:46,851 [INFO] shopai.services.chat: CHAT TIMING laya_ms=4391.6
+2026-10-10 10:40:46,853 [ERROR] shopai.services.chat: LAYA decision failed
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\chat_service.py", line 394, in generate_response
+    decision = await run_in_threadpool(self.laya.decide, user_message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\laya_client.py", line 50, in decide
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:5056/decide
+2026-10-10 10:40:47,169 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:10:42.457594+00:00","laya_start":"2026-10-10T05:10:42.459530+00:00","laya_end":"2026-10-10T05:10:46.851051+00:00","laya_duration_ms":4391.6,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":4711.6}
+INFO:     127.0.0.1:54130 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:41:06,212 [INFO] shopai.services.laya: LAYA V2 request: Tell me more about this product.
+2026-10-10 10:41:13,398 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.993
+2026-10-10 10:41:13,399 [INFO] shopai.services.chat: CHAT TIMING laya_ms=7187.5
+2026-10-10 10:41:13,399 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.993, source=laya-python-v2
+2026-10-10 10:41:13,399 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.993
+2026-10-10 10:41:13,400 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_details (Laya choice: product_details)
+2026-10-10 10:41:13,400 [INFO] shopai.services.chat: TOOL/DATABASE action=product_details
+2026-10-10 10:41:13,412 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:11:06.211517+00:00","laya_start":"2026-10-10T05:11:06.212138+00:00","laya_end":"2026-10-10T05:11:13.399576+00:00","laya_duration_ms":7187.5,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":7200.7}
+INFO:     127.0.0.1:51375 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:41:26,681 [INFO] shopai.services.laya: LAYA V2 request: What is the price and available stock?
+2026-10-10 10:41:30,709 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.5764
+2026-10-10 10:41:30,709 [INFO] shopai.services.chat: CHAT TIMING laya_ms=4028.9
+2026-10-10 10:41:30,709 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.5764, source=laya-python-v2
+2026-10-10 10:41:30,709 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.5764
+2026-10-10 10:41:30,710 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya product_details
+2026-10-10 10:41:30,710 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_details)
+2026-10-10 10:41:30,710 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:41:30,711 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.4 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'what price and stock'}
+2026-10-10 10:41:30,711 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'what price and stock'}
+2026-10-10 10:41:30,736 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=24.8 postgres_query_ms=20.9
+2026-10-10 10:41:30,736 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 10:41:30,736 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 10:41:30,737 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:41:30,737 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:41:30,737 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:11:26.680029+00:00","laya_start":"2026-10-10T05:11:26.680717+00:00","laya_end":"2026-10-10T05:11:30.709566+00:00","laya_duration_ms":4028.9,"laya_call_count":1,"product_search_start":"2026-10-10T05:11:30.711865+00:00","product_search_end":"2026-10-10T05:11:30.736612+00:00","product_search_duration_ms":24.8,"postgres_query_duration_ms":20.9,"postgres_query_start":"2026-10-10T05:11:30.715669+00:00","postgres_query_end":"2026-10-10T05:11:30.736578+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":4057.2}
+INFO:     127.0.0.1:59808 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:42:17,559 [INFO] shopai.services.laya: LAYA V2 request: Show me Samsung mobiles.
+2026-10-10 10:42:19,641 [INFO] shopai.services.chat: CHAT TIMING laya_ms=2083.6
+2026-10-10 10:42:19,642 [ERROR] shopai.services.chat: LAYA decision failed
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\chat_service.py", line 394, in generate_response
+    decision = await run_in_threadpool(self.laya.decide, user_message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\laya_client.py", line 50, in decide
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:5056/decide
+2026-10-10 10:42:19,654 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:12:17.553448+00:00","laya_start":"2026-10-10T05:12:17.558141+00:00","laya_end":"2026-10-10T05:12:19.641444+00:00","laya_duration_ms":2083.3,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":2100.6}
+INFO:     127.0.0.1:54079 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56595 - "GET /api/products?limit=50 HTTP/1.1" 200 OK
+2026-10-10 10:42:37,962 [INFO] shopai.services.laya: LAYA V2 request: Show me Samsung mobiles.
+2026-10-10 10:42:43,542 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.3735
+2026-10-10 10:42:43,543 [INFO] shopai.services.chat: CHAT TIMING laya_ms=5580.9
+2026-10-10 10:42:43,543 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.3735, source=laya-python-v2
+2026-10-10 10:42:43,543 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.3735
+2026-10-10 10:42:43,544 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:42:43,544 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:42:43,544 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.7 filters={'intent': 'product_search', 'category': 'Mobiles', 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 10:42:43,545 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Mobiles', 'brand': 'Samsung', 'max_price': None, 'min_price': None, 'search_term': None}
+2026-10-10 10:42:43,562 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=17.2 postgres_query_ms=13.3
+2026-10-10 10:42:43,562 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 10:42:43,562 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 10:42:43,563 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:42:43,563 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:42:43,564 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:12:37.961356+00:00","laya_start":"2026-10-10T05:12:37.962550+00:00","laya_end":"2026-10-10T05:12:43.543446+00:00","laya_duration_ms":5580.9,"laya_call_count":1,"product_search_start":"2026-10-10T05:12:43.545205+00:00","product_search_end":"2026-10-10T05:12:43.562391+00:00","product_search_duration_ms":17.2,"postgres_query_duration_ms":13.3,"postgres_query_start":"2026-10-10T05:12:43.548864+00:00","postgres_query_end":"2026-10-10T05:12:43.562162+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":5602.6}
+INFO:     127.0.0.1:56595 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:42:52,645 [INFO] shopai.services.laya: LAYA V2 request: Which one is the cheapest?
+2026-10-10 10:42:56,391 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.0776
+2026-10-10 10:42:56,392 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3747.4
+2026-10-10 10:42:56,392 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.0776, source=laya-python-v2
+2026-10-10 10:42:56,392 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.0776
+2026-10-10 10:42:56,393 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: catalog phrase overrides Laya add_to_cart
+2026-10-10 10:42:56,393 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 10:42:56,393 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:42:56,393 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'one cheapest'}
+2026-10-10 10:42:56,393 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'one cheapest'}
+2026-10-10 10:42:56,420 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=27.0 postgres_query_ms=24.4
+2026-10-10 10:42:56,421 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 10:42:56,421 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 10:42:56,421 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:42:56,421 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:42:56,421 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:12:52.644418+00:00","laya_start":"2026-10-10T05:12:52.645199+00:00","laya_end":"2026-10-10T05:12:56.392099+00:00","laya_duration_ms":3747.4,"laya_call_count":1,"product_search_start":"2026-10-10T05:12:56.393902+00:00","product_search_end":"2026-10-10T05:12:56.420847+00:00","product_search_duration_ms":27.0,"postgres_query_duration_ms":24.4,"postgres_query_start":"2026-10-10T05:12:56.396403+00:00","postgres_query_end":"2026-10-10T05:12:56.420814+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":3777.0}
+INFO:     127.0.0.1:53082 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:43:38,036 [INFO] shopai.services.laya: LAYA V2 request: Show me laptops under \u20b950,000.
+2026-10-10 10:43:39,022 [INFO] shopai.services.chat: CHAT TIMING laya_ms=986.5
+2026-10-10 10:43:39,023 [ERROR] shopai.services.chat: LAYA decision failed
+Traceback (most recent call last):
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\chat_service.py", line 394, in generate_response
+    decision = await run_in_threadpool(self.laya.decide, user_message)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\starlette\concurrency.py", line 34, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\to_thread.py", line 65, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2706, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 1100, in run
+    result = context.run(func, *args)
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\backend\app\services\laya_client.py", line 50, in decide
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\GURU\OneDrive\Pictures\Documents\cubeAI solutions\poorvika-shopai\.venv\Lib\site-packages\requests\models.py", line 1167, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http://127.0.0.1:5056/decide
+2026-10-10 10:43:39,036 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:13:38.034090+00:00","laya_start":"2026-10-10T05:13:38.035838+00:00","laya_end":"2026-10-10T05:13:39.022305+00:00","laya_duration_ms":986.5,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":1002.2}
+INFO:     127.0.0.1:63207 - "POST /api/chat HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63207 - "GET /api/products?limit=50 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63207 - "GET /api/products?limit=50 HTTP/1.1" 200 OK
+2026-10-10 10:43:59,504 [INFO] shopai.services.laya: LAYA V2 request: Show me laptops under \u20b950,000.
+2026-10-10 10:44:03,984 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.3965
+2026-10-10 10:44:03,985 [INFO] shopai.services.chat: CHAT TIMING laya_ms=4481.4
+2026-10-10 10:44:03,985 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.3965, source=laya-python-v2
+2026-10-10 10:44:03,985 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.3965
+2026-10-10 10:44:03,986 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:44:03,986 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:44:03,986 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.6 filters={'intent': 'product_search', 'category': 'Laptops', 'brand': None, 'max_price': 50000.0, 'min_price': None, 'search_term': 'laptop'}
+2026-10-10 10:44:03,986 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Laptops', 'brand': None, 'max_price': 50000.0, 'min_price': None, 'search_term': 'laptop'}
+2026-10-10 10:44:04,004 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=17.8 postgres_query_ms=14.9
+2026-10-10 10:44:04,005 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 10:44:04,005 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 10:44:04,006 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:44:04,006 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:44:04,006 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:13:59.503220+00:00","laya_start":"2026-10-10T05:13:59.503859+00:00","laya_end":"2026-10-10T05:14:03.985247+00:00","laya_duration_ms":4481.4,"laya_call_count":1,"product_search_start":"2026-10-10T05:14:03.987029+00:00","product_search_end":"2026-10-10T05:14:04.004841+00:00","product_search_duration_ms":17.8,"postgres_query_duration_ms":14.9,"postgres_query_start":"2026-10-10T05:14:03.989722+00:00","postgres_query_end":"2026-10-10T05:14:04.004640+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":4503.2}
+INFO:     127.0.0.1:59545 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:44:17,293 [INFO] shopai.services.laya: LAYA V2 request: Only show HP laptops.
+2026-10-10 10:44:21,412 [INFO] shopai.services.laya: LAYA V2 decision: choice=cart_action confidence=0.2452
+2026-10-10 10:44:21,413 [INFO] shopai.services.chat: CHAT TIMING laya_ms=4119.8
+2026-10-10 10:44:21,413 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=cart_action, confidence=0.2452, source=laya-python-v2
+2026-10-10 10:44:21,413 [INFO] shopai.services.chat: DECISION action=cart_action confidence=0.2452
+2026-10-10 10:44:21,413 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: natural product discovery overrides Laya cart_action
+2026-10-10 10:44:21,414 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: cart_action)
+2026-10-10 10:44:21,414 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:44:21,414 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': 'Laptops', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'only hp laptop'}
+2026-10-10 10:44:21,414 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Laptops', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'only hp laptop'}
+2026-10-10 10:44:21,435 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=21.0 postgres_query_ms=17.5
+2026-10-10 10:44:21,435 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 10:44:21,435 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 10:44:21,436 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:44:21,436 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:44:21,436 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:14:17.292921+00:00","laya_start":"2026-10-10T05:14:17.293565+00:00","laya_end":"2026-10-10T05:14:21.413389+00:00","laya_duration_ms":4119.8,"laya_call_count":1,"product_search_start":"2026-10-10T05:14:21.414691+00:00","product_search_end":"2026-10-10T05:14:21.435653+00:00","product_search_duration_ms":21.0,"postgres_query_duration_ms":17.5,"postgres_query_start":"2026-10-10T05:14:21.418175+00:00","postgres_query_end":"2026-10-10T05:14:21.435613+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":4143.3}
+INFO:     127.0.0.1:64346 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:44:41,349 [INFO] shopai.services.laya: LAYA V2 request: Which one has the best specifications?
+2026-10-10 10:44:44,533 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_details confidence=0.0471
+2026-10-10 10:44:44,534 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3184.7
+2026-10-10 10:44:44,534 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_details, confidence=0.0471, source=laya-python-v2
+2026-10-10 10:44:44,534 [INFO] shopai.services.chat: DECISION action=product_details confidence=0.0471
+2026-10-10 10:44:44,534 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_details (Laya choice: product_details)
+2026-10-10 10:44:44,534 [INFO] shopai.services.chat: TOOL/DATABASE action=product_details
+2026-10-10 10:44:44,545 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:14:41.348729+00:00","laya_start":"2026-10-10T05:14:41.349355+00:00","laya_end":"2026-10-10T05:14:44.534048+00:00","laya_duration_ms":3184.7,"laya_call_count":1,"product_search_start":null,"product_search_end":null,"product_search_duration_ms":null,"postgres_query_duration_ms":null,"postgres_query_start":null,"postgres_query_end":null,"postgres_query_count":0,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":null,"response_total_ms":3196.3}
+INFO:     127.0.0.1:63045 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:45:06,018 [INFO] shopai.services.laya: LAYA V2 request: Show me Sony earphones under \u20b91000.
+2026-10-10 10:45:09,406 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.7351
+2026-10-10 10:45:09,407 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3388.7
+2026-10-10 10:45:09,407 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.7351, source=laya-python-v2
+2026-10-10 10:45:09,407 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.7351
+2026-10-10 10:45:09,407 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:45:09,407 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:45:09,408 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 10:45:09,408 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': 'Sony', 'max_price': 1000.0, 'min_price': None, 'search_term': None}
+2026-10-10 10:45:09,413 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=5.0 postgres_query_ms=4.3
+2026-10-10 10:45:09,413 [INFO] shopai.services.chat: TOOL/DATABASE returned 1 products
+2026-10-10 10:45:09,413 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 1 products found
+2026-10-10 10:45:09,413 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:45:09,413 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:45:09,413 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:15:06.017983+00:00","laya_start":"2026-10-10T05:15:06.018388+00:00","laya_end":"2026-10-10T05:15:09.407091+00:00","laya_duration_ms":3388.7,"laya_call_count":1,"product_search_start":"2026-10-10T05:15:09.408252+00:00","product_search_end":"2026-10-10T05:15:09.413272+00:00","product_search_duration_ms":5.0,"postgres_query_duration_ms":4.3,"postgres_query_start":"2026-10-10T05:15:09.408975+00:00","postgres_query_end":"2026-10-10T05:15:09.413215+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":3395.7}
+INFO:     127.0.0.1:59378 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:45:15,326 [INFO] shopai.services.laya: LAYA V2 request: Show me similar earphones.
+2026-10-10 10:45:19,240 [INFO] shopai.services.laya: LAYA V2 decision: choice=product_search confidence=0.7014
+2026-10-10 10:45:19,241 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3914.9
+2026-10-10 10:45:19,241 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=product_search, confidence=0.7014, source=laya-python-v2
+2026-10-10 10:45:19,242 [INFO] shopai.services.chat: DECISION action=product_search confidence=0.7014
+2026-10-10 10:45:19,242 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: product_search)
+2026-10-10 10:45:19,242 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:45:19,242 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.3 filters={'intent': 'product_search', 'category': 'Headphones', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'similar'}
+2026-10-10 10:45:19,242 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Headphones', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': 'similar'}
+2026-10-10 10:45:19,267 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=24.6 postgres_query_ms=21.0
+2026-10-10 10:45:19,267 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 10:45:19,267 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 10:45:19,268 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:45:19,268 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:45:19,268 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:15:15.325364+00:00","laya_start":"2026-10-10T05:15:15.326537+00:00","laya_end":"2026-10-10T05:15:19.241408+00:00","laya_duration_ms":3914.9,"laya_call_count":1,"product_search_start":"2026-10-10T05:15:19.242961+00:00","product_search_end":"2026-10-10T05:15:19.267529+00:00","product_search_duration_ms":24.6,"postgres_query_duration_ms":21.0,"postgres_query_start":"2026-10-10T05:15:19.246719+00:00","postgres_query_end":"2026-10-10T05:15:19.267397+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":3942.9}
+INFO:     127.0.0.1:50645 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:45:35,360 [INFO] shopai.services.laya: LAYA V2 request: Recommend a phone for gaming.
+2026-10-10 10:45:38,408 [INFO] shopai.services.laya: LAYA V2 decision: choice=recommendation confidence=0.992
+2026-10-10 10:45:38,409 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3049.3
+2026-10-10 10:45:38,409 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=recommendation, confidence=0.992, source=laya-python-v2
+2026-10-10 10:45:38,409 [INFO] shopai.services.chat: DECISION action=recommendation confidence=0.992
+2026-10-10 10:45:38,410 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: recommendation (Laya choice: recommendation)
+2026-10-10 10:45:38,410 [INFO] shopai.services.chat: TOOL/DATABASE action=recommendation
+2026-10-10 10:45:38,414 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=3.9 filters={'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': None, 'use_case': 'gaming'}
+2026-10-10 10:45:38,414 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': 'Mobiles', 'brand': None, 'max_price': None, 'min_price': None, 'search_term': None, 'use_case': 'gaming'}
+2026-10-10 10:45:38,442 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=28.0 postgres_query_ms=24.2
+2026-10-10 10:45:38,442 [INFO] shopai.services.chat: TOOL/DATABASE returned 5 products
+2026-10-10 10:45:38,442 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 5 products found
+2026-10-10 10:45:38,443 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_recommendation
+2026-10-10 10:45:38,443 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:15:35.358466+00:00","laya_start":"2026-10-10T05:15:35.360208+00:00","laya_end":"2026-10-10T05:15:38.409456+00:00","laya_duration_ms":3049.3,"laya_call_count":1,"product_search_start":"2026-10-10T05:15:38.414504+00:00","product_search_end":"2026-10-10T05:15:38.441973+00:00","product_search_duration_ms":28.0,"postgres_query_duration_ms":24.2,"postgres_query_start":"2026-10-10T05:15:38.417657+00:00","postgres_query_end":"2026-10-10T05:15:38.441829+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"grounded_recommendation_candidates","response_total_ms":3085.0}
+INFO:     127.0.0.1:63660 - "POST /api/chat HTTP/1.1" 200 OK
+2026-10-10 10:45:47,184 [INFO] shopai.services.laya: LAYA V2 request: My budget is \u20b925,000.
+2026-10-10 10:45:50,737 [INFO] shopai.services.laya: LAYA V2 decision: choice=add_to_cart confidence=0.2887
+2026-10-10 10:45:50,738 [INFO] shopai.services.chat: CHAT TIMING laya_ms=3554.2
+2026-10-10 10:45:50,738 [INFO] shopai.services.chat: [AI FLOW] LAYA DECISION: choice=add_to_cart, confidence=0.2887, source=laya-python-v2
+2026-10-10 10:45:50,738 [INFO] shopai.services.chat: DECISION action=add_to_cart confidence=0.2887
+2026-10-10 10:45:50,743 [INFO] shopai.services.chat: [AI FLOW] ACTION RECOVERY: catalog phrase overrides Laya add_to_cart
+2026-10-10 10:45:50,744 [INFO] shopai.services.chat: [AI FLOW] INTENT/ACTION: product_search (Laya choice: add_to_cart)
+2026-10-10 10:45:50,744 [INFO] shopai.services.chat: TOOL/DATABASE action=product_search
+2026-10-10 10:45:50,744 [INFO] shopai.services.chat: CHAT TIMING product_filter_extraction_ms=0.2 filters={'intent': 'product_search', 'category': None, 'brand': None, 'max_price': 27500.000000000004, 'min_price': 22500.0, 'search_term': 'my 25 000'}
+2026-10-10 10:45:50,744 [INFO] shopai.services.chat: [AI FLOW] EXTRACTED FILTERS: {'intent': 'product_search', 'category': None, 'brand': None, 'max_price': 27500.000000000004, 'min_price': 22500.0, 'search_term': 'my 25 000'}
+2026-10-10 10:45:50,766 [INFO] shopai.services.chat: CHAT TIMING product_search_ms=22.1 postgres_query_ms=20.4
+2026-10-10 10:45:50,766 [INFO] shopai.services.chat: TOOL/DATABASE returned 0 products
+2026-10-10 10:45:50,766 [INFO] shopai.services.chat: [AI FLOW] PRODUCT TOOL: 0 products found
+2026-10-10 10:45:50,767 [INFO] shopai.services.chat: [AI FLOW] OLLAMA SKIPPED: exact product-search facts are available from PostgreSQL
+2026-10-10 10:45:50,767 [INFO] shopai.services.chat: [AI FLOW] FINAL RESPONSE: source=deterministic_catalog
+2026-10-10 10:45:50,767 [INFO] shopai.routes.chat: [TIMING] {"request_received":"2026-10-10T05:15:47.183504+00:00","laya_start":"2026-10-10T05:15:47.183942+00:00","laya_end":"2026-10-10T05:15:50.738161+00:00","laya_duration_ms":3554.2,"laya_call_count":1,"product_search_start":"2026-10-10T05:15:50.744543+00:00","product_search_end":"2026-10-10T05:15:50.766632+00:00","product_search_duration_ms":22.1,"postgres_query_duration_ms":20.4,"postgres_query_start":"2026-10-10T05:15:50.746238+00:00","postgres_query_end":"2026-10-10T05:15:50.766606+00:00","postgres_query_count":1,"ollama_start":null,"ollama_end":null,"ollama_duration_ms":null,"ollama_http_duration_ms":null,"ollama_client_overhead_ms":null,"ollama_server_total_ms":null,"ollama_prompt_build_ms":null,"ollama_model_load_ms":null,"ollama_prompt_eval_ms":null,"ollama_generation_ms":null,"ollama_prompt_chars":null,"ollama_call_count":0,"ollama_skipped_reason":"deterministic_catalog_search","response_total_ms":3583.9}
+INFO:     127.0.0.1:62184 - "POST /api/chat HTTP/1.1" 200 OK

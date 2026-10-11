@@ -1,0 +1,62 @@
+[
+  {
+    "file": "data/poorvika_products.jsonl",
+    "records": 508,
+    "keys": [
+      "url",
+      "canonical_url",
+      "name",
+      "brand",
+      "model",
+      "sku",
+      "product_id",
+      "item_code",
+      "erp_item_code",
+      "online_price",
+      "mrp",
+      "shop_price",
+      "currency",
+      "availability",
+      "stock",
+      "rating",
+      "rating_count",
+      "description",
+      "images",
+      "specifications",
+      "source_hash",
+      "scraped_at"
+    ],
+    "duplicate_ids": 0,
+    "size": 3478197
+  },
+  {
+    "file": "data/poorvika_products_expanded.jsonl",
+    "records": 508,
+    "keys": [
+      "url",
+      "canonical_url",
+      "name",
+      "brand",
+      "model",
+      "sku",
+      "product_id",
+      "item_code",
+      "erp_item_code",
+      "online_price",
+      "mrp",
+      "shop_price",
+      "currency",
+      "availability",
+      "stock",
+      "rating",
+      "rating_count",
+      "description",
+      "images",
+      "specifications",
+      "source_hash",
+      "scraped_at"
+    ],
+    "duplicate_ids": 0,
+    "size": 3478197
+  }
+]

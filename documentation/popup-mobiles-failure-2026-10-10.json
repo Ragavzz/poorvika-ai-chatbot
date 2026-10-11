@@ -1,0 +1,166 @@
+{
+  "captured_at_utc": "2026-10-10T14:35:52Z",
+  "provenance": {
+    "source": "Saved 508-row catalog snapshot; current storefront default Mobiles filters and first eight rows reconstructed in backend result ordering",
+    "visible_category_product_count_under_default_max_price": 90,
+    "exact_browser_screenshot_payload_available": false
+  },
+  "request_context": {
+    "name": "Mobiles",
+    "category": "Mobiles",
+    "filters": {
+      "maxPrice": 150000,
+      "inStockOnly": false,
+      "minRating": 0,
+      "minDiscount": 0,
+      "brands": [],
+      "page": 1
+    },
+    "products": [
+      {
+        "id": "tecno-spark-go-1-glittery-white-64gb-4gb-ram",
+        "name": "Tecno Spark Go 1 ( Glittery White, 4GB-64GB )",
+        "brand": "Tecno",
+        "category": "Mobiles",
+        "price": 7299.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/VoLTE supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "tecno-spark-go-1-startrail-black-64gb-4gb-ram",
+        "name": "Tecno Spark Go 1 ( Startrail Black, 4GB-64GB )",
+        "brand": "Tecno",
+        "category": "Mobiles",
+        "price": 7299.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/VoLTE supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "redmi-13c-5g-starlight-black-128gb-6gb-ram",
+        "name": "Redmi 13C 5G ( Starlight Black,6GB-128GB )",
+        "brand": "Redmi",
+        "category": "Mobiles",
+        "price": 11299.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE Supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "redmi-13c-5g-startrail-green-128gb-6gb-ram",
+        "name": "Redmi 13C 5G ( Startrail Green,6GB-128GB )",
+        "brand": "Redmi",
+        "category": "Mobiles",
+        "price": 11299.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE Supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "redmi-13c-5g-starlight-black-256gb-8gb-ram",
+        "name": "Redmi 13C 5G ( Starlight Black,8GB-256GB )",
+        "brand": "Redmi",
+        "category": "Mobiles",
+        "price": 13299.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE Supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "samsung-galaxy-a16-5g-blue-black-6gb-128gb",
+        "name": "Samsung Galaxy A16 5G ( Blue Black, 6GB-128GB )",
+        "brand": "Samsung",
+        "category": "Mobiles",
+        "price": 15999.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "samsung-galaxy-a16-5g-gold-6gb-128gb",
+        "name": "Samsung Galaxy A16 5G ( Gold, 6GB-128GB )",
+        "brand": "Samsung",
+        "category": "Mobiles",
+        "price": 15999.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      },
+      {
+        "id": "samsung-galaxy-a16-5g-blue-black-128gb-8gb-ram",
+        "name": "Samsung Galaxy A16 5G ( Blue Black, 8GB-128GB )",
+        "brand": "Samsung",
+        "category": "Mobiles",
+        "price": 16999.0,
+        "specifications": {
+          "Network Type": "2G/3G/4G/5G/VoLTE/Supported",
+          "SIM Type": "Dual Nano SIM"
+        }
+      }
+    ]
+  },
+  "schema_validation": "passed",
+  "request_id": "mobiles-screenshot-repro-321aa13ae0",
+  "suggestion_endpoint": {
+    "execution": "FastAPI TestClient for POST /api/chat/suggestions; outbound Ollama HTTP request was real",
+    "status": 503,
+    "body": {
+      "detail": "Suggestions are unavailable (model_connection_or_service_failure)."
+    },
+    "timings": {
+      "request_id": "mobiles-screenshot-repro-321aa13ae0",
+      "laya_call_count": 0,
+      "ollama_call_count": 1,
+      "cache": "miss",
+      "ollama_http_status": 500,
+      "ollama_failure_type": "HTTPError",
+      "ollama_ms": 4303.701,
+      "failure_reason": "model_connection_or_service_failure",
+      "backend_api_ms": 4311.85,
+      "status": 503
+    }
+  },
+  "ollama": {
+    "tags_status": 200,
+    "installed_model": "llama3.2:latest",
+    "running_models_at_probe": [],
+    "chat_status": 500,
+    "exception": "requests.exceptions.HTTPError",
+    "response_body": "{\"error\":\"llama-server process has terminated: exit status 1: ggml_backend_cpu_buffer_type_alloc_buffer: failed to allocate buffer of size 649046272\\nggml_backend_buft_alloc_buffer_n_default: failed to allocate CPU buffer of size 649046272\\nerror loading model: unable to allocate CPU buffer\"}",
+    "generation_duration_ms": 4303.701,
+    "validation": "No model content returned; JSON parsing, suggestion count, and semantic validation were not reached."
+  },
+  "related_runtime_checks": [
+    {
+      "request": "plain llama3.2 greeting, GPU/default settings",
+      "status": 500,
+      "elapsed_ms": 6493.0,
+      "body": "cudaMalloc failed: out of memory; failed to allocate CUDA0 buffer of size 2011539712 bytes"
+    },
+    {
+      "request": "plain llama3.2 greeting, num_gpu=0 and num_ctx=1024 diagnostic",
+      "status": 500,
+      "elapsed_ms": 3768.2,
+      "body": "failed to allocate CPU buffer of size 649046272 bytes"
+    },
+    {
+      "request": "same listing context, direct Ollama generation attempt",
+      "status": 500,
+      "elapsed_ms": 27848.9,
+      "body": "llama-server process has terminated: exit status 0xc0000409; stack-based buffer overrun"
+    }
+  ],
+  "browser": {
+    "provider_apps": [],
+    "provider_browsers": [],
+    "rendered_verification": "not performed"
+  }
+}

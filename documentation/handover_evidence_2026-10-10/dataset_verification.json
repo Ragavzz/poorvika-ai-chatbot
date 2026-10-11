@@ -1,0 +1,15 @@
+{
+  "cases": 400,
+  "typeCounts": {
+    "choice": 600,
+    "noul": 600,
+    "score": 800
+  },
+  "sha256": "46beeb91b458bc737baddb2fe333268bb038847eafc31e55e54aaf3e3553280b",
+  "workflows": [
+    "agent_trace_observability",
+    "customer_service",
+    "invoice_processing",
+    "security_incidents"
+  ]
+}

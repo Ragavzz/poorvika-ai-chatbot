@@ -1,0 +1,622 @@
+{
+  "snapshot": {
+    "head": "29d29eb",
+    "branch": "main",
+    "remote": "https://github.com/cubeaisolutionstech/Chatbot-laya.git"
+  },
+  "source_files": [
+    {
+      "path": "README.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "backend/app/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/config.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/database/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/database/base.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/database/ingest.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/database/session.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/main.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/models/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/models/product.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/routes/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/routes/chat.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/routes/health.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/routes/products.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/routes/suggestions.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/schemas/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/schemas/chat.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/schemas/product.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/schemas/suggestions.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/services/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/services/chat_service.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/services/laya_client.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/services/llm_service.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/services/ollama_service.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/tools/__init__.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/app/tools/product_search_tool.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/requirements.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "backend/run.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "backend/scripts/__init__.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "backend/scripts/import_products.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/scripts/measure_suggestions.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "backend/suggestion-diagnostics.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "backend/test_accessory_compatibility.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_backend.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_chat_concurrency.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_chat_regressions.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_laya_contract.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_search_budget_regressions.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_short_accessory.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_suggestion_click.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "backend/test_suggestions.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/README.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/benchmark_dataset.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/benchmark_runner.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/build_dataset.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/check_env.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/check_packages.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/dataset.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/download_benchmark.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/evaluate.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/inspect_benchmark.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/inspect_errors.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/inspect_questions.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/README.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/config.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/dataset/typed_decisions_test.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/metrics.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/candidate_config.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/config.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/exact_baseline_runner.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/exact_full_evaluation.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/phase5_exact_evaluation.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/phase5_exact_runner.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/requirements.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase4_experiment/run_candidate.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/phase5_model_config.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/reference_validation.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/run_baseline_v2.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/jev_benchmark/runner.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/metrics.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/requirements.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "evaluation/test_case0.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/test_hf_api.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/test_laya_custom.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/test_laya_health.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "evaluation/verify_dataset.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/.lovable/plan/mobile-commerce-frontend-2026-09-22.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/.lovable/project.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/AGENTS.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/README.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/components.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/eslint.config.js",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/package.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/roadmap.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/components/ai-elements/conversation.tsx",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/components/ai-elements/message.tsx",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/components/ai-elements/prompt-input.tsx",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/components/ai-elements/shimmer.tsx",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/components/storefront/CartDrawer.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/CategoryNav.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/Chatbot.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/ChatbotPanel.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/Navbar.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/ProductCard.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/ProductDetails.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/ProductFilters.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/ProductGrid.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/ProductSuggestionPopup.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/SearchBar.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/components/storefront/SiteFooter.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/context/CartContext.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/hooks/use-mobile.tsx",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/lib/chat-cart.ts",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/lib/error-capture.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/lib/error-page.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/lib/lovable-error-reporting.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/lib/product-suggestions.ts",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/lib/shopping-response.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/lib/suggestion-timing.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/lib/utils.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/routeTree.gen.ts",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/src/router.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/routes/README.md",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/routes/__root.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/routes/index.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/routes/products.$productId.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/routes/products.index.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/routes/products.tsx",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/server.ts",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/services/api.ts",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/src/start.ts",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "frontend/vite.config.ts",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "laya_service/SPECIALIST.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_service/package.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_service/server.js",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "laya_service/switchable_server.mjs",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "laya_v2_service/README.md",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/compare_services.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/example_request.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/laya_Model/evaluate.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/laya_Model/infer.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/laya_Model/prepare_data.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/laya_Model/requirements.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/laya_Model/train_ddp.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/requirements.lock.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/requirements.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/run_benchmark.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/service.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "laya_v2_service/shopai_questions.json",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "laya_v2_service/verify_model.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "run_v2_jev.py",
+      "scope": "implementation/contracts or test/entry-point review"
+    },
+    {
+      "path": "scripts/expand_poorvika_catalog.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "scripts/requirements.txt",
+      "scope": "loaded; relevant configuration/outline inspected"
+    },
+    {
+      "path": "scripts/scrape_poorvika_products.py",
+      "scope": "loaded; relevant configuration/outline inspected"
+    }
+  ],
+  "historical_reports": [
+    "documentation/accessory_compatibility_investigation_2026-10-10.md",
+    "documentation/shopai_inspected_files_2026-10-09.md",
+    "documentation/shopai_stabilization_audit_2026-10-09.md",
+    "documentation/shopai_technical_audit_2026-10-07.md",
+    "documentation/short_accessory_investigation_2026-10-10.md",
+    "documentation/sony_search_investigation_2026-10-10.md"
+  ],
+  "additional_evaluation_source_inventory": "additional_evaluation_inventory.json",
+  "excluded_from_narrative": [
+    ".git",
+    ".venv",
+    "node_modules",
+    "model/cache directories",
+    "build output",
+    "binary semantic review"
+  ],
+  "limitations": "No exhaustive dependency security/binary/Git-history secret audit; source and historical labels are independently qualified in the guides.",
+  "configuration_and_locks": [
+    ".gitignore",
+    "backend/.gitignore",
+    "frontend/.gitignore",
+    "backend/.env.example",
+    "frontend/.env.example",
+    "frontend/package-lock.json",
+    "frontend/bun.lock",
+    "laya_service/package-lock.json"
+  ],
+  "frontend_test_sources": [
+    "frontend/tests/chat-cart.test.cjs",
+    "frontend/tests/product-suggestions.test.cjs",
+    "frontend/tests/suggestion-click.test.cjs"
+  ]
+}

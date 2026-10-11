@@ -1,0 +1,64 @@
+{
+  "configured_decision_provider": "laya",
+  "configured_ollama_enabled": true,
+  "laya_url": "http://127.0.0.1:5056/decide",
+  "ollama_url": "http://localhost:11434/api/chat",
+  "ollama_model": "llama3.2:latest",
+  "browser_verification": "Not executed",
+  "running_backend_health": {
+    "status": "healthy",
+    "service": "ShopAI Backend",
+    "database": {
+      "type": "PostgreSQL",
+      "connected": true,
+      "details": "PostgreSQL connected successfully",
+      "product_count": 508
+    },
+    "decision_provider": "laya",
+    "ollama_enabled": true
+  },
+  "laya_inference": {
+    "passed": true,
+    "output": {
+      "choice": "product_search",
+      "probabilities": {
+        "product_search": 0.8912,
+        "product_details": 0.0032,
+        "recommendation": 0.0005,
+        "add_to_cart": 0.0019,
+        "cart_action": 0.1028,
+        "general_query": 0.0004
+      },
+      "confidence": 0.7914,
+      "answer_confidence": 0.8912,
+      "action": {
+        "act_probability": 1.0
+      },
+      "noul": {
+        "type": "noul",
+        "noul": 0.0074,
+        "confidence": 0.9926,
+        "answer_confidence": 0.9926,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "source": "laya-python-v2"
+    }
+  },
+  "ollama_greeting_inference": {
+    "passed": true,
+    "output": "Hello! Welcome to Poorvika. How can I assist you today? Are you looking for something in particular or just browsing?"
+  },
+  "ollama_suggestions_inference": {
+    "passed": true,
+    "output": {
+      "suggestions": [
+        "Is this product suitable for heavy usage and gaming?",
+        "How does the camera quality compare to other mid-range mobiles?",
+        "Are there any water-resistant or dust-proof options available?",
+        "Can this product be easily repaired or replaced if it gets damaged?"
+      ]
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "health": {
+    "status": "healthy",
+    "service": "ShopAI Backend",
+    "database": {
+      "type": "PostgreSQL",
+      "connected": true,
+      "details": "PostgreSQL connected successfully",
+      "product_count": 508
+    },
+    "decision_provider": "rules",
+    "ollama_enabled": false
+  },
+  "http_checks": [
+    {
+      "url": "http://127.0.0.1:8080",
+      "status": 200,
+      "html": true
+    },
+    {
+      "url": "http://127.0.0.1:8080/products/samsung-galaxy-watch5-pro-lte-45-mm-gray-titanium-sm-r925fztainu",
+      "status": 200,
+      "html": true
+    },
+    {
+      "url": "http://127.0.0.1:8080/products/apple-iphone-13-blue-128gb",
+      "status": 200,
+      "html": true
+    }
+  ],
+  "available_RAM_GiB": 1.007,
+  "used_percent": 87,
+  "frontend_pid": 19364,
+  "browser_verified": false
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "path": "laya_v2_service/results/jev_full_20261008T115135_157161Z/laya_jev_benchmark_results.json",
+    "rows": 2000,
+    "correct": 1576,
+    "errors": 0
+  },
+  {
+    "path": "evaluation/jev_benchmark/results/baseline_v2_20261004_raw.jsonl",
+    "rows": 2000,
+    "correct": 718,
+    "errors": 0
+  },
+  {
+    "path": "evaluation/laya_specialist_onnx_isolated/benchmark/runs/20261005_184532_IST/specialist_raw.jsonl",
+    "rows": 2000,
+    "correct": 1530,
+    "errors": 0
+  }
+]

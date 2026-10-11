@@ -1,0 +1,40 @@
+{
+  "execution": "Independent live inference; unchanged configured services",
+  "decision_provider": "laya",
+  "ollama_model": "llama3.2:latest",
+  "laya": {
+    "passed": true,
+    "output": {
+      "choice": "product_search",
+      "probabilities": {
+        "product_search": 0.9583,
+        "product_details": 0.0013,
+        "recommendation": 0.0006,
+        "add_to_cart": 0.001,
+        "cart_action": 0.0386,
+        "general_query": 0.0003
+      },
+      "confidence": 0.8949,
+      "answer_confidence": 0.9583,
+      "action": {
+        "act_probability": 1.0
+      },
+      "noul": {
+        "type": "noul",
+        "noul": 0.0053,
+        "confidence": 0.9947,
+        "answer_confidence": 0.9947,
+        "action": {
+          "act_probability": 1.0
+        }
+      },
+      "source": "laya-python-v2"
+    },
+    "latency_ms": 2672.26
+  },
+  "ollama": {
+    "passed": true,
+    "output": "Hello! Welcome to Poorvika. How can I assist you today? Are you looking for something in particular or would you like some recommendations?",
+    "latency_ms": 12143.76
+  }
+}

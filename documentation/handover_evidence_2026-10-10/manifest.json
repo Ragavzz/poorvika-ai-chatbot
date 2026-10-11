@@ -1,0 +1,47 @@
+{
+  "created_markdown": [
+    "documentation/FINAL_PROJECT_HANDOVER.md",
+    "documentation/ARCHITECTURE.md",
+    "documentation/API_REFERENCE.md",
+    "documentation/TESTING_AND_BENCHMARKS.md",
+    "documentation/DEPLOYMENT_AND_OPERATIONS.md"
+  ],
+  "updated_markdown": [
+    "README.md"
+  ],
+  "new_evidence_files": [
+    "additional_evaluation_inventory.json",
+    "backend.log",
+    "benchmark_inventory.json",
+    "benchmark_recount.json",
+    "build.log",
+    "catalog_inventory.json",
+    "check_documentation.cjs",
+    "database_schema.json",
+    "dataset_verification.json",
+    "diff_check.log",
+    "documentation_checks.json",
+    "final_git_status.txt",
+    "frontend.log",
+    "health.json",
+    "initial_git_status.txt",
+    "manifest.json",
+    "node_packages.json",
+    "openapi.json",
+    "preservation.json",
+    "readme_diff_check.log",
+    "safe_config_verification.json",
+    "smoke.json",
+    "source_inventory.json",
+    "tracked_large_files.json",
+    "types.log",
+    "versions.json"
+  ],
+  "runtime_appends": [
+    "documentation/accessory_compatibility_2026-10-10/laya_restart.log",
+    "documentation/short_accessory_2026-10-10/api_runtime.log"
+  ],
+  "preserved_untracked": [
+    "q"
+  ]
+}
